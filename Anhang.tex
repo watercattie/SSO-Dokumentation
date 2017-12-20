@@ -1,0 +1,55 @@
+% !TEX root = Projektdokumentation.tex
+\section{Anhang}
+\subsection{Detaillierte Zeitplanung}
+\label{app:Zeitplanung}
+
+\tabelleAnhang{ZeitplanungKomplett}
+
+\input{Anhang/AnhangRessourcen.tex}
+
+\input{Anhang/AnhangLastenheft.tex}
+\clearpage
+
+\subsection{Kommandozeileninterface}
+\label{app:cli}
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{cli.png}{1}
+\caption{Kommandozeileninterface}
+\end{figure}
+\clearpage
+
+\subsection{Komponentendiagramm}
+\label{app:Komponentendiagramm}
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{Komponentendiagramm.png}{1}
+\caption{Komponentendiagramm}
+\end{figure}
+\clearpage
+
+\subsection{Aktivitätsdiagramm - Einlesen einer Regel}
+\label{app:AktivitaetRegelEinlesen}
+Das folgende Diagramm beschreibt das Einlesen einer Regel aus einer Regeldatei.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{AktivitaetRegelEinlesen.png}{0.9}
+\caption{Einlesen einer Regel}
+\end{figure}
+\clearpage
+
+\subsection{Beispiel Hauptregeldatei}
+\label{app:MasterDatei}
+Ein Beispiel einer Hauptdatei. In der Hauptdatei werden sowohl die Datenbankverbindungsparamer beschrieben als auch sämtliche Regeln aufgelistet, die evaluiert werden sollen.
+\lstinputlisting{Listings/master.conf}
+
+\subsection{Implementierung des Regel \acs{ADT}s}
+\label{app:RegelADT}
+\lstinputlisting[language=scala]{Listings/Rule.scala}
+\clearpage
+
+\subsection{Implementierung des Komposit \acs{ADT}s}
+\label{app:CompositeADT}
+\lstinputlisting[language=scala]{Listings/Composition.scala}
+
+\input{Anhang/AnhangPflichtenheft.tex}

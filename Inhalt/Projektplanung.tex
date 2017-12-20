@@ -1,0 +1,45 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Projektplanung} 
+\label{sec:Projektplanung}
+
+
+\subsection{Projektphasen}
+\label{sec:Projektphasen}
+
+Insgesamt standen für die Umsetzung des Projekts 70 Stunden zur Verfügung. Vor Projektbeginn wurden diese auf die verschiedenen Phasen der Softwareentwicklung verteilt. Die grobe Zeitplanung inklusive der Hauptphasen lassen sich der Tabelle~\ref{tab:Zeitplanung} entnehmen. 
+\tabelle{Zeitplanung}{tab:Zeitplanung}{ZeitplanungKurz}\\
+Eine detailliete Übersicht der Phasen befindet sich im \Anhang{app:Zeitplanung}.
+
+
+\subsection{Ressourcenplanung}
+\label{sec:Ressourcenplanung}
+
+Eine vollständige Auflistung aller während der Umsetzung des Projekts verwendeten Resourcen befindet sich im \Anhang{app:Ressourcen}. Bei der Auswahl der verwendeten Software war es wichtig, dass hierduch keine Zusatzkosten anfallen. Es sollte also Software verwendet werden, die entweder kostenfrei ist (\zB Open Source), oder für die \textsc{synectic} bereits Lizenzen besitzt.
+
+
+\subsection{Entwicklungsprozess}
+\label{sec:Entwicklungsprozess}
+
+Der Entwicklungsprozess definiert die Vorgehensweise, nach welcher das Projekt entwickelt wird. Für das Abschlussprojekt wurde sich für einen agilen Prozess nach dem Scrum Modell entschieden. Dies bot sich an, da das Projekt im Rahmen von \textit{syn6} entwickelt wurde, welches ebenfalls einem agilen Softwareprozess folgt. Die Projektarbeit wurde als User Story innerhalb eines zweiwöchigen Sprints definiert und dem Autor zugewiesen.
+
+Im Gegensatz zum Wasserfallmodell zeichnet sich ein agiler Entwicklungsprozess durch kurze Iterationszyklen mit häufiger Rücksprache mit dem Product Owner und den Stakeholdern aus. Hierdurch kann flexibel auf sich ändernde Anforderungen reagiert werden.
+
+Das gesamte Projekt soll mithilfe von \ac{TDD}, zu Deutsch \textit{Testgetriebene Entwicklung}, umgesetzt werden. Das Kernprinzip von \acs{TDD} besagt, dass die Softwaretests vor der tatsächlichen Implementierung geschrieben werden. Anders formuliert besagt \acs{TDD}, dass \emph{keine Zeile Produktivcode} geschrieben werden darf, wenn es keinen dazugehörigen Test gibt der fehlschlägt. Dieser Prozess führt dazu, dass man sich bereits  vor der Implementierung Gedanken über den Aufbau der einzelnen Komponenten machen muss. Dadurch haben die Tests nicht nur eine prüfende Funktion, sondern bestimmen maßgeblich die Architektur des Projekts mit. 
+
+Die Entwicklungsprozess des \ac{TDD} wird auch als \textit{red-green-refactor Loop} bezeichnet (QUELLE). Die einzelnen Phasen lassen sich wie folgt beschreiben:
+
+
+\paragraph{1. Test schreiben, der fehlschlägt \textit{(red)}}
+Zuerst wird ein Test geschrieben, der die zu implementierende Funktionalität prüft. Auch wenn es redundant erscheint, sollte immer noch einmal sichergestellt werden, dass der Test tatsächlich fehlschlägt. Dieser Schritt verifiziert, dass der Test sich auch tatsächlich korrekt verhält. Falls ein Test in dieser Phase bereits ohne Fehler durchläuft, ist er fehlerhaft, da noch keinerlei Implementierung existiert.
+
+\paragraph{2. Minimum an Implementierung schreiben, sodass der Test erfolgreich durchläuft \textit{(green)}}
+Anschließend wird Produktivcode geschrieben. Wichtig hierbei ist, dass nur das \emph{absolute Minimum} an Implementierung geschrieben wird, sodass der Test fehlerfrei durchläuft. Oft bedeutet das, dass zuerst hardkodiert die Erwartung des Tests zurückgegeben wird. Dies hat zwei Dinge zur Folge:
+\begin{enumerate}
+	\item Ähnlich wie im ersten Schritt sichergestellt wurde, dass der Test fehlschlägt wenn keine Implementierung existiert, wird hierdurch festgestellt, dass der Test unter den korrekten Bedingungen ein positives Ergebnis zurückgibt.
+	\item Da erst weiter implementiert werden darf, sobald ein Test existiert der fehlschlägt, ist der Programmierer gezwungen weitere Tests zu schreiben, sodass das hardkodierte Ergebnis nicht mehr ausreichend ist.
+\end{enumerate}
+
+\paragraph{3. Falls nötig Refaktorisieren des Codes \textit{(refactor)}}
+Falls benötigt wird in dieser Phase der Code refaktorisiert und restrukturiert. Da durch die ersten beiden Schritte eine vollständige Testsuite der momentan implementierten Funktionalität gewährleistet ist, wird sofort offensichtlich, wenn eine Änderung Fehler eingeführt hat.
+
+Es ist durchaus möglich, dass diese Phase erst nach mehreren Durchläufen der ersten beiden Schritte notwendig wird. 

@@ -1,0 +1,47 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Einleitung}
+\label{sec:Einleitung}
+
+
+\subsection{Projektumfeld} 
+\label{sec:Projektumfeld}
+
+Ausbildungsbetrieb ist die \textsc{synectic software \& services gmbh}, im Folgenden als \textit{synectic} bezeichnet. \textit{synectic} ist ein mittelständisches Softwareunternehmen mit Sitz in Berlin. Zu den Produkten des Unternehmens gehören individuell anpassbare Softwarelösungen für die Arbeit im Bereich Case Management. Momentan beschäftig das Unternehmen 21 Mitarbeiter.
+
+Der Auftraggeber des Projektes ist die Entwicklungsabteilung des Produktes \textit{syn6}. 
+
+Ziel von \textit{syn6} ist es, Kunden neben der momentanen Desktoplösung auch eine moderne, webbasierte Lösung anzubieten.
+
+
+\subsection{Projektziel} 
+\label{sec:Projektziel}
+Durch die Anforderungen an die Software \textit{syn6} können die Daten innerhalb der Datenbank gewissen inhaltlichen Restriktionen unterliegen. Ein triviales Beispiel hierfür wäre, dass in einem bestimmten Feld nur Daten abgespeichert werden dürfen, die mit einem Großbuchstaben beginnen. Es sind allerdings auch komplexere Regeln möglich, die mehrere Felder aus mehreren Tabellen betreffen. Beispielsweise könnte eine Bedingung lauten, dass die Summe der Textlänge der Felder $A$ und $B$ die gleiche Länge wie das Feld $C$ besitzen müssen.
+
+Da sich das \textit{syn6} noch in einem sehr frühen Entwicklungsstadium befindet, müssen momentan viele Daten noch händisch in die Datenbank eingetragen werden. Eine Prüfroutine vor dem tatsächlichen Abspeichern der Daten in die Datenbank ist dadurch nicht möglich.
+
+Durch das manuelle Anlegen von Daten in der Datenbank ist, gerade bei komplexeren Regeln, die Chance, dass eine dieser inhaltlichen Regeln verletzt wird relativ hoch. Solche inkonsistenten Daten erschweren die Fehlersuche, da zuerst ermittelt werden muss, ob es sich um einen Fehler in der Programmlogik handelt oder ob fehlerhafte Daten vorliegen.
+
+Ziel ist es, ein Konsolenbasiertes Tool zu entwickeln, was anhand von vordefinierten Regeln, in der Form von \acs{SQL}-Abfragen, eine Datenbank auf inhaltliche Integrität überprüft. Diese Regeln müssen beliebig verschachtelbar sein. Das heißt, dass es möglich sein muss, die Ergebnissmengen zweier oder meherer Regeln miteinander zu verknüpfen um so eine neue Regel erstellen zu können.
+
+Das Ergebniss einer solchen Prüfung soll in einem leicht weiterverarbeitbaren Format ausgegeben werden um es \bspw in einem Monitoring System anzeigen zu lassen.
+
+
+\subsection{Projektbegründung} 
+\label{sec:Projektbegruendung}
+Das Hauptproblem des momentanen Validierungsprozesses ist das hohe Maß an manueller Arbeit. Da die Restriktionen teilweise sehr komplex sind und sich über mehrere Felder und Tabellen erstrecken können, ist die Chance, dass bei der manuellen Prüfung ein Fehler passiert sehr hoch. Außerdem ist dieser Prozess sehr Zeitintensiv.
+
+Da es keinen automatisierten Weg zur Prüfung gibt, erfordern selbst kleinste Änderungen der Daten eine erneute manuelle Validierung der Datenbank. Dies kann sich massiv auf die Produktivität der Entwickler auswirken.
+
+Des Weiteren ist es nur schwer möglich, das Ergebnis einer Prüfung weiterzuverwerten. Es existiert auch keine Möglichkeit einer Einbindung in das \ac{CI} System um die Validierung automatisch bei jedem Build auszuführen.
+
+Diese Probleme sollen nun durch ein Tool zur automatischen Validierung der Datenbank gelöst werden. Ein weiterer Vorteil einer Softwarelösung ist es, dass sich das Tool auch problemlos auf andere Datenbanken und Projekte anwenden lässt.
+
+\subsection{Projektschnittstellen} 
+\label{sec:Projektschnittstellen}
+Die Anwendung muss ausschließlich mit der zu validierenden Datenbank interagieren können. Hierfür muss der entsprechende Datenbanktreiber auf dem ausführenden System vorhanden sein.
+
+Mit weiteren externen Systemen muss \emph{nicht} interagiert werden.
+
+\subsection{Projektabgrenzung} 
+\label{sec:Projektabgrenzung}
+Das Abschlussprojekt befasst sich nicht mit dem Weiterverabeiten des Ergebnisses einer Prüfung. Die Integration in \zB ein \acs{CI}-System ist also nicht Bestandteil der Arbeit.

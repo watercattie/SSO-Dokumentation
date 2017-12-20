@@ -1,0 +1,100 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Analysephase} 
+\label{sec:Analysephase}
+
+
+\subsection{Ist-Analyse} 
+\label{sec:IstAnalyse}
+
+Da in dieser frühen Entwicklungsphase noch keine Entwicklertools existieren, muss der Großteil der Testdaten von Hand in der Datenbank angelegt werden. Hierduch kann es passieren, dass bei der Konfiguration der teils sehr komplexen Zusammenhänge und Abhängigkeiten der Datensätze ein Fehler unterläuft. Dies hat zur Folge, das inkonsistente Daten vorliegen, die zu Fehlern im Programmablauf führen können.
+
+Wie in den Abschnitten \fullnameref{sec:Projektziel} und \fullnameref{sec:Projektbegruendung} beschrieben, existiert kein automatisierter Weg eine Datenbank auf inhaltliche Integrität zu prüfen. Die Entwickler müssen die Datenbank manuell validieren. Dieser Prozess sieht in der Regel wie folgt aus:
+
+\begin{enumerate}
+	\item Die betroffene Datenbank in einem \acs{GUI}-Programm wie \textit{pgAdmin} öffnen
+	\item Sämtliche betroffenen Felder und Tabellen manuell prüfen
+	\item Bei komplexeren Regeln muss zusätzlich noch geprüft werden, ob alle benötigten Einträge in den betroffenen Verbindungstabellen existieren
+\end{enumerate}
+
+Dieser Prozess ist zeitaufwändig, monoton und gerade bei komplexeren Regeln sehr fehleranfällig. Die Fehlersuche wird hierdurch unnötig verlängert, da zuerst bestimmt werden muss, ob sich der Fehler in der Programmlogik oder in der Datenbank befindet.
+
+
+\subsection{Wirtschaftlichkeitsanalyse}
+\label{sec:Wirtschaftlichkeitsanalyse}
+
+Durch den sehr hohen zeitlichen Mehraufwand, der durch den momentan Prozess anfällt, ist eine Umsetzung des Projektes unbedingt nötig. In den folgenden Abschnitten wird erläutert, ob sich das Projekt auch aus wirtschaftlicher Sicht für das Unternehmen lohnt.
+
+
+\subsubsection{\gqq{Make or Buy}-Entscheidung}
+\label{sec:MakeOrBuyEntscheidung}
+
+Da es sich bei der Problematik um ein sehr spezifisches Problem der Entwicklung von \textit{syn6} handelt, konnten die Entwickler kein geeignetes Tool auf dem Markt finden, was allen benötigten Ansprüchen entspricht. Darum wurde sich dazu entschieden, das Projekt in Eigenentwicklung durchzuführen.
+
+
+\subsubsection{Projektkosten}
+\label{sec:Projektkosten}
+
+Bei der Berechnung der Projektkosten müssen sowohl die Personalkosten, die durch die Entwicklung des Projektes anfallen, als auch die verwendeten Ressourcen berücksichtigt werden. Bei den Personalkosten muss weiterhin zwischen den Stundensätzen von Auszubildenden und Mitarbeitern unterschieden werden.
+
+Der Stundensatz eines Mitarbeiters wird mit \eur{37,50} bemessen, der eines Auszubildenden mit \eur{10}. Für die Nutzung der Ressourcen\footnote{Räumlichkeiten, Arbeitsplatz, \etc} wird ein pauschaler Stundensatz von \eur{15} angenommen. Sämtliche Angaben stammen aus dem Controlling.
+
+Aus diesen Werten ergeben sich die Projektkosten in Tabelle~\ref{tab:Kostenaufstellung}.
+
+\tabelle{Kostenaufstellung}{tab:Kostenaufstellung}{Kostenaufstellung.tex}
+
+
+\subsubsection{Amortisationsdauer}
+\label{sec:Amortisationsdauer}
+
+Die Automatisierung des Validierungsprozesses hat eine deutliche Zeitersparnis zur Folge. 
+
+Da es sich nicht um einen täglichen Prozess handelt, und die Dauer einer manuellen Validierung stark abhängig von der Komplexität der zu prüfenden Regel ist, ist es schwer eine Aussage über die tatsächliche Zeitersparnis zu treffen. Schätzungen der Entwickler lagen bei einer Einsparung von 15-60 Minuten pro Prüfung. Für die Berechnung der Amortisationsdauer wird davon ausgegangen, dass eine Prüfung einmal in der Woche nötig ist. Für die Zeitersparnis pro Prüfung werden als Mittelwert 37,5 Minuten angenommen. 
+
+Dies ergibt eine tägliche Ersparnis von
+
+\begin{eqnarray}
+\frac{37,5 \mbox{ min/Woche}}{5 \mbox{ Tage/Woche}} = 7,5 \mbox{ min/Tag}
+\end{eqnarray}
+
+Bei einer Zeiteinsparung von 7,5 Minuten pro Tag für beide Backend Entwickler und 254 Arbeitstagen\footnote{vgl. http://www.schnelle-online.info/Arbeitstage/Anzahl-Arbeitstage-2015.html} im Jahr ergibt sich eine Zeiteinsparung von 
+\begin{eqnarray}
+2 \cdot 254 \frac{Tage}{Jahr} \cdot 7,5 \frac{min}{Tag} = 3810 \frac{min}{Jahr} \approx 63,5 \frac{h}{Jahr} 
+\end{eqnarray}
+
+Dadurch ergibt sich eine jährliche Einsparung von 
+\begin{eqnarray}
+63,5 \mbox{ h} \cdot \eur{(37,5 + 15)}{\mbox{/h}} = \eur{3333,75}
+\end{eqnarray}
+
+Die Amortisationszeit beträgt also $\frac{\eur{2065,00}}{\eur{3333,75}\mbox{/Jahr}} \approx 0,6 \mbox{ Jahre} \approx 7 \mbox{ Monate}$.
+
+
+\subsection{Nutzwertanalyse}
+\label{sec:Nutzwertanalyse}
+
+Neben den in \fullnameref{sec:Amortisationsdauer} aufgeführten wirtschaftlichen Vorteilen ergeben sich durch Realisierung des Projekts noch einige zusätliche nicht-monitäre Vorteile.
+
+Ein automatisierter Prüfprozess ermöglicht es, das Ergebnis einer Prüfung weiterzuvearbeiten, um es \zB in einer Weboberfläche oder einem Monitoring System anzeigen zu lassen. Außerdem ermöglicht es die Einbindung in das \acs{CI}-System um die Datenbank kontinuierlich zu Prüfen. 
+
+Obwohl das Projekt im Rahmen von \textit{syn6} entwickelt wurde, lässt es sich auch Problemlos auf andere Projekte und Datenbanken Anwenden. Der tatsächliche Nutzen geht also über \textit{syn6} hinaus.
+
+
+\subsection{Qualitätsanforderungen}
+\label{sec:Qualitaetsanforderungen}
+
+Die Qualitätsanforderungen an die Anwendung lassen sich Tabelle~\ref{tab:Qualitaetsanforderungen} entnehmen.
+
+\tabelle{Qualitätsanforderungen}{tab:Qualitaetsanforderungen}{Qualitaetsanforderungen.tex}
+
+
+\subsection{Lastenheft/Fachkonzept}
+\label{sec:Lastenheft}
+\begin{itemize}
+	\item Auszüge aus dem Lastenheft/Fachkonzept, wenn es im Rahmen des Projekts erstellt wurde.
+	\item Mögliche Inhalte: Funktionen des Programms (Muss/Soll/Wunsch), User Stories, Benutzerrollen
+\end{itemize}
+
+\paragraph{Beispiel}
+Ein Beispiel für ein Lastenheft findet sich im \Anhang{app:Lastenheft}. 
+
+\Zwischenstand{Analysephase}{Analyse}
