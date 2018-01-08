@@ -1,0 +1,362 @@
+;; RefTeX parse info file
+;; File: /Users/bluemke/Documents/SSO-Doku/Projektdokumentation.tex
+;; User: bluemke (Sibylle Blümke)
+
+(set reftex-docstruct-symbol '(
+
+
+(xr nil "\\\\\\\\\\\\")
+
+(index-tags "idx")
+
+(is-multi t)
+
+(bibview-cache)
+
+(master-dir . "/Users/bluemke/Documents/SSO-Doku/")
+
+(label-numbers)
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Projektdokumentation.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Meta.tex")
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Meta.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Allgemein/Packages.tex")
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Allgemein/Packages.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Allgemein/Seitenstil.tex")
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Allgemein/Seitenstil.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Allgemein/Befehle.tex")
+
+(file-error "Tabellen/#3")
+
+("#2" "t" "#1" "/Users/bluemke/Documents/SSO-Doku/Allgemein/Befehle.tex" nil)
+
+(file-error "Tabellen/#1")
+
+(index "idx" "\\newcommand{\\Index}[2][\\empty]{\\ifthenelse{\\equal{#1}{\\empty}}{\\index{#2}#2}{\\index{#1}#2}}" "/Users/bluemke/Documents/SSO-Doku/Allgemein/Befehle.tex" 2310 "#2" "#2" "#2" "#2" nil)
+
+(index "idx" "\\newcommand{\\Index}[2][\\empty]{\\ifthenelse{\\equal{#1}{\\empty}}{\\index{#2}#2}{\\index{#1}#2}}" "/Users/bluemke/Documents/SSO-Doku/Allgemein/Befehle.tex" 2324 "#1" "#1" "#1" "#1" nil)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Allgemein/Befehle.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Befehle.tex")
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Befehle.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Deckblatt.tex")
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Deckblatt.tex")
+
+(toc "toc" "    * \\abkvz" "/Users/bluemke/Documents/SSO-Doku/Projektdokumentation.tex" nil 2 "*" "\\section*{\\abkvz}" 1673)
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Abkuerzungen.tex")
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Abkuerzungen.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex")
+
+(toc "toc" "    1 Einleitung" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil 2 "1" "\\section{Einleitung}" 43)
+
+("sec:Einleitung" "s" "\\subsection{Projektumfeld}  Ausbildungsbetrieb ist die \\textsc{synectic software \\& services gmbh}, " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil)
+
+(toc "toc" "      1.1 Projektumfeld" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil 3 "1.1" "\\subsection{Projektumfeld}" 89)
+
+("sec:Projektumfeld" "s" "Ausbildungsbetrieb ist die \\textsc{synectic software \\& services gmbh}, im Folgenden als \\textit{syn" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil)
+
+(toc "toc" "      1.2 Projektziel" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil 3 "1.2" "\\subsection{Projektziel}" 742)
+
+("sec:Projektziel" "s" "Durch die Anforderungen an die Software \\textit{syn6} können die Daten innerhalb der Datenbank gewis" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil)
+
+(toc "toc" "      1.3 Projektbegründung" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil 3 "1.3" "\\subsection{Projektbegründung}" 2503)
+
+("sec:Projektbegruendung" "s" "Das Hauptproblem des momentanen Validierungsprozesses ist das hohe Maß an manueller Arbeit. Da die R" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil)
+
+(toc "toc" "      1.4 Projektschnittstellen" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil 3 "1.4" "\\subsection{Projektschnittstellen}" 3572)
+
+("sec:Projektschnittstellen" "s" "Die Anwendung muss ausschließlich mit der zu validierenden Datenbank interagieren können. Hierfür mu" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil)
+
+(toc "toc" "      1.5 Projektabgrenzung" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil 3 "1.5" "\\subsection{Projektabgrenzung}" 3895)
+
+("sec:Projektabgrenzung" "s" "Das Abschlussprojekt befasst sich nicht mit dem Weiterverabeiten des Ergebnisses einer Prüfung. Die " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex" nil)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einleitung.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex")
+
+(toc "toc" "    2 Projektplanung" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil 2 "2" "\\section{Projektplanung}" 43)
+
+("sec:Projektplanung" "s" "\\subsection{Projektphasen}  Insgesamt standen für die Umsetzung des Projekts 70 Stunden zur Verfügun" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil)
+
+(toc "toc" "      2.1 Projektphasen" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil 3 "2.1" "\\subsection{Projektphasen}" 98)
+
+("sec:Projektphasen" "s" "Insgesamt standen für die Umsetzung des Projekts 70 Stunden zur Verfügung. Vor Projektbeginn wurden " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil)
+
+(toc "toc" "      2.2 Ressourcenplanung" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil 3 "2.2" "\\subsection{Ressourcenplanung}" 568)
+
+("sec:Ressourcenplanung" "s" "Eine vollständige Auflistung aller während der Umsetzung des Projekts verwendeten Resourcen befindet" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil)
+
+(toc "toc" "      2.3 Entwicklungsprozess" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil 3 "2.3" "\\subsection{Entwicklungsprozess}" 1012)
+
+("sec:Entwicklungsprozess" "s" "Der Entwicklungsprozess definiert die Vorgehensweise, nach welcher das Projekt entwickelt wird. Für " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil)
+
+(toc "toc" "          2.3.0.1 1. Test schreiben, der fehlschlägt \\textit{(red)}" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil 5 "2.3.0.1" "\\paragraph{1. Test schreiben, der fehlschlägt \\textit{(red)}}" 2583)
+
+(toc "toc" "          2.3.0.2 2. Minimum an Implementierung schreiben, sodass der Test erfolgreich durchläuft \\textit{(green)}" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil 5 "2.3.0.2" "\\paragraph{2. Minimum an Implementierung schreiben, sodass der Test erfolgreich durchläuft \\textit{(green)}}" 3059)
+
+(toc "toc" "          2.3.0.3 3. Falls nötig Refaktorisieren des Codes \\textit{(refactor)}" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex" nil 5 "2.3.0.3" "\\paragraph{3. Falls nötig Refaktorisieren des Codes \\textit{(refactor)}}" 3945)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Projektplanung.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex")
+
+(toc "toc" "    3 Analysephase" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 2 "3" "\\section{Analysephase}" 43)
+
+("sec:Analysephase" "s" "\\subsection{Ist-Analyse}  Da in dieser frühen Entwicklungsphase noch keine Entwicklertools existiere" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil)
+
+(toc "toc" "      3.1 Ist-Analyse" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 3 "3.1" "\\subsection{Ist-Analyse}" 94)
+
+("sec:IstAnalyse" "s" "Da in dieser frühen Entwicklungsphase noch keine Entwicklertools existieren, muss der Großteil der T" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil)
+
+(toc "toc" "      3.2 Wirtschaftlichkeitsanalyse" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 3 "3.2" "\\subsection{Wirtschaftlichkeitsanalyse}" 1438)
+
+("sec:Wirtschaftlichkeitsanalyse" "s" "Durch den sehr hohen zeitlichen Mehraufwand, der durch den momentan Prozess anfällt, ist eine Umsetz" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil)
+
+(toc "toc" "        3.2.1 \\gqq{Make or Buy}-Entscheidung" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 4 "3.2.1" "\\subsubsection{\\gqq{Make or Buy}-Entscheidung}" 1779)
+
+("sec:MakeOrBuyEntscheidung" "s" "Da es sich bei der Problematik um ein sehr spezifisches Problem der Entwicklung von \\textit{syn6} ha" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil)
+
+(toc "toc" "        3.2.2 Projektkosten" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 4 "3.2.2" "\\subsubsection{Projektkosten}" 2162)
+
+("sec:Projektkosten" "s" "Bei der Berechnung der Projektkosten müssen sowohl die Personalkosten, die durch die Entwicklung des" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil)
+
+(toc "toc" "        3.2.3 Amortisationsdauer" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 4 "3.2.3" "\\subsubsection{Amortisationsdauer}" 2975)
+
+("sec:Amortisationsdauer" "s" "Die Automatisierung des Validierungsprozesses hat eine deutliche Zeitersparnis zur Folge. Da es sich" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil)
+
+(toc "toc" "      3.3 Nutzwertanalyse" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 3 "3.3" "\\subsection{Nutzwertanalyse}" 4461)
+
+("sec:Nutzwertanalyse" "s" "Neben den in \\fullnameref{sec:Amortisationsdauer} aufgeführten wirtschaftlichen Vorteilen ergeben si" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil)
+
+(toc "toc" "      3.4 Qualitätsanforderungen" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 3 "3.4" "\\subsection{Qualitätsanforderungen}" 5189)
+
+("sec:Qualitaetsanforderungen" "s" "Die Qualitätsanforderungen an die Anwendung lassen sich Tabelle~\\ref{tab:Qualitaetsanforderungen} en" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil)
+
+(toc "toc" "      3.5 Lastenheft/Fachkonzept" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 3 "3.5" "\\subsection{Lastenheft/Fachkonzept}" 5465)
+
+("sec:Lastenheft" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil)
+
+(toc "toc" "          3.5.0.1 Beispiel" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex" nil 5 "3.5.0.1" "\\paragraph{Beispiel}" 5748)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Analysephase.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex")
+
+(toc "toc" "    4 Entwurfsphase" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 2 "4" "\\section{Entwurfsphase}" 43)
+
+("sec:Entwurfsphase" "s" "\\subsection{Zielplattform}  Wie in Abschnitt \\fullnameref{sec:Projektziel} erwähnt, soll am Ende des" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil)
+
+(toc "toc" "      4.1 Zielplattform" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 3 "4.1" "\\subsection{Zielplattform}" 95)
+
+("sec:Zielplattform" "s" "Wie in Abschnitt \\fullnameref{sec:Projektziel} erwähnt, soll am Ende des Abschlussprojektes eine eig" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil)
+
+(toc "toc" "      4.2 Architekturdesign" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 3 "4.2" "\\subsection{Architekturdesign}" 1267)
+
+("sec:Architekturdesign" "s" "Um die Abhängigkeiten zwischen den einzelnen Programmkomponenten zu verwalten, wurde das Cake Patter" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil)
+
+(toc "toc" "      4.3 Entwurf der Benutzeroberfläche" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 3 "4.3" "\\subsection{Entwurf der Benutzeroberfläche}" 2288)
+
+("sec:Benutzeroberflaeche" "s" "Da die Anwendung automatisiert ausgeführt werden soll, wurde auf eine grafische Benutzeroberfläche v" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil)
+
+(toc "toc" "      4.4 Datenmodell" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 3 "4.4" "\\subsection{Datenmodell}" 3179)
+
+("sec:Datenmodell" "s" "Im folgenden sollen die wichtigsten Komponenten des Datenmodells genannt und kurz erläutert werden. " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil)
+
+(toc "toc" "          4.4.0.1 Runner" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 5 "4.4.0.1" "\\paragraph{Runner}" 3419)
+
+(toc "toc" "          4.4.0.2 Regel" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 5 "4.4.0.2" "\\paragraph{Regel}" 3770)
+
+(toc "toc" "          4.4.0.3 Reporter" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 5 "4.4.0.3" "\\paragraph{Reporter}" 4295)
+
+(toc "toc" "      4.5 Geschäftslogik" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 3 "4.5" "\\subsection{Geschäftslogik}" 4378)
+
+("sec:Geschaeftslogik" "s" "Der Ablauf einer Validierung lässt sich in vier Phasen unterteilen: \\paragraph{Einlesen der Hauptdat" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil)
+
+(toc "toc" "          4.5.0.1 Einlesen der Hauptdatei" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 5 "4.5.0.1" "\\paragraph{Einlesen der Hauptdatei}" 4504)
+
+(toc "toc" "          4.5.0.2 Erstellen der Regeln" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 5 "4.5.0.2" "\\paragraph{Erstellen der Regeln}" 4803)
+
+(toc "toc" "          4.5.0.3 Evaluieren der Regeln" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 5 "4.5.0.3" "\\paragraph{Evaluieren der Regeln}" 5200)
+
+(toc "toc" "          4.5.0.4 Ergebnisausgabe" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 5 "4.5.0.4" "\\paragraph{Ergebnisausgabe}" 5674)
+
+(toc "toc" "      4.6 Pflichtenheft/Datenverarbeitungskonzept" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 3 "4.6" "\\subsection{Pflichtenheft/Datenverarbeitungskonzept}" 5870)
+
+("sec:Pflichtenheft" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil)
+
+(toc "toc" "          4.6.0.1 Beispiel" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex" nil 5 "4.6.0.1" "\\paragraph{Beispiel}" 6091)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Entwurfsphase.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex")
+
+(toc "toc" "    5 Implementierungsphase" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil 2 "5" "\\section{Implementierungsphase}" 43)
+
+("sec:Implementierungsphase" "s" "\\subsection{Implementierung der Datenstrukturen}  Die zwei wichtigsten Datentypen, die das Herzstück" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil)
+
+(toc "toc" "      5.1 Implementierung der Datenstrukturen" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil 3 "5.1" "\\subsection{Implementierung der Datenstrukturen}" 111)
+
+("sec:ImplementierungDatenstrukturen" "s" "Die zwei wichtigsten Datentypen, die das Herzstück der Anwendung bilden, sind Regeln und Kompositstr" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil)
+
+(toc "toc" "          5.1.0.1 Beispiel" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil 5 "5.1.0.1" "\\paragraph{Beispiel}" 1486)
+
+(toc "toc" "      5.2 Implementierung des Kommandozeileninterfaces" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil 3 "5.2" "\\subsection{Implementierung des Kommandozeileninterfaces}" 1884)
+
+("sec:ImplementierungKommandozeileninterface" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil)
+
+(toc "toc" "      5.3 Implementierung der Geschäftslogik" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil 3 "5.3" "\\subsection{Implementierung der Geschäftslogik}" 2217)
+
+("sec:ImplementierungGeschaeftslogik" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil)
+
+(toc "toc" "          5.3.0.1 Beispiel" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex" nil 5 "5.3.0.1" "\\paragraph{Beispiel}" 2871)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Implementierungsphase.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Abnahmephase.tex")
+
+(toc "toc" "    6 Abnahmephase" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Abnahmephase.tex" nil 2 "6" "\\section{Abnahmephase}" 43)
+
+("sec:Abnahmephase" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Abnahmephase.tex" nil)
+
+(toc "toc" "          6.0.0.1 Beispiel" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Abnahmephase.tex" nil 5 "6.0.0.1" "\\paragraph{Beispiel}" 351)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Abnahmephase.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einfuehrungsphase.tex")
+
+(toc "toc" "    7 Einführungsphase" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einfuehrungsphase.tex" nil 2 "7" "\\section{Einführungsphase}" 43)
+
+("sec:Einfuehrungsphase" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einfuehrungsphase.tex" nil)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Einfuehrungsphase.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Dokumentation.tex")
+
+(toc "toc" "    8 Dokumentation" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Dokumentation.tex" nil 2 "8" "\\section{Dokumentation}" 43)
+
+("sec:Dokumentation" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Dokumentation.tex" nil)
+
+(toc "toc" "          8.0.0.1 Beispiel" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Dokumentation.tex" nil 5 "8.0.0.1" "\\paragraph{Beispiel}" 483)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Dokumentation.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex")
+
+(toc "toc" "    9 Fazit" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex" nil 2 "9" "\\section{Fazit}" 43)
+
+("sec:Fazit" "s" "\\subsection{Soll-/Ist-Vergleich}  \\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex" nil)
+
+(toc "toc" "      9.1 Soll-/Ist-Vergleich" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex" nil 3 "9.1" "\\subsection{Soll-/Ist-Vergleich}" 79)
+
+("sec:SollIstVergleich" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex" nil)
+
+(toc "toc" "          9.1.0.1 Beispiel (verkürzt)" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex" nil 5 "9.1.0.1" "\\paragraph{Beispiel (verkürzt)}" 713)
+
+(toc "toc" "      9.2 Lessons Learned" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex" nil 3 "9.2" "\\subsection{Lessons Learned}" 929)
+
+("sec:LessonsLearned" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex" nil)
+
+(toc "toc" "      9.3 Ausblick" "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex" nil 3 "9.3" "\\subsection{Ausblick}" 1175)
+
+("sec:Ausblick" "s" "\\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex" nil)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt/Fazit.tex")
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Inhalt.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Erklaerung.tex")
+
+(toc "toc" "      * Eidesstattliche Erklärung" "/Users/bluemke/Documents/SSO-Doku/Erklaerung.tex" nil 2 "  *" "\\addsec{Eidesstattliche Erklärung}" 51)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Erklaerung.tex")
+
+(appendix . t)
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Anhang.tex")
+
+(toc "toc" "    A Anhang" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil 2 "A" "\\section{Anhang}" 40)
+
+(toc "toc" "      A.1 Detaillierte Zeitplanung" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil 3 "A.1" "\\subsection{Detaillierte Zeitplanung}" 57)
+
+("app:Zeitplanung" "s" "\\tabelleAnhang{ZeitplanungKomplett} \\input{Anhang/AnhangRessourcen.tex} \\input{Anhang/AnhangLastenhe" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil)
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangRessourcen.tex")
+
+(toc "toc" "      A.2 Verwendete Resourcen" "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangRessourcen.tex" nil 3 "A.2" "\\subsection{Verwendete Resourcen}" 1)
+
+("app:Ressourcen" "s" "\\subsubsection{Hardware} \\begin{itemize} " "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangRessourcen.tex" nil)
+
+(toc "toc" "        A.2.1 Hardware" "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangRessourcen.tex" nil 4 "A.2.1" "\\subsubsection{Hardware}" 59)
+
+(toc "toc" "        A.2.2 Software" "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangRessourcen.tex" nil 4 "A.2.2" "\\subsubsection{Software}" 165)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangRessourcen.tex")
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangLastenheft.tex")
+
+(toc "toc" "      A.3 Lastenheft (Auszug)" "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangLastenheft.tex" nil 3 "A.3" "\\subsection{Lastenheft (Auszug)}" 1)
+
+("app:Lastenheft" "s" "Es folgt ein Auszug aus dem Lastenheft mit Fokus auf die Anforderungen: Die Anwendung muss folgende " "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangLastenheft.tex" nil)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangLastenheft.tex")
+
+(toc "toc" "      A.4 Kommandozeileninterface" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil 3 "A.4" "\\subsection{Kommandozeileninterface}" 242)
+
+("app:cli" "s" "\\begin{figure}[htb] \\centering \\includegraphicsKeepAspectRatio{cli.png}{1} \\caption{Kommandozeilenin" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil)
+
+(toc "toc" "      A.5 Komponentendiagramm" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil 3 "A.5" "\\subsection{Komponentendiagramm}" 429)
+
+("app:Komponentendiagramm" "s" "\\begin{figure}[htb] \\centering \\includegraphicsKeepAspectRatio{Komponentendiagramm.png}{1} \\caption{" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil)
+
+(toc "toc" "      A.6 Aktivitätsdiagramm - Einlesen einer Regel" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil 3 "A.6" "\\subsection{Aktivitätsdiagramm - Einlesen einer Regel}" 640)
+
+("app:AktivitaetRegelEinlesen" "s" "Das folgende Diagramm beschreibt das Einlesen einer Regel aus einer Regeldatei. \\begin{figure}[htb] " "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil)
+
+(toc "toc" "      A.7 Beispiel Hauptregeldatei" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil 3 "A.7" "\\subsection{Beispiel Hauptregeldatei}" 964)
+
+("app:MasterDatei" "s" "Ein Beispiel einer Hauptdatei. In der Hauptdatei werden sowohl die Datenbankverbindungsparamer besch" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil)
+
+(toc "toc" "      A.8 Implementierung des Regel \\acs{ADT}s" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil 3 "A.8" "\\subsection{Implementierung des Regel \\acs{ADT}s}" 1241)
+
+("app:RegelADT" "s" "\\lstinputlisting[language=scala]{Listings/Rule.scala} \\clearpage \\subsection{Implementierung des Kom" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil)
+
+(toc "toc" "      A.9 Implementierung des Komposit \\acs{ADT}s" "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil 3 "A.9" "\\subsection{Implementierung des Komposit \\acs{ADT}s}" 1378)
+
+("app:CompositeADT" "s" "\\lstinputlisting[language=scala]{Listings/Composition.scala} \\input{Anhang/AnhangPflichtenheft.tex} " "/Users/bluemke/Documents/SSO-Doku/Anhang.tex" nil)
+
+(bof "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangPflichtenheft.tex")
+
+(toc "toc" "      A.10 Pflichtenheft (Auszug)" "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangPflichtenheft.tex" nil 3 "A.10" "\\subsection{Pflichtenheft (Auszug)}" 1)
+
+("app:Pflichtenheft" "s" "\\subsubsection*{Zielbestimmung} \\begin{enumerate}[itemsep=0em,partopsep=0em,parsep=0em,topsep=0em] " "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangPflichtenheft.tex" nil)
+
+(toc "toc" "           * Zielbestimmung" "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangPflichtenheft.tex" nil 4 "   *" "\\subsubsection*{Zielbestimmung}" 64)
+
+(toc "toc" "           * Produkteinsatz" "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangPflichtenheft.tex" nil 4 "   *" "\\subsubsection*{Produkteinsatz}" 3662)
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Anhang/AnhangPflichtenheft.tex")
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Anhang.tex")
+
+(bib "/Users/bluemke/Documents/SSO-Doku/Bibliographie.bib")
+
+(eof "/Users/bluemke/Documents/SSO-Doku/Projektdokumentation.tex")
+))
+
