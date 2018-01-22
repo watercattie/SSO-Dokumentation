@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.22)  22 JAN 2018 15:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.22)  22 JAN 2018 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1561,6 +1561,10 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrpage2.sty
 Package: scrpage2 2017/04/13 v3.23 KOMA-Script package (page head and foot)
 LaTeX Info: Redefining \pagemark on input line 174.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/sectsty/sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
 ))
 (./Allgemein/Befehle.tex
 \myx=\skip192
@@ -1719,6 +1723,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 34.
 
+
+Class scrartcl Warning: incompatible usage of \@ssect detected.
+(scrartcl)              You've used the KOMA-Script implementation of \@ssect
+(scrartcl)              from within a non compatible caller, that does not
+(scrartcl)              \scr@s@ct@@nn@m@ locally.
+(scrartcl)              This could result in several error messages on input li
+ne 35.
+
 (./Projektdokumentation.toc
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 2.
 
@@ -1791,11 +1803,19 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 36.
 
 [2]
+
+Class scrartcl Warning: incompatible usage of \@ssect detected.
+(scrartcl)              You've used the KOMA-Script implementation of \@ssect
+(scrartcl)              from within a non compatible caller, that does not
+(scrartcl)              \scr@s@ct@@nn@m@ locally.
+(scrartcl)              This could result in several error messages on input li
+ne 39.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 39.
- (./Projektdokumentation.lof)
+(./Projektdokumentation.lof)
 \tf@lof=\write7
 \openout7 = `Projektdokumentation.lof'.
 
@@ -1815,11 +1835,19 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 ]
+
+Class scrartcl Warning: incompatible usage of \@ssect detected.
+(scrartcl)              You've used the KOMA-Script implementation of \@ssect
+(scrartcl)              from within a non compatible caller, that does not
+(scrartcl)              \scr@s@ct@@nn@m@ locally.
+(scrartcl)              This could result in several error messages on input li
+ne 43.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 43.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 43.
- (./Projektdokumentation.lot)
+(./Projektdokumentation.lot)
 \tf@lot=\write8
 \openout8 = `Projektdokumentation.lot'.
 
@@ -1877,11 +1905,19 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 ]
+
+Class scrartcl Warning: incompatible usage of \@ssect detected.
+(scrartcl)              You've used the KOMA-Script implementation of \@ssect
+(scrartcl)              from within a non compatible caller, that does not
+(scrartcl)              \scr@s@ct@@nn@m@ locally.
+(scrartcl)              This could result in several error messages on input li
+ne 52.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 54.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 54.
- (./Abkuerzungen.tex)
+(./Abkuerzungen.tex)
 File: Bilder/LogoBetrieb.png Graphic file (type png)
  <use Bilder/LogoBetrieb.png>
 Package pdftex.def Info: Bilder/LogoBetrieb.png used on input line 56.
@@ -2605,8 +2641,16 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-File: Bilder/LogoBetrieb.png Graphic file (type png)
 
+
+Class scrartcl Warning: incompatible usage of \@ssect detected.
+(scrartcl)              You've used the KOMA-Script implementation of \@ssect
+(scrartcl)              from within a non compatible caller, that does not
+(scrartcl)              \scr@s@ct@@nn@m@ locally.
+(scrartcl)              This could result in several error messages on input li
+ne 4.
+
+File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
 Package pdftex.def Info: Bilder/LogoBetrieb.png used on input line 20.
 (pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
@@ -2641,6 +2685,14 @@ Package acronym Warning: Acronym `SVN' is not defined on input line 28.
 
 Package acronym Warning: Acronym `NatInfo' is not defined on input line 28.
 
+
+Class scrartcl Warning: incompatible usage of \@ssect detected.
+(scrartcl)              You've used the KOMA-Script implementation of \@ssect
+(scrartcl)              from within a non compatible caller, that does not
+(scrartcl)              \scr@s@ct@@nn@m@ locally.
+(scrartcl)              This could result in several error messages on input li
+ne 43.
+
 ))
 
 Package natbib Warning: There were undefined citations.
@@ -2672,10 +2724,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 26507 strings out of 492995
- 467330 string characters out of 6132704
- 721885 words of memory out of 5000000
- 29135 multiletter control sequences out of 15000+600000
+ 26602 strings out of 492995
+ 468775 string characters out of 6132704
+ 723113 words of memory out of 5000000
+ 29226 multiletter control sequences out of 15000+600000
  73711 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,16n,80p,8831b,1310s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2698,7 +2750,7 @@ xlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/20
 dist/fonts/type1/public/lm/lmsso12.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
 blic/lm/lmtt10.pfb>
-Output written on Projektdokumentation.pdf (32 pages, 619662 bytes).
+Output written on Projektdokumentation.pdf (32 pages, 620086 bytes).
 PDF statistics:
  866 PDF objects out of 1000 (max. 8388607)
  797 compressed objects within 8 object streams
