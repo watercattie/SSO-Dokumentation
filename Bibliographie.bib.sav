@@ -107,7 +107,7 @@
   url       = {https://www.univention.de/2016/12/einmalige-anmeldung-per-single-sign-on/},
 }
 
-@Article{TDDcircle,
+@Article{T,
   author    = {EETech Media, LLC},
   title     = {How to Write Better Unit Tests For Embedded Software With TDD},
   year      = {2014},

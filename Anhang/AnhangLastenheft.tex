@@ -1,32 +1,38 @@
+\newpage
 \subsection{Lastenheft (Auszug)}
 \label{app:Lastenheft}
 Es folgt ein Auszug aus dem Lastenheft mit Fokus auf die Anforderungen:
 
 Die Anwendung muss folgende Anforderungen erfüllen: 
 \begin{enumerate}[itemsep=0em,partopsep=0em,parsep=0em,topsep=0em]
-\item Verarbeitung der Moduldaten
+\item Single-Sign-On-Server
 	\begin{enumerate}
-	\item Die Anwendung muss die von Subversion und einem externen Programm bereitgestellten Informationen (z.B. Source-Benutzer, -Datum, Hash) verarbeiten.
-	\item Auslesen der Beschreibung und der Stichwörter aus dem Sourcecode.
+	\item Die Anwendung verfügt über eine eigene Datenbank für die Benutzerdaten.
+	\item Anzeigen einer Übersichtsseite für autorisierte Clienten und Token mit allen relevanten Informationen zu diesen.
+	\item Die Authentifizierung muss über einen sicheren Kanal erfolgen.
 	\end{enumerate}
-\item Darstellung der Daten
+\item Login Prozess der Client Anwendung
 	\begin{enumerate}
-	\item Die Anwendung muss eine Liste aller Module erzeugen inkl. Source-Benutzer und -Datum, letztem Commit-Benutzer und -Datum für alle drei Umgebungen. 
-	\item Verknüpfen der Module mit externen Tools wie z.B. Wiki-Einträgen zu den Modulen oder dem Sourcecode in Subversion.
-	\item Die Sourcen der Umgebungen müssen verglichen und eine schnelle Übersicht zur Einhaltung des allgemeinen Entwicklungsprozesses gegeben werden. 
-	\item Dieser Vergleich muss auf die von einem bestimmten Benutzer bearbeiteten Module eingeschränkt werden können. 
-	\item Die Anwendung muss in dieser Liste auch Module anzeigen, die nach einer Bearbeitung durch den gesuchten Benutzer durch jemand anderen bearbeitet wurden. 
-	\item Abweichungen sollen kenntlich gemacht werden. 
-	\item Anzeigen einer Übersichtsseite für ein Modul mit allen relevanten Informationen zu diesem.
+	\item Die Client Anwendung verfügt über eine eigene Benutzerdatenbank.
+	\item Die Authentifizierungsmöglichkeit über wy-connect muss einfach auf andere Clients übertragbar sein.
+	\item Der Nutzer muss die Client Anwendung zum Zugriff autorisieren.
+	\item Der Nutzer meldet sich nur am Server mit seinen Nutzerdaten an.
 	\end{enumerate}
 \item Sonstige Anforderungen
 	\begin{enumerate}
-	\item Die Anwendung muss ohne das Installieren einer zusätzlichen Software über einen Webbrowser im Intranet erreichbar sein.
-	\item Die Daten der Anwendung müssen jede Nacht \bzw nach jedem \acs{SVN}-Commit automatisch aktualisiert werden. 
-	\item Es muss ermittelt werden, ob Änderungen auf der Produktionsumgebung vorgenommen wurden, die nicht von einer anderen Umgebung kopiert wurden. Diese Modulliste soll als Mahnung per E-Mail an alle Entwickler geschickt werden (Peer Pressure).
-	\item Die Anwendung soll jederzeit erreichbar sein.
-	\item Da sich die Entwickler auf die Anwendung verlassen, muss diese korrekte Daten liefern und darf keinen Interpretationsspielraum lassen.
-	\item Die Anwendung muss so flexibel sein, dass sie bei Änderungen im Entwicklungsprozess einfach angepasst werden kann.
+	\item Der Server sowie der Login Prozess am Client soll über eine \acs{GUI} intuitiv bedient werden können.
+	\item Der Server sowie der Client müssen ohne Installation von zusätzlicher Software über einen
+Webbrowser im Intranet erreichbar sein. 
+	\item Zur Versionskontrolle der Anwendungsentwicklung soll ein Git\footnote{vgl. \cite{Git}}-Repository
+verwendet werden.
+	\item Die Anwendung soll in der Programmiersprache \acs{PHP}\footnote{vgl. \cite{PHP}} mittels des Frameworks Laravel\footnote{vgl. \cite{Laravel}} umgesetzt werden.	
+	\item Der Server soll auf dem firmeninternen Webserver gehostet
+werden.
+	\item Bei Einsatz einer MySQL-Datenbank\footnote{vgl. \cite{MySQL}} soll der firmeninterne MySQL Server Verwendung
+finden.
+	\item Der Einrichtungsprozess für neue Clienten muss dokumentiert werden.
 	\end{enumerate}
 \end{enumerate}
+		{[...]}
+
 

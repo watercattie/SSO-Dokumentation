@@ -6,23 +6,28 @@
 \subsection{Ist-Analyse} 
 \label{sec:IstAnalyse}
 
-Da in dieser frühen Entwicklungsphase noch keine Entwicklertools existieren, muss der Großteil der Testdaten von Hand in der Datenbank angelegt werden. Hierduch kann es passieren, dass bei der Konfiguration der teils sehr komplexen Zusammenhänge und Abhängigkeiten der Datensätze ein Fehler unterläuft. Dies hat zur Folge, das inkonsistente Daten vorliegen, die zu Fehlern im Programmablauf führen können.
+Derzeit gibt es bei der Anmeldung an verschiedene Dienste der wycomco GmbH keine Optimierungen. 
+Bei allen Anwendungen kann man sich nicht selbständig registrieren und sich damit ein Benutzerkonto anlegen. Der jeweilige Administrator oder Befugte muss den User per Hand per Email einladen, damit dieser die Registrierung durchführen kann und nach einem Akivierungslink die App vollständig nutzbar ist. 
 
-Wie in den Abschnitten \fullnameref{sec:Projektziel} und \fullnameref{sec:Projektbegruendung} beschrieben, existiert kein automatisierter Weg eine Datenbank auf inhaltliche Integrität zu prüfen. Die Entwickler müssen die Datenbank manuell validieren. Dieser Prozess sieht in der Regel wie folgt aus:
-
+Dieser Rhythmus lässt wie folgt beschreiben:
 \begin{enumerate}
-	\item Die betroffene Datenbank in einem \acs{GUI}-Programm wie \textit{pgAdmin} öffnen
-	\item Sämtliche betroffenen Felder und Tabellen manuell prüfen
-	\item Bei komplexeren Regeln muss zusätzlich noch geprüft werden, ob alle benötigten Einträge in den betroffenen Verbindungstabellen existieren
+	\item Anlegen eines vorläufigen Benutzerkontos durch den Admin
+	\item Benutzer bekommt eine Mail und klickt auf den Registrierungslink
+	\item Benutzer füllt das Registrierungsformular aus
+	\item Benutzer bekommt eine Email mit einem Aktivierungslink
+	\item Benutzer klickt auf den Link und lässt sich damit aktivieren
+	\item Benutzer muss sich einloggen und kann damit die Anwendung vollständig nutzen
 \end{enumerate}
 
-Dieser Prozess ist zeitaufwändig, monoton und gerade bei komplexeren Regeln sehr fehleranfällig. Die Fehlersuche wird hierdurch unnötig verlängert, da zuerst bestimmt werden muss, ob sich der Fehler in der Programmlogik oder in der Datenbank befindet.
+Wie schnell ersichtlich wird, ist der Aufwand immens, wenn dieser Vorgang auch nur dreimal wiederholt werden muss.
+Dieser Prozess ist sehr zeitaufwändig. Auch im täglichen Geschäft ist es erforderlich sich an jeder Anwendung einzeln anzumelden. Wie in Abschnitt \ref{sec:Projektbegruendung} schon erwähnt, führt dies schnell zu Trivialpasswörtern und damit zu einem Sicherheitsrisiko. 
 
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
 
-Durch den sehr hohen zeitlichen Mehraufwand, der durch den momentan Prozess anfällt, ist eine Umsetzung des Projektes unbedingt nötig. In den folgenden Abschnitten wird erläutert, ob sich das Projekt auch aus wirtschaftlicher Sicht für das Unternehmen lohnt.
+Durch den momentanen Prozess entsteht ein hoher zeitlicher Mehraufwand, der durch die Umsetzung des Projektes verringert werden kann.
+Damit ist es dringend nötig dieses Projekt umzusetzen. Ob sich das auch wirtschaftlich begründen lässt, wird in den nächsten Abschnitten erläutert.
 
 
 \subsubsection{\gqq{Make or Buy}-Entscheidung}

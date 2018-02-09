@@ -2,46 +2,46 @@
 \section{Einleitung}
 \label{sec:Einleitung}
 
+Die folgende Projektdokumentation wurde im Rahmen des IHK Abschlussprojektes erstellt, welches während der Ausbildung zum Fachinformatiker Fachrichtung Anwendungsentwicklung durchgeführt wurde.
 
 \subsection{Projektumfeld} 
 \label{sec:Projektumfeld}
 
-Ausbildungsbetrieb ist die \textsc{synectic software \& services gmbh}, im Folgenden als \textit{synectic} bezeichnet. \textit{synectic} ist ein mittelständisches Softwareunternehmen mit Sitz in Berlin. Zu den Produkten des Unternehmens gehören individuell anpassbare Softwarelösungen für die Arbeit im Bereich Case Management. Momentan beschäftig das Unternehmen 21 Mitarbeiter.
+Ausbildungsbetrieb ist die \textsc{wycomco GmbH}, im Folgenden als \textit{wycomco} bezeichnet. Wycomco ist ein Full-Service-Dienstleister im IT-Bereich mit Sitz in Berlin. Zu den Produkten des Unternehmens gehören außerdem individuell anpassbare Softwarelösungen für Anforderungen aller Art. Momentan beschäftigt das Unternehmen 12 Mitarbeiter. \\
 
-Der Auftraggeber des Projektes ist die Entwicklungsabteilung des Produktes \textit{syn6}. 
-
-Ziel von \textit{syn6} ist es, Kunden neben der momentanen Desktoplösung auch eine moderne, webbasierte Lösung anzubieten.
+Der Auftraggeber des Projektes ist die Entwicklungsabteilung von wycomco. 
 
 
 \subsection{Projektziel} 
 \label{sec:Projektziel}
-Durch die Anforderungen an die Software \textit{syn6} können die Daten innerhalb der Datenbank gewissen inhaltlichen Restriktionen unterliegen. Ein triviales Beispiel hierfür wäre, dass in einem bestimmten Feld nur Daten abgespeichert werden dürfen, die mit einem Großbuchstaben beginnen. Es sind allerdings auch komplexere Regeln möglich, die mehrere Felder aus mehreren Tabellen betreffen. Beispielsweise könnte eine Bedingung lauten, dass die Summe der Textlänge der Felder $A$ und $B$ die gleiche Länge wie das Feld $C$ besitzen müssen.
 
-Da sich das \textit{syn6} noch in einem sehr frühen Entwicklungsstadium befindet, müssen momentan viele Daten noch händisch in die Datenbank eingetragen werden. Eine Prüfroutine vor dem tatsächlichen Abspeichern der Daten in die Datenbank ist dadurch nicht möglich.
+Wycomco implementiert immer mehr Webanwendungen zur internen Nutzung. Bisher müssen sich die Mitarbeiter an jeder Anwendung mit eigenem - teils verschiedenen - Benutzernamen und Passwort registrieren und anschließend anmelden. Rechte und Rollen werden manuell gesetzt und eine Anbindung an die \acs{AD} ist nicht vorhanden.
 
-Durch das manuelle Anlegen von Daten in der Datenbank ist, gerade bei komplexeren Regeln, die Chance, dass eine dieser inhaltlichen Regeln verletzt wird relativ hoch. Solche inkonsistenten Daten erschweren die Fehlersuche, da zuerst ermittelt werden muss, ob es sich um einen Fehler in der Programmlogik handelt oder ob fehlerhafte Daten vorliegen.
-
-Ziel ist es, ein Konsolenbasiertes Tool zu entwickeln, was anhand von vordefinierten Regeln, in der Form von \acs{SQL}-Abfragen, eine Datenbank auf inhaltliche Integrität überprüft. Diese Regeln müssen beliebig verschachtelbar sein. Das heißt, dass es möglich sein muss, die Ergebnissmengen zweier oder meherer Regeln miteinander zu verknüpfen um so eine neue Regel erstellen zu können.
-
-Das Ergebniss einer solchen Prüfung soll in einem leicht weiterverarbeitbaren Format ausgegeben werden um es \bspw in einem Monitoring System anzeigen zu lassen.
-
+Mit einem Single-Sign-On Server soll dieser Prozess automatisiert und vereinfacht werden. Die eigenständige Applikation, im folgenden \textit{wy-connect} genannt, verwaltet die Benutzer an zentraler Stelle und vereinheitlicht die Nutzerdaten der verschiedenen Anwendungen. Die Anmeldung erfolgt ausschließlich am SSO über einen sicheren Kanal. \\
 
 \subsection{Projektbegründung} 
 \label{sec:Projektbegruendung}
-Das Hauptproblem des momentanen Validierungsprozesses ist das hohe Maß an manueller Arbeit. Da die Restriktionen teilweise sehr komplex sind und sich über mehrere Felder und Tabellen erstrecken können, ist die Chance, dass bei der manuellen Prüfung ein Fehler passiert sehr hoch. Außerdem ist dieser Prozess sehr Zeitintensiv.
 
-Da es keinen automatisierten Weg zur Prüfung gibt, erfordern selbst kleinste Änderungen der Daten eine erneute manuelle Validierung der Datenbank. Dies kann sich massiv auf die Produktivität der Entwickler auswirken.
+Im Unternehmen wird die Softwareentwicklung vorangetrieben und auch die Entwicklung im Eigenbedarf steigt stetig an. So existieren momentan drei Anwendungen die im Betrieb laufen oder in der Testphase sind. Alle drei Apps haben eine eigene Benutzerverwaltung mit eigenen Benutzerkennungen. Wird bei der ersten ein Nutzername zum anmelden vergeben, nutzt die zweite die Firmenmailadresse oder eine ID. 
 
-Des Weiteren ist es nur schwer möglich, das Ergebnis einer Prüfung weiterzuverwerten. Es existiert auch keine Möglichkeit einer Einbindung in das \ac{CI} System um die Validierung automatisch bei jedem Build auszuführen.
+An allen muss in regelmäßigen Abständen das Passwort geändert werden. 
+Damit gehört es zum Standard sich Passwörter aufzuschreiben, Passwörter generieren zu lassen oder vergessene Passwörter neu zu vergeben. Der Einfachheit halber neigt man dazu Trivialpasswörter zu nutzen, diese wiederholt einzusetzen und sie sich an unsicheren Stellen zu notieren\footnote{vgl. \cite{datenschutzbeauftragter}}. 
 
-Diese Probleme sollen nun durch ein Tool zur automatischen Validierung der Datenbank gelöst werden. Ein weiterer Vorteil einer Softwarelösung ist es, dass sich das Tool auch problemlos auf andere Datenbanken und Projekte anwenden lässt.
+Durch den wiederholten Anmeldeprozess an verschiedenen Diensten mit verschiedenen Sicherheitsvorkehrungen steigt zudem die Wahrscheinlichkeit, dass ein Passwort ausgespäht wird. 
+Dazu ein Anwendungsdiagramm im \Anhang{app:Use-Case-Diagramm}. \\
+
+Durch die Implementierung einer Single Sign-on-Lösung muss sich der Nutzer nur ein Master-Passwort merken und dieses einmalig bei der Anmeldung am wy-connect Dienst eingeben. Bei der Nutzung von SSO ist der größte Vorteil darin zu sehen, dass sich der Nutzer nicht nochmal registrieren muss, so dass das lästige Eintippen von Daten, Festlegen eines neuen Passwortes und Bestätigung der Registrierung entfällt. Auch der administrative Aufwand verringert sich bei einer zentralen Nutzerverwaltungfootnote{vgl. \cite{univention}.\\
+
+Dies hätte auf jeden Fall eine bessere Usability und eine nicht zu unterschätzende Zeitersparnis für Anwender im Vergleich zur derzeitigen Lösung zur Folge. 
+Aufgrund der angeführten Gründe hat sich die wycomco GmbH entschieden die Entwicklung von wy-connect in Auftrag zu geben.
 
 \subsection{Projektschnittstellen} 
 \label{sec:Projektschnittstellen}
-Die Anwendung muss ausschließlich mit der zu validierenden Datenbank interagieren können. Hierfür muss der entsprechende Datenbanktreiber auf dem ausführenden System vorhanden sein.
 
-Mit weiteren externen Systemen muss \emph{nicht} interagiert werden.
+Die Anwendung benötigt keinerlei Schnittstellen zu anderen Diensten. Der SSO-Server kommuniziert im Rahmen des Abschlussprojektes nur mit einem Testclient, der eigens implementiert wird.
+
+Integration mit anderen externen Systemen wie dem \acs{AD} ist nicht Teil der Anforderung.
 
 \subsection{Projektabgrenzung} 
 \label{sec:Projektabgrenzung}
-Das Abschlussprojekt befasst sich nicht mit dem Weiterverabeiten des Ergebnisses einer Prüfung. Die Integration in \zB ein \acs{CI}-System ist also nicht Bestandteil der Arbeit.
+Die Anbindung an einen Client wird in diesem Projekt nur für einen Testclient durchgeführt, die Durchführung für alle bestehenden Anwendungen im Unternehmen gehört nicht zum Projekt. Es wird allerdings eine Dokumentation bereitgestellt. Diese befindet sich im Anhang lalala(kommt noch). 
