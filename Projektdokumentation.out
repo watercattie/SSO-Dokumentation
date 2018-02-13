@@ -14,52 +14,53 @@
 \BOOKMARK [2][-]{subsection.19}{2.1 Projektphasen}{section.18}% 14
 \BOOKMARK [2][-]{subsection.21}{2.2 Ressourcenplanung}{section.18}% 15
 \BOOKMARK [2][-]{subsection.22}{2.3 Entwicklungsprozess}{section.18}% 16
-\BOOKMARK [1][-]{section.29}{3 Analysephase}{}% 17
-\BOOKMARK [2][-]{subsection.30}{3.1 Ist-Analyse}{section.29}% 18
-\BOOKMARK [2][-]{subsection.34}{3.2 Wirtschaftlichkeitsanalyse}{section.29}% 19
-\BOOKMARK [3][-]{subsubsection.35}{3.2.1 \214Make or Buy\215-Entscheidung}{subsection.34}% 20
-\BOOKMARK [3][-]{subsubsection.36}{3.2.2 Projektkosten}{subsection.34}% 21
-\BOOKMARK [3][-]{subsubsection.39}{3.2.3 Amortisationsdauer}{subsection.34}% 22
-\BOOKMARK [2][-]{subsection.44}{3.3 Nutzwertanalyse}{section.29}% 23
-\BOOKMARK [2][-]{subsection.45}{3.4 Qualit\344tsanforderungen}{section.29}% 24
-\BOOKMARK [2][-]{subsection.48}{3.5 Lastenheft/Fachkonzept}{section.29}% 25
-\BOOKMARK [2][-]{subsection.50}{3.6 Zwischenstand}{section.29}% 26
-\BOOKMARK [1][-]{section.52}{4 Entwurfsphase}{}% 27
-\BOOKMARK [2][-]{subsection.53}{4.1 Zielplattform}{section.52}% 28
-\BOOKMARK [2][-]{subsection.60}{4.2 Architekturdesign}{section.52}% 29
-\BOOKMARK [2][-]{subsection.67}{4.3 Entwurf der Benutzeroberfl\344che}{section.52}% 30
-\BOOKMARK [2][-]{subsection.68}{4.4 Datenmodell}{section.52}% 31
-\BOOKMARK [2][-]{subsection.72}{4.5 Gesch\344ftslogik}{section.52}% 32
-\BOOKMARK [2][-]{subsection.77}{4.6 Pflichtenheft/Datenverarbeitungskonzept}{section.52}% 33
-\BOOKMARK [2][-]{subsection.79}{4.7 Zwischenstand}{section.52}% 34
-\BOOKMARK [1][-]{section.81}{5 Implementierungsphase}{}% 35
-\BOOKMARK [2][-]{subsection.82}{5.1 Implementierung der Datenstrukturen}{section.81}% 36
-\BOOKMARK [2][-]{subsection.85}{5.2 Implementierung des Kommandozeileninterfaces}{section.81}% 37
-\BOOKMARK [2][-]{subsection.86}{5.3 Implementierung der Gesch\344ftslogik}{section.81}% 38
-\BOOKMARK [2][-]{subsection.88}{5.4 Zwischenstand}{section.81}% 39
-\BOOKMARK [1][-]{section.90}{6 Abnahmephase}{}% 40
-\BOOKMARK [2][-]{subsection.92}{6.1 Zwischenstand}{section.90}% 41
-\BOOKMARK [1][-]{section.94}{7 Einf\374hrungsphase}{}% 42
-\BOOKMARK [2][-]{subsection.95}{7.1 Zwischenstand}{section.94}% 43
-\BOOKMARK [1][-]{section.97}{8 Dokumentation}{}% 44
-\BOOKMARK [2][-]{subsection.100}{8.1 Zwischenstand}{section.97}% 45
-\BOOKMARK [1][-]{section.102}{9 Fazit}{}% 46
-\BOOKMARK [2][-]{subsection.103}{9.1 Soll-/Ist-Vergleich}{section.102}% 47
-\BOOKMARK [2][-]{subsection.106}{9.2 Lessons Learned}{section.102}% 48
-\BOOKMARK [2][-]{subsection.107}{9.3 Ausblick}{section.102}% 49
-\BOOKMARK [1][-]{section*.108}{Literaturverzeichnis}{}% 50
-\BOOKMARK [1][-]{section*.109}{Eidesstattliche Erkl\344rung}{}% 51
-\BOOKMARK [1][-]{appendix.110}{A Anhang}{}% 52
-\BOOKMARK [2][-]{subsection.111}{A.1 Detaillierte Zeitplanung}{appendix.110}% 53
-\BOOKMARK [2][-]{subsection.112}{A.2 Verwendete Resourcen}{appendix.110}% 54
-\BOOKMARK [3][-]{subsubsection.113}{A.2.1 Hardware}{subsection.112}% 55
-\BOOKMARK [3][-]{subsubsection.114}{A.2.2 Software}{subsection.112}% 56
-\BOOKMARK [2][-]{subsection.115}{A.3 Lastenheft \(Auszug\)}{appendix.110}% 57
-\BOOKMARK [2][-]{subsection.137}{A.4 Use-Case-Diagramm}{appendix.110}% 58
-\BOOKMARK [2][-]{subsection.139}{A.5 Kommandozeileninterface}{appendix.110}% 59
-\BOOKMARK [2][-]{subsection.141}{A.6 Komponentendiagramm}{appendix.110}% 60
-\BOOKMARK [2][-]{subsection.143}{A.7 Aktivit\344tsdiagramm - Einlesen einer Regel}{appendix.110}% 61
-\BOOKMARK [2][-]{subsection.145}{A.8 Beispiel Hauptregeldatei}{appendix.110}% 62
-\BOOKMARK [2][-]{subsection.160}{A.9 Implementierung des Regel ADT!s}{appendix.110}% 63
-\BOOKMARK [2][-]{subsection.178}{A.10 Implementierung des Komposit ADT!s}{appendix.110}% 64
-\BOOKMARK [2][-]{subsection.196}{A.11 Pflichtenheft \(Auszug\)}{appendix.110}% 65
+\BOOKMARK [1][-]{section.34}{3 Analysephase}{}% 17
+\BOOKMARK [2][-]{subsection.35}{3.1 Ist-Analyse}{section.34}% 18
+\BOOKMARK [2][-]{subsection.42}{3.2 Wirtschaftlichkeitsanalyse}{section.34}% 19
+\BOOKMARK [3][-]{subsubsection.43}{3.2.1 \214Make or Buy\215-Entscheidung}{subsection.42}% 20
+\BOOKMARK [3][-]{subsubsection.48}{3.2.2 Projektkosten}{subsection.42}% 21
+\BOOKMARK [3][-]{subsubsection.51}{3.2.3 Amortisationsdauer}{subsection.42}% 22
+\BOOKMARK [2][-]{subsection.58}{3.3 Nutzwertanalyse}{section.34}% 23
+\BOOKMARK [2][-]{subsection.59}{3.4 Qualit\344tsanforderungen}{section.34}% 24
+\BOOKMARK [2][-]{subsection.62}{3.5 Lastenheft/Fachkonzept}{section.34}% 25
+\BOOKMARK [2][-]{subsection.64}{3.6 Zwischenstand}{section.34}% 26
+\BOOKMARK [1][-]{section.66}{4 Entwurfsphase}{}% 27
+\BOOKMARK [2][-]{subsection.67}{4.1 Zielplattform}{section.66}% 28
+\BOOKMARK [2][-]{subsection.74}{4.2 Architekturdesign}{section.66}% 29
+\BOOKMARK [2][-]{subsection.81}{4.3 Entwurf der Benutzeroberfl\344che}{section.66}% 30
+\BOOKMARK [2][-]{subsection.82}{4.4 Datenmodell}{section.66}% 31
+\BOOKMARK [2][-]{subsection.86}{4.5 Gesch\344ftslogik}{section.66}% 32
+\BOOKMARK [2][-]{subsection.91}{4.6 Pflichtenheft/Datenverarbeitungskonzept}{section.66}% 33
+\BOOKMARK [2][-]{subsection.93}{4.7 Zwischenstand}{section.66}% 34
+\BOOKMARK [1][-]{section.95}{5 Implementierungsphase}{}% 35
+\BOOKMARK [2][-]{subsection.96}{5.1 Implementierung der Datenstrukturen}{section.95}% 36
+\BOOKMARK [2][-]{subsection.99}{5.2 Implementierung des Kommandozeileninterfaces}{section.95}% 37
+\BOOKMARK [2][-]{subsection.100}{5.3 Implementierung der Gesch\344ftslogik}{section.95}% 38
+\BOOKMARK [2][-]{subsection.102}{5.4 Zwischenstand}{section.95}% 39
+\BOOKMARK [1][-]{section.104}{6 Abnahmephase}{}% 40
+\BOOKMARK [2][-]{subsection.106}{6.1 Zwischenstand}{section.104}% 41
+\BOOKMARK [1][-]{section.108}{7 Einf\374hrungsphase}{}% 42
+\BOOKMARK [2][-]{subsection.109}{7.1 Zwischenstand}{section.108}% 43
+\BOOKMARK [1][-]{section.111}{8 Dokumentation}{}% 44
+\BOOKMARK [2][-]{subsection.114}{8.1 Zwischenstand}{section.111}% 45
+\BOOKMARK [1][-]{section.116}{9 Fazit}{}% 46
+\BOOKMARK [2][-]{subsection.117}{9.1 Soll-/Ist-Vergleich}{section.116}% 47
+\BOOKMARK [2][-]{subsection.120}{9.2 Lessons Learned}{section.116}% 48
+\BOOKMARK [2][-]{subsection.121}{9.3 Ausblick}{section.116}% 49
+\BOOKMARK [1][-]{section*.122}{Literaturverzeichnis}{}% 50
+\BOOKMARK [1][-]{section*.123}{Eidesstattliche Erkl\344rung}{}% 51
+\BOOKMARK [1][-]{appendix.124}{A Anhang}{}% 52
+\BOOKMARK [2][-]{subsection.125}{A.1 Detaillierte Zeitplanung}{appendix.124}% 53
+\BOOKMARK [2][-]{subsection.126}{A.2 Verwendete Resourcen}{appendix.124}% 54
+\BOOKMARK [3][-]{subsubsection.127}{A.2.1 Hardware}{subsection.126}% 55
+\BOOKMARK [3][-]{subsubsection.128}{A.2.2 Software}{subsection.126}% 56
+\BOOKMARK [2][-]{subsection.129}{A.3 Lastenheft \(Auszug\)}{appendix.124}% 57
+\BOOKMARK [2][-]{subsection.151}{A.4 Use-Case-Diagramm}{appendix.124}% 58
+\BOOKMARK [2][-]{subsection.153}{A.5 Amortisationsdiagramm}{appendix.124}% 59
+\BOOKMARK [2][-]{subsection.155}{A.6 Kommandozeileninterface}{appendix.124}% 60
+\BOOKMARK [2][-]{subsection.157}{A.7 Komponentendiagramm}{appendix.124}% 61
+\BOOKMARK [2][-]{subsection.159}{A.8 Aktivit\344tsdiagramm - Einlesen einer Regel}{appendix.124}% 62
+\BOOKMARK [2][-]{subsection.161}{A.9 Beispiel Hauptregeldatei}{appendix.124}% 63
+\BOOKMARK [2][-]{subsection.176}{A.10 Implementierung des Regel ADT!s}{appendix.124}% 64
+\BOOKMARK [2][-]{subsection.194}{A.11 Implementierung des Komposit ADT!s}{appendix.124}% 65
+\BOOKMARK [2][-]{subsection.212}{A.12 Pflichtenheft \(Auszug\)}{appendix.124}% 66

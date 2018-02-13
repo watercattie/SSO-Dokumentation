@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.23)  9 FEB 2018 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.23)  13 FEB 2018 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1710,12 +1710,12 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 27.
  (./Deckblatt.tex
-<Bilder/LogoIHK.pdf, id=268, 450.73643pt x 225.36507pt>
+<Bilder/LogoIHK.pdf, id=272, 450.73643pt x 225.36507pt>
 File: Bilder/LogoIHK.pdf Graphic file (type pdf)
 <use Bilder/LogoIHK.pdf>
 Package pdftex.def Info: Bilder/LogoIHK.pdf  used on input line 5.
 (pdftex.def)             Requested size: 112.68382pt x 56.34113pt.
-<Bilder/LogoBetrieb.png, id=269, 586.19pt x 88.33pt>
+<Bilder/LogoBetrieb.png, id=273, 586.19pt x 88.33pt>
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
 Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 21.
@@ -1798,10 +1798,10 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ]
 
-Package acronym Warning: Acronym `ADT' is not defined on input line 79.
-
-
 Package acronym Warning: Acronym `ADT' is not defined on input line 80.
+
+
+Package acronym Warning: Acronym `ADT' is not defined on input line 81.
 
 )
 \tf@toc=\write6
@@ -2037,7 +2037,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
-<Bilder/timeline.png, id=445, 918.3108pt x 254.8722pt>
+<Bilder/timeline.png, id=456, 918.3108pt x 254.8722pt>
 File: Bilder/timeline.png Graphic file (type png)
 <use Bilder/timeline.png>
 Package pdftex.def Info: Bilder/timeline.png  used on input line 14.
@@ -2078,7 +2078,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 48.
 
 [3 <./Bilder/timeline.png>]
-<Bilder/TDDcircle.png, id=474, 1490.56876pt x 971.63pt>
+<Bilder/TDDcircle.png, id=503, 1490.56876pt x 971.63pt>
 File: Bilder/TDDcircle.png Graphic file (type png)
 <use Bilder/TDDcircle.png>
 Package pdftex.def Info: Bilder/TDDcircle.png  used on input line 59.
@@ -2094,77 +2094,95 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 6.
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 10.
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 11.
 (pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
 Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 10.
+(babel)             in language  on input line 11.
 
 [4 <./Bilder/TDDcircle.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 22.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 28.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 28.
+(babel)             in language  on input line 26.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 34.
-LaTeX Font Info:    Try loading font information for TS1+lmss on input line 39.
+File: Bilder/LogoBetrieb.png Graphic file (type png)
+<use Bilder/LogoBetrieb.png>
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 42.
+(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
+Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmss.fd
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 42.
+
+[5]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 44.
+LaTeX Font Info:    Try loading font information for TS1+lmss on input line 50.
+
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+(./Tabellen/Kostenaufstellung.tex)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 57.
+ (./Tabellen/Zeitersparnis1.tex)
+Overfull \hbox (2.82716pt too wide) in paragraph at lines 2--64
+ [][] 
+ []
+
+(./Tabellen/Zeitersparnis2.tex)
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 41.
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 70.
 (pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
 Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 70.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
-
-[5] (./Tabellen/Kostenaufstellung.tex)
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 46.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 46.
-File: Bilder/LogoBetrieb.png Graphic file (type png)
-<use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 67.
-(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
-
-Overfull \vbox (1.61179pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 67.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 70.
 
 [6]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 72.
+(babel)             in language  on input line 95.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 72.
+(babel)             in language  on input line 95.
+File: Bilder/LogoBetrieb.png Graphic file (type png)
+<use Bilder/LogoBetrieb.png>
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 100.
+(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
-
-Package acronym Warning: Acronym `CI' is not defined on input line 77.
+Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 100.
+
+[7]
+
+Package acronym Warning: Acronym `CI' is not defined on input line 100.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 105.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 105.
 (./Tabellen/Qualitaetsanforderungen.tex
 
 Package acronym Warning: Acronym `RDBMS' is not defined on input line 10.
@@ -2181,26 +2199,13 @@ Underfull \hbox (badness 10000) in alignment at lines 10--10
 
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 90.
+(babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 90.
-File: Bilder/LogoBetrieb.png Graphic file (type png)
-<use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 100.
-(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
-
-Overfull \vbox (1.61179pt too high) has occurred while \output is active []
-
+(babel)             in language  on input line 113.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 123.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 100.
-
-[7]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 100.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 100.
+(babel)             in language  on input line 123.
  (./Tabellen/Analyse.tex)) (./Inhalt/Entwurfsphase.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
@@ -2210,6 +2215,19 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
+File: Bilder/LogoBetrieb.png Graphic file (type png)
+<use Bilder/LogoBetrieb.png>
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 10.
+(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
+
+Overfull \vbox (1.61179pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
+
+[8]
 Package acronym Info: Label `acro:HOCON' newly defined as it shall be overridde
 n
 although it is yet undefined on input line 12.
@@ -2234,8 +2252,22 @@ Package acronym Warning: Acronym `DI' is not defined on input line 20.
 
 Package acronym Warning: Acronym `DI' is not defined on input line 20.
 
+File: Bilder/LogoBetrieb.png Graphic file (type png)
+<use Bilder/LogoBetrieb.png>
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 21.
+(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
+
+Overfull \vbox (1.61179pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 21.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 21.
+
+[9]
 Package acronym Info: Label `acro:ORM' newly defined as it shall be overridden
 although it is yet undefined on input line 22.
+
 
 Package acronym Warning: Acronym `ORM' is not defined on input line 22.
 
@@ -2251,19 +2283,6 @@ Package acronym Warning: Acronym `JDBC' is not defined on input line 22.
 
 Package acronym Warning: Acronym `JDBC' is not defined on input line 22.
 
-File: Bilder/LogoBetrieb.png Graphic file (type png)
-<use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 24.
-(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
-
-Overfull \vbox (1.61179pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 24.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 24.
-
-[8]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2274,17 +2293,17 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 37.
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 47.
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 52.
 (pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
 Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 52.
 
-[9]
+[10]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 52.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2297,32 +2316,32 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 72.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 82.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 82.
+(./Tabellen/Entwurf.tex)) (./Inhalt/Implementierungsphase.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 5.
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 82.
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 10.
 (pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
 Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 82.
+(babel)             in language  on input line 10.
 
-[10]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 82.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 82.
- (./Tabellen/Entwurf.tex)) (./Inhalt/Implementierungsphase.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 2.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 5.
+[11]
 Package acronym Info: Label `acro:ADT' newly defined as it shall be overridden
 although it is yet undefined on input line 10.
 
@@ -2340,17 +2359,17 @@ Package acronym Warning: Acronym `ADT' is not defined on input line 12.
 
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 24.
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 28.
 (pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
 Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 24.
+(babel)             in language  on input line 28.
 
-[11]
+[12]
 
 Package acronym Warning: Acronym `ADT' is not defined on input line 28.
 
@@ -2367,10 +2386,10 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 51.
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
-LaTeX Warning: Reference `app:CNMI' on page 12 undefined on input line 51.
+LaTeX Warning: Reference `app:CNMI' on page 13 undefined on input line 51.
 
 
-LaTeX Warning: Reference `app:CNMI' on page 12 undefined on input line 51.
+LaTeX Warning: Reference `app:CNMI' on page 13 undefined on input line 51.
 
 
 Package hyperref Warning: Suppressing link with empty target on input line 51.
@@ -2384,19 +2403,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
-File: Bilder/LogoBetrieb.png Graphic file (type png)
-<use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 7.
-(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
-Overfull \vbox (1.61179pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 7.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 7.
-
-[12]
 
 LaTeX Warning: Reference `app:Test' on page 13 undefined on input line 11.
 
@@ -2406,11 +2413,24 @@ LaTeX Warning: Reference `app:Test' on page 13 undefined on input line 11.
 
 Package hyperref Warning: Suppressing link with empty target on input line 11.
 
+File: Bilder/LogoBetrieb.png Graphic file (type png)
+<use Bilder/LogoBetrieb.png>
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 14.
+(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
+
+Overfull \vbox (1.61179pt too high) has occurred while \output is active []
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 14.
-(./Tabellen/Abnahme.tex)) (./Inhalt/Einfuehrungsphase.tex
+
+[13]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 14.
+ (./Tabellen/Abnahme.tex)) (./Inhalt/Einfuehrungsphase.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2437,27 +2457,27 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 7.
 
-[13]
+[14]
 
-LaTeX Warning: Reference `app:BenutzerDoku' on page 14 undefined on input line 
+LaTeX Warning: Reference `app:BenutzerDoku' on page 15 undefined on input line 
 11.
 
 
-LaTeX Warning: Reference `app:BenutzerDoku' on page 14 undefined on input line 
+LaTeX Warning: Reference `app:BenutzerDoku' on page 15 undefined on input line 
 11.
 
 
 Package hyperref Warning: Suppressing link with empty target on input line 11.
 
 
-Package natbib Warning: Citation `phpDoc' on page 14 undefined on input line 12
+Package natbib Warning: Citation `phpDoc' on page 15 undefined on input line 12
 .
 
 
-LaTeX Warning: Reference `app:Doc' on page 14 undefined on input line 12.
+LaTeX Warning: Reference `app:Doc' on page 15 undefined on input line 12.
 
 
-LaTeX Warning: Reference `app:Doc' on page 14 undefined on input line 12.
+LaTeX Warning: Reference `app:Doc' on page 15 undefined on input line 12.
 
 
 Package hyperref Warning: Suppressing link with empty target on input line 12.
@@ -2475,19 +2495,20 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 5.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 5.
+ (./Tabellen/Zeitnachher.tex)
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 13.
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 18.
 (pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
 Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 13.
+(babel)             in language  on input line 18.
 
-[14] (./Tabellen/Zeitnachher.tex)
+[15]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 20.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2509,7 +2530,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 63.
 
-[15] (./Projektdokumentation.bbl
+[16] (./Projektdokumentation.bbl
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2526,6 +2547,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--28
 ww . datenschutzbeauftragter-[]info . de /
  []
 
+
+Underfull \hbox (badness 6252) in paragraph at lines 30--35
+\T1/lmr/m/sc/10.95 EE-Tech Me-dia\T1/lmss/m/n/10.95 , LLC:  How to Wri-te Bet-t
+er Unit Tests For Em-bed-ded Soft-wa-
+ []
+
+
+Underfull \hbox (badness 5832) in paragraph at lines 30--35
+\T1/lmss/m/n/10.95 re With TDD.  (2014).  [][]$\T1/lmtt/m/n/10.95 https : / / w
+ww . allaboutcircuits . com / technical-[]articles /
+ []
+
+
+Underfull \hbox (badness 5133) in paragraph at lines 69--74
+\T1/lmr/m/sc/10.95 on-li-ne.info \T1/lmss/m/n/10.95 www.schnelle:  \T1/lmss/m/s
+l/10.95 Ar-beits-ta-ge 2018\T1/lmss/m/n/10.95 .  [][]$\T1/lmtt/m/n/10.95 https 
+: / / www . schnelle-[]online . info /
+ []
+
+File: Bilder/LogoBetrieb.png Graphic file (type png)
+<use Bilder/LogoBetrieb.png>
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 97.
+(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
+
+Overfull \vbox (1.61179pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 97.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 97.
+
+[17
+
+]
+Underfull \hbox (badness 1924) in paragraph at lines 98--102
+\T1/lmr/m/sc/10.95 Ry-te\T1/lmss/m/n/10.95 :  Test Dri-ven De-ve-lop-ment.  (20
+16).  [][]$\T1/lmtt/m/n/10.95 https : / / de . ryte . com / wiki / Test _ Drive
+n _
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 104--109
+\T1/lmr/m/sc/10.95 Schon-schek\T1/lmss/m/n/10.95 , Oli-ver:  Wor-auf es bei SSO
+ Lö-sun-gen an-kommt.  (2015).  [][]$\T1/lmtt/m/n/10.95 https : / / www .
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 111--115
+\T1/lmr/m/sc/10.95 Wi-ki-pe-dia\T1/lmss/m/n/10.95 :  Test-ge-trie-be-ne Ent-wic
+k-lung.  (2018).  [][]$\T1/lmtt/m/n/10.95 https : / / de . wikipedia . org / wi
+ki /
+ []
+
 ) (./Erklaerung.tex
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
@@ -2539,9 +2613,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 2.
 
-[16
-
-]
+[18]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2564,7 +2636,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 70.
 
-[17
+[19
 
 ] (./Anhang.tex
 Package babel Info: Redefining ngerman shorthand "|
@@ -2644,7 +2716,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./Bilder/use_case_diagramm.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Bilder/use_case_diagramm.pdf, id=713, 597.23125pt x 844.15375pt>
+<Bilder/use_case_diagramm.pdf, id=796, 597.23125pt x 844.15375pt>
 File: Bilder/use_case_diagramm.pdf Graphic file (type pdf)
 <use Bilder/use_case_diagramm.pdf>
 Package pdftex.def Info: Bilder/use_case_diagramm.pdf  used on input line 18.
@@ -2668,61 +2740,60 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 23.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 23.
-<Bilder/cli.png, id=723, 952.55875pt x 548.0475pt>
-File: Bilder/cli.png Graphic file (type png)
-<use Bilder/cli.png>
-Package pdftex.def Info: Bilder/cli.png  used on input line 27.
-(pdftex.def)             Requested size: 483.70552pt x 278.29633pt.
+<Bilder/amortisation.png, id=806, 932.48375pt x 747.79375pt>
+File: Bilder/amortisation.png Graphic file (type png)
+<use Bilder/amortisation.png>
+Package pdftex.def Info: Bilder/amortisation.png  used on input line 28.
+(pdftex.def)             Requested size: 435.32211pt x 349.10115pt.
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 30.
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 31.
 (pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
 Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 31.
 
 [5
 
- <./Bilder/cli.png>]
+ <./Bilder/amortisation.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 32.
-<Bilder/Komponentendiagramm.png, id=729, 1672.2475pt x 1136.245pt>
-File: Bilder/Komponentendiagramm.png Graphic file (type png)
-<use Bilder/Komponentendiagramm.png>
-Package pdftex.def Info: Bilder/Komponentendiagramm.png  used on input line 36.
-
-(pdftex.def)             Requested size: 483.68906pt x 328.65306pt.
+(babel)             in language  on input line 33.
+<Bilder/cli.png, id=813, 952.55875pt x 548.0475pt>
+File: Bilder/cli.png Graphic file (type png)
+<use Bilder/cli.png>
+Package pdftex.def Info: Bilder/cli.png  used on input line 37.
+(pdftex.def)             Requested size: 483.70552pt x 278.29633pt.
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
-Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 39.
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 40.
 (pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
 
 Overfull \vbox (1.61179pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 40.
 
 [6
 
- <./Bilder/Komponentendiagramm.png>]
+ <./Bilder/cli.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 41.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 41.
-<Bilder/AktivitaetRegelEinlesen.png, id=735, 1304.875pt x 1047.915pt>
-File: Bilder/AktivitaetRegelEinlesen.png Graphic file (type png)
-<use Bilder/AktivitaetRegelEinlesen.png>
-Package pdftex.def Info: Bilder/AktivitaetRegelEinlesen.png  used on input line
- 46.
-(pdftex.def)             Requested size: 435.32893pt x 349.60262pt.
+(babel)             in language  on input line 42.
+<Bilder/Komponentendiagramm.png, id=819, 1672.2475pt x 1136.245pt>
+File: Bilder/Komponentendiagramm.png Graphic file (type png)
+<use Bilder/Komponentendiagramm.png>
+Package pdftex.def Info: Bilder/Komponentendiagramm.png  used on input line 46.
+
+(pdftex.def)             Requested size: 483.68906pt x 328.65306pt.
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
 Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 49.
@@ -2737,31 +2808,17 @@ Package babel Info: Redefining ngerman shorthand "~
 
 [7
 
- <./Bilder/AktivitaetRegelEinlesen.png>]
+ <./Bilder/Komponentendiagramm.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 51.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 51.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 54.
- (./Listings/master.conf)
-
-Package acronym Warning: Acronym `ADT' is not defined on input line 56.
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2015/06/04 1.6 listings language file
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2015/06/04 1.6 listings language file
-)
-(./Listings/Rule.scala.tex)
+<Bilder/AktivitaetRegelEinlesen.png, id=825, 1304.875pt x 1047.915pt>
+File: Bilder/AktivitaetRegelEinlesen.png Graphic file (type png)
+<use Bilder/AktivitaetRegelEinlesen.png>
+Package pdftex.def Info: Bilder/AktivitaetRegelEinlesen.png  used on input line
+ 56.
+(pdftex.def)             Requested size: 435.32893pt x 349.60262pt.
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
 Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 59.
@@ -2776,14 +2833,53 @@ Package babel Info: Redefining ngerman shorthand "~
 
 [8
 
-]
-
-Package acronym Warning: Acronym `ADT' is not defined on input line 61.
-
+ <./Bilder/AktivitaetRegelEinlesen.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 61.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 61.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 64.
+ (./Listings/master.conf)
+
+Package acronym Warning: Acronym `ADT' is not defined on input line 66.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 66.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 66.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+)
+(./Listings/Rule.scala.tex)
+File: Bilder/LogoBetrieb.png Graphic file (type png)
+<use Bilder/LogoBetrieb.png>
+Package pdftex.def Info: Bilder/LogoBetrieb.png  used on input line 69.
+(pdftex.def)             Requested size: 117.23592pt x 17.66568pt.
+
+Overfull \vbox (1.61179pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 69.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 69.
+
+[9
+
+]
+
+Package acronym Warning: Acronym `ADT' is not defined on input line 71.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 71.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 71.
 (./Listings/Composition.scala) (./Anhang/AnhangPflichtenheft.tex
 File: Bilder/LogoBetrieb.png Graphic file (type png)
 <use Bilder/LogoBetrieb.png>
@@ -2797,7 +2893,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-[9
+[10
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -2833,14 +2929,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 75.
 
-[10]
+[11]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
  (./Projektdokumentation.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
 Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
-(rerunfilecheck)             Checksum: 39E14A41D8366FF14C2485930826A3B3;4536.
+(rerunfilecheck)             Checksum: 12529208B79EC87293751B2F465DC919;4625.
 
 
 LaTeX Warning: There were undefined references.
@@ -2852,13 +2948,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
 ### simple group (level 1) entered at line 33 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 26715 strings out of 492980
- 471032 string characters out of 6132509
- 725253 words of memory out of 5000000
- 29323 multiletter control sequences out of 15000+600000
+ 26780 strings out of 492980
+ 472197 string characters out of 6132509
+ 727137 words of memory out of 5000000
+ 29357 multiletter control sequences out of 15000+600000
  73704 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,16n,80p,8831b,1509s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,16n,80p,8831b,1511s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ts1.e
 nc}{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local
 /texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/
@@ -2877,10 +2973,10 @@ ss9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
 al/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsso12.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2017/tex
 mf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Projektdokumentation.pdf (34 pages, 734817 bytes).
+Output written on Projektdokumentation.pdf (37 pages, 790563 bytes).
 PDF statistics:
- 950 PDF objects out of 1000 (max. 8388607)
- 877 compressed objects within 9 object streams
- 272 named destinations out of 1000 (max. 500000)
- 573 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1047 PDF objects out of 1200 (max. 8388607)
+ 968 compressed objects within 10 object streams
+ 296 named destinations out of 1000 (max. 500000)
+ 586 words of extra memory for PDF output out of 10000 (max. 10000000)
 

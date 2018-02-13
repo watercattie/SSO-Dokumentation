@@ -8,25 +8,18 @@
 }
 
 @Book{ItHandbuch,
-  Title                    = {IT-Handbuch},
-  Author                   = {Hübscher, Heinrich and Petersen, Hans-Joachim and Rathgeber, Carsten and Richter, Klaus and Dr. Scharf, Dirk},
-  Publisher                = {Westermann},
-  Year                     = {2007},
-  Edition                  = {5}
+  title     = {IT-Handbuch},
+  publisher = {Westermann},
+  year      = {2007},
+  author    = {HÃŒbscher, Heinrich and Petersen, Hans-Joachim and Rathgeber, Carsten and Richter, Klaus and Dr. Scharf, Dirk},
+  edition   = {5},
 }
 
 @Book{FunktionaleProgrammierung,
-  Title                    = {Funktionale Programmierung – Sprachdesign und Programmiertechnik},
-  Author                   = {Pepper, Peter and Hofstedt, Petra},
-  Publisher                = {Springer},
-  Year                     = {2006}
-}
-
-@Misc{Arbeitstage,
-  Title                    = {Arbeitstage 2015},
-  Author                   = {schulferien.org},
-  Timestamp                = {2015.11.16},
-  Url                      = {http://www.schulferien.org/Arbeitstage/arbeitstage-2015.html}
+  title     = {Funktionale Programmierung - Sprachdesign und Programmiertechnik},
+  publisher = {Springer},
+  year      = {2006},
+  author    = {Pepper, Peter and Hofstedt, Petra},
 }
 
 @Misc{redgreenrefactor,
@@ -107,13 +100,53 @@
   url       = {https://www.univention.de/2016/12/einmalige-anmeldung-per-single-sign-on/},
 }
 
-@Article{T,
+@Article{TDDcircle,
   author    = {EETech Media, LLC},
   title     = {How to Write Better Unit Tests For Embedded Software With TDD},
   year      = {2014},
   owner     = { EETech Media, LLC},
   timestamp = {2018-02-09},
   url       = {https://www.allaboutcircuits.com/technical-articles/how-test-driven-development-can-help-you-write-better-unit-tests/},
+}
+
+@Article{tdd-ryte,
+  author    = {Ryte},
+  title     = {Test Driven Development},
+  year      = {2016},
+  owner     = {Ryte},
+  timestamp = {2018-02-12},
+  url       = {https://de.ryte.com/wiki/Test_Driven_Development},
+}
+
+@Article{tdd-improuv,
+  author    = {improuv},
+  title     = {TDD - so einfach und doch so schwer},
+  year      = {2015},
+  owner     = {improuv},
+  timestamp = {2018-02-12},
+  url       = {https://improuv.com/blog/daniel-zappold/tdd-so-einfach-und-doch-so-schwer},
+}
+
+@Article{tddwiki,
+  author = {Wikipedia},
+  title  = {Testgetriebene Entwicklung},
+  year   = {2018},
+  owner  = {Wikipedia},
+  url    = {https://de.wikipedia.org/wiki/Testgetriebene_Entwicklung},
+}
+
+@Article{computerwoche,
+  author = {Oliver Schonschek},
+  title  = {Worauf es bei SSO Lösungen ankommt},
+  year   = {2015},
+  url    = {https://www.computerwoche.de/a/worauf-es-bei-sso-loesungen-ankommt,2539134},
+}
+
+@Misc{arbeitstage,
+  author    = {w},
+  title     = {Arbeitstage 2018},
+  timestamp = {2018-02-13},
+  url       = {https://www.schnelle-online.info/Arbeitstage/Anzahl-Arbeitstage-2018.html},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -38,9 +38,9 @@ Projektphase\footnote{vgl. \cite[S. 263]{ItHandbuch}}.
 
 Das gesamte Projekt soll mithilfe von \ac{TDD}, zu Deutsch \textit{Testgetriebene Entwicklung}, umgesetzt werden. Das Kernprinzip von \acs{TDD} besagt, dass das Testen der Programmkomponenten den kompletten Entwicklungsprozess leitet.
 Es handelt sich hierbei um eine Designstrategie in der das Testen vor der eigentlichen Implementierung stattfindet. Es soll keine Zeile Produktivcode geschrieben werden, die nicht durch einen Test vorher abgedeckt wird.
-Damit lässt sich die Qualität des Codes erhöhen und den späteren Wartungsaufwand im Nachhinein zu verringern.
+Damit lässt sich die Qualität des Codes erhöhen und den späteren Wartungsaufwand im Nachhinein zu verringern\footnote{vgl. \cite{datenschutzbeauftragter}}.
 
-Dieses Parallelentwicklung von Code und Tests erfolgt in sich wiederholenden Mikroiterationen, die nur einen kleinen Zeitraum in Anspruch nehmen sollte. Man kann \acs{TDD} in drei Hauptteile aufspalten, die im englisch Red-Green-Refactor genannt werden. Die einzelnen Phasen lassen sich wie folgt beschreiben:
+Dieses Parallelentwicklung von Code und Tests erfolgt in sich wiederholenden Mikroiterationen, die nur einen kleinen Zeitraum in Anspruch nehmen sollte. Man kann \acs{TDD} in drei Hauptteile aufspalten, die im englisch Red-Green-Refactor genannt werden. Die einzelnen Phasen lassen sich wie folgt beschreiben\footnote{vgl. \cite{tddwiki}}:
 
 \paragraph{1. Test schreiben, der fehlschlägt \colorbox{red}{RED}}
 Im ersten Schritt wird ein Test geschrieben, der die spätere Implementierung auf Funktionalität prüft. Diese Prüfung sollte auch tatsächlich durchgeführt werden um sicherzustellen, dass sich der Test korrekt verhält. Falls ein Test diese Phase bereits ohne Fehler durchläuft, ist er fehlerhaft, da noch keinerlei Implementierung existiert.
@@ -50,9 +50,9 @@ Nach dem fehlschlagen des geschriebenen Tests, wird nur soviel Code geschrieben,
 Das bedeutet, dass der zu testende Wert oftmals hartkodiert implementiert wird. Damit müssen weitere Test geschrieben werden, dass das hartkodierte Ergebnis nicht mehr ausreicht.
 
 \paragraph{3. Falls nötig – Refaktorisieren des Codes \colorbox{gray}{REFACTOR}}
-Beim Refactoring werden die Tests und der Produktivcode gesäubert. Damit soll die Software einfach, verständlich und frei von Wiederholungen sein. In dieser Phase darf kein neues Verhalten eingeführt werden, was nicht durch einen Test abgedeckt wird. Dabei ist es auch möglich, dass diese Phase erst nach mehrmaligen Durchlaufen der vorherigen beiden Phasen erreicht wird.
+Beim Refactoring werden die Tests und der Produktivcode gesäubert. Damit soll die Software einfach, verständlich und frei von Wiederholungen sein. In dieser Phase darf kein neues Verhalten eingeführt werden, was nicht durch einen Test abgedeckt wird. Dabei ist es auch möglich, dass diese Phase erst nach mehrmaligen Durchlaufen der vorherigen beiden Phasen erreicht wird\footnote{vgl. \cite{tdd-ryte}}\footnote{vgl. \cite{tdd-improuv}}..
 
-Zur Verdeutlichung der drei Phasen die Abbildung \ref{fig:tddcircle}
+Zur Verdeutlichung der drei Phasen die Abbildung \ref{fig:tddcircle}\footnote{vgl. \cite{tddcircle}}
 
 \begin{figure}[htb]
 \centering
