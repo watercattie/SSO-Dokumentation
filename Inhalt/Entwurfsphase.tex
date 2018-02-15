@@ -5,33 +5,65 @@
 \subsection{Zielplattform}
 \label{sec:Zielplattform}
 
-Wie in Abschnitt \fullnameref{sec:Projektziel} erwähnt, soll am Ende des Abschlussprojektes eine eigenständige Konsolenanwendung vorliegen. Die Anwendung muss vorerst nur auf Linuxsystemen lauffähig sein, da dies auch die Zielplattform von \textit{syn6} ist.
+Wie in Abschnitt \fullnameref{sec:Projektziel} erwähnt, soll am Ende des Abschlussprojektes eine eigenständige Webanwendung vorliegen. Das Deployment und die Aktualisierung wird somit erleichtert.
+Die Daten, auf die zugegriffen werden soll, sind in einer bestehenden MySQL Datenbank gespeichert. 
 
-Als Programmiersprache wurde Scala\footnote{http://www.scala-lang.org} gewählt. Dies bot sich an, da sowohl der Autor, als auch die Backend-Entwickler \textsc{synectic}s mit dieser Sprache bereits vertraut sind. Dies erleichtert später die Wartung des Projektes.
+Als Programmiersprache wurde \acs{PHP}\footnote{vgl. \cite{PHP}} gewählt. Dies bot sich an, da viele bestehende Anwendungen bereits in PHP geschrieben sind und sie sich damit leichter an wy-connect anbinden lassen und die Entwickler wycomcos mit dieser Sprache vertraut sind. 
+Wie auch die bestehenden Webapplikationen wird bei der Implementation das Framework Laravel\footnote{vgl. \cite{Laravel}} genutzt.
 
-Für das Dateiformat der Regeldateien wurde die \ac{HOCON}\footnote{https://github.com/typesafehub/config/blob/master/HOCON.md} gewählt. Die Nutzwertanalyse, die der Entscheidung für das Dateiformat zugrunde liegt, lässt sich Tabelle~\ref{tab:NutzwertDateiformat} entnehmen. Sowohl für die Gewichtung als auch für die Bewertung der einzelnen Kriterien wurde eine Skala von 1 bis 5 verwendet\footnote{Gewichtung: 1 = unnötig, 5 = unbedingt erforderlich}\footnote{Bewertung: 1 = mangelhaft, 5 = sehr gut}.
+\subsection{Framework}
+\label{sec:Framework}
 
-\tabelle{Nutzwertanalyse Dateiformat}{tab:NutzwertDateiformat}{NutzwertDateiformat.tex}
+Laravel ist ein freies \acs{PHP}-Webframework, welches dem \acs{MVC}-Muster folgt. 
 
+Es ermöglicht neben dem im folgenden unter \ref{sec:Architekturdesign} erläuterten MVC-Architekturdesign, \acs{REST}-Webdienste zu implementieren.
+
+Laravel wird mit dem \acs{ORM} Eloquent und einem gut bedienbaren Migrationssystem ausgeliefert. Damit werden Objekte einer objektorientierten Anwendung in eine relationale Datenbank überführt.
+
+Das Framework bringt von Hause aus ein Authentifizierungspaket, was auch von wyconnect genutzt wird und durch die Pakete Socialite und Passport ergänzt wird um den OAuth2 Mechanismus zu implementieren. Dazu mehr im Kapitel \fullnameref{sec:Architekturdesign}.
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
 
-Um die Abhängigkeiten zwischen den einzelnen Programmkomponenten zu verwalten, wurde das Cake Pattern verwendet\footnote{vgl. http://lampwww.epfl.ch/\textasciitilde odersky/papers/ScalableComponent.pdf}. Beim Cake Pattern werden mithilfe von Scalas Traits Module erstellt, die dann als Mixin in anderen Komponenten verwendet werden können. Ein Vorteil gegenüber den meisten \ac{DI} Frameworks ist, dass hierbei bereits zur Kompilierungszeit festgestellt werden kann, ob alle benötigten Abhängigkeiten erfüllt sind.
+Beim Design wurde dem MVC Muster gefolgt, welches Laravel schon mit sich bringt. Die Anwendung wird in 3 Komponenten aufgespalten und sicher damit Flexibilität, Anpassbarkeit und Wiederverwendbarkeit.
+Bei einer späteren Implementierung als native Anwendung, kann das Model beibehalten werden und nur die View und der Controller müssten teilweise umgeschrieben werden.
 
-Zur Kommunikation mit der zu testenden Datenbank wurde das \textit{Slick} Framework verwendet\footnote{http://slick.typesafe.com/}. Da die Anwendung nur reine \acs{SQL} Queries ausführen muss, und daher kein \ac{ORM} benötigt wird, wird das Slick Framework hauptsächlich als dünner \ac{JDBC}-Wrapper verwendet.
+Model
+Das Model enthält Daten zur Weiterverarbeitung. In vielen Fällen spiegelt ein Model
+eine Tabelle in der Datenbank wieder, so auch beim Eloquent ORM von Laravel. Nur in dieser Model Klasse werden die Daten bearbeitet oder erfasst. Eine Trennung vom Controller ist erwünscht.
 
-Für das Parsen der Kommandozeilenparameter wurde die Library \textit{scopt}\footnote{https://github.com/scopt/scopt} verwendet. 
+View
+Die View ist das Benutzerinterface. Daten von Model und Controller werden visualisiert und leitet \zB Benutzeraktionen und Formulare weiter. Innerhalb der View sollte ein Zugriff auf das Model oder den Controller vermieden werden. Somit bleiben alle Daten statisch und werden nicht verändert.
+
+Controller
+Der Controller empfängt Anfragen (Requests) von der View. In diesen Request sind \bspw die Login Daten eines Benutzers. Der Controller verarbeitet die Daten und sendet eine Anfrage an das User Model, welches dem Controller den richten User zurückgibt. Dieser loggt den Benutzer ein und die View zeigt den erfolgreichen Login Prozess an. 
+
 
 
 \subsection{Entwurf der Benutzeroberfläche}
 \label{sec:Benutzeroberflaeche} 
 
-Da die Anwendung automatisiert ausgeführt werden soll, wurde auf eine grafische Benutzeroberfläche verzichtet. Stattdessen soll die Anwendung über die Kommandozeile gestartet werden können. 
+Das Laravel Passport Paket bringt eine beispielhafte Oberfläche mit, in der alle relevanten Anforderungen Anwendung finden. 
+Ein Screenshot dazu im \fullnameref{app:wyconnect-mockup}
 
-Wie bei Kommandozeilenprogrammen üblich, soll ein Hilfetext existieren, der die Syntax, sowie sämtliche Paramter, Optionen und Flags enthält.
+Über die Hauptansicht kann der Anwender die authorisierten Clients verwalten, sowie deren AccessToken. 
 
-Als einzige benötigter Parameter ist der Pfad zur Hauptdatei anzugeben. Zusätzlich soll es möglich sein, den Pfad anzugeben in dem sich die in der Hauptdatei referenzierten Regeldateien befinden und den Pfad der Ergebnisdatei anzupassen. Zuletzt soll ein Flag existieren, dass das Ergebnis nicht in eine Datei speichert, sondern in die Konsole ausgibt. Dies soll es ermöglichen, den Output einer Prüfung direkt in andere Skripte zu pipen um es \zB direkt weiterzuverarbeiten.
+zu exportierenden Ressourcen selektieren und
+einschränken können. Folgende Filtermöglichkeiten sollen dafür zur Verfügung stehen:
+-Selektion des Ressourcentyps: Auftrags-, Rechnungs- oder Angebotspositionen
+-Abfrage der Positionen via Status ; mehrere Auswahlmöglichkeiten
+-Abfrage einzelner Auftrags-, Rechnungs- oder Angebotspositionen via Selektion der
+Vorgangsnummer ; mehrer Auswahlmöglichkeiten
+-Alle Ressourcentyp-Positionen
+Das darauf basierende Aktivitätsdiagramm ( zu finden im Anhang unter A.8 ) beschreibt die
+Anwender-Interaktion von der Wahl der Ressource, über die Einschränkung dieser, bis zur
+Darstellung und Ausgabe der abgefragten Datensätze.
+für die Erstellung des Prototyps wurde die kostenlose Diagram-Webanwendung draw.io
+genutzt, die dafür die typischen Bootstrap-Komponenten anbietet. Der Entwurf der
+Hauptansicht ist im Anhang unter A.7 GUI-Mockup zu finden.
+Für die weitere Implementierung des Webinterfaces wurde der Entwurf jedoch nur als grobe
+Orientierungsvorlage genutzt, da sich in den Fachgesprächen mit dem Kunden noch
+Änderungen ergaben.
 
 
 \subsection{Datenmodell}
@@ -68,6 +100,8 @@ Die Evaluation einer einfachen Regeln besteht daraus, dass das in der Regeln def
 \paragraph{Ergebnisausgabe}
 Der letzte Schritt ist die Ausgabe des Gesamtergebnisses. Der Reporter bekommt hierbei die gesamte Ergebnissmenge übergeben und erstellt daraus eine \acs{XML}-Datei.
 
+\subsection{Deployment}
+\label{sec:Deployment}
 
 \subsection{Pflichtenheft/Datenverarbeitungskonzept}
 \label{sec:Pflichtenheft}

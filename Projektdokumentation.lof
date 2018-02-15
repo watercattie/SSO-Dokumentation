@@ -1,8 +1,10 @@
-\babel@toc {ngerman}{}
+\select@language {ngerman}
 \contentsline {figure}{\numberline {1}{\ignorespaces grobe Zeitplanung}}{3}{figure.20}
 \contentsline {figure}{\numberline {2}{\ignorespaces TDD Zirkel}}{4}{figure.33}
-\contentsline {figure}{\numberline {3}{\ignorespaces Use-Case-Diagramm}}{iv}{figure.152}
-\contentsline {figure}{\numberline {4}{\ignorespaces Amortisations-Diagramm}}{v}{figure.154}
-\contentsline {figure}{\numberline {5}{\ignorespaces Kommandozeileninterface}}{vi}{figure.156}
-\contentsline {figure}{\numberline {6}{\ignorespaces Komponentendiagramm}}{vii}{figure.158}
-\contentsline {figure}{\numberline {7}{\ignorespaces Einlesen einer Regel}}{viii}{figure.160}
+\contentsline {figure}{\numberline {3}{\ignorespaces Use-Case-Diagramm ohne SSO}}{v}{figure.143}
+\contentsline {figure}{\numberline {4}{\ignorespaces Use-Case-Diagramm mit SSO}}{vi}{figure.145}
+\contentsline {figure}{\numberline {5}{\ignorespaces Benutzeroberfl\IeC {\"a}che des SSO-Servers}}{vii}{figure.147}
+\contentsline {figure}{\numberline {6}{\ignorespaces Amortisations-Diagramm}}{viii}{figure.149}
+\contentsline {figure}{\numberline {7}{\ignorespaces Kommandozeileninterface}}{ix}{figure.151}
+\contentsline {figure}{\numberline {8}{\ignorespaces Komponentendiagramm}}{x}{figure.153}
+\contentsline {figure}{\numberline {9}{\ignorespaces Einlesen einer Regel}}{xi}{figure.155}

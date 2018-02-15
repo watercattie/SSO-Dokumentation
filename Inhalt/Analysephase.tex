@@ -98,13 +98,9 @@ Eine grafische Darstellung der berechneten Werte findet sich unter \ref{app:Amor
 Neben den in \fullnameref{sec:Amortisationsdauer} aufgeführten wirtschaftlichen Vorteilen ergeben sich durch Realisierung des Projekts noch einige zusätzliche Vorteile.
 
 Wie in der \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine höhere Sicherheit mit sich.
-In einer der Anwendungen von wycomco liegen vertrauliche Kundendaten. Sollte das Projekt dort nicht umgesetzt werden und daher 
+In einer der Anwendungen von wycomco liegen vertrauliche Kundendaten. Sollte das Projekt dort nicht umgesetzt werden und daher Unbefugte Zugriff erlangen, kann man von Opportunitätskosten sprechen. Der Fremdzugriff bringt eine Vertragsstrafe mit sich, schätzungsweise bei größeren Kunden von 60000 \eur. Das sind Kosten die vermieden werden können mit der Umsetzung von wy-connect. 
 
-
-
-Ein automatisierter Prüfprozess ermöglicht es, das Ergebnis einer Prüfung weiterzuvearbeiten, um es \zB in einer Weboberfläche oder einem Monitoring System anzeigen zu lassen. Außerdem ermöglicht es die Einbindung in das \acs{CI}-System um die Datenbank kontinuierlich zu Prüfen. 
-
-Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, lässt es sich auch Problemlos auf andere Projekte und Datenbanken Anwenden. Der tatsächliche Nutzen geht also über wycomco hinaus.
+Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, lässt es sich auch Problemlos auf andere Kunden anwenden. Der tatsächliche Nutzen geht also über wycomco hinaus.
 
 
 \subsection{Qualitätsanforderungen}
@@ -114,15 +110,18 @@ Die Qualitätsanforderungen an die Anwendung lassen sich Tabelle~\ref{tab:Qualit
 
 \tabelle{Qualitätsanforderungen}{tab:Qualitaetsanforderungen}{Qualitaetsanforderungen.tex}
 
+\subsection{Anwendungsfälle}
+\label{sec:Anwendungsfaelle}
+
+Es wird im Zuge der Analyse des Projektes ein Anwendungsfalldiagramm erstellt. Dies stellt
+Interaktionen von Benutzern mit dem System dar und zeigt somit das erwartete Verhalten der
+Anwendung. Das Anwendungsfalldiagramm ist im Anhang \ref{app:Use-Case-Diagramm} und \ref{app:Use-Case-Diagramm2} dargestellt.
+Bevor ein Nutzer eine Anwendung innerhalb wycomcos nutzen kann, muss ein Administrator sie einladen. Bevor der Implementierung eines \acs{SSO}-Servers geschah dies für jede Anwendung separat. Nach Einladung bekam der User eine EMail, die ihn auf das Registrierungsformular führte. Sobald er sich erfolgreich registriert hatte, musste er sich an jeder einzelnen Anwendung einloggen um sie nutzen zu können.
+Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen gut zu sehen ist, vereinfacht werden. Administratoren erstellen einmalig eine EInladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen.
+Hierbei sei die Authorisierung des Clients vernachlässigt. 
+
 
 \subsection{Lastenheft/Fachkonzept}
-\label{sec:Lastenheft}
-\begin{itemize}
-	\item Auszüge aus dem Lastenheft/Fachkonzept, wenn es im Rahmen des Projekts erstellt wurde.
-	\item Mögliche Inhalte: Funktionen des Programms (Muss/Soll/Wunsch), User Stories, Benutzerrollen
-\end{itemize}
-
-\paragraph{Beispiel}
-Ein Beispiel für ein Lastenheft findet sich im \Anhang{app:Lastenheft}. 
+Am Ende der Entwurfsphase wurde zusammen mit dem Projektleiter auf Basis des Anwendungsfalldiagramms das Lastenheft erstellt. Ein Auszug befindet sich im Anhang \Anhang{app:Lastenheft}
 
 \Zwischenstand{Analysephase}{Analyse}
