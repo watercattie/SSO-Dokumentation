@@ -1,9 +1,9 @@
 % !TEX root = Projektdokumentation.tex
 \section{Anhang}
-\subsection{Detaillierte Zeitplanung}
-\label{app:Zeitplanung}
+%\subsection{Detaillierte Zeitplanung}
+%\label{app:Zeitplanung}
 
-\tabelleAnhang{ZeitplanungKomplett}
+%\tabelleAnhang{ZeitplanungKomplett}
 
 \input{Anhang/AnhangRessourcen.tex}
 
@@ -30,13 +30,40 @@ Das folgende Diagramm beschreibt den Anmeldeprozess an verschiedenen Systemen mi
 \end{figure}
 \clearpage
 
-\subsection{Benutzeroberfläche von wyconnect}
+\subsection{Benutzeroberfläche von wyconnect und dem Client}
 \label{app:wyconnect-mockup}
-Das folgende Diagramm beschreibt den Anmeldeprozess an verschiedenen Systemen mit \acs{SSO}.
+
+Das folgende Template beschreibt die Benutzeroberfläche an verschiedenen Systemen mit \acs{SSO}.
 \begin{figure}[htb]
 \centering
 \includegraphicsKeepAspectRatio{mockup-server.png}{0.9}
 \caption{Benutzeroberfläche des SSO-Servers}
+\end{figure}
+\clearpage
+
+Das folgende Template beschreibt den Anmeldeprozess am \acs{SSO}-Server.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{login-wyconnect.png}{0.9}
+\caption{Login am SSO-Servers}
+\end{figure}
+\clearpage
+
+Das folgende Mockup beschreibt den Anmeldeprozess am Client mit \acs{SSO}.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{mockup-timy.png}{0.9}
+\caption{Login am Client Timy}
+\end{figure}
+\clearpage
+
+\subsection{Entity Relationship Modell}
+\label{app:ERM}
+Das folgende Diagramm zeigt die Entitäten und Attribute der Datenbank und deren Beziehung zueinander.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{ERM.png}{0.99}
+\caption{ERM}
 \end{figure}
 \clearpage
 
@@ -49,47 +76,5 @@ Das folgende Diagramm zeigt die Amortisation
 \caption{Amortisations-Diagramm}
 \end{figure}
 \clearpage
-
-\subsection{Kommandozeileninterface}
-\label{app:cli}
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{cli.png}{1}
-\caption{Kommandozeileninterface}
-\end{figure}
-\clearpage
-
-\subsection{Komponentendiagramm}
-\label{app:Komponentendiagramm}
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{Komponentendiagramm.png}{1}
-\caption{Komponentendiagramm}
-\end{figure}
-\clearpage
-
-\subsection{Aktivitätsdiagramm - Einlesen einer Regel}
-\label{app:AktivitaetRegelEinlesen}
-Das folgende Diagramm beschreibt das Einlesen einer Regel aus einer Regeldatei.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{AktivitaetRegelEinlesen.png}{0.9}
-\caption{Einlesen einer Regel}
-\end{figure}
-\clearpage
-
-\subsection{Beispiel Hauptregeldatei}
-\label{app:MasterDatei}
-Ein Beispiel einer Hauptdatei. In der Hauptdatei werden sowohl die Datenbankverbindungsparamer beschrieben als auch sämtliche Regeln aufgelistet, die evaluiert werden sollen.
-\lstinputlisting{Listings/master.conf}
-
-\subsection{Implementierung des Regel \acs{ADT}s}
-\label{app:RegelADT}
-\lstinputlisting[language=scala]{Listings/Rule.scala}
-\clearpage
-
-\subsection{Implementierung des Komposit \acs{ADT}s}
-\label{app:CompositeADT}
-\lstinputlisting[language=scala]{Listings/Composition.scala}
 
 \input{Anhang/AnhangPflichtenheft.tex}

@@ -31,41 +31,34 @@
 \BOOKMARK [2][-]{subsection.70}{4.3 Architekturdesign}{section.65}% 31
 \BOOKMARK [2][-]{subsection.71}{4.4 Entwurf der Benutzeroberfl\344che}{section.65}% 32
 \BOOKMARK [2][-]{subsection.72}{4.5 Datenmodell}{section.65}% 33
-\BOOKMARK [2][-]{subsection.76}{4.6 Gesch\344ftslogik}{section.65}% 34
-\BOOKMARK [2][-]{subsection.81}{4.7 Deployment}{section.65}% 35
-\BOOKMARK [2][-]{subsection.82}{4.8 Pflichtenheft/Datenverarbeitungskonzept}{section.65}% 36
-\BOOKMARK [2][-]{subsection.84}{4.9 Zwischenstand}{section.65}% 37
-\BOOKMARK [1][-]{section.86}{5 Implementierungsphase}{}% 38
-\BOOKMARK [2][-]{subsection.87}{5.1 Implementierung der Datenstrukturen}{section.86}% 39
-\BOOKMARK [2][-]{subsection.90}{5.2 Implementierung des Kommandozeileninterfaces}{section.86}% 40
-\BOOKMARK [2][-]{subsection.91}{5.3 Implementierung der Gesch\344ftslogik}{section.86}% 41
-\BOOKMARK [2][-]{subsection.93}{5.4 Zwischenstand}{section.86}% 42
-\BOOKMARK [1][-]{section.95}{6 Abnahmephase}{}% 43
-\BOOKMARK [2][-]{subsection.97}{6.1 Zwischenstand}{section.95}% 44
-\BOOKMARK [1][-]{section.99}{7 Einf\374hrungsphase}{}% 45
-\BOOKMARK [2][-]{subsection.100}{7.1 Zwischenstand}{section.99}% 46
-\BOOKMARK [1][-]{section.102}{8 Dokumentation}{}% 47
-\BOOKMARK [2][-]{subsection.105}{8.1 Zwischenstand}{section.102}% 48
-\BOOKMARK [1][-]{section.107}{9 Fazit}{}% 49
-\BOOKMARK [2][-]{subsection.108}{9.1 Soll-/Ist-Vergleich}{section.107}% 50
-\BOOKMARK [2][-]{subsection.111}{9.2 Lessons Learned}{section.107}% 51
-\BOOKMARK [2][-]{subsection.112}{9.3 Ausblick}{section.107}% 52
-\BOOKMARK [1][-]{section*.113}{Literaturverzeichnis}{}% 53
-\BOOKMARK [1][-]{section*.114}{Eidesstattliche Erkl\344rung}{}% 54
-\BOOKMARK [1][-]{appendix.115}{A Anhang}{}% 55
-\BOOKMARK [2][-]{subsection.116}{A.1 Detaillierte Zeitplanung}{appendix.115}% 56
-\BOOKMARK [2][-]{subsection.117}{A.2 Verwendete Resourcen}{appendix.115}% 57
-\BOOKMARK [3][-]{subsubsection.118}{A.2.1 Hardware}{subsection.117}% 58
-\BOOKMARK [3][-]{subsubsection.119}{A.2.2 Software}{subsection.117}% 59
-\BOOKMARK [2][-]{subsection.120}{A.3 Lastenheft \(Auszug\)}{appendix.115}% 60
-\BOOKMARK [2][-]{subsection.142}{A.4 Use-Case-Diagramm ohne SSO}{appendix.115}% 61
-\BOOKMARK [2][-]{subsection.144}{A.5 Use-Case-Diagramm mit SSO}{appendix.115}% 62
-\BOOKMARK [2][-]{subsection.146}{A.6 Benutzeroberfl\344che von wyconnect}{appendix.115}% 63
-\BOOKMARK [2][-]{subsection.148}{A.7 Amortisationsdiagramm}{appendix.115}% 64
-\BOOKMARK [2][-]{subsection.150}{A.8 Kommandozeileninterface}{appendix.115}% 65
-\BOOKMARK [2][-]{subsection.152}{A.9 Komponentendiagramm}{appendix.115}% 66
-\BOOKMARK [2][-]{subsection.154}{A.10 Aktivit\344tsdiagramm - Einlesen einer Regel}{appendix.115}% 67
-\BOOKMARK [2][-]{subsection.156}{A.11 Beispiel Hauptregeldatei}{appendix.115}% 68
-\BOOKMARK [2][-]{subsection.171}{A.12 Implementierung des Regel ADT!s}{appendix.115}% 69
-\BOOKMARK [2][-]{subsection.189}{A.13 Implementierung des Komposit ADT!s}{appendix.115}% 70
-\BOOKMARK [2][-]{subsection.207}{A.14 Pflichtenheft \(Auszug\)}{appendix.115}% 71
+\BOOKMARK [2][-]{subsection.74}{4.6 Gesch\344ftslogik}{section.65}% 34
+\BOOKMARK [2][-]{subsection.75}{4.7 Deployment}{section.65}% 35
+\BOOKMARK [2][-]{subsection.76}{4.8 Pflichtenheft/Datenverarbeitungskonzept}{section.65}% 36
+\BOOKMARK [2][-]{subsection.78}{4.9 Zwischenstand}{section.65}% 37
+\BOOKMARK [1][-]{section.80}{5 Implementierungsphase}{}% 38
+\BOOKMARK [2][-]{subsection.81}{5.1 Implementierung der Datenstrukturen}{section.80}% 39
+\BOOKMARK [2][-]{subsection.82}{5.2 Implementierung des Kommandozeileninterfaces}{section.80}% 40
+\BOOKMARK [2][-]{subsection.83}{5.3 Implementierung der Gesch\344ftslogik}{section.80}% 41
+\BOOKMARK [1][-]{section.85}{6 Abnahmephase}{}% 42
+\BOOKMARK [2][-]{subsection.87}{6.1 Zwischenstand}{section.85}% 43
+\BOOKMARK [1][-]{section.89}{7 Einf\374hrungsphase}{}% 44
+\BOOKMARK [2][-]{subsection.90}{7.1 Zwischenstand}{section.89}% 45
+\BOOKMARK [1][-]{section.92}{8 Dokumentation}{}% 46
+\BOOKMARK [2][-]{subsection.95}{8.1 Zwischenstand}{section.92}% 47
+\BOOKMARK [1][-]{section.97}{9 Fazit}{}% 48
+\BOOKMARK [2][-]{subsection.98}{9.1 Soll-/Ist-Vergleich}{section.97}% 49
+\BOOKMARK [2][-]{subsection.101}{9.2 Lessons Learned}{section.97}% 50
+\BOOKMARK [2][-]{subsection.102}{9.3 Ausblick}{section.97}% 51
+\BOOKMARK [1][-]{section*.103}{Literaturverzeichnis}{}% 52
+\BOOKMARK [1][-]{section*.104}{Eidesstattliche Erkl\344rung}{}% 53
+\BOOKMARK [1][-]{appendix.105}{A Anhang}{}% 54
+\BOOKMARK [2][-]{subsection.106}{A.1 Verwendete Ressourcen}{appendix.105}% 55
+\BOOKMARK [3][-]{subsubsection.107}{A.1.1 Hardware}{subsection.106}% 56
+\BOOKMARK [3][-]{subsubsection.108}{A.1.2 Software}{subsection.106}% 57
+\BOOKMARK [2][-]{subsection.109}{A.2 Lastenheft \(Auszug\)}{appendix.105}% 58
+\BOOKMARK [2][-]{subsection.131}{A.3 Use-Case-Diagramm ohne SSO}{appendix.105}% 59
+\BOOKMARK [2][-]{subsection.133}{A.4 Use-Case-Diagramm mit SSO}{appendix.105}% 60
+\BOOKMARK [2][-]{subsection.135}{A.5 Benutzeroberfl\344che von wyconnect und dem Client}{appendix.105}% 61
+\BOOKMARK [2][-]{subsection.139}{A.6 Entity Relationship Modell}{appendix.105}% 62
+\BOOKMARK [2][-]{subsection.141}{A.7 Amortisationsdiagramm}{appendix.105}% 63
+\BOOKMARK [2][-]{subsection.143}{A.8 Pflichtenheft \(Auszug\)}{appendix.105}% 64

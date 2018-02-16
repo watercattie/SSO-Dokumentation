@@ -44,61 +44,23 @@ Der Controller empfängt Anfragen (Requests) von der View. In diesen Request sin
 \label{sec:Benutzeroberflaeche} 
 
 Das Laravel Passport Paket bringt eine beispielhafte Oberfläche mit, in der alle relevanten Anforderungen Anwendung finden. 
-Ein Screenshot dazu im \fullnameref{app:wyconnect-mockup}
+Dazu sind Screenshots und Mockups auf  \fullnameref{app:wyconnect-mockup} zu sehen. Timy stellt hier einen Client dar. Dabei handelt es sich um eine Zeiterfassungssoftware, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die auch über Single-Sign-On laufen soll. 
 
-Über die Hauptansicht kann der Anwender die authorisierten Clients verwalten, sowie deren AccessToken. 
-
-zu exportierenden Ressourcen selektieren und
-einschränken können. Folgende Filtermöglichkeiten sollen dafür zur Verfügung stehen:
--Selektion des Ressourcentyps: Auftrags-, Rechnungs- oder Angebotspositionen
--Abfrage der Positionen via Status ; mehrere Auswahlmöglichkeiten
--Abfrage einzelner Auftrags-, Rechnungs- oder Angebotspositionen via Selektion der
-Vorgangsnummer ; mehrer Auswahlmöglichkeiten
--Alle Ressourcentyp-Positionen
-Das darauf basierende Aktivitätsdiagramm ( zu finden im Anhang unter A.8 ) beschreibt die
-Anwender-Interaktion von der Wahl der Ressource, über die Einschränkung dieser, bis zur
-Darstellung und Ausgabe der abgefragten Datensätze.
-für die Erstellung des Prototyps wurde die kostenlose Diagram-Webanwendung draw.io
-genutzt, die dafür die typischen Bootstrap-Komponenten anbietet. Der Entwurf der
-Hauptansicht ist im Anhang unter A.7 GUI-Mockup zu finden.
-Für die weitere Implementierung des Webinterfaces wurde der Entwurf jedoch nur als grobe
-Orientierungsvorlage genutzt, da sich in den Fachgesprächen mit dem Kunden noch
-Änderungen ergaben.
-
+Über die Hauptansicht kann der Administrator die autorisierten Clients verwalten, die per \acs{SSO} auf  Benutzerdaten zugreifen dürfen. Benutzer können lediglich ihr eigenes Profil verwalten.
 
 \subsection{Datenmodell}
 \label{sec:Datenmodell}
 
-Im folgenden sollen die wichtigsten Komponenten des Datenmodells genannt und kurz erläutert werden. Ein vollständiges Komponentendiagramm befindet sich im \Anhang{app:Komponentendiagramm}.
+Im folgenden sollen die wichtigsten Komponenten des Datenmodells genannt und kurz erläutert werden. 
+Das Laravel Passport Paket erleichtert die Aufgabe der Autorin des Datenmodells immens. Mit Installation des Pakets werden automatisch alle Tabellen mit dem Konsolenbefehl \Code{php artisan migrate} migriert. im \fullnameref{app:ERM} werden die von der Autorin benötigten Entitäten dargestellt. 
 
-\paragraph{Runner}
-Der Runner ist dafür zuständig, auf Grundlage einer Konfigurationsdatei, einen vollständigen Testdurchlauf zu starten. Der Runner selbst besitzt relativ wenig eigene Funktionalität, sondern delegiert stattdessen die einzelnen Aufgaben, wie \zB das Parsen der Regeln und die Ausgabe des Ergebnisses, an die zuständigen Komponenten.
+\tabelle{Entitaeten}{tab:Entitaeten}{Entitaeten.tex}
 
-\paragraph{Regel}
-Eine Regel repräsentiert eine zu prüfende Bedinung. Es wird hierbei zwischen einfachen und Kompositregeln unterschieden. Beide Arten von Regeln besitzen einen Namen und eine Beschreibung. Eine simple Regel besteht zusätzlich aus einem \acs{SQL}-Query. Dieses Query stellt die Bedingung dar, die durch die Regel validiert werden soll. Eine Kompositregel besitzt kein eigenes Query, sondern stellt eine Verknüpfung aus mehreren anderen Regeln dar. Die verknüpften Regeln können wiederum Kompositregeln sein.
-
-\paragraph{Reporter}
-Der Reporter ist für die Ausgabe des Ergebnisses zuständig.
-
+** noch erweiterbar mit Details **
 
 \subsection{Geschäftslogik}
 \label{sec:Geschaeftslogik}
 
-Der Ablauf einer Validierung lässt sich in vier Phasen unterteilen:
-
-\paragraph{Einlesen der Hauptdatei}
-Die Hauptdatei ist der Ausgangspunkt einer Prüfung. Sie enthält neben sämtlichen auszuführenden Regeln auch alle benötigten Daten für den Verbindungsaufbau mit der zu testenden Datenbank. Ein Beispiel einer solchen Datei findet sich im \Anhang{app:MasterDatei}.
-
-\paragraph{Erstellen der Regeln}
-In dieser Phase werden sämtliche Regeln die in der Hauptdatei referenziert sind erstellt. Hierbei wird anhand des Regelnamens die dazugehörige Datei ermittelt und eingelesen. Anschließend wird die Regeldatei geparst und das korrekte Regelobjekt erstellt. Im \Anhang{app:AktivitaetRegelEinlesen} findet sich ein Aktivitätsdiagramm, dass diesen Vorgang beschreibt.
-
-\paragraph{Evaluieren der Regeln}
-Nun folgt die eigentliche Prüfung. Die Runner Komponente evaluiert sämtliche Regeln die im vorherigen Schritt erstellt wurden und erstellt daraus ein Ergebnisset.
-
-Die Evaluation einer einfachen Regeln besteht daraus, dass das in der Regeln definierte \acs{SQL}-Query abgesetzt wird. Bei einer Kompositregel werden sämtliche im Komposit definierten Regeln rekursiv evaluiert und anschließend je nach Kompositionsart miteinander verknüpft.
-
-\paragraph{Ergebnisausgabe}
-Der letzte Schritt ist die Ausgabe des Gesamtergebnisses. Der Reporter bekommt hierbei die gesamte Ergebnissmenge übergeben und erstellt daraus eine \acs{XML}-Datei.
 
 \subsection{Deployment}
 \label{sec:Deployment}

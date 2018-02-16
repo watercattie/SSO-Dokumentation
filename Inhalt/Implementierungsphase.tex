@@ -5,50 +5,18 @@
 \subsection{Implementierung der Datenstrukturen}
 \label{sec:ImplementierungDatenstrukturen}
 
-Die zwei wichtigsten Datentypen, die das Herzstück der Anwendung bilden, sind Regeln und Kompositstrukturen, d.h. logische Verkettungen von Regeln.
 
-Beide Datenstrukturen wurden als \ac{ADT} realisiert, genauer gesagt als \textit{Summentyp}.
-
-Eine Regel kann zwei mögliche Formen annehmen. Eine \textit{SimpleRule}, d.h. eine einfache Regel, die nur aus Name, Beschreibung und dem auszuführenden \acs{SQL}-Query besteht, oder eine \textit{CompositeRule}, also eine zusammengesetzte Regel. Zusammgesetzte Regeln besitzen selbst keine \acs{SQL}-Abfrage, sonder enthalten stattdessen eine Verkettung von Regeln, wobei diese verketteten Regeln wiederum Kompositregeln sein können. Die implementierung des Regel \acs{ADT} befindet sich im \Anhang{app:RegelADT}.
-
-Eine solche Verkettung von Regeln wird durch den \textit{Composition} Datentyp abgebildet. Ein Komposit mehrere Formen annehmen, welches die Art der Verkettung repräsentiert. Die ersten vier Formen sind eine \textbf{AND}, \textbf{OR}, \textbf{XOR} oder \textbf{NAND} Verknüpfung. Eine Komposit stellt eine Baumstruktur dar, wobei jeder Zweig des Baums wiederrum ein Komposit enthält. Die Blätter des Baumes enthalten den speziellen Typ \textbf{Value} der keine weitere Verkettung, sondern eine \textit{SimpleRule} enthält.
-
-\paragraph{Beispiel}
-Gegeben sei der folgende Ausdruck, wobei $S_n$ eine \textit{SimpleRule} darstellt
-\begin{align*}
-S_1 \wedge (S_2 \oplus S_3)
-\end{align*}
-
-Daraus würde sich also folgendes Komposit ergeben:
-
-\Tree [.And [.Value $S_1$ ]
-				   [.Xor [.Value $S_2$ ]
-				  		    [.Value $S_3$ ]]]
-
-Die Implementierung des \textit{Composition} Datentyps findet sich im \Anhang{app:CompositeADT}.
 
 \subsection{Implementierung des Kommandozeileninterfaces}
 \label{sec:ImplementierungKommandozeileninterface}
 
-\begin{itemize}
-	\item Scopt Library (erstellt automatisch Hilfetext)
-	\item Kommandozeileninterface macht nicht mehr als den Runner mit der CLI Config aufzurufen
-	\item Screenshot des Hilfetextes im Anhang
-\end{itemize}
 
 
 \subsection{Implementierung der Geschäftslogik}
 \label{sec:ImplementierungGeschaeftslogik}
 
-\begin{itemize}
-	\item Beschreibung des Vorgehens bei der Umsetzung/Programmierung der entworfenen Anwendung.
-	\item \Ggfs interessante Funktionen/Algorithmen im Detail vorstellen, verwendete Entwurfsmuster zeigen.
-	\item Quelltextbeispiele zeigen.
-	\item Hinweis: Wie in Kapitel~\ref{sec:Einleitung}: \nameref{sec:Einleitung} zitiert, wird nicht ein lauffähiges Programm bewertet, sondern die Projektdurchführung. Dennoch würde ich immer Quelltextausschnitte zeigen, da sonst Zweifel an der tatsächlichen Leistung des Prüflings aufkommen können.
-\end{itemize}
 
 \paragraph{Beispiel}
-Die Klasse \texttt{Com\-par\-ed\-Na\-tu\-ral\-Mo\-dule\-In\-for\-ma\-tion} findet sich im \Anhang{app:CNMI}.  
 
 
-\Zwischenstand{Implementierungsphase}{Implementierung}
+% \Zwischenstand{Implementierungsphase}{Implementierung}

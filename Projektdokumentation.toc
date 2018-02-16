@@ -33,54 +33,39 @@
 \contentsline {subsection}{\numberline {4.3}Architekturdesign}{10}{subsection.70}
 \contentsline {subsection}{\numberline {4.4}Entwurf der Benutzeroberfl\IeC {\"a}che}{10}{subsection.71}
 \contentsline {subsection}{\numberline {4.5}Datenmodell}{11}{subsection.72}
-\contentsline {paragraph}{\nonumberline Runner}{11}{section*.73}
-\contentsline {paragraph}{\nonumberline Regel}{11}{section*.74}
-\contentsline {paragraph}{\nonumberline Reporter}{11}{section*.75}
-\contentsline {subsection}{\numberline {4.6}Gesch\IeC {\"a}ftslogik}{11}{subsection.76}
-\contentsline {paragraph}{\nonumberline Einlesen der Hauptdatei}{11}{section*.77}
-\contentsline {paragraph}{\nonumberline Erstellen der Regeln}{12}{section*.78}
-\contentsline {paragraph}{\nonumberline Evaluieren der Regeln}{12}{section*.79}
-\contentsline {paragraph}{\nonumberline Ergebnisausgabe}{12}{section*.80}
-\contentsline {subsection}{\numberline {4.7}Deployment}{12}{subsection.81}
-\contentsline {subsection}{\numberline {4.8}Pflichtenheft/Datenverarbeitungskonzept}{12}{subsection.82}
-\contentsline {paragraph}{\nonumberline Beispiel}{12}{section*.83}
-\contentsline {subsection}{\numberline {4.9}Zwischenstand}{12}{subsection.84}
-\contentsline {section}{\numberline {5}Implementierungsphase}{13}{section.86}
-\contentsline {subsection}{\numberline {5.1}Implementierung der Datenstrukturen}{13}{subsection.87}
-\contentsline {paragraph}{\nonumberline Beispiel}{13}{section*.89}
-\contentsline {subsection}{\numberline {5.2}Implementierung des Kommandozeileninterfaces}{14}{subsection.90}
-\contentsline {subsection}{\numberline {5.3}Implementierung der Gesch\IeC {\"a}ftslogik}{14}{subsection.91}
-\contentsline {paragraph}{\nonumberline Beispiel}{14}{section*.92}
-\contentsline {subsection}{\numberline {5.4}Zwischenstand}{14}{subsection.93}
-\contentsline {section}{\numberline {6}Abnahmephase}{14}{section.95}
-\contentsline {paragraph}{\nonumberline Beispiel}{15}{section*.96}
-\contentsline {subsection}{\numberline {6.1}Zwischenstand}{15}{subsection.97}
-\contentsline {section}{\numberline {7}Einf\IeC {\"u}hrungsphase}{15}{section.99}
-\contentsline {subsection}{\numberline {7.1}Zwischenstand}{15}{subsection.100}
-\contentsline {section}{\numberline {8}Dokumentation}{15}{section.102}
-\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.103}
-\contentsline {subsection}{\numberline {8.1}Zwischenstand}{16}{subsection.105}
-\contentsline {section}{\numberline {9}Fazit}{16}{section.107}
-\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{16}{subsection.108}
-\contentsline {paragraph}{\nonumberline Beispiel (verk\IeC {\"u}rzt)}{16}{section*.109}
-\contentsline {subsection}{\numberline {9.2}Lessons Learned}{16}{subsection.111}
-\contentsline {subsection}{\numberline {9.3}Ausblick}{17}{subsection.112}
-\contentsline {section}{\nonumberline Literaturverzeichnis}{18}{section*.113}
-\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{20}{section*.114}
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.115}
-\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.116}
-\contentsline {subsection}{\numberline {A.2}Verwendete Resourcen}{ii}{subsection.117}
-\contentsline {subsubsection}{\numberline {A.2.1}Hardware}{ii}{subsubsection.118}
-\contentsline {subsubsection}{\numberline {A.2.2}Software}{ii}{subsubsection.119}
-\contentsline {subsection}{\numberline {A.3}Lastenheft (Auszug)}{iii}{subsection.120}
-\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm ohne SSO}{iv}{subsection.142}
-\contentsline {subsection}{\numberline {A.5}Use-Case-Diagramm mit SSO}{vi}{subsection.144}
-\contentsline {subsection}{\numberline {A.6}Benutzeroberfl\IeC {\"a}che von wyconnect}{vii}{subsection.146}
-\contentsline {subsection}{\numberline {A.7}Amortisationsdiagramm}{viii}{subsection.148}
-\contentsline {subsection}{\numberline {A.8}Kommandozeileninterface}{ix}{subsection.150}
-\contentsline {subsection}{\numberline {A.9}Komponentendiagramm}{x}{subsection.152}
-\contentsline {subsection}{\numberline {A.10}Aktivit\IeC {\"a}tsdiagramm - Einlesen einer Regel}{xi}{subsection.154}
-\contentsline {subsection}{\numberline {A.11}Beispiel Hauptregeldatei}{xii}{subsection.156}
-\contentsline {subsection}{\numberline {A.12}Implementierung des Regel \acs {ADT}s}{xii}{subsection.171}
-\contentsline {subsection}{\numberline {A.13}Implementierung des Komposit \acs {ADT}s}{xiii}{subsection.189}
-\contentsline {subsection}{\numberline {A.14}Pflichtenheft (Auszug)}{xiv}{subsection.207}
+\contentsline {subsection}{\numberline {4.6}Gesch\IeC {\"a}ftslogik}{11}{subsection.74}
+\contentsline {subsection}{\numberline {4.7}Deployment}{11}{subsection.75}
+\contentsline {subsection}{\numberline {4.8}Pflichtenheft/Datenverarbeitungskonzept}{11}{subsection.76}
+\contentsline {paragraph}{\nonumberline Beispiel}{11}{section*.77}
+\contentsline {subsection}{\numberline {4.9}Zwischenstand}{11}{subsection.78}
+\contentsline {section}{\numberline {5}Implementierungsphase}{12}{section.80}
+\contentsline {subsection}{\numberline {5.1}Implementierung der Datenstrukturen}{12}{subsection.81}
+\contentsline {subsection}{\numberline {5.2}Implementierung des Kommandozeileninterfaces}{12}{subsection.82}
+\contentsline {subsection}{\numberline {5.3}Implementierung der Gesch\IeC {\"a}ftslogik}{12}{subsection.83}
+\contentsline {paragraph}{\nonumberline Beispiel}{12}{section*.84}
+\contentsline {section}{\numberline {6}Abnahmephase}{12}{section.85}
+\contentsline {paragraph}{\nonumberline Beispiel}{12}{section*.86}
+\contentsline {subsection}{\numberline {6.1}Zwischenstand}{12}{subsection.87}
+\contentsline {section}{\numberline {7}Einf\IeC {\"u}hrungsphase}{13}{section.89}
+\contentsline {subsection}{\numberline {7.1}Zwischenstand}{13}{subsection.90}
+\contentsline {section}{\numberline {8}Dokumentation}{13}{section.92}
+\contentsline {paragraph}{\nonumberline Beispiel}{13}{section*.93}
+\contentsline {subsection}{\numberline {8.1}Zwischenstand}{13}{subsection.95}
+\contentsline {section}{\numberline {9}Fazit}{14}{section.97}
+\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{14}{subsection.98}
+\contentsline {paragraph}{\nonumberline Beispiel (verk\IeC {\"u}rzt)}{14}{section*.99}
+\contentsline {subsection}{\numberline {9.2}Lessons Learned}{14}{subsection.101}
+\contentsline {subsection}{\numberline {9.3}Ausblick}{15}{subsection.102}
+\contentsline {section}{\nonumberline Literaturverzeichnis}{16}{section*.103}
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{18}{section*.104}
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.105}
+\contentsline {subsection}{\numberline {A.1}Verwendete Ressourcen}{i}{subsection.106}
+\contentsline {subsubsection}{\numberline {A.1.1}Hardware}{i}{subsubsection.107}
+\contentsline {subsubsection}{\numberline {A.1.2}Software}{i}{subsubsection.108}
+\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.109}
+\contentsline {subsection}{\numberline {A.3}Use-Case-Diagramm ohne SSO}{iii}{subsection.131}
+\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm mit SSO}{v}{subsection.133}
+\contentsline {subsection}{\numberline {A.5}Benutzeroberfl\IeC {\"a}che von wyconnect und dem Client}{vi}{subsection.135}
+\contentsline {subsection}{\numberline {A.6}Entity Relationship Modell}{ix}{subsection.139}
+\contentsline {subsection}{\numberline {A.7}Amortisationsdiagramm}{x}{subsection.141}
+\contentsline {subsection}{\numberline {A.8}Pflichtenheft (Auszug)}{xi}{subsection.143}
