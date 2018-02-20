@@ -22,13 +22,6 @@
   author    = {Pepper, Peter and Hofstedt, Petra},
 }
 
-@Misc{Arbeitstage,
-  Title                    = {Arbeitstage 2015},
-  Author                   = {schulferien.org},
-  Timestamp                = {2015.11.16},
-  Url                      = {http://www.schulferien.org/Arbeitstage/arbeitstage-2015.html}
-}
-
 @Misc{redgreenrefactor,
   Title                    = {Red-Green-Refactor},
   Author                   = {Shore, James},
@@ -150,9 +143,16 @@
 }
 
 @Misc{arbeitstage,
+  author    = {www.schnelle-online.info},
   title     = {Arbeitstage 2018},
   timestamp = {2018-02-13},
   url       = {https://www.schnelle-online.info/Arbeitstage/Anzahl-Arbeitstage-2018.html},
+}
+
+@Article{,
+  author = {Red Hat, Inc.},
+  title  = {Red Hat Enterprise Linux 4: Referenzhandbuch},
+  url    = {http://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-de-4/ch-kerberos.html},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

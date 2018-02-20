@@ -20,7 +20,45 @@ Es ermöglicht neben dem im folgenden unter \ref{sec:Architekturdesign} erläute
 
 Laravel wird mit dem \acs{ORM} Eloquent und einem gut bedienbaren Migrationssystem ausgeliefert. Damit werden Objekte einer objektorientierten Anwendung in eine relationale Datenbank überführt.
 
-Das Framework bringt von Hause aus ein Authentifizierungspaket, was auch von wyconnect genutzt wird und durch die Pakete Socialite und Passport ergänzt wird um den OAuth2 Mechanismus zu implementieren. Dazu mehr im Kapitel \fullnameref{sec:Architekturdesign}.
+Das Framework bringt von Hause aus ein Authentifizierungspaket, was auch von wyconnect genutzt wird und durch die Pakete Socialite und Passport ergänzt wird um den OAuth2 Mechanismus zu implementieren. Dazu mehr im Kapitel \fullnameref{sec:Geschaeftslogik}.
+
+\subsection{Wahl des SSO-Protokolls}
+\label{sec:Protokollwahl}
+
+Nach der Entscheidung einen \acs{SSO}-Server einzusetzen, galt es ein geeignetes Protokoll für die Umsetzung zu finden. 
+An erster Stelle steht dabei die Sicherheit. Sicherheit bei den wesentlichen Aspekten der Autorisierung und Authentifizierung. Autorisierung um bestimmten Clients den Zugriff auf die Ressourcen des Nutzers zu berechtigen und Authentifizierung um die Identität des Benutzer zu identifizieren. Eine mögliche Lösung bietet das OAuth2 Protokoll. \footnote{vgl. \cite{OAuth2}}.
+
+Der Workflow von OAuth2 sieht im Groben so aus: 
+
+\begin{enumerate}
+\item Der Client fragt beim Benutzer nach, ob er eine bestimmte Aktion durchführen darf. Im Fall des SSO-Projekts Zugriff auf das Benutzerbefehls.
+\item Wenn der Zugriff gewährt wurde, bekommt der Client eine entsprechende Antwort vom Benutzer.
+\item Der Client nutzt diese Antwort um eine Anfrage beim SSO-Server zu stellen.
+\item der Server gibt ein Access Token zurück.
+\item Mit diesem Token kann der Client die Anfrage nach dem Benutzerprofil beim Server stellen.
+\item Der Server beantwortet die Anfrage.
+\end{enumerate}
+
+Ein anderer Ansatz wäre Kerberos, deren Infrastruktur schon im \acs{AD} mit integriert ist. Allerdings ist damit die Authentifizierung auch an das \acs{AD} gebunden. Sobald sich ein Benutzer außerhalb der Domäne an eine Anwendung anmelden möchte, ist dies nicht mehr möglich. Da wycomco immer mehr Webanwendungen entwickelt und diese auch perspektivisch an Kunden gehen sollen, wäre eine Einschränkung an die AD nicht sinnvoll. 
+\acs{SAML} hingegen weist eine ähnliche Struktur wie die von OAuth2 auf. Während allerdings SAML längere Nachrichten über POST Parameter senden muss, greift OAuth2 auf GET zurück. Zudem sendet SAML XML Antworten an den Client zurück, der wesentlich komplizierter zu verarbeiten ist als das häufig genutzte JSON, welches auch bei wycomco standardmäßig genutzt wird. \footnote{vgl. \cite{SSO-Vgl}}
+Auch sendet OAuth2 keine Benutzerinformationen mit dem AccessToken mit, wie es in SAML der Fall ist, so erhält ein Angreifer nicht direkt den Zugang zu den Nutzerdaten.
+
+Aufgrund den angeführten Merkmale der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches innerhalb des SSO-Servers bei wycomco zukünftig zum Einsatz kommen wird. Für Oauth2 gibt es zahlreiche Bibliotheken, die genutzt werden können. Durch \acs{JWT} können nicht nur die Nutzerdaten, sondern auch weitere Informationen gesendet werden.
+
+\subsection{Authorization Grant Types}
+\label{sec:AuthorizationGrants}
+
+OAuth2 bringt verschiedene Arten mit um den Nutzer zu autorisieren.
+
+\begin{enumerate}
+\item mit dem \textbf{Passwortansatz} gibt der Nutzer direkt am Client Nutzername und Passwort ein und sendet sie per POST Request an den Server. Das hat den Nachteil, dass der Client die Daten bearbeitet.
+\item mit dem \textbf{Autorisationsansatz} lenkt der Client den Nutzer auf eine View vom Server. Dort kann der Zugriff gestattet oder abgelehnt werden. Nach Genehmigung bekommt der Client einen Authorization Code über eine Redirect URI, die der Client beim ersten Request angegeben hat. So kann sichergestellt werden, dass der richtige Client den Code bekommt. Nun kann der Client über einen Post Request mit dem Authorization Code ein Access Token erzeugen. 
+\item mit dem \textbf{Implicitansatz} läuft der Prozess ähnlich dem Authorizationsansatz. Nur das senden eines Authorization Codes entfällt und der Client bekommt sofort den Access Code vom Server geschickt.
+\item mit dem \textbf{Client Credentialsansatz} nutzt der Client eine bestimmte Information, die nur der Client kennt, um ein Access Token zu bekommen. So kann der Client ohne weitere Informationen auf Daten zugreifen.
+\end{enumerate}
+
+Im Projekt der Autorin fallen alle Grants bis auf den zweiten heraus. Beim Passwortansatz werden die Credentials des Nutzers von der Anwendung bearbeitet und verschickt werden, dies stellt ein Sicherheitsrisiko dar, was umgangen werden sollte.
+Der Client Credentialsansatz passt nicht zu den Anforderungen von wycomco an das Projekt, es soll eindeutig ein Nutzer authentifiziert werden, nur der Client sind nicht ausreichend. Nach Prüfung der Sicherheitsbestimmungen entschied sich die Autorin für den Autorisationsansatz. Der Nutzer kann den Zugriff gestatten und sendet seine Nutzerdaten nur über den Server, damit erhöht sich durch die Verwendet eines Authorizationscodes die Sicherheit und der Client ist nicht in die Authentifizierung verwickelt.
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
@@ -28,23 +66,23 @@ Das Framework bringt von Hause aus ein Authentifizierungspaket, was auch von wyc
 Beim Design wurde dem MVC Muster gefolgt, welches Laravel schon mit sich bringt. Die Anwendung wird in 3 Komponenten aufgespalten und sicher damit Flexibilität, Anpassbarkeit und Wiederverwendbarkeit.
 Bei einer späteren Implementierung als native Anwendung, kann das Model beibehalten werden und nur die View und der Controller müssten teilweise umgeschrieben werden.
 
-Model
-Das Model enthält Daten zur Weiterverarbeitung. In vielen Fällen spiegelt ein Model
+Das \textbf{Model} enthält Daten zur Weiterverarbeitung. In vielen Fällen spiegelt ein Model
 eine Tabelle in der Datenbank wieder, so auch beim Eloquent ORM von Laravel. Nur in dieser Model Klasse werden die Daten bearbeitet oder erfasst. Eine Trennung vom Controller ist erwünscht.
 
-View
-Die View ist das Benutzerinterface. Daten von Model und Controller werden visualisiert und leitet \zB Benutzeraktionen und Formulare weiter. Innerhalb der View sollte ein Zugriff auf das Model oder den Controller vermieden werden. Somit bleiben alle Daten statisch und werden nicht verändert.
+Die \textbf{View} ist das Benutzerinterface. Daten von Model und Controller werden visualisiert und leitet \zB Benutzeraktionen und Formulare weiter. Innerhalb der View sollte ein Zugriff auf das Model oder den Controller vermieden werden. Somit bleiben alle Daten statisch und werden nicht verändert.
 
-Controller
-Der Controller empfängt Anfragen (Requests) von der View. In diesen Request sind \bspw die Login Daten eines Benutzers. Der Controller verarbeitet die Daten und sendet eine Anfrage an das User Model, welches dem Controller den richten User zurückgibt. Dieser loggt den Benutzer ein und die View zeigt den erfolgreichen Login Prozess an. 
+Der \textbf{Controller} empfängt Anfragen (Requests) von der View. In diesen Request sind \bspw die Login Daten eines Benutzers. Der Controller verarbeitet die Daten und sendet eine Anfrage an das User Model, welches dem Controller den richten User zurückgibt. Dieser loggt den Benutzer ein und die View zeigt den erfolgreichen Login Prozess an. 
 
 
 
 \subsection{Entwurf der Benutzeroberfläche}
 \label{sec:Benutzeroberflaeche} 
 
-Das Laravel Passport Paket bringt eine beispielhafte Oberfläche mit, in der alle relevanten Anforderungen Anwendung finden. 
-Dazu sind Screenshots und Mockups auf  \fullnameref{app:wyconnect-mockup} zu sehen. Timy stellt hier einen Client dar. Dabei handelt es sich um eine Zeiterfassungssoftware, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die auch über Single-Sign-On laufen soll. 
+Das Laravel Passport Paket bringt eine beispielhafte Oberfläche mit, in der alle relevanten Anforderungen Anwendung finden. Jedoch wurde nach Absprache mit dem Teamleiter beschlossen die Oberfläche selber zu implementieren und auf die gesonderten Anforderungen von wycomco  anzupassen.
+
+Die \acs{GUI} wurde mittels HTML und CSS responsiv umgesetzt. Dabei kam auch das bekannte Bootstrap Paket zum Einsatz. 
+
+Dazu sind Screenshots und Mockups auf  \fullnameref{app:wyconnect-mockup} zu sehen. Timy stellt hier einen Client dar. Dabei handelt es sich um eine Zeiterfassungssoftware, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die auch über Single-Sign-On laufen soll. Auf diesem Client wurde eine Benutzerverwaltung implementiert, die auch auf die restlich angebundenen Clients übertragen werden kann. 
 
 Über die Hauptansicht kann der Administrator die autorisierten Clients verwalten, die per \acs{SSO} auf  Benutzerdaten zugreifen dürfen. Benutzer können lediglich ihr eigenes Profil verwalten.
 
@@ -60,6 +98,19 @@ Das Laravel Passport Paket erleichtert die Aufgabe der Autorin des Datenmodells 
 
 \subsection{Geschäftslogik}
 \label{sec:Geschaeftslogik}
+
+Da wy-connect mittel \acs{PHP} Laravel umgesetzt werden soll, lag es nahe bei der Implementierung auf das Passport Paket zurückzugreifen.\footnote{vgl. \cite{Passport}}
+Passport bringt viele Interfaces mit, die dann nach den jeweiligen Anforderungen implementiert werden können. 
+
+Im Anhang \fullnameref{app:sequenzdiagramm} befindet sich ein Sequenzdiagramm was den Ablauf des OAuth2 Authentifizierungsprozesses veranschaulicht. 
+
+Ein User besucht die Seite von timy und möchte sich per \acs{SSO} einloggen. Dazu nutzt er den "wy-connect" Button und wird auf wy-connect weitergeleitet. Bei dieser Weiterleitung schickt timy seine Client\_ID und Redirect Adresse als GET Parameter mit und authentifiziert sich somit am Server. 
+Beim erstmaligen Anlegen eines Clients werden Redirect Adresse, Client\_ID, sowie Client\_secret ausgetauscht. 
+Am \acs{SSO}-Server loggt sich der User mit seinen Benutzerdaten ein und muss einmalig den Zugriff von timy auf seine Nutzerdaten erlauben. 
+Er wird auf die konfigurierte Redirect Adresse geleitet, in der der Server einen Autorisierungscode mitschickt. Mit diesem Code, seiner eigenen Client\_ID und seiner Secret\_ID sendet timy eine Anfrage auf ein Access Token per POST Request an den Server. Mit diesem Access Token, kann timy dann die Nutzerdaten per API erfragen. 
+
+Die Authentifizierung muss nicht zwingend mit einem Access Token erfolgen, die Autorin hat sich aber für diese Methode entschieden, weil gerade das Passwort n
+
 
 
 \subsection{Deployment}
