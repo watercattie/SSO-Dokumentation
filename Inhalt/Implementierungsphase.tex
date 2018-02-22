@@ -2,21 +2,30 @@
 \section{Implementierungsphase} 
 \label{sec:Implementierungsphase}
 
-\subsection{Implementierung der Datenstrukturen}
-\label{sec:ImplementierungDatenstrukturen}
+\subsection{Aufsetzen des Grundgerüsts}
+\label{sec:AufsetzenGrundgeruest}
+
+Als erstes wurde eine neues Projekt auf dem GitLabServer erstellt und lokal geklont. Über das Terminal wurde auf Basis des MVC Musters mit dem Befehl \texttt{laravel new wy-connect} und \texttt{php artisan make:auth} ein neues Laravel Projekt mit Authentifizierungserweiterung angelegt. 
+Für den Testclient wurde die fertige Instanz des von der Autorin entwickeltem Zeiterfassungstool genutzt.
+
+\subsection{Implementierung des OAuth2 Flows}
+\label{sec:ImplementierungOAuth2}
+
+Mit dem Konsolenbefehl \texttt{composer require laravel/passport} wurde das Grundgerüst des SSO-Servers erstellt und mit \texttt{php artisan migrate} die erforderlichen Tabellen in die Datenbank migriert. 
+
+Für jedes Modelobjekt wurden die Fremdschlüssel mittels \texttt{\$this->belongsTo(Model::class)} und \texttt{\$this->hasMany()(Model::class)} implementiert, Attribute gesetzt und die Vererbung der Klasse \texttt{Model} gesetzt.
+Für die Client und Token Klassen gibt es zusätzlich eine Repository Klasse, die Abfragen übernimmt, die ein einzelnes Model anhand verschiedener Parameter zurückgibt. 
+
+Im \Anhang{app:routes} sind alle Routen aufgelistet, die der Server zur Verfügung stellt. Es ist sehr schön zu erkennen, welche Route auf welchen Controller zugreift und wie die Zugriffsrechte (in Laravel über Middlewares implementiert) validiert sind. Alle Routen mit der Middleware web und auth können nur eingeloggte User benutzen, sei es per normaler Webauthentifizierung oder auth über den OAuth2 Flow.
 
 
 
-\subsection{Implementierung des Kommandozeileninterfaces}
-\label{sec:ImplementierungKommandozeileninterface}
 
-
-
-\subsection{Implementierung der Geschäftslogik}
-\label{sec:ImplementierungGeschaeftslogik}
+\subsection{Implementierung der Anbindung an den Server}
+\label{sec:ImplementierungCient}
 
 
 \paragraph{Beispiel}
 
 
-% \Zwischenstand{Implementierungsphase}{Implementierung}
+\Zwischenstand{Implementierungsphase}{Implementierung}

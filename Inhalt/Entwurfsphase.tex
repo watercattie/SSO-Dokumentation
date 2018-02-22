@@ -94,27 +94,23 @@ Das Laravel Passport Paket erleichtert die Aufgabe der Autorin des Datenmodells 
 
 \tabelle{Entitaeten}{tab:Entitaeten}{Entitaeten.tex}
 
-** noch erweiterbar mit Details **
-
 \subsection{Geschäftslogik}
 \label{sec:Geschaeftslogik}
 
 Da wy-connect mittel \acs{PHP} Laravel umgesetzt werden soll, lag es nahe bei der Implementierung auf das Passport Paket zurückzugreifen.\footnote{vgl. \cite{Passport}}
 Passport bringt viele Interfaces mit, die dann nach den jeweiligen Anforderungen implementiert werden können. 
 
-Im Anhang \fullnameref{app:sequenzdiagramm} befindet sich ein Sequenzdiagramm was den Ablauf des OAuth2 Authentifizierungsprozesses veranschaulicht. 
+Im Anhang \fullnameref{app:oauth2flow} befindet sich ein Diagramm was den Ablauf des OAuth2 Authentifizierungsprozesses  am Beispiel von timy sveranschaulicht. 
 
 Ein User besucht die Seite von timy und möchte sich per \acs{SSO} einloggen. Dazu nutzt er den "wy-connect" Button und wird auf wy-connect weitergeleitet. Bei dieser Weiterleitung schickt timy seine Client\_ID und Redirect Adresse als GET Parameter mit und authentifiziert sich somit am Server. 
 Beim erstmaligen Anlegen eines Clients werden Redirect Adresse, Client\_ID, sowie Client\_secret ausgetauscht. 
 Am \acs{SSO}-Server loggt sich der User mit seinen Benutzerdaten ein und muss einmalig den Zugriff von timy auf seine Nutzerdaten erlauben. 
 Er wird auf die konfigurierte Redirect Adresse geleitet, in der der Server einen Autorisierungscode mitschickt. Mit diesem Code, seiner eigenen Client\_ID und seiner Secret\_ID sendet timy eine Anfrage auf ein Access Token per POST Request an den Server. Mit diesem Access Token, kann timy dann die Nutzerdaten per API erfragen. 
 
-Die Authentifizierung muss nicht zwingend mit einem Access Token erfolgen, die Autorin hat sich aber für diese Methode entschieden, weil gerade das Passwort n
-
-
-
 \subsection{Deployment}
 \label{sec:Deployment}
+
+Der Server ist auf dem firmeneigenen Webserver gehostet mit der dazugehörigen Datenbank. Das komplette Repository liegt auf dem Gitlab Server und wird von da aus mittels dem GitLab Runner verarbeitet. Diese Jobs, ausgelöst durch einen Push auf den master Branch, werden innerhalb eines Docker Containers ausgeführt, nachdem der Build erfolgreich war, werden die Tests durchlaufen und bei Erfolg wird der Build deployed. 
 
 \subsection{Pflichtenheft/Datenverarbeitungskonzept}
 \label{sec:Pflichtenheft}

@@ -38,30 +38,33 @@
 \BOOKMARK [2][-]{subsection.91}{4.10 Pflichtenheft/Datenverarbeitungskonzept}{section.65}% 38
 \BOOKMARK [2][-]{subsection.93}{4.11 Zwischenstand}{section.65}% 39
 \BOOKMARK [1][-]{section.95}{5 Implementierungsphase}{}% 40
-\BOOKMARK [2][-]{subsection.96}{5.1 Implementierung der Datenstrukturen}{section.95}% 41
-\BOOKMARK [2][-]{subsection.97}{5.2 Implementierung des Kommandozeileninterfaces}{section.95}% 42
-\BOOKMARK [2][-]{subsection.98}{5.3 Implementierung der Gesch\344ftslogik}{section.95}% 43
-\BOOKMARK [1][-]{section.100}{6 Abnahmephase}{}% 44
-\BOOKMARK [2][-]{subsection.102}{6.1 Zwischenstand}{section.100}% 45
-\BOOKMARK [1][-]{section.104}{7 Einf\374hrungsphase}{}% 46
-\BOOKMARK [2][-]{subsection.105}{7.1 Zwischenstand}{section.104}% 47
-\BOOKMARK [1][-]{section.107}{8 Dokumentation}{}% 48
-\BOOKMARK [2][-]{subsection.110}{8.1 Zwischenstand}{section.107}% 49
-\BOOKMARK [1][-]{section.112}{9 Fazit}{}% 50
-\BOOKMARK [2][-]{subsection.113}{9.1 Soll-/Ist-Vergleich}{section.112}% 51
-\BOOKMARK [2][-]{subsection.116}{9.2 Lessons Learned}{section.112}% 52
-\BOOKMARK [2][-]{subsection.117}{9.3 Ausblick}{section.112}% 53
-\BOOKMARK [1][-]{section*.118}{Literaturverzeichnis}{}% 54
-\BOOKMARK [1][-]{section*.119}{Eidesstattliche Erkl\344rung}{}% 55
-\BOOKMARK [1][-]{appendix.120}{A Anhang}{}% 56
-\BOOKMARK [2][-]{subsection.121}{A.1 Verwendete Ressourcen}{appendix.120}% 57
-\BOOKMARK [3][-]{subsubsection.122}{A.1.1 Hardware}{subsection.121}% 58
-\BOOKMARK [3][-]{subsubsection.123}{A.1.2 Software}{subsection.121}% 59
-\BOOKMARK [2][-]{subsection.124}{A.2 Lastenheft \(Auszug\)}{appendix.120}% 60
-\BOOKMARK [2][-]{subsection.146}{A.3 Use-Case-Diagramm ohne SSO}{appendix.120}% 61
-\BOOKMARK [2][-]{subsection.148}{A.4 Use-Case-Diagramm mit SSO}{appendix.120}% 62
-\BOOKMARK [2][-]{subsection.150}{A.5 Benutzeroberfl\344che von wyconnect und dem Client}{appendix.120}% 63
-\BOOKMARK [2][-]{subsection.154}{A.6 Entity Relationship Modell}{appendix.120}% 64
-\BOOKMARK [2][-]{subsection.156}{A.7 Amortisationsdiagramm}{appendix.120}% 65
-\BOOKMARK [2][-]{subsection.158}{A.8 Sequenzdiagramm OAuth2}{appendix.120}% 66
-\BOOKMARK [2][-]{subsection.160}{A.9 Pflichtenheft \(Auszug\)}{appendix.120}% 67
+\BOOKMARK [2][-]{subsection.96}{5.1 Aufsetzen des Grundger\374sts}{section.95}% 41
+\BOOKMARK [2][-]{subsection.97}{5.2 Implementierung des OAuth2 Flows}{section.95}% 42
+\BOOKMARK [2][-]{subsection.98}{5.3 Implementierung der Anbindung an den Server}{section.95}% 43
+\BOOKMARK [2][-]{subsection.100}{5.4 Zwischenstand}{section.95}% 44
+\BOOKMARK [1][-]{section.102}{6 Abnahmephase}{}% 45
+\BOOKMARK [2][-]{subsection.104}{6.1 Zwischenstand}{section.102}% 46
+\BOOKMARK [1][-]{section.106}{7 Einf\374hrungsphase}{}% 47
+\BOOKMARK [2][-]{subsection.107}{7.1 Zwischenstand}{section.106}% 48
+\BOOKMARK [1][-]{section.109}{8 Dokumentation}{}% 49
+\BOOKMARK [2][-]{subsection.112}{8.1 Zwischenstand}{section.109}% 50
+\BOOKMARK [1][-]{section.114}{9 Fazit}{}% 51
+\BOOKMARK [2][-]{subsection.115}{9.1 Soll-/Ist-Vergleich}{section.114}% 52
+\BOOKMARK [2][-]{subsection.118}{9.2 Lessons Learned}{section.114}% 53
+\BOOKMARK [2][-]{subsection.119}{9.3 Ausblick}{section.114}% 54
+\BOOKMARK [1][-]{section*.120}{Literaturverzeichnis}{}% 55
+\BOOKMARK [1][-]{section*.121}{Eidesstattliche Erkl\344rung}{}% 56
+\BOOKMARK [1][-]{appendix.122}{A Anhang}{}% 57
+\BOOKMARK [2][-]{subsection.123}{A.1 Verwendete Ressourcen}{appendix.122}% 58
+\BOOKMARK [3][-]{subsubsection.124}{A.1.1 Hardware}{subsection.123}% 59
+\BOOKMARK [3][-]{subsubsection.125}{A.1.2 Software}{subsection.123}% 60
+\BOOKMARK [2][-]{subsection.126}{A.2 Lastenheft \(Auszug\)}{appendix.122}% 61
+\BOOKMARK [2][-]{subsection.148}{A.3 Use-Case-Diagramm ohne SSO}{appendix.122}% 62
+\BOOKMARK [2][-]{subsection.150}{A.4 Use-Case-Diagramm mit SSO}{appendix.122}% 63
+\BOOKMARK [2][-]{subsection.152}{A.5 Benutzeroberfl\344che von wyconnect und dem Client}{appendix.122}% 64
+\BOOKMARK [2][-]{subsection.156}{A.6 Entity Relationship Modell}{appendix.122}% 65
+\BOOKMARK [2][-]{subsection.158}{A.7 Amortisationsdiagramm}{appendix.122}% 66
+\BOOKMARK [2][-]{subsection.160}{A.8 OAuth2 Flow}{appendix.122}% 67
+\BOOKMARK [2][-]{subsection.162}{A.9 Sequenzdiagramm OAuth2}{appendix.122}% 68
+\BOOKMARK [2][-]{subsection.164}{A.10 Pflichtenheft \(Auszug\)}{appendix.122}% 69
+\BOOKMARK [2][-]{subsection.183}{A.11 Routen innerhalb des SSO-Servers}{appendix.122}% 70
