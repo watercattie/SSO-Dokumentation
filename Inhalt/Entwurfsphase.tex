@@ -124,6 +124,25 @@ state=TMnRrCWI3HFx3crHYiqcKPepe2McHagD4NlGa5Dn
 \textbf{code} - Der Server gibt den Autorisierungscode zurück \\
 \textbf{state} - Der Server gibt den gleichen Statuswert zurück, der übergeben wurde
 
+Dabei ist wichtig, dass der state Wert dem vom vorherigen Request entspricht. 
+Sie sollten diesen Zustandswert zuerst vergleichen, um sicherzustellen, dass er mit dem übereinstimmt, mit dem Sie begonnen haben. Sie können den Statuswert normalerweise in einem Cookie oder einer Sitzung speichern und vergleichen, wenn der Benutzer zurückkommt. Dies stellt sicher, dass Ihr Umleitungsendpunkt nicht dazu verleitet werden kann, willkürliche Autorisierungscodes auszutauschen.
+
+Mittels des Autorisierungscodes kann nun der Client mittels folgednem Aufruf ein Access Token erlangen: 
+
+\texttt{POST https://wy-connect.wycomco.de/token \\
+  grant\_type=authorization\_code\& \\
+  code=def502009ae50a0d3dc123a13c16d3281a46e5301eec50483c3bb4e7 [...]\& \\
+  redirect\_uri=https://wy-connect-client.test/login/wyconnect/callback\& \\
+  client\_id=1\& \\
+  client\_secret=ZKKn5QypcIsO4iAh2dTdFAWJ47bHinbvMoLCYFP2}
+  
+\textbf{grant\_type} = authorization\_code - Der Grant Type für diesen Ablauf ist authorization\_code \\
+\textbf{code} - Dies ist der Code, den der Nutzer inm vorherigen Request erhalten hat \\
+\textbf{redirect\_uri} - Muss identisch mit der URL sein, die im ursprünglichen Link angegeben wurde \\
+\textbf{client\_id} - Die Client-ID, die beim Erstellen der Anwendung vergeben wurde \\
+\textbf{client\_secret} - Da diese Anfrage vom serverseitigen Code stammt, ist das Geheimnis enthalten
+
+Der Server antwortet mit einem Zugriffstoken und einer Ablaufzeit.
 
 Im Anhang \fullnameref{app:oauth2flow} befindet sich ein Diagramm was den Ablauf des OAuth2 Authentifizierungsprozesses  am Beispiel von timy veranschaulicht. 
 
