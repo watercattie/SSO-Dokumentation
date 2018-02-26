@@ -15,11 +15,8 @@ Wie auch die bestehenden Webapplikationen wird bei der Implementation das Framew
 \label{sec:Framework}
 
 Laravel ist ein freies \acs{PHP}-Webframework, welches dem \acs{MVC}-Muster folgt. 
-
 Es ermöglicht neben dem im folgenden unter \ref{sec:Architekturdesign} erläuterten MVC-Architekturdesign, \acs{REST}-Webdienste zu implementieren.
-
 Laravel wird mit dem \acs{ORM} Eloquent und einem gut bedienbaren Migrationssystem ausgeliefert. Damit werden Objekte einer objektorientierten Anwendung in eine relationale Datenbank überführt.
-
 Das Framework bringt von Hause aus ein Authentifizierungspaket, was auch von wyconnect genutzt wird und durch die Pakete Socialite und Passport ergänzt wird um den OAuth2 Mechanismus zu implementieren. Dazu mehr im Kapitel \fullnameref{sec:Geschaeftslogik}.
 
 \subsection{Wahl des SSO-Protokolls}
@@ -28,22 +25,14 @@ Das Framework bringt von Hause aus ein Authentifizierungspaket, was auch von wyc
 Nach der Entscheidung einen \acs{SSO}-Server einzusetzen, galt es ein geeignetes Protokoll für die Umsetzung zu finden. 
 An erster Stelle steht dabei die Sicherheit. Sicherheit bei den wesentlichen Aspekten der Autorisierung und Authentifizierung. Autorisierung um bestimmten Clients den Zugriff auf die Ressourcen des Nutzers zu berechtigen und Authentifizierung um die Identität des Benutzer zu identifizieren. Eine mögliche Lösung bietet das OAuth2 Protokoll. \footnote{vgl. \cite{OAuth2}}.
 
-Der Workflow von OAuth2 sieht im Groben so aus: 
-
-\begin{enumerate}
-\item Der Client fragt beim Benutzer nach, ob er eine bestimmte Aktion durchführen darf. Im Fall des SSO-Projekts Zugriff auf das Benutzerbefehls.
-\item Wenn der Zugriff gewährt wurde, bekommt der Client eine entsprechende Antwort vom Benutzer.
-\item Der Client nutzt diese Antwort um eine Anfrage beim SSO-Server zu stellen.
-\item der Server gibt ein Access Token zurück.
-\item Mit diesem Token kann der Client die Anfrage nach dem Benutzerprofil beim Server stellen.
-\item Der Server beantwortet die Anfrage.
-\end{enumerate}
+Die Benutzerkontrolle stellt bei OAuth2 das grundlegende Prinzip dar. Im Fokus steht der Schutz von Benutzerdaten vor unbefugten Zugriff. Die Ressourcen von den Benutzern (als \textit{Resource Owner} bezeichnet) verwaltet ein \textit{Resource Server}, der nur zulässige und autorisierte Anfragen zulässt. Ein vertrauenswürdiger \textit{Authorization Server} authentifiziert den Benutzer und holt dessen Autorisierung für den Zugriff ein. Als Autorisierungsnachweis stellt der \textit{Auhorization Server} Access Token aus. Im vorliegenden Anwendungsfall sind \textit{Resource Server} und \textit{Authorization Server} ein und derselbe Server.
+Als \textit{Client} bezeichnet man dabei jede Anwendung, die auf Ressourcen eines Benutzers in seinem Namen zugreifen möchte. Im Falle der Projektarbeit handelt es sich hierbei um \textit{timy}, eine Zeiterfassungsanwendung, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die als erstes den Single-Sign-On-Dienst nutzen soll. 
 
 Ein anderer Ansatz wäre Kerberos, deren Infrastruktur schon im \acs{AD} mit integriert ist. Allerdings ist damit die Authentifizierung auch an das \acs{AD} gebunden. Sobald sich ein Benutzer außerhalb der Domäne an eine Anwendung anmelden möchte, ist dies nicht mehr möglich. Da wycomco immer mehr Webanwendungen entwickelt und diese auch perspektivisch an Kunden gehen sollen, wäre eine Einschränkung an die AD nicht sinnvoll. 
-\acs{SAML} hingegen weist eine ähnliche Struktur wie die von OAuth2 auf. Während allerdings SAML längere Nachrichten über POST Parameter senden muss, greift OAuth2 auf GET zurück. Zudem sendet SAML XML Antworten an den Client zurück, der wesentlich komplizierter zu verarbeiten ist als das häufig genutzte JSON, welches auch bei wycomco standardmäßig genutzt wird. \footnote{vgl. \cite{SSO-Vgl}}
+\acs{SAML} hingegen weist eine ähnliche Struktur wie die von OAuth2 auf. Während allerdings SAML längere Nachrichten über POST Parameter senden muss, greift OAuth2 auf GET zurück. Zudem sendet SAML \acs{XML} Antworten an den Client zurück, der wesentlich komplizierter zu verarbeiten ist als das häufig genutzte \acs{JSON}, welches auch bei wycomco standardmäßig genutzt wird. \footnote{vgl. \cite{SSO-Vgl}}
 Auch sendet OAuth2 keine Benutzerinformationen mit dem AccessToken mit, wie es in SAML der Fall ist, so erhält ein Angreifer nicht direkt den Zugang zu den Nutzerdaten.
 
-Aufgrund den angeführten Merkmale der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches innerhalb des SSO-Servers bei wycomco zukünftig zum Einsatz kommen wird. Für Oauth2 gibt es zahlreiche Bibliotheken, die genutzt werden können. Durch \acs{JWT} können nicht nur die Nutzerdaten, sondern auch weitere Informationen gesendet werden.
+Aufgrund den angeführten Merkmalen der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches innerhalb des SSO-Servers bei wycomco zukünftig zum Einsatz kommen wird. Für OAuth2 gibt es zudem zahlreiche Bibliotheken, die genutzt werden können um die Komplexität der Implementierung zu verringern.
 
 \subsection{Authorization Grant Types}
 \label{sec:AuthorizationGrants}
@@ -80,7 +69,7 @@ Der \textbf{Controller} empfängt Anfragen (Requests) von der View. In diesen Re
 
 Das Laravel Passport Paket bringt eine beispielhafte Oberfläche mit, in der alle relevanten Anforderungen Anwendung finden. Jedoch wurde nach Absprache mit dem Teamleiter beschlossen die Oberfläche selber zu implementieren und auf die gesonderten Anforderungen von wycomco  anzupassen.
 
-Die \acs{GUI} wurde mittels HTML und CSS responsiv umgesetzt. Dabei kam auch das bekannte Bootstrap Paket zum Einsatz. 
+Die \acs{GUI} wurde mittels \acs{HTML} und \acs{CSS} responsiv umgesetzt. Dabei kam auch das bekannte Bootstrap Paket zum Einsatz. 
 
 Dazu sind Screenshots und Mockups auf  \fullnameref{app:wyconnect-mockup} zu sehen. Timy stellt hier einen Client dar. Dabei handelt es sich um eine Zeiterfassungssoftware, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die auch über Single-Sign-On laufen soll. Auf diesem Client wurde eine Benutzerverwaltung implementiert, die auch auf die restlich angebundenen Clients übertragen werden kann. 
 
@@ -90,17 +79,55 @@ Dazu sind Screenshots und Mockups auf  \fullnameref{app:wyconnect-mockup} zu seh
 \label{sec:Datenmodell}
 
 Im folgenden sollen die wichtigsten Komponenten des Datenmodells genannt und kurz erläutert werden. 
-Das Laravel Passport Paket erleichtert die Aufgabe der Autorin des Datenmodells immens. Mit Installation des Pakets werden automatisch alle Tabellen mit dem Konsolenbefehl \Code{php artisan migrate} migriert. im \fullnameref{app:ERM} werden die von der Autorin benötigten Entitäten dargestellt. 
+Das Laravel Passport Paket erleichtert die Aufgabe der Autorin des Datenmodells immens. Mit Installation des Pakets werden automatisch alle Tabellen migriert. im \fullnameref{app:ERM} werden die von der Autorin benötigten Entitäten dargestellt. 
 
 \tabelle{Entitaeten}{tab:Entitaeten}{Entitaeten.tex}
 
 \subsection{Geschäftslogik}
 \label{sec:Geschaeftslogik}
 
-Da wy-connect mittel \acs{PHP} Laravel umgesetzt werden soll, lag es nahe bei der Implementierung auf das Passport Paket zurückzugreifen.\footnote{vgl. \cite{Passport}}
+Da wy-connect mittels \acs{PHP} Laravel umgesetzt werden soll, lag es nahe bei der Implementierung auf das Passport Paket zurückzugreifen.\footnote{vgl. \cite{Passport}}
 Passport bringt viele Interfaces mit, die dann nach den jeweiligen Anforderungen implementiert werden können. 
 
-Im Anhang \fullnameref{app:oauth2flow} befindet sich ein Diagramm was den Ablauf des OAuth2 Authentifizierungsprozesses  am Beispiel von timy sveranschaulicht. 
+In Kapitel \fullnameref{sec:Protokollwahl} wurden bereits die verschiedenen Rollen erläutert, die im OAuth Prozess eine Rolle spielen. Nachfolgend der Workflow des Protokolls.
+
+Zuerst muss, die neue App, die den Dienst nutzen möchte, registriert werden. Dabei werden Daten wie Anwendungsname, ein Logo und eine Weiterleitungsadresse - die \textit{redirect URI}, auf die der Nutzer weitergeleitet wird.
+
+\textbf{redirect URI}
+Der Service wird den Nutzer nur zur registrierten URL weiterleiten, wodurch einige Angriffe verhindert werden können. Alle redirect URIs müssen TLS verschlüsselt sein, da der Dienst nur URIs akzeptiert die mit "https" beginnen. Das verhindert, dass Token während des Autorisierungsprozesses abgefangen werden können. 
+
+\textbf{Client ID und Secret}
+Nach der Registrierung der Anwendung erhält man eine \textit{Client ID} und ein \textit{Client Secret}. Die Client ID wird als öffentliche Information betrachtet und wird verwendet zum Erstellen von Login Seiten. Sie ist so etwas wie die öffentliche Kennung des Clients. 
+Das Client Secret muss vertraulich behandelt werden und wird genutzt um vom Authorization Server ein Access Token zu erlangen. Das Secret ist nur der Anwendung und dem Autorisierungsserver bekannt und sollte ausreichend zufällig sein. 
+
+Der erste Schritt von OAuth 2 besteht darin, eine Autorisierung vom Benutzer zu erhalten. Dies wird dadurch erreicht, dass dem Benutzer eine vom Dienst bereitgestellte Schnittstelle angezeigt wird. Dazu wird der Nutzer über den Anmelden Button an folgende URL weitergeleitet:
+
+\texttt{https://wy-connect.wycomco.de/oauth/authorize?\\
+client\_id=1\& \\
+redirect\_uri=https://wy-connect-client.test/login/wyconnect/callback\& \\
+response\_type=code\& \\
+state=TMnRrCWI3HFx3crHYiqcKPepe2McHagD4NlGa5Dn
+}
+
+\textbf{code} - Gibt an, dass Ihr Server einen Autorisierungscode erwartet \\
+\textbf{client\_id} - Die Client-ID, die beim Erstellen der Anwendung festgelegt wurde \\
+\textbf{redirect\_uri} - Gibt die URL an, zu dem der Benutzer nach Abschluss der Autorisierung zurückkehren soll \\
+\textbf{state} - Eine zufällige Zeichenfolge, die von Ihrer Anwendung generiert und später überprüft wird
+
+Nachdem der Benutzer sich Autorisierungsserver eingeloggt hat, sieht er die Autorisierungsanforderung. Wenn der Nutzer auf "Zulassen" klickt, leitet der DIenst ihn mit einem Autorisierungscode zurück zum Client. Ein Beispiel für eine Antworte wäre:
+
+\texttt{https://wy-connect-client.test/login/wyconnect/callback?\\
+code=def502009ae50a0d3dc123a13c16d3281a46e5301eec50483c3bb4e7 [...]\& \\
+state=TMnRrCWI3HFx3crHYiqcKPepe2McHagD4NlGa5Dn
+}
+
+\textbf{code} - Der Server gibt den Autorisierungscode zurück \\
+\textbf{state} - Der Server gibt den gleichen Statuswert zurück, der übergeben wurde
+
+
+Im Anhang \fullnameref{app:oauth2flow} befindet sich ein Diagramm was den Ablauf des OAuth2 Authentifizierungsprozesses  am Beispiel von timy veranschaulicht. 
+
+
 
 Ein User besucht die Seite von timy und möchte sich per \acs{SSO} einloggen. Dazu nutzt er den "wy-connect" Button und wird auf wy-connect weitergeleitet. Bei dieser Weiterleitung schickt timy seine Client\_ID und Redirect Adresse als GET Parameter mit und authentifiziert sich somit am Server. 
 Beim erstmaligen Anlegen eines Clients werden Redirect Adresse, Client\_ID, sowie Client\_secret ausgetauscht. 
@@ -112,13 +139,9 @@ Er wird auf die konfigurierte Redirect Adresse geleitet, in der der Server einen
 
 Der Server ist auf dem firmeneigenen Webserver gehostet mit der dazugehörigen Datenbank. Das komplette Repository liegt auf dem Gitlab Server und wird von da aus mittels dem GitLab Runner verarbeitet. Diese Jobs, ausgelöst durch einen Push auf den master Branch, werden innerhalb eines Docker Containers ausgeführt, nachdem der Build erfolgreich war, werden die Tests durchlaufen und bei Erfolg wird der Build deployed. 
 
-\subsection{Pflichtenheft/Datenverarbeitungskonzept}
+\subsection{Pflichtenheft}
 \label{sec:Pflichtenheft}
-\begin{itemize}
-	\item Auszüge aus dem Pflichtenheft/Datenverarbeitungskonzept, wenn es im Rahmen des Projekts erstellt wurde.
-\end{itemize}
 
-\paragraph{Beispiel}
 Ein Beispiel für das auf dem Lastenheft (siehe Kapitel~\ref{sec:Lastenheft}: \nameref{sec:Lastenheft}) aufbauende Pflichtenheft ist im \Anhang{app:Pflichtenheft} zu finden.
 
 

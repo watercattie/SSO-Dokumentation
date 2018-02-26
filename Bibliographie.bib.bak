@@ -155,4 +155,16 @@
   url    = {http://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-de-4/ch-kerberos.html},
 }
 
+@Article{SSO-Vgl,
+  author = {Darfk},
+  title  = {Single Sign-On Kerberos vs SAML vs OAuth2},
+  url    = {http://dafrk-blog.com/de/sso-kerberos-saml-oauth-sap/},
+}
+
+@Manual{composer,
+  title  = {Composer},
+  author = {composer},
+  url    = {https://getcomposer.org/},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

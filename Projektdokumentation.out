@@ -29,42 +29,43 @@
 \BOOKMARK [2][-]{subsection.66}{4.1 Zielplattform}{section.65}% 29
 \BOOKMARK [2][-]{subsection.69}{4.2 Framework}{section.65}% 30
 \BOOKMARK [2][-]{subsection.70}{4.3 Wahl des SSO-Protokolls}{section.65}% 31
-\BOOKMARK [2][-]{subsection.79}{4.4 Authorization Grant Types}{section.65}% 32
-\BOOKMARK [2][-]{subsection.84}{4.5 Architekturdesign}{section.65}% 33
-\BOOKMARK [2][-]{subsection.85}{4.6 Entwurf der Benutzeroberfl\344che}{section.65}% 34
-\BOOKMARK [2][-]{subsection.86}{4.7 Datenmodell}{section.65}% 35
-\BOOKMARK [2][-]{subsection.88}{4.8 Gesch\344ftslogik}{section.65}% 36
-\BOOKMARK [2][-]{subsection.90}{4.9 Deployment}{section.65}% 37
-\BOOKMARK [2][-]{subsection.91}{4.10 Pflichtenheft/Datenverarbeitungskonzept}{section.65}% 38
-\BOOKMARK [2][-]{subsection.93}{4.11 Zwischenstand}{section.65}% 39
-\BOOKMARK [1][-]{section.95}{5 Implementierungsphase}{}% 40
-\BOOKMARK [2][-]{subsection.96}{5.1 Aufsetzen des Grundger\374sts}{section.95}% 41
-\BOOKMARK [2][-]{subsection.97}{5.2 Implementierung des OAuth2 Flows}{section.95}% 42
-\BOOKMARK [2][-]{subsection.98}{5.3 Implementierung der Anbindung an den Server}{section.95}% 43
-\BOOKMARK [2][-]{subsection.100}{5.4 Zwischenstand}{section.95}% 44
-\BOOKMARK [1][-]{section.102}{6 Abnahmephase}{}% 45
-\BOOKMARK [2][-]{subsection.104}{6.1 Zwischenstand}{section.102}% 46
-\BOOKMARK [1][-]{section.106}{7 Einf\374hrungsphase}{}% 47
-\BOOKMARK [2][-]{subsection.107}{7.1 Zwischenstand}{section.106}% 48
-\BOOKMARK [1][-]{section.109}{8 Dokumentation}{}% 49
-\BOOKMARK [2][-]{subsection.112}{8.1 Zwischenstand}{section.109}% 50
-\BOOKMARK [1][-]{section.114}{9 Fazit}{}% 51
-\BOOKMARK [2][-]{subsection.115}{9.1 Soll-/Ist-Vergleich}{section.114}% 52
-\BOOKMARK [2][-]{subsection.118}{9.2 Lessons Learned}{section.114}% 53
-\BOOKMARK [2][-]{subsection.119}{9.3 Ausblick}{section.114}% 54
-\BOOKMARK [1][-]{section*.120}{Literaturverzeichnis}{}% 55
-\BOOKMARK [1][-]{section*.121}{Eidesstattliche Erkl\344rung}{}% 56
-\BOOKMARK [1][-]{appendix.122}{A Anhang}{}% 57
-\BOOKMARK [2][-]{subsection.123}{A.1 Verwendete Ressourcen}{appendix.122}% 58
-\BOOKMARK [3][-]{subsubsection.124}{A.1.1 Hardware}{subsection.123}% 59
-\BOOKMARK [3][-]{subsubsection.125}{A.1.2 Software}{subsection.123}% 60
-\BOOKMARK [2][-]{subsection.126}{A.2 Lastenheft \(Auszug\)}{appendix.122}% 61
-\BOOKMARK [2][-]{subsection.148}{A.3 Use-Case-Diagramm ohne SSO}{appendix.122}% 62
-\BOOKMARK [2][-]{subsection.150}{A.4 Use-Case-Diagramm mit SSO}{appendix.122}% 63
-\BOOKMARK [2][-]{subsection.152}{A.5 Benutzeroberfl\344che von wyconnect und dem Client}{appendix.122}% 64
-\BOOKMARK [2][-]{subsection.156}{A.6 Entity Relationship Modell}{appendix.122}% 65
-\BOOKMARK [2][-]{subsection.158}{A.7 Amortisationsdiagramm}{appendix.122}% 66
-\BOOKMARK [2][-]{subsection.160}{A.8 OAuth2 Flow}{appendix.122}% 67
-\BOOKMARK [2][-]{subsection.162}{A.9 Sequenzdiagramm OAuth2}{appendix.122}% 68
-\BOOKMARK [2][-]{subsection.164}{A.10 Pflichtenheft \(Auszug\)}{appendix.122}% 69
-\BOOKMARK [2][-]{subsection.183}{A.11 Routen innerhalb des SSO-Servers}{appendix.122}% 70
+\BOOKMARK [2][-]{subsection.73}{4.4 Authorization Grant Types}{section.65}% 32
+\BOOKMARK [2][-]{subsection.78}{4.5 Architekturdesign}{section.65}% 33
+\BOOKMARK [2][-]{subsection.79}{4.6 Entwurf der Benutzeroberfl\344che}{section.65}% 34
+\BOOKMARK [2][-]{subsection.80}{4.7 Datenmodell}{section.65}% 35
+\BOOKMARK [2][-]{subsection.82}{4.8 Gesch\344ftslogik}{section.65}% 36
+\BOOKMARK [2][-]{subsection.84}{4.9 Deployment}{section.65}% 37
+\BOOKMARK [2][-]{subsection.85}{4.10 Pflichtenheft}{section.65}% 38
+\BOOKMARK [2][-]{subsection.86}{4.11 Zwischenstand}{section.65}% 39
+\BOOKMARK [1][-]{section.88}{5 Implementierungsphase}{}% 40
+\BOOKMARK [2][-]{subsection.89}{5.1 Aufsetzen des Grundger\374sts}{section.88}% 41
+\BOOKMARK [2][-]{subsection.90}{5.2 Middleware}{section.88}% 42
+\BOOKMARK [2][-]{subsection.91}{5.3 Implementierung des OAuth2 Flows}{section.88}% 43
+\BOOKMARK [2][-]{subsection.94}{5.4 Implementierung der Anbindung an den Server}{section.88}% 44
+\BOOKMARK [2][-]{subsection.96}{5.5 Zwischenstand}{section.88}% 45
+\BOOKMARK [1][-]{section.98}{6 Abnahmephase}{}% 46
+\BOOKMARK [2][-]{subsection.100}{6.1 Zwischenstand}{section.98}% 47
+\BOOKMARK [1][-]{section.102}{7 Einf\374hrungsphase}{}% 48
+\BOOKMARK [2][-]{subsection.103}{7.1 Zwischenstand}{section.102}% 49
+\BOOKMARK [1][-]{section.105}{8 Dokumentation}{}% 50
+\BOOKMARK [2][-]{subsection.108}{8.1 Zwischenstand}{section.105}% 51
+\BOOKMARK [1][-]{section.110}{9 Fazit}{}% 52
+\BOOKMARK [2][-]{subsection.111}{9.1 Soll-/Ist-Vergleich}{section.110}% 53
+\BOOKMARK [2][-]{subsection.114}{9.2 Lessons Learned}{section.110}% 54
+\BOOKMARK [2][-]{subsection.115}{9.3 Ausblick}{section.110}% 55
+\BOOKMARK [1][-]{section*.116}{Literaturverzeichnis}{}% 56
+\BOOKMARK [1][-]{section*.117}{Eidesstattliche Erkl\344rung}{}% 57
+\BOOKMARK [1][-]{appendix.118}{A Anhang}{}% 58
+\BOOKMARK [2][-]{subsection.119}{A.1 Verwendete Ressourcen}{appendix.118}% 59
+\BOOKMARK [3][-]{subsubsection.120}{A.1.1 Hardware}{subsection.119}% 60
+\BOOKMARK [3][-]{subsubsection.121}{A.1.2 Software}{subsection.119}% 61
+\BOOKMARK [2][-]{subsection.122}{A.2 Lastenheft \(Auszug\)}{appendix.118}% 62
+\BOOKMARK [2][-]{subsection.144}{A.3 Use-Case-Diagramm ohne SSO}{appendix.118}% 63
+\BOOKMARK [2][-]{subsection.146}{A.4 Use-Case-Diagramm mit SSO}{appendix.118}% 64
+\BOOKMARK [2][-]{subsection.148}{A.5 Benutzeroberfl\344che von wyconnect und dem Client}{appendix.118}% 65
+\BOOKMARK [2][-]{subsection.152}{A.6 Entity Relationship Modell}{appendix.118}% 66
+\BOOKMARK [2][-]{subsection.154}{A.7 Amortisationsdiagramm}{appendix.118}% 67
+\BOOKMARK [2][-]{subsection.156}{A.8 OAuth2 Flow}{appendix.118}% 68
+\BOOKMARK [2][-]{subsection.158}{A.9 Sequenzdiagramm OAuth2}{appendix.118}% 69
+\BOOKMARK [2][-]{subsection.160}{A.10 Pflichtenheft \(Auszug\)}{appendix.118}% 70
+\BOOKMARK [2][-]{subsection.179}{A.11 Routen innerhalb des SSO-Servers}{appendix.118}% 71

@@ -13,6 +13,10 @@ Warning--to sort, need author, organization, or key in PHP
 Warning--empty edition in PHP
 Warning--empty address in PHP
 Warning--empty year in PHP
+Warning--empty edition in composer
+Warning--empty address in composer
+Warning--empty year in composer
+Warning--there's no year in SSO-Vgl
 Warning--empty edition in Git
 Warning--empty address in Git
 Warning--empty year in Git
@@ -34,45 +38,45 @@ Warning--empty year in Socialite
 Warning--empty edition in GitLab
 Warning--empty address in GitLab
 Warning--empty year in GitLab
-You've used 17 entries,
+You've used 19 entries,
             4728 wiz_defined-function locations,
-            961 strings with 8209 characters,
-and the built_in function-call counts, 8325 in all, are:
-= -- 838
-> -- 194
-< -- 170
-+ -- 215
-- -- 61
-* -- 557
-:= -- 1464
-add.period$ -- 18
-call.type$ -- 17
-change.case$ -- 71
-chr.to.int$ -- 15
-cite$ -- 43
-duplicate$ -- 307
-empty$ -- 654
-format.name$ -- 116
-if$ -- 1657
+            969 strings with 8362 characters,
+and the built_in function-call counts, 9161 in all, are:
+= -- 920
+> -- 214
+< -- 174
++ -- 223
+- -- 67
+* -- 615
+:= -- 1614
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 79
+chr.to.int$ -- 17
+cite$ -- 49
+duplicate$ -- 343
+empty$ -- 730
+format.name$ -- 128
+if$ -- 1832
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 47
-newline$ -- 101
-num.names$ -- 64
-pop$ -- 171
+missing$ -- 52
+newline$ -- 110
+num.names$ -- 72
+pop$ -- 195
 preamble$ -- 1
-purify$ -- 105
+purify$ -- 117
 quote$ -- 0
-skip$ -- 463
+skip$ -- 500
 stack$ -- 0
-substring$ -- 360
-swap$ -- 34
-text.length$ -- 20
+substring$ -- 386
+swap$ -- 37
+text.length$ -- 22
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 232
-warning$ -- 25
-while$ -- 68
+type$ -- 260
+warning$ -- 29
+while$ -- 76
 width$ -- 0
-write$ -- 233
-(There were 26 warnings)
+write$ -- 257
+(There were 30 warnings)

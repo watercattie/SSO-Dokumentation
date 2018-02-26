@@ -26,52 +26,52 @@
 \contentsline {subsection}{\numberline {3.4}Qualit\IeC {\"a}tsanforderungen}{8}{subsection.59}
 \contentsline {subsection}{\numberline {3.5}Anwendungsf\IeC {\"a}lle}{8}{subsection.61}
 \contentsline {subsection}{\numberline {3.6}Lastenheft/Fachkonzept}{8}{subsection.62}
-\contentsline {subsection}{\numberline {3.7}Zwischenstand}{9}{subsection.63}
+\contentsline {subsection}{\numberline {3.7}Zwischenstand}{8}{subsection.63}
 \contentsline {section}{\numberline {4}Entwurfsphase}{9}{section.65}
 \contentsline {subsection}{\numberline {4.1}Zielplattform}{9}{subsection.66}
 \contentsline {subsection}{\numberline {4.2}Framework}{9}{subsection.69}
-\contentsline {subsection}{\numberline {4.3}Wahl des SSO-Protokolls}{10}{subsection.70}
-\contentsline {subsection}{\numberline {4.4}Authorization Grant Types}{11}{subsection.79}
-\contentsline {subsection}{\numberline {4.5}Architekturdesign}{11}{subsection.84}
-\contentsline {subsection}{\numberline {4.6}Entwurf der Benutzeroberfl\IeC {\"a}che}{12}{subsection.85}
-\contentsline {subsection}{\numberline {4.7}Datenmodell}{12}{subsection.86}
-\contentsline {subsection}{\numberline {4.8}Gesch\IeC {\"a}ftslogik}{12}{subsection.88}
-\contentsline {subsection}{\numberline {4.9}Deployment}{13}{subsection.90}
-\contentsline {subsection}{\numberline {4.10}Pflichtenheft/Datenverarbeitungskonzept}{13}{subsection.91}
-\contentsline {paragraph}{\nonumberline Beispiel}{14}{section*.92}
-\contentsline {subsection}{\numberline {4.11}Zwischenstand}{14}{subsection.93}
-\contentsline {section}{\numberline {5}Implementierungsphase}{14}{section.95}
-\contentsline {subsection}{\numberline {5.1}Aufsetzen des Grundger\IeC {\"u}sts}{14}{subsection.96}
-\contentsline {subsection}{\numberline {5.2}Implementierung des OAuth2 Flows}{14}{subsection.97}
-\contentsline {subsection}{\numberline {5.3}Implementierung der Anbindung an den Server}{14}{subsection.98}
-\contentsline {paragraph}{\nonumberline Beispiel}{14}{section*.99}
-\contentsline {subsection}{\numberline {5.4}Zwischenstand}{15}{subsection.100}
-\contentsline {section}{\numberline {6}Abnahmephase}{15}{section.102}
-\contentsline {paragraph}{\nonumberline Beispiel}{15}{section*.103}
-\contentsline {subsection}{\numberline {6.1}Zwischenstand}{15}{subsection.104}
-\contentsline {section}{\numberline {7}Einf\IeC {\"u}hrungsphase}{15}{section.106}
-\contentsline {subsection}{\numberline {7.1}Zwischenstand}{16}{subsection.107}
-\contentsline {section}{\numberline {8}Dokumentation}{16}{section.109}
-\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.110}
-\contentsline {subsection}{\numberline {8.1}Zwischenstand}{16}{subsection.112}
-\contentsline {section}{\numberline {9}Fazit}{17}{section.114}
-\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{17}{subsection.115}
-\contentsline {paragraph}{\nonumberline Beispiel (verk\IeC {\"u}rzt)}{17}{section*.116}
-\contentsline {subsection}{\numberline {9.2}Lessons Learned}{17}{subsection.118}
-\contentsline {subsection}{\numberline {9.3}Ausblick}{17}{subsection.119}
-\contentsline {section}{\nonumberline Literaturverzeichnis}{18}{section*.120}
-\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{20}{section*.121}
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.122}
-\contentsline {subsection}{\numberline {A.1}Verwendete Ressourcen}{i}{subsection.123}
-\contentsline {subsubsection}{\numberline {A.1.1}Hardware}{i}{subsubsection.124}
-\contentsline {subsubsection}{\numberline {A.1.2}Software}{i}{subsubsection.125}
-\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.126}
-\contentsline {subsection}{\numberline {A.3}Use-Case-Diagramm ohne SSO}{iii}{subsection.148}
-\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm mit SSO}{iv}{subsection.150}
-\contentsline {subsection}{\numberline {A.5}Benutzeroberfl\IeC {\"a}che von wyconnect und dem Client}{v}{subsection.152}
-\contentsline {subsection}{\numberline {A.6}Entity Relationship Modell}{viii}{subsection.156}
-\contentsline {subsection}{\numberline {A.7}Amortisationsdiagramm}{ix}{subsection.158}
-\contentsline {subsection}{\numberline {A.8}OAuth2 Flow}{x}{subsection.160}
-\contentsline {subsection}{\numberline {A.9}Sequenzdiagramm OAuth2}{xi}{subsection.162}
-\contentsline {subsection}{\numberline {A.10}Pflichtenheft (Auszug)}{xii}{subsection.164}
-\contentsline {subsection}{\numberline {A.11}Routen innerhalb des SSO-Servers}{xiii}{subsection.183}
+\contentsline {subsection}{\numberline {4.3}Wahl des SSO-Protokolls}{9}{subsection.70}
+\contentsline {subsection}{\numberline {4.4}Authorization Grant Types}{10}{subsection.73}
+\contentsline {subsection}{\numberline {4.5}Architekturdesign}{11}{subsection.78}
+\contentsline {subsection}{\numberline {4.6}Entwurf der Benutzeroberfl\IeC {\"a}che}{11}{subsection.79}
+\contentsline {subsection}{\numberline {4.7}Datenmodell}{12}{subsection.80}
+\contentsline {subsection}{\numberline {4.8}Gesch\IeC {\"a}ftslogik}{12}{subsection.82}
+\contentsline {subsection}{\numberline {4.9}Deployment}{14}{subsection.84}
+\contentsline {subsection}{\numberline {4.10}Pflichtenheft}{14}{subsection.85}
+\contentsline {subsection}{\numberline {4.11}Zwischenstand}{14}{subsection.86}
+\contentsline {section}{\numberline {5}Implementierungsphase}{15}{section.88}
+\contentsline {subsection}{\numberline {5.1}Aufsetzen des Grundger\IeC {\"u}sts}{15}{subsection.89}
+\contentsline {subsection}{\numberline {5.2}Middleware}{15}{subsection.90}
+\contentsline {subsection}{\numberline {5.3}Implementierung des OAuth2 Flows}{15}{subsection.91}
+\contentsline {subsection}{\numberline {5.4}Implementierung der Anbindung an den Server}{16}{subsection.94}
+\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.95}
+\contentsline {subsection}{\numberline {5.5}Zwischenstand}{16}{subsection.96}
+\contentsline {section}{\numberline {6}Abnahmephase}{16}{section.98}
+\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.99}
+\contentsline {subsection}{\numberline {6.1}Zwischenstand}{16}{subsection.100}
+\contentsline {section}{\numberline {7}Einf\IeC {\"u}hrungsphase}{17}{section.102}
+\contentsline {subsection}{\numberline {7.1}Zwischenstand}{17}{subsection.103}
+\contentsline {section}{\numberline {8}Dokumentation}{17}{section.105}
+\contentsline {paragraph}{\nonumberline Beispiel}{17}{section*.106}
+\contentsline {subsection}{\numberline {8.1}Zwischenstand}{17}{subsection.108}
+\contentsline {section}{\numberline {9}Fazit}{18}{section.110}
+\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{18}{subsection.111}
+\contentsline {paragraph}{\nonumberline Beispiel (verk\IeC {\"u}rzt)}{18}{section*.112}
+\contentsline {subsection}{\numberline {9.2}Lessons Learned}{18}{subsection.114}
+\contentsline {subsection}{\numberline {9.3}Ausblick}{19}{subsection.115}
+\contentsline {section}{\nonumberline Literaturverzeichnis}{20}{section*.116}
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{22}{section*.117}
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.118}
+\contentsline {subsection}{\numberline {A.1}Verwendete Ressourcen}{i}{subsection.119}
+\contentsline {subsubsection}{\numberline {A.1.1}Hardware}{i}{subsubsection.120}
+\contentsline {subsubsection}{\numberline {A.1.2}Software}{i}{subsubsection.121}
+\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.122}
+\contentsline {subsection}{\numberline {A.3}Use-Case-Diagramm ohne SSO}{iii}{subsection.144}
+\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm mit SSO}{iv}{subsection.146}
+\contentsline {subsection}{\numberline {A.5}Benutzeroberfl\IeC {\"a}che von wyconnect und dem Client}{v}{subsection.148}
+\contentsline {subsection}{\numberline {A.6}Entity Relationship Modell}{viii}{subsection.152}
+\contentsline {subsection}{\numberline {A.7}Amortisationsdiagramm}{ix}{subsection.154}
+\contentsline {subsection}{\numberline {A.8}OAuth2 Flow}{x}{subsection.156}
+\contentsline {subsection}{\numberline {A.9}Sequenzdiagramm OAuth2}{xi}{subsection.158}
+\contentsline {subsection}{\numberline {A.10}Pflichtenheft (Auszug)}{xii}{subsection.160}
+\contentsline {subsection}{\numberline {A.11}Routen innerhalb des SSO-Servers}{xiii}{subsection.179}

@@ -19,15 +19,16 @@
 % Kopfzeile
 \renewcommand{\headfont}{\normalfont} % Schriftform der Kopfzeile
 \ihead{\large{{\kurzertitel}}\\[2ex] \textit{\headmark}}
+\ohead{\pagemark}
 \chead{}
-\ohead{\includegraphics[scale=0.2]{\betriebLogo}}
+
 \setlength{\headheight}{15mm} % Höhe der Kopfzeile
 % \setheadwidth[0pt]{textwithmarginpar} % Kopfzeile über den Text hinaus verbreitern (falls Logo den Text überdeckt)
 
 % Fußzeile
 \ifoot{\autorName}
-\cfoot{}
-\ofoot{\pagemark}
+\ofoot{\includegraphics[scale=0.25]{\betriebLogo}}
+
 
 % Überschriften nach DIN 5008 in einer Fluchtlinie
 % ------------------------------------------------------------------------------
@@ -36,6 +37,7 @@
 % > Schön wäre hier die dynamische Berechnung des Abstandes in Abhängigkeit
 % > der Verschachtelungstiefe des Inhaltsverzeichnisses
 \newcommand{\headingSpace}{1.5cm}
+
 
 % Abschnittsüberschriften im selben Stil wie beim Inhaltsverzeichnis einrücken
 \renewcommand*{\othersectionlevelsformat}[3]{
@@ -87,3 +89,21 @@
 \sectionfont{\color{wyc-green}}
 \subsectionfont{\color{wyc-grey}}  % sets colour of chapters
 
+
+% Abstand vor und nach Überschriften
+\makeatletter 
+\renewcommand\section{\@startsection 
+   {section}{1}{0mm}%         % name, ebene, einzug 
+   {1\baselineskip}%            % vor-abstand 
+   {0.1\baselineskip}%            % nach-abstand 
+   {\bfseries\sffamily\Large}%      % layout 
+   } 
+\makeatother 
+\makeatletter 
+\renewcommand\subsection{\@startsection 
+   {subsection}{2}{0mm}%      % name, ebene, einzug 
+   {1\baselineskip}%            % vor-abstand 
+   {0.1\baselineskip}%            % nach-abstand 
+   {\bfseries\sffamily\large}%           % layout 
+   } 
+\makeatother 

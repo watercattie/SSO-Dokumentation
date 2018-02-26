@@ -30,6 +30,7 @@
 \newacro{AD}[\AC@hyperlink{AD}{AD}]{Active Directory}
 \newacro{API}[\AC@hyperlink{API}{API}]{Application Programming Interface}
 \newacro{CSS}[\AC@hyperlink{CSS}{CSS}]{Cascading Style Sheets}
+\newacro{CSRF}[\AC@hyperlink{CSRF}{CSRF}]{Cross-Site-Request-Forgery}
 \newacro{ERM}[\AC@hyperlink{ERM}{ERM}]{En\-ti\-ty-Re\-la\-tion\-ship-Mo\-dell}
 \newacro{GUI}[\AC@hyperlink{GUI}{GUI}]{Graphical User Interface}
 \newacro{HTML}[\AC@hyperlink{HTML}{HTML}]{Hypertext Markup Language}
@@ -41,11 +42,13 @@
 \newacro{ORM}[\AC@hyperlink{ORM}{ORM}]{Object Relational Mapping}
 \newacro{PHP}[\AC@hyperlink{PHP}{PHP}]{PHP: Hypertext Preprocessor}
 \newacro{REST}[\AC@hyperlink{REST}{REST}]{Representational State Transfer}
+\newacro{SAML}[\AC@hyperlink{SAML}{SAML}]{Security Assertion Markup Language}
 \newacro{SSO}[\AC@hyperlink{SSO}{SSO}]{Single Sign On}
 \newacro{SQL}[\AC@hyperlink{SQL}{SQL}]{Structured Query Language}
 \newacro{TDD}[\AC@hyperlink{TDD}{TDD}]{Test Driven Development}
 \newacro{Timy}[\AC@hyperlink{Timy}{Timy}]{wycomco Zeiterfassungssoftware}
 \newacro{UML}[\AC@hyperlink{UML}{UML}]{Unified Modeling Language}
+\newacro{XML}[\AC@hyperlink{XML}{XML}]{Extensible Markup Language}
 \citation{datenschutzbeauftragter}
 \citation{univention}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Einleitung}{1}{section.11}}
@@ -133,10 +136,10 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Lastenheft/Fachkonzept}{8}{subsection.62}}
 \newlabel{4@xvr}{{}{8}{Lastenheft/Fachkonzept}{subsection.62}{}}
 \newlabel{4@vr}{{}{8}{Lastenheft/Fachkonzept}{subsection.62}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Zwischenstand}{8}{subsection.63}}
 \citation{PHP}
 \citation{Laravel}
 \citation{OAuth2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Zwischenstand}{9}{subsection.63}}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Zwischenstand nach der Analysephase}}{9}{table.64}}
 \newlabel{tab:Analyse}{{5}{9}{Zwischenstand nach der Analysephase}{table.64}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Entwurfsphase}{9}{section.65}}
@@ -150,114 +153,123 @@
 \acronymused{MVC}
 \acronymused{REST}
 \acronymused{ORM}
-\citation{SSO-Vgl}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Wahl des SSO-Protokolls}{10}{subsection.70}}
-\newlabel{sec:Protokollwahl}{{4.3}{10}{Wahl des SSO-Protokolls}{subsection.70}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Wahl des SSO-Protokolls}{9}{subsection.70}}
+\newlabel{sec:Protokollwahl}{{4.3}{9}{Wahl des SSO-Protokolls}{subsection.70}{}}
 \acronymused{SSO}
+\citation{SSO-Vgl}
 \acronymused{AD}
 \acronymused{AD}
 \acronymused{SAML}
-\acronymused{JWT}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Authorization Grant Types}{11}{subsection.79}}
-\newlabel{sec:AuthorizationGrants}{{4.4}{11}{Authorization Grant Types}{subsection.79}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Architekturdesign}{11}{subsection.84}}
-\newlabel{sec:Architekturdesign}{{4.5}{11}{Architekturdesign}{subsection.84}{}}
-\citation{Passport}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Entwurf der Benutzeroberfl\IeC {\"a}che}{12}{subsection.85}}
-\newlabel{sec:Benutzeroberflaeche}{{4.6}{12}{Entwurf der Benutzeroberfläche}{subsection.85}{}}
+\acronymused{XML}
+\acronymused{JSON}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Authorization Grant Types}{10}{subsection.73}}
+\newlabel{sec:AuthorizationGrants}{{4.4}{10}{Authorization Grant Types}{subsection.73}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Architekturdesign}{11}{subsection.78}}
+\newlabel{sec:Architekturdesign}{{4.5}{11}{Architekturdesign}{subsection.78}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Entwurf der Benutzeroberfl\IeC {\"a}che}{11}{subsection.79}}
+\newlabel{sec:Benutzeroberflaeche}{{4.6}{11}{Entwurf der Benutzeroberfläche}{subsection.79}{}}
 \acronymused{GUI}
+\acronymused{HTML}
+\acronymused{CSS}
+\citation{Passport}
 \acronymused{SSO}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Datenmodell}{12}{subsection.86}}
-\newlabel{sec:Datenmodell}{{4.7}{12}{Datenmodell}{subsection.86}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Gesch\IeC {\"a}ftslogik}{12}{subsection.88}}
-\newlabel{sec:Geschaeftslogik}{{4.8}{12}{Geschäftslogik}{subsection.88}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Datenmodell}{12}{subsection.80}}
+\newlabel{sec:Datenmodell}{{4.7}{12}{Datenmodell}{subsection.80}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Entitaeten}}{12}{table.81}}
+\newlabel{tab:Entitaeten}{{6}{12}{Entitaeten}{table.81}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Gesch\IeC {\"a}ftslogik}{12}{subsection.82}}
+\newlabel{sec:Geschaeftslogik}{{4.8}{12}{Geschäftslogik}{subsection.82}{}}
 \acronymused{PHP}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Entitaeten}}{13}{table.87}}
-\newlabel{tab:Entitaeten}{{6}{13}{Entitaeten}{table.87}{}}
 \acronymused{SSO}
 \acronymused{SSO}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Deployment}{13}{subsection.90}}
-\newlabel{sec:Deployment}{{4.9}{13}{Deployment}{subsection.90}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Pflichtenheft/Datenverarbeitungskonzept}{13}{subsection.91}}
-\newlabel{sec:Pflichtenheft}{{4.10}{13}{Pflichtenheft/Datenverarbeitungskonzept}{subsection.91}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Beispiel}{14}{section*.92}}
-\newlabel{5@xvr}{{}{14}{Beispiel}{section*.92}{}}
-\newlabel{5@vr}{{}{14}{Beispiel}{section*.92}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.11}Zwischenstand}{14}{subsection.93}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Zwischenstand nach der Entwurfsphase}}{14}{table.94}}
-\newlabel{tab:Entwurf}{{7}{14}{Zwischenstand nach der Entwurfsphase}{table.94}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Implementierungsphase}{14}{section.95}}
-\newlabel{sec:Implementierungsphase}{{5}{14}{Implementierungsphase}{section.95}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Aufsetzen des Grundger\IeC {\"u}sts}{14}{subsection.96}}
-\newlabel{sec:AufsetzenGrundgeruest}{{5.1}{14}{Aufsetzen des Grundgerüsts}{subsection.96}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Implementierung des OAuth2 Flows}{14}{subsection.97}}
-\newlabel{sec:ImplementierungOAuth2}{{5.2}{14}{Implementierung des OAuth2 Flows}{subsection.97}{}}
-\newlabel{6@xvr}{{}{14}{Implementierung des OAuth2 Flows}{subsection.97}{}}
-\newlabel{6@vr}{{}{14}{Implementierung des OAuth2 Flows}{subsection.97}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Implementierung der Anbindung an den Server}{14}{subsection.98}}
-\newlabel{sec:ImplementierungCient}{{5.3}{14}{Implementierung der Anbindung an den Server}{subsection.98}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Beispiel}{14}{section*.99}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Zwischenstand}{15}{subsection.100}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Zwischenstand nach der Implementierungsphase}}{15}{table.101}}
-\newlabel{tab:Implementierung}{{8}{15}{Zwischenstand nach der Implementierungsphase}{table.101}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Abnahmephase}{15}{section.102}}
-\newlabel{sec:Abnahmephase}{{6}{15}{Abnahmephase}{section.102}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Beispiel}{15}{section*.103}}
-\newlabel{7@xvr}{{}{15}{Beispiel}{section*.103}{}}
-\newlabel{7@vr}{{}{15}{Beispiel}{section*.103}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Zwischenstand}{15}{subsection.104}}
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Zwischenstand nach der Abnahmephase}}{15}{table.105}}
-\newlabel{tab:Abnahme}{{9}{15}{Zwischenstand nach der Abnahmephase}{table.105}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Einf\IeC {\"u}hrungsphase}{15}{section.106}}
-\newlabel{sec:Einfuehrungsphase}{{7}{15}{Einführungsphase}{section.106}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Deployment}{14}{subsection.84}}
+\newlabel{sec:Deployment}{{4.9}{14}{Deployment}{subsection.84}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Pflichtenheft}{14}{subsection.85}}
+\newlabel{sec:Pflichtenheft}{{4.10}{14}{Pflichtenheft}{subsection.85}{}}
+\newlabel{5@xvr}{{}{14}{Pflichtenheft}{subsection.85}{}}
+\newlabel{5@vr}{{}{14}{Pflichtenheft}{subsection.85}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.11}Zwischenstand}{14}{subsection.86}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Zwischenstand nach der Entwurfsphase}}{14}{table.87}}
+\newlabel{tab:Entwurf}{{7}{14}{Zwischenstand nach der Entwurfsphase}{table.87}{}}
+\citation{composer}
+\citation{Laravel}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Implementierungsphase}{15}{section.88}}
+\newlabel{sec:Implementierungsphase}{{5}{15}{Implementierungsphase}{section.88}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Aufsetzen des Grundger\IeC {\"u}sts}{15}{subsection.89}}
+\newlabel{sec:AufsetzenGrundgeruest}{{5.1}{15}{Aufsetzen des Grundgerüsts}{subsection.89}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Middleware}{15}{subsection.90}}
+\newlabel{sec:Middleware}{{5.2}{15}{Middleware}{subsection.90}{}}
+\acronymused{CSRF}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Implementierung des OAuth2 Flows}{15}{subsection.91}}
+\newlabel{sec:ImplementierungOAuth2}{{5.3}{15}{Implementierung des OAuth2 Flows}{subsection.91}{}}
+\newlabel{6@xvr}{{}{15}{Implementierung des OAuth2 Flows}{subsection.91}{}}
+\newlabel{6@vr}{{}{15}{Implementierung des OAuth2 Flows}{subsection.91}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Implementierung der Anbindung an den Server}{16}{subsection.94}}
+\newlabel{sec:ImplementierungCient}{{5.4}{16}{Implementierung der Anbindung an den Server}{subsection.94}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.95}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Zwischenstand}{16}{subsection.96}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Zwischenstand nach der Implementierungsphase}}{16}{table.97}}
+\newlabel{tab:Implementierung}{{8}{16}{Zwischenstand nach der Implementierungsphase}{table.97}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Abnahmephase}{16}{section.98}}
+\newlabel{sec:Abnahmephase}{{6}{16}{Abnahmephase}{section.98}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.99}}
+\newlabel{7@xvr}{{}{16}{Beispiel}{section*.99}{}}
+\newlabel{7@vr}{{}{16}{Beispiel}{section*.99}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Zwischenstand}{16}{subsection.100}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Zwischenstand nach der Abnahmephase}}{16}{table.101}}
+\newlabel{tab:Abnahme}{{9}{16}{Zwischenstand nach der Abnahmephase}{table.101}{}}
 \citation{phpDoc}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Zwischenstand}{16}{subsection.107}}
-\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Zwischenstand nach der Einf\IeC {\"u}hrungsphase}}{16}{table.108}}
-\newlabel{tab:Einfuehrung}{{10}{16}{Zwischenstand nach der Einführungsphase}{table.108}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Dokumentation}{16}{section.109}}
-\newlabel{sec:Dokumentation}{{8}{16}{Dokumentation}{section.109}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Einf\IeC {\"u}hrungsphase}{17}{section.102}}
+\newlabel{sec:Einfuehrungsphase}{{7}{17}{Einführungsphase}{section.102}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Zwischenstand}{17}{subsection.103}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Zwischenstand nach der Einf\IeC {\"u}hrungsphase}}{17}{table.104}}
+\newlabel{tab:Einfuehrung}{{10}{17}{Zwischenstand nach der Einführungsphase}{table.104}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Dokumentation}{17}{section.105}}
+\newlabel{sec:Dokumentation}{{8}{17}{Dokumentation}{section.105}{}}
 \acronymused{API}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.110}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Zwischenstand}{16}{subsection.112}}
-\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Zwischenstand nach der Dokumentation}}{16}{table.113}}
-\newlabel{tab:Dokumentation}{{11}{16}{Zwischenstand nach der Dokumentation}{table.113}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Fazit}{17}{section.114}}
-\newlabel{sec:Fazit}{{9}{17}{Fazit}{section.114}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{17}{subsection.115}}
-\newlabel{sec:SollIstVergleich}{{9.1}{17}{Soll-/Ist-Vergleich}{subsection.115}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Beispiel (verk\IeC {\"u}rzt)}{17}{section*.116}}
-\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Soll-/Ist-Vergleich}}{17}{table.117}}
-\newlabel{tab:Vergleich}{{12}{17}{Soll-/Ist-Vergleich}{table.117}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Lessons Learned}{17}{subsection.118}}
-\newlabel{sec:LessonsLearned}{{9.2}{17}{Lessons Learned}{subsection.118}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Ausblick}{17}{subsection.119}}
-\newlabel{sec:Ausblick}{{9.3}{17}{Ausblick}{subsection.119}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Beispiel}{17}{section*.106}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Zwischenstand}{17}{subsection.108}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Zwischenstand nach der Dokumentation}}{18}{table.109}}
+\newlabel{tab:Dokumentation}{{11}{18}{Zwischenstand nach der Dokumentation}{table.109}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Fazit}{18}{section.110}}
+\newlabel{sec:Fazit}{{9}{18}{Fazit}{section.110}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{18}{subsection.111}}
+\newlabel{sec:SollIstVergleich}{{9.1}{18}{Soll-/Ist-Vergleich}{subsection.111}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Beispiel (verk\IeC {\"u}rzt)}{18}{section*.112}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Soll-/Ist-Vergleich}}{18}{table.113}}
+\newlabel{tab:Vergleich}{{12}{18}{Soll-/Ist-Vergleich}{table.113}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Lessons Learned}{18}{subsection.114}}
+\newlabel{sec:LessonsLearned}{{9.2}{18}{Lessons Learned}{subsection.114}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Ausblick}{19}{subsection.115}}
+\newlabel{sec:Ausblick}{{9.3}{19}{Ausblick}{subsection.115}{}}
 \bibdata{Bibliographie}
 \bibcite{PHP}{{1}{}{{\scshape  {}PHP}}{{}}}
 \bibcite{datenschutzbeauftragter}{{2}{2016}{{\scshape  {}intersoft consulting~services AG}}{{}}}
-\bibcite{tddcircle}{{3}{2014}{{\scshape  {}EETech~Media}}{{}}}
-\bibcite{Git}{{4}{}{{\scshape  {}Git}}{{}}}
-\bibcite{univention}{{5}{2016}{{\scshape  {}GmbH}}{{}}}
-\bibcite{OAuth2}{{6}{}{{\scshape  {}Hardt}}{{}}}
-\bibcite{ItHandbuch}{{7}{2007}{{\scshape  {}H\IeC {\~A}\IeC {\OE }bscher u.\tmspace  +\thinmuskip {.1667em}a.}}{{H\IeC {\~A}\IeC {\OE }bscher, Petersen, Rathgeber, Richter, und Dr.~Scharf}}}
-\bibcite{tdd-improuv}{{8}{2015}{{\scshape  {}improuv}}{{}}}
-\bibcite{arbeitstage}{{9}{}{{\scshape  {}www.schnelle online.info}}{{}}}
-\bibcite{MySQL}{{10}{}{{\scshape  {}Oracle}}{{}}}
-\bibcite{Laravel}{{11}{a}{{\scshape  {}Otwell}}{{}}}
-\bibcite{Passport}{{12}{b}{{\scshape  {}Otwell}}{{}}}
-\bibcite{Socialite}{{13}{c}{{\scshape  {}Otwell}}{{}}}
-\bibcite{GitLab}{{14}{}{{\scshape  {}Pages}}{{}}}
-\@writefile{toc}{\contentsline {section}{\nonumberline Literaturverzeichnis}{18}{section*.120}}
-\bibcite{tdd-ryte}{{15}{2016}{{\scshape  {}Ryte}}{{}}}
-\bibcite{computerwoche}{{16}{2015}{{\scshape  {}Schonschek}}{{}}}
-\bibcite{tddwiki}{{17}{2018}{{\scshape  {}Wikipedia}}{{}}}
+\bibcite{composer}{{3}{}{{\scshape  {}composer}}{{}}}
+\bibcite{SSO-Vgl}{{4}{}{{\scshape  {}Darfk}}{{}}}
+\bibcite{tddcircle}{{5}{2014}{{\scshape  {}EETech~Media}}{{}}}
+\bibcite{Git}{{6}{}{{\scshape  {}Git}}{{}}}
+\bibcite{univention}{{7}{2016}{{\scshape  {}GmbH}}{{}}}
+\bibcite{OAuth2}{{8}{}{{\scshape  {}Hardt}}{{}}}
+\bibcite{ItHandbuch}{{9}{2007}{{\scshape  {}H\IeC {\~A}\IeC {\OE }bscher u.\tmspace  +\thinmuskip {.1667em}a.}}{{H\IeC {\~A}\IeC {\OE }bscher, Petersen, Rathgeber, Richter, und Dr.~Scharf}}}
+\bibcite{tdd-improuv}{{10}{2015}{{\scshape  {}improuv}}{{}}}
+\bibcite{arbeitstage}{{11}{}{{\scshape  {}www.schnelle online.info}}{{}}}
+\bibcite{MySQL}{{12}{}{{\scshape  {}Oracle}}{{}}}
+\bibcite{Laravel}{{13}{a}{{\scshape  {}Otwell}}{{}}}
+\@writefile{toc}{\contentsline {section}{\nonumberline Literaturverzeichnis}{20}{section*.116}}
+\bibcite{Passport}{{14}{b}{{\scshape  {}Otwell}}{{}}}
+\bibcite{Socialite}{{15}{c}{{\scshape  {}Otwell}}{{}}}
+\bibcite{GitLab}{{16}{}{{\scshape  {}Pages}}{{}}}
+\bibcite{tdd-ryte}{{17}{2016}{{\scshape  {}Ryte}}{{}}}
+\bibcite{computerwoche}{{18}{2015}{{\scshape  {}Schonschek}}{{}}}
+\bibcite{tddwiki}{{19}{2018}{{\scshape  {}Wikipedia}}{{}}}
 \bibstyle{Allgemein/natdin}
-\@writefile{toc}{\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{20}{section*.121}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Anhang}{i}{appendix.122}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Verwendete Ressourcen}{i}{subsection.123}}
-\newlabel{app:Ressourcen}{{A.1}{i}{Verwendete Ressourcen}{subsection.123}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.1}Hardware}{i}{subsubsection.124}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.2}Software}{i}{subsubsection.125}}
+\@writefile{toc}{\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{22}{section*.117}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Anhang}{i}{appendix.118}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Verwendete Ressourcen}{i}{subsection.119}}
+\newlabel{app:Ressourcen}{{A.1}{i}{Verwendete Ressourcen}{subsection.119}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.1}Hardware}{i}{subsubsection.120}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.2}Software}{i}{subsubsection.121}}
 \acronymused{UML}
 \acronymused{PHP}
 \acronymused{HTML}
@@ -267,49 +279,49 @@
 \citation{PHP}
 \citation{Laravel}
 \citation{MySQL}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.126}}
-\newlabel{app:Lastenheft}{{A.2}{ii}{Lastenheft (Auszug)}{subsection.126}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.122}}
+\newlabel{app:Lastenheft}{{A.2}{ii}{Lastenheft (Auszug)}{subsection.122}{}}
 \acronymused{GUI}
 \acronymused{PHP}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Use-Case-Diagramm ohne SSO}{iii}{subsection.148}}
-\newlabel{app:Use-Case-Diagramm}{{A.3}{iii}{Use-Case-Diagramm ohne SSO}{subsection.148}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Use-Case-Diagramm ohne SSO}{iii}{subsection.144}}
+\newlabel{app:Use-Case-Diagramm}{{A.3}{iii}{Use-Case-Diagramm ohne SSO}{subsection.144}{}}
 \acronymused{SSO}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Use-Case-Diagramm ohne SSO}}{iii}{figure.149}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm mit SSO}{iv}{subsection.150}}
-\newlabel{app:Use-Case-Diagramm2}{{A.4}{iv}{Use-Case-Diagramm mit SSO}{subsection.150}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Use-Case-Diagramm ohne SSO}}{iii}{figure.145}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm mit SSO}{iv}{subsection.146}}
+\newlabel{app:Use-Case-Diagramm2}{{A.4}{iv}{Use-Case-Diagramm mit SSO}{subsection.146}{}}
 \acronymused{SSO}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Use-Case-Diagramm mit SSO}}{iv}{figure.151}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.5}Benutzeroberfl\IeC {\"a}che von wyconnect und dem Client}{v}{subsection.152}}
-\newlabel{app:wyconnect-mockup}{{A.5}{v}{Benutzeroberfläche von wyconnect und dem Client}{subsection.152}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Use-Case-Diagramm mit SSO}}{iv}{figure.147}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.5}Benutzeroberfl\IeC {\"a}che von wyconnect und dem Client}{v}{subsection.148}}
+\newlabel{app:wyconnect-mockup}{{A.5}{v}{Benutzeroberfläche von wyconnect und dem Client}{subsection.148}{}}
 \acronymused{SSO}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Benutzeroberfl\IeC {\"a}che des SSO-Servers}}{v}{figure.153}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Benutzeroberfl\IeC {\"a}che des SSO-Servers}}{v}{figure.149}}
 \acronymused{SSO}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Login am SSO-Servers}}{vi}{figure.154}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Login am SSO-Servers}}{vi}{figure.150}}
 \acronymused{SSO}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Login am Client Timy}}{vii}{figure.155}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.6}Entity Relationship Modell}{viii}{subsection.156}}
-\newlabel{app:ERM}{{A.6}{viii}{Entity Relationship Modell}{subsection.156}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces ERM}}{viii}{figure.157}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.7}Amortisationsdiagramm}{ix}{subsection.158}}
-\newlabel{app:Amortisationsdiagramm}{{A.7}{ix}{Amortisationsdiagramm}{subsection.158}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Amortisations-Diagramm}}{ix}{figure.159}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.8}OAuth2 Flow}{x}{subsection.160}}
-\newlabel{app:oauth2flow}{{A.8}{x}{OAuth2 Flow}{subsection.160}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces OAuth2 Flow}}{x}{figure.161}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.9}Sequenzdiagramm OAuth2}{xi}{subsection.162}}
-\newlabel{app:sequenzdiagramm}{{A.9}{xi}{Sequenzdiagramm OAuth2}{subsection.162}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Sequenzdiagramm OAuth2}}{xi}{figure.163}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Login am Client Timy}}{vii}{figure.151}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.6}Entity Relationship Modell}{viii}{subsection.152}}
+\newlabel{app:ERM}{{A.6}{viii}{Entity Relationship Modell}{subsection.152}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces ERM}}{viii}{figure.153}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.7}Amortisationsdiagramm}{ix}{subsection.154}}
+\newlabel{app:Amortisationsdiagramm}{{A.7}{ix}{Amortisationsdiagramm}{subsection.154}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Amortisations-Diagramm}}{ix}{figure.155}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.8}OAuth2 Flow}{x}{subsection.156}}
+\newlabel{app:oauth2flow}{{A.8}{x}{OAuth2 Flow}{subsection.156}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces OAuth2 Flow}}{x}{figure.157}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.9}Sequenzdiagramm OAuth2}{xi}{subsection.158}}
+\newlabel{app:sequenzdiagramm}{{A.9}{xi}{Sequenzdiagramm OAuth2}{subsection.158}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Sequenzdiagramm OAuth2}}{xi}{figure.159}}
 \citation{OAuth2}
 \citation{Passport}
 \citation{Socialite}
 \citation{GitLab}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.10}Pflichtenheft (Auszug)}{xii}{subsection.164}}
-\newlabel{app:Pflichtenheft}{{A.10}{xii}{Pflichtenheft (Auszug)}{subsection.164}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.10}Pflichtenheft (Auszug)}{xii}{subsection.160}}
+\newlabel{app:Pflichtenheft}{{A.10}{xii}{Pflichtenheft (Auszug)}{subsection.160}{}}
 \acronymused{SSO-Servers}
 \acronymused{SSO}
 \acronymused{SSO}
 \acronymused{GUI}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.11}Routen innerhalb des SSO-Servers}{xiii}{subsection.183}}
-\newlabel{app:routes}{{A.11}{xiii}{Routen innerhalb des SSO-Servers}{subsection.183}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Routen des SSO-Servers}}{xiii}{figure.184}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.11}Routen innerhalb des SSO-Servers}{xiii}{subsection.179}}
+\newlabel{app:routes}{{A.11}{xiii}{Routen innerhalb des SSO-Servers}{subsection.179}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Routen des SSO-Servers}}{xiii}{figure.180}}
 \global\csname @altsecnumformattrue\endcsname
