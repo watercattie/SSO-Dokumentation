@@ -8,7 +8,7 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Bibliographie.bib
-Warning--I didn't find a database entry for "phpDoc"
+Warning--I didn't find a database entry for "phpdoc"
 Warning--to sort, need author, organization, or key in PHP
 Warning--empty edition in PHP
 Warning--empty address in PHP
@@ -40,7 +40,7 @@ Warning--empty address in GitLab
 Warning--empty year in GitLab
 You've used 19 entries,
             4728 wiz_defined-function locations,
-            969 strings with 8362 characters,
+            968 strings with 8356 characters,
 and the built_in function-call counts, 9161 in all, are:
 = -- 920
 > -- 214

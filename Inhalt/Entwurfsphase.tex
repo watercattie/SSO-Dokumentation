@@ -142,16 +142,9 @@ Mittels des Autorisierungscodes kann nun der Client mittels folgednem Aufruf ein
 \textbf{client\_id} - Die Client-ID, die beim Erstellen der Anwendung vergeben wurde \\
 \textbf{client\_secret} - Da diese Anfrage vom serverseitigen Code stammt, ist das Geheimnis enthalten
 
-Der Server antwortet mit einem Zugriffstoken und einer Ablaufzeit.
+Der Server antwortet mit einem Zugriffstoken und einer Ablaufzeit. Mit diesem Access Token, kann timy dann die Nutzerdaten per API erfragen und den Nutzer einloggen.
 
-Im Anhang \fullnameref{app:oauth2flow} befindet sich ein Diagramm was den Ablauf des OAuth2 Authentifizierungsprozesses  am Beispiel von timy veranschaulicht. 
-
-
-
-Ein User besucht die Seite von timy und möchte sich per \acs{SSO} einloggen. Dazu nutzt er den "wy-connect" Button und wird auf wy-connect weitergeleitet. Bei dieser Weiterleitung schickt timy seine Client\_ID und Redirect Adresse als GET Parameter mit und authentifiziert sich somit am Server. 
-Beim erstmaligen Anlegen eines Clients werden Redirect Adresse, Client\_ID, sowie Client\_secret ausgetauscht. 
-Am \acs{SSO}-Server loggt sich der User mit seinen Benutzerdaten ein und muss einmalig den Zugriff von timy auf seine Nutzerdaten erlauben. 
-Er wird auf die konfigurierte Redirect Adresse geleitet, in der der Server einen Autorisierungscode mitschickt. Mit diesem Code, seiner eigenen Client\_ID und seiner Secret\_ID sendet timy eine Anfrage auf ein Access Token per POST Request an den Server. Mit diesem Access Token, kann timy dann die Nutzerdaten per API erfragen. 
+Im Anhang \fullnameref{app:oauth2flow} befindet sich ein Diagramm was den Ablauf des OAuth2 Authentifizierungsprozesses veranschaulicht. 
 
 \subsection{Deployment}
 \label{sec:Deployment}

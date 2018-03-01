@@ -37,41 +37,38 @@
 \contentsline {subsection}{\numberline {4.7}Datenmodell}{12}{subsection.80}
 \contentsline {subsection}{\numberline {4.8}Gesch\IeC {\"a}ftslogik}{12}{subsection.82}
 \contentsline {subsection}{\numberline {4.9}Deployment}{14}{subsection.84}
-\contentsline {subsection}{\numberline {4.10}Pflichtenheft}{15}{subsection.85}
-\contentsline {subsection}{\numberline {4.11}Zwischenstand}{15}{subsection.86}
+\contentsline {subsection}{\numberline {4.10}Pflichtenheft}{14}{subsection.85}
+\contentsline {subsection}{\numberline {4.11}Zwischenstand}{14}{subsection.86}
 \contentsline {section}{\numberline {5}Implementierungsphase}{15}{section.88}
 \contentsline {subsection}{\numberline {5.1}Aufsetzen des Grundger\IeC {\"u}sts}{15}{subsection.89}
 \contentsline {subsection}{\numberline {5.2}Middleware}{15}{subsection.90}
-\contentsline {subsection}{\numberline {5.3}Implementierung des OAuth2 Flows}{16}{subsection.91}
+\contentsline {subsection}{\numberline {5.3}Implementierung des OAuth2 Flows}{15}{subsection.91}
 \contentsline {subsection}{\numberline {5.4}Implementierung der Anbindung an den Server}{16}{subsection.94}
 \contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.95}
 \contentsline {subsection}{\numberline {5.5}Zwischenstand}{16}{subsection.96}
-\contentsline {section}{\numberline {6}Abnahmephase}{17}{section.98}
-\contentsline {paragraph}{\nonumberline Beispiel}{17}{section*.99}
-\contentsline {subsection}{\numberline {6.1}Zwischenstand}{17}{subsection.100}
-\contentsline {section}{\numberline {7}Einf\IeC {\"u}hrungsphase}{17}{section.102}
+\contentsline {section}{\numberline {6}Abnahme- und Einf\IeC {\"u}hrungsphase}{16}{section.98}
+\contentsline {subsection}{\numberline {6.1}Zwischenstand}{16}{subsection.99}
+\contentsline {section}{\numberline {7}Dokumentation}{17}{section.101}
 \contentsline {subsection}{\numberline {7.1}Zwischenstand}{17}{subsection.103}
-\contentsline {section}{\numberline {8}Dokumentation}{18}{section.105}
-\contentsline {paragraph}{\nonumberline Beispiel}{18}{section*.106}
-\contentsline {subsection}{\numberline {8.1}Zwischenstand}{18}{subsection.108}
-\contentsline {section}{\numberline {9}Fazit}{18}{section.110}
-\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{18}{subsection.111}
-\contentsline {paragraph}{\nonumberline Beispiel (verk\IeC {\"u}rzt)}{18}{section*.112}
-\contentsline {subsection}{\numberline {9.2}Lessons Learned}{19}{subsection.114}
-\contentsline {subsection}{\numberline {9.3}Ausblick}{19}{subsection.115}
-\contentsline {section}{\nonumberline Literaturverzeichnis}{20}{section*.116}
-\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{22}{section*.117}
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.118}
-\contentsline {subsection}{\numberline {A.1}Verwendete Ressourcen}{i}{subsection.119}
-\contentsline {subsubsection}{\numberline {A.1.1}Hardware}{i}{subsubsection.120}
-\contentsline {subsubsection}{\numberline {A.1.2}Software}{i}{subsubsection.121}
-\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.122}
-\contentsline {subsection}{\numberline {A.3}Use-Case-Diagramm ohne SSO}{iii}{subsection.144}
-\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm mit SSO}{iv}{subsection.146}
-\contentsline {subsection}{\numberline {A.5}Benutzeroberfl\IeC {\"a}che von wyconnect und dem Client}{v}{subsection.148}
-\contentsline {subsection}{\numberline {A.6}Entity Relationship Modell}{viii}{subsection.152}
-\contentsline {subsection}{\numberline {A.7}Amortisationsdiagramm}{ix}{subsection.154}
-\contentsline {subsection}{\numberline {A.8}OAuth2 Flow}{x}{subsection.156}
-\contentsline {subsection}{\numberline {A.9}Sequenzdiagramm OAuth2}{xi}{subsection.158}
-\contentsline {subsection}{\numberline {A.10}Pflichtenheft (Auszug)}{xii}{subsection.160}
-\contentsline {subsection}{\numberline {A.11}Routen innerhalb des SSO-Servers}{xiii}{subsection.179}
+\contentsline {section}{\numberline {8}Fazit}{17}{section.105}
+\contentsline {subsection}{\numberline {8.1}Soll-/Ist-Vergleich}{17}{subsection.106}
+\contentsline {subsection}{\numberline {8.2}Lessons Learned}{18}{subsection.108}
+\contentsline {subsection}{\numberline {8.3}Ausblick}{18}{subsection.109}
+\contentsline {section}{\nonumberline Literaturverzeichnis}{19}{section*.110}
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{21}{section*.111}
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.112}
+\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.113}
+\contentsline {subsection}{\numberline {A.2}Verwendete Ressourcen}{i}{subsection.114}
+\contentsline {subsubsection}{\numberline {A.2.1}Hardware}{i}{subsubsection.115}
+\contentsline {subsubsection}{\numberline {A.2.2}Software}{i}{subsubsection.116}
+\contentsline {subsection}{\numberline {A.3}Lastenheft (Auszug)}{iii}{subsection.117}
+\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm ohne SSO}{iv}{subsection.139}
+\contentsline {subsection}{\numberline {A.5}Use-Case-Diagramm mit SSO}{v}{subsection.141}
+\contentsline {subsection}{\numberline {A.6}Benutzeroberfl\IeC {\"a}che von wyconnect und dem Client}{vi}{subsection.143}
+\contentsline {subsection}{\numberline {A.7}Entity Relationship Modell}{ix}{subsection.147}
+\contentsline {subsection}{\numberline {A.8}Amortisationsdiagramm}{x}{subsection.149}
+\contentsline {subsection}{\numberline {A.9}OAuth2 Flow}{xi}{subsection.151}
+\contentsline {subsection}{\numberline {A.10}Sequenzdiagramm OAuth2}{xii}{subsection.153}
+\contentsline {subsection}{\numberline {A.11}Pflichtenheft (Auszug)}{xiii}{subsection.155}
+\contentsline {subsection}{\numberline {A.12}Routen innerhalb des SSO-Servers}{xiv}{subsection.174}
+\contentsline {subsection}{\numberline {A.13}Screenshot der Entwicklerdokumentation}{xv}{subsection.176}

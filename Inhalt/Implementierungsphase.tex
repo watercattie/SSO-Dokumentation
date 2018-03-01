@@ -10,10 +10,9 @@ Für den Testclient wurde die fertige Instanz des von der Autorin entwickelten Z
 
 \subsection{Middleware}
 \label{sec:Middleware}
+Die Middleware bietet einen Filtermechanismus von HTTP-Anfragen, die in eine Anwendung eingehen. Die meist genutzte Middleware wäre hierbei die Überprüfung ob ein User authentifiziert ist. Ist dies nicht der Fall wird er automatisch zum Anmeldebildschirm weitergeleitet. Wenn der Benutzer jedoch authentifiziert ist, ermöglicht die Middleware, dass die Anforderung weiter in der Anwendung ausgeführt wird.
 
-Middleware bietet einen praktischen Mechanismus zum Filtern von HTTP-Anfragen, die in Ihre Anwendung eingehen. Zum Beispiel enthält Laravel eine Middleware, die überprüft, ob der Benutzer Ihrer Anwendung authentifiziert ist. Wenn der Benutzer nicht authentifiziert ist, leitet die Middleware den Benutzer zum Anmeldebildschirm um. Wenn der Benutzer jedoch authentifiziert ist, ermöglicht die Middleware, dass die Anforderung weiter in der Anwendung ausgeführt wird.
-
-Im Laravel-Framework sind mehrere Middleware enthalten, einschließlich Middleware für Authentifizierung und \acs{CSRF}-Schutz, die die Autorin in ihrem Projekt nutzt. 
+Im Projekt der Autorin werden die Middleware für Authentifizierung sowie der \acs{CSRF}-Schutz (Schutz gegen Anfragenfälschung\footnote{vgl \cite{CSRF}}) genutzt.
 
 \subsection{Implementierung des OAuth2 Flows}
 \label{sec:ImplementierungOAuth2}
@@ -22,7 +21,7 @@ Mit dem Paketmanager composer wurde das Passport Paket eingebunden, welche den G
 
 Es wurde das ORM Modell und auch das Repository Design Pattern umgesetzt. Die Models haben eine zusätzliche  Repository Klasse, die eine Entkapselung der Persistenzschicht mit sich bringt.
 
-Im \Anhang{app:routes} sind alle Routen aufgelistet, die der Server zur Verfügung stellt. Es ist sehr schön zu erkennen, welche Route auf welchen Controller zugreift und wie die Zugriffsrechte über die Middlewares (siehe \fullnameref{sec:Middleware} geregelt sind. Alle Routen mit der Middleware web und auth können nur eingeloggte User benutzen, guest ist für alle Nutzer offen.
+Im \Anhang{app:routes} sind alle Routen aufgelistet, die der Server zur Verfügung stellt. Es ist sehr schön zu erkennen, welche Route auf welchen Controller zugreift und wie die Zugriffsrechte über die Middlewares (siehe \fullnameref{sec:Middleware} geregelt sind. Alle Routen mit der Middleware auth können nur eingeloggte User benutzen, guest ist für alle Nutzer offen.
 
 Nachdem über die View mit Namen und einer URL, auf die der SSO nach Authentifizierung zurück leiten soll, ein neuer Client auf dem Server hinzugefügt wurde, werden die ID und das secret des Clients serverseitig angelegt und dem Client mitgeteilt. Wie üblich beim MVC Muster, leitet die View den Request mit den Clientdaten an den Controller per POST Request, der dann nach Validierung der Daten das Model beauftragt einen neuen Client anzulegen. 
 
