@@ -17,6 +17,10 @@ Im Projekt der Autorin werden die Middleware für Authentifizierung sowie der \a
 \subsection{Implementierung des OAuth2 Flows}
 \label{sec:ImplementierungOAuth2}
 
+$tokens = $this->tokenRepository->forUser($request->user()->getKey());
+$
+in PersonalAccessTokenController
+
 Mit dem Paketmanager composer wurde das Passport Paket eingebunden, welche den Grundstein des SSO-Servers legt.\footnote{Befehl zur Installation des Pakets: \texttt{composer require laravel/passport} vgl \cite{composer}} und die erforderlichen Tabellen wurde mit dem laraveleigenen Befehlen migriert. \footnote{Befehl zur Migration: \texttt{php artisan migrate} vgl. \cite{Laravel}}
 
 Es wurde das ORM Modell und auch das Repository Design Pattern umgesetzt. Die Models haben eine zusätzliche  Repository Klasse, die eine Entkapselung der Persistenzschicht mit sich bringt.
