@@ -7,7 +7,6 @@
 \label{sec:IstAnalyse}
 
 Derzeit gibt es bei der Anmeldung an den verschiedenen Diensten bei wycomco keine Optimierungen. 
-Bei allen Anwendungen kann man sich nicht selbständig registrieren und sich damit ein Benutzerkonto anlegen. Der jeweilige Administrator oder Befugte muss den User per Hand per Email einladen, damit dieser die Registrierung durchführen kann und nach einem Aktivierungslink die Applikation vollständig nutzbar ist. 
 
 Dieser Prozess lässt wie folgt beschreiben:
 \begin{enumerate}
@@ -20,16 +19,14 @@ Dieser Prozess lässt wie folgt beschreiben:
 \end{enumerate}
 
 Wie schnell ersichtlich wird, ist der Aufwand immens, wenn dieser Vorgang auch nur dreimal wiederholt werden muss.
-Dieser Prozess ist sehr zeitaufwändig. Auch im täglichen Geschäft ist es erforderlich sich an jeder Anwendung einzeln anzumelden. Wie in Abschnitt \ref{sec:Projektbegruendung} schon erwähnt, führt dies schnell zu Trivialpasswörtern und damit zu einem Sicherheitsrisiko. 
-
+Auch im täglichen Geschäft ist es erforderlich sich an jeder Anwendung einzeln anzumelden. Wie in Abschnitt \ref{sec:Projektbegruendung} schon erwähnt, führt dies schnell zu Trivialpasswörtern und damit zu einem Sicherheitsrisiko. 
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
 
 Durch den momentanen Prozess entsteht ein hoher zeitlicher Mehraufwand, der durch die Umsetzung des Projektes verringert werden kann.
 Eine Vereinheitlichung der Nutzerzugänge durch ein Single-Sign-On-Verfahren erscheint als hilfreicher Ausweg.
-Damit ist es dringend nötig dieses Projekt umzusetzen. Ob sich das auch wirtschaftlich begründen lässt, wird in den nächsten Abschnitten erläutert.
-
+Ob sich das auch wirtschaftlich begründen lässt, wird in den nächsten Abschnitten erläutert.
 
 \subsubsection{\gqq{Make or Buy}-Entscheidung}
 \label{sec:MakeOrBuyEntscheidung}
@@ -40,12 +37,10 @@ Auch durch ihre Nutzerfreundlichkeit sollte eine \acs{SSO} Lösung ansprechen, f
 
 Ein \ac{SSO}-Verfahren, das tatsächlich alle eingesetzten Anwendungen einbinden kann und die oben genannten für wycomco erfüllt, ist kaum zu finden. Da der Großteil der entwickelten Anwendungen bei wycomco auf Laravel\footnote{vgl. \cite{Laravel}} basiert, lag es nahe die zur Verfügung gestellten Pakete zu nutzen. Dabei handelt es sich um Passport\footnote{vgl. \cite{Passport}} und Socialite\footnote{vgl. \cite{Socialite}}, die die Grundfunktionen eines SSO Servers und den angebundenen Clients bieten. Damit kann das Augenmerk auf die individuellen Anforderungen von wycomco gelegt werden und es wurde sich dazu entschieden, das Projekt in Eigenentwicklung durchzuführen.
 
-
 \subsubsection{Projektkosten}
 \label{sec:Projektkosten}
 
-Im Folgenden werden die Projektkosten, die während der Entwicklung anfallen, kalkuliert. 
-Dafür müssen nicht nur die Personalkosten berücksichtigt werden, sondern auch die verwendeten Ressourcen, siehe unter \ref{app:Ressourcen}. Sämtliche Werte sind Beispiel-Angaben, da im Rahmen der IHK Projektangaben auf genaue Angaben der Personalkosten verzichtet wird. 
+Für die Projektkosten müssen nicht nur die Personalkosten berücksichtigt werden, sondern auch die verwendeten Ressourcen, siehe unter \ref{app:Ressourcen}. Sämtliche Werte sind Beispiel-Angaben, da im Rahmen der IHK Projektangaben auf genaue Angaben der Personalkosten verzichtet wird. 
 
 Bei den Personalkosten wird zwischen dem Stundensatz eines Auszubildenden und eines Mitarbeiters unterschieden. Der eines Mitarbeiters wird mit \eur{40} bemessen, der eines Auszubildenden mit \eur{10}.
 Für die Nutzung der Ressourcen \footnote{Hardware, Arbeitsplatz, \etc} wird ein Satz von \eur{15} angewendet.
@@ -53,11 +48,10 @@ Aus diesen Werten ergeben sich die Projektkosten in Tabelle~\ref{tab:Kostenaufst
 
 \tabelle{Kostenaufstellung}{tab:Kostenaufstellung}{Kostenaufstellung.tex}
 
-
 \subsubsection{Amortisationsdauer}
 \label{sec:Amortisationsdauer}
 
-Der Einsatz eines \ac{SSO}-Servers hat eine deutliche Zeitersparnis zur Folge. Durchschnittlich loggt sich ein Mitarbeiter pro Tag mindestens einmal am Tag in einer Anwendung ein. Bei 3 Anwendungen wie momentan bei wycomco sind es 3 Vorgänge täglich. Dazu muss er alle sechs Monat das Passwort ändern. Durch die Vielzahl an Freelancern in der Firma, schätzt man die Anzahl neuer User pro Monat auf eins. Neue User werden von den Administratoren der Anwendung eingeladen und müssen danach selbstständig ihre Registrierung vervollständigen. 
+Der Einsatz eines \ac{SSO}-Servers hat eine deutliche Zeitersparnis zur Folge. Durchschnittlich loggt sich ein Mitarbeiter pro Tag mindestens einmal am Tag in einer Anwendung ein. Bei 3 Anwendungen wie momentan bei wycomco sind es 3 Vorgänge täglich. Dazu muss er alle sechs Monate das Passwort ändern. Durch die Vielzahl an Freelancern in der Firma, schätzt man die Anzahl neuer User pro Monat auf eins. 
 
 Dazu die Auflistungen in Tabelle \ref{tab:Zeitersparnis1} und Tabelle \ref{tab:Zeitersparnis2}.
 
@@ -73,7 +67,7 @@ Dies ergibt eine tägliche Ersparnis von
 \frac{463 \mbox{ min/Monat}}{20 \mbox{ Tage/Monat}} = 23,15 \mbox{ min/Tag}
 \end{eqnarray}
 
-Bei einer Zeiteinsparung von 23,15 Minuten pro Tag für 252 Arbeitstagen\footnote{vgl. \cite{arbeitstage}} im Jahr ergibt sich eine Zeiteinsparung von 
+Bei einer Zeiteinsparung von 23,15 Minuten pro Tag an 252 Arbeitstagen\footnote{vgl. \cite{arbeitstage}} im Jahr ergibt sich eine Zeiteinsparung von 
 \begin{eqnarray}
 252 \frac{Tage}{Jahr} \cdot 23,15 \frac{min}{Tag} = 5833,8 \frac{min}{Jahr} \approx 97,23 \frac{h}{Jahr} 
 \end{eqnarray}
@@ -85,23 +79,15 @@ Dadurch ergibt sich eine jährliche Einsparung von
 
 Die Amortisationszeit beträgt also $\frac{\eur{2080,00}}{\eur{5347,65}\mbox{/Jahr}} \approx 0,4 \mbox{ Jahre} \approx 5 \mbox{ Monate}$.
 
-Der Server muss also mindestens 5 Monate das alte Vorgehen ersetzen,
-damit sich Anschaffungskosten und Kosteneinsparung ausgleichen. Da es vorgesehen ist die
-neue Anwendung längerfristig einzusetzen, kann die Umsetzung trotz der relativ langen
-Amortisationszeit auch unter wirtschaftlichen Gesichtspunkten als sinnvoll eingestuft werden.
+Der Server muss also mindestens 5 Monate das alte Vorgehen ersetzen, damit sich Anschaffungskosten und Kosteneinsparung ausgleichen. Da es vorgesehen ist die neue Anwendung längerfristig einzusetzen, kann die Umsetzung trotz der relativ langen Amortisationszeit auch unter wirtschaftlichen Gesichtspunkten als sinnvoll eingestuft werden.
 Eine grafische Darstellung der berechneten Werte findet sich unter \ref{app:Amortisationsdiagramm} .
-
 
 \subsection{Nutzwertanalyse}
 \label{sec:Nutzwertanalyse}
 
 Neben den in \fullnameref{sec:Amortisationsdauer} aufgeführten wirtschaftlichen Vorteilen ergeben sich durch Realisierung des Projekts noch einige zusätzliche Vorteile.
-
-Wie in der \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine höhere Sicherheit mit sich.
-In einer der Anwendungen von wycomco liegen vertrauliche Kundendaten. Sollte das Projekt dort nicht umgesetzt werden und daher Unbefugte Zugriff erlangen, kann man von Opportunitätskosten sprechen. Der Fremdzugriff bringt eine Vertragsstrafe mit sich, schätzungsweise bei größeren Kunden von 60000 \eur. Das sind Kosten die vermieden werden können mit der Umsetzung von wy-connect. 
-
+Wie in der \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine höhere Sicherheit mit sich. In einer der Anwendungen von wycomco liegen vertrauliche Kundendaten. Sollte das Projekt dort nicht umgesetzt werden und daher Unbefugte Zugriff erlangen, kann man von Opportunitätskosten sprechen. Der Fremdzugriff bringt eine Vertragsstrafe mit sich, schätzungsweise bei größeren Kunden von 60000 \eur. Das sind Kosten die vermieden werden können mit der Umsetzung von wy-connect. 
 Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, lässt es sich auch problemlos auf andere Kunden anwenden. Der tatsächliche Nutzen geht also über wycomco hinaus.
-
 
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
@@ -116,10 +102,8 @@ Die Qualitätsanforderungen an die Anwendung lassen sich Tabelle~\ref{tab:Qualit
 Es wird im Zuge der Analyse des Projektes ein Anwendungsfalldiagramm erstellt. Dies stellt
 Interaktionen von Benutzern mit dem System dar und zeigt somit das erwartete Verhalten der
 Anwendung. Das Anwendungsfalldiagramm ist im Anhang \ref{app:Use-Case-Diagramm} und \ref{app:Use-Case-Diagramm2} dargestellt.
-Bevor ein Nutzer eine Anwendung innerhalb wycomcos nutzen kann, muss ein Administrator sie einladen. Bevor der Implementierung eines \acs{SSO}-Servers geschah dies für jede Anwendung separat. Nach Einladung bekam der User eine EMail, die ihn auf das Registrierungsformular führte. Sobald er sich erfolgreich registriert hatte, musste er sich an jeder einzelnen Anwendung einloggen um sie nutzen zu können.
-Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen gut zu sehen ist, vereinfacht werden. Administratoren erstellen einmalig eine Einladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen.
-Hierbei sei die Autorisierung des Clients vernachlässigt. 
-
+Der vollständige Prozess ist in \fullnameref{sec:IstAnalyse} beschrieben.
+Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen gut zu sehen ist, vereinfacht werden. Administratoren erstellen einmalig eine Einladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen. Hierbei sei die Autorisierung des Clients vernachlässigt. 
 
 \subsection{Lastenheft/Fachkonzept}
 Am Ende der Entwurfsphase wurde zusammen mit dem Projektleiter auf Basis des Anwendungsfalldiagramms das Lastenheft erstellt. Ein Auszug befindet sich im Anhang \Anhang{app:Lastenheft}

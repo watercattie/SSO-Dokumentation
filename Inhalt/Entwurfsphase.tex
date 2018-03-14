@@ -5,7 +5,7 @@
 \subsection{Zielplattform}
 \label{sec:Zielplattform}
 
-Wie in Abschnitt \fullnameref{sec:Projektziel} erwähnt, soll am Ende des Abschlussprojektes eine eigenständige Webanwendung vorliegen. Die für eventuelle Weiterentwicklungen eine größtmögliche Plattform-Unabhängigkeit gewährleistet und über einen zeitgemäßen Browser oder auch auf mobilen Endgeräten von jedem Nutzer verwendet werden kann. Eine  reine Windows-Anwendung müsste beispielsweise jeweils erst lokal installiert, und bei Änderungen zusätzlich aktualisiert werden.
+Wie in Abschnitt \fullnameref{sec:Projektziel} erwähnt, soll am Ende des Abschlussprojektes eine eigenständige Webanwendung vorliegen. Die für eventuelle Weiterentwicklungen eine größtmögliche Plattform-Unabhängigkeit gewährleistet und über einen zeitgemäßen Browser oder auch auf mobilen Endgeräten von jedem Nutzer verwendet werden kann. 
 Die Daten, auf die zugegriffen werden soll, sind in einer bestehenden MySQL Datenbank gespeichert. 
 
 Als Programmiersprache wurde \ac{PHP}\footnote{vgl. \cite{PHP}} gewählt. Dies bot sich an, da viele bestehende Anwendungen bereits in PHP geschrieben sind und sie sich damit leichter an wy-connect anbinden lassen und die Entwickler wycomcos mit dieser Sprache vertraut sind. 
@@ -17,7 +17,7 @@ Wie auch die bestehenden Webapplikationen wird bei der Implementation das Framew
 Laravel ist ein freies \ac{PHP}-Webframework, welches dem \ac{MVC}-Muster folgt. 
 Es ermöglicht neben dem im folgenden unter \ref{sec:Architekturdesign} erläuterten MVC-Architekturdesign, \ac{REST}-Webdienste zu implementieren.
 Laravel wird mit dem \ac{ORM} Eloquent und einem gut bedienbaren Migrationssystem ausgeliefert. Damit werden Objekte einer objektorientierten Anwendung in eine relationale Datenbank überführt.
-Das Framework bringt von Hause aus ein Authentifizierungspaket, was auch von wyconnect genutzt wird und durch die Pakete Socialite und Passport ergänzt wird um den OAuth2 Mechanismus zu implementieren. Dazu mehr im Kapitel \fullnameref{sec:Geschaeftslogik}.
+Das Framework bringt von Hause aus ein Authentifizierungspaket, was auch von wyconnect genutzt wird und durch die Pakete Socialite und Passport ergänzt wird, um den OAuth2 Mechanismus zu implementieren. Dazu mehr im Kapitel \fullnameref{sec:Geschaeftslogik}.
 
 \subsection{Wahl des SSO-Protokolls}
 \label{sec:Protokollwahl}
@@ -31,7 +31,7 @@ Ein anderer Ansatz wäre Kerberos, deren Infrastruktur schon im \ac{AD} mit inte
 \acs{SAML} hingegen weist eine ähnliche Struktur wie die von OAuth2 auf. Während allerdings SAML längere Nachrichten über POST Parameter senden muss, greift OAuth2 auf GET zurück. Zudem sendet SAML \acs{XML} Antworten an den Client zurück, der wesentlich komplizierter zu verarbeiten ist als das häufig genutzte \acs{JSON}, welches auch bei wycomco standardmäßig genutzt wird. \footnote{vgl. \cite{SSO-Vgl}}
 Auch sendet OAuth2 keine Benutzerinformationen mit dem AccessToken mit, wie es in SAML der Fall ist, so erhält ein Angreifer nicht direkt den Zugang zu den Nutzerdaten.
 
-Aufgrund den angeführten Merkmalen der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches innerhalb des \ac{SSO}-Servers bei wycomco zukünftig zum Einsatz kommen wird. Für OAuth2 gibt es zudem zahlreiche Bibliotheken, die genutzt werden können um die Komplexität der Implementierung zu verringern.
+Aufgrund den angeführten Merkmalen der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches innerhalb des \ac{SSO}-Servers bei wycomco zukünftig zum Einsatz kommen wird. 
 
 \subsection{Authorization Grant Types}
 \label{sec:AuthorizationGrants}
@@ -55,7 +55,7 @@ Beim Design wurde dem \ac{MVC} Muster gefolgt, welches Laravel schon mit sich br
 Bei einer späteren Implementierung als native Anwendung, kann das Model beibehalten werden und nur die View und der Controller müssten teilweise umgeschrieben werden.
 
 Das \textbf{Model} enthält Daten zur Weiterverarbeitung. In vielen Fällen spiegelt ein Model
-eine Tabelle in der Datenbank wieder, so auch beim Eloquent \ac{ORM} von Laravel. Nur in dieser Model Klasse werden die Daten bearbeitet oder erfasst. Eine Trennung vom Controller ist erwünscht, um die Ziele von \ac{MVC} zu gewährleisten.
+eine Tabelle in der Datenbank wieder, so auch beim Eloquent \ac{ORM} von Laravel. Nur in dieser Model Klasse werden die Daten bearbeitet oder erfasst. 
 
 Die \textbf{View} ist das Benutzerinterface. Die Daten von den Models werden visualisiert und leitet \zB Benutzeraktionen und Formulare weiter. Innerhalb der View sollte ein Schreibzugriff auf das Model oder den Controller vermieden werden. Somit bleiben alle Daten statisch und werden nicht verändert.
 
@@ -65,9 +65,8 @@ Der \textbf{Controller} empfängt Anfragen (Requests) von der View. In diesen Re
 \subsection{Entwurf der Benutzeroberfläche}
 \label{sec:Benutzeroberflaeche} 
 
-Das Laravel Passport Paket bringt eine beispielhafte Oberfläche mit, in der alle relevanten Anforderungen Anwendung finden. Jedoch wurde nach Absprache mit dem Teamleiter beschlossen die Oberfläche selber zu implementieren und auf die gesonderten Anforderungen von wycomco  anzupassen.
-
-Dazu sind Screenshots und Mockups auf  \fullnameref{app:wyconnect-mockup} zu sehen. Timy stellt hier einen Client dar. Dabei handelt es sich um eine Zeiterfassungssoftware, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die auch über Single-Sign-On laufen soll. Auf diesem Client wurde eine Benutzerverwaltung implementiert, die auch auf die restlich angebundenen Clients übertragen werden kann. 
+Das Laravel Passport Paket bringt eine beispielhafte Oberfläche mit, in der alle relevanten Anforderungen Anwendung finden. 
+-Dazu sind Screenshots und Mockups auf  \fullnameref{app:wyconnect-mockup} zu sehen. Timy stellt hier einen Client dar. Dabei handelt es sich um eine Zeiterfassungssoftware, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die auch über Single-Sign-On laufen soll. 
 
 Über die Hauptansicht kann der Administrator die autorisierten Clients verwalten, die per \ac{SSO} auf  Benutzerdaten zugreifen dürfen. Benutzer können lediglich ihr eigenes Profil verwalten.
 
@@ -140,10 +139,14 @@ Der Server antwortet mit einem Zugriffstoken und einer Ablaufzeit. Mit diesem Ac
 
 Im Anhang \fullnameref{app:oauth2flow} befindet sich ein Diagramm was den Ablauf des OAuth2 Authentifizierungsprozesses veranschaulicht. 
 
+\textit{! hhm...kürzen diesen Abschnitt? !}
+
 \subsection{Deployment}
 \label{sec:Deployment}
 
 Der Server ist auf dem firmeneigenen Webserver gehostet mit der dazugehörigen Datenbank. Das komplette Repository liegt auf dem Gitlab Server und wird von da aus mittels dem GitLab Runner verarbeitet. Diese Jobs, ausgelöst durch einen Push auf den master Branch, werden innerhalb eines Docker Containers ausgeführt. Nachdem der Build erfolgreich war, werden die Tests durchlaufen und bei Erfolg wird der Build deployed und das System ist läuft auf dem Webserver.
+
+\textit{! ANGUCKEN! Richtig so? !}
 
 \subsection{Pflichtenheft}
 \label{sec:Pflichtenheft}
