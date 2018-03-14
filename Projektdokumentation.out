@@ -7,65 +7,67 @@
 \BOOKMARK [1][-]{section.11}{1 Einleitung}{}% 7
 \BOOKMARK [2][-]{subsection.12}{1.1 Projektumfeld}{section.11}% 8
 \BOOKMARK [2][-]{subsection.13}{1.2 Projektziel}{section.11}% 9
-\BOOKMARK [2][-]{subsection.14}{1.3 Projektbegr\374ndung}{section.11}% 10
-\BOOKMARK [2][-]{subsection.16}{1.4 Projektschnittstellen}{section.11}% 11
-\BOOKMARK [2][-]{subsection.17}{1.5 Projektabgrenzung}{section.11}% 12
-\BOOKMARK [1][-]{section.18}{2 Projektplanung}{}% 13
-\BOOKMARK [2][-]{subsection.19}{2.1 Projektphasen}{section.18}% 14
-\BOOKMARK [2][-]{subsection.21}{2.2 Ressourcenplanung}{section.18}% 15
-\BOOKMARK [2][-]{subsection.22}{2.3 Entwicklungsprozess}{section.18}% 16
-\BOOKMARK [1][-]{section.34}{3 Analysephase}{}% 17
-\BOOKMARK [2][-]{subsection.35}{3.1 Ist-Analyse}{section.34}% 18
-\BOOKMARK [2][-]{subsection.42}{3.2 Wirtschaftlichkeitsanalyse}{section.34}% 19
-\BOOKMARK [3][-]{subsubsection.43}{3.2.1 \214Make or Buy\215-Entscheidung}{subsection.42}% 20
-\BOOKMARK [3][-]{subsubsection.48}{3.2.2 Projektkosten}{subsection.42}% 21
-\BOOKMARK [3][-]{subsubsection.51}{3.2.3 Amortisationsdauer}{subsection.42}% 22
-\BOOKMARK [2][-]{subsection.58}{3.3 Nutzwertanalyse}{section.34}% 23
-\BOOKMARK [2][-]{subsection.59}{3.4 Qualit\344tsanforderungen}{section.34}% 24
-\BOOKMARK [2][-]{subsection.61}{3.5 Anwendungsf\344lle}{section.34}% 25
-\BOOKMARK [2][-]{subsection.62}{3.6 Lastenheft/Fachkonzept}{section.34}% 26
-\BOOKMARK [2][-]{subsection.63}{3.7 Zwischenstand}{section.34}% 27
-\BOOKMARK [1][-]{section.65}{4 Entwurfsphase}{}% 28
-\BOOKMARK [2][-]{subsection.66}{4.1 Zielplattform}{section.65}% 29
-\BOOKMARK [2][-]{subsection.69}{4.2 Framework}{section.65}% 30
-\BOOKMARK [2][-]{subsection.70}{4.3 Wahl des SSO-Protokolls}{section.65}% 31
-\BOOKMARK [2][-]{subsection.73}{4.4 Authorization Grant Types}{section.65}% 32
-\BOOKMARK [2][-]{subsection.78}{4.5 Architekturdesign}{section.65}% 33
-\BOOKMARK [2][-]{subsection.79}{4.6 Entwurf der Benutzeroberfl\344che}{section.65}% 34
-\BOOKMARK [2][-]{subsection.80}{4.7 Datenmodell}{section.65}% 35
-\BOOKMARK [2][-]{subsection.82}{4.8 Gesch\344ftslogik}{section.65}% 36
-\BOOKMARK [2][-]{subsection.84}{4.9 Deployment}{section.65}% 37
-\BOOKMARK [2][-]{subsection.85}{4.10 Pflichtenheft}{section.65}% 38
-\BOOKMARK [2][-]{subsection.86}{4.11 Zwischenstand}{section.65}% 39
-\BOOKMARK [1][-]{section.88}{5 Implementierungsphase}{}% 40
-\BOOKMARK [2][-]{subsection.89}{5.1 Aufsetzen des Grundger\374sts}{section.88}% 41
-\BOOKMARK [2][-]{subsection.90}{5.2 Middleware}{section.88}% 42
-\BOOKMARK [2][-]{subsection.92}{5.3 Implementierung des OAuth2 Flows}{section.88}% 43
-\BOOKMARK [2][-]{subsection.95}{5.4 Implementierung der Anbindung an den Server}{section.88}% 44
-\BOOKMARK [2][-]{subsection.97}{5.5 Zwischenstand}{section.88}% 45
-\BOOKMARK [1][-]{section.99}{6 Abnahme- und Einf\374hrungsphase}{}% 46
-\BOOKMARK [2][-]{subsection.100}{6.1 Zwischenstand}{section.99}% 47
-\BOOKMARK [1][-]{section.102}{7 Dokumentation}{}% 48
-\BOOKMARK [2][-]{subsection.104}{7.1 Zwischenstand}{section.102}% 49
-\BOOKMARK [1][-]{section.106}{8 Fazit}{}% 50
-\BOOKMARK [2][-]{subsection.107}{8.1 Soll-/Ist-Vergleich}{section.106}% 51
-\BOOKMARK [2][-]{subsection.109}{8.2 Lessons Learned}{section.106}% 52
-\BOOKMARK [2][-]{subsection.110}{8.3 Ausblick}{section.106}% 53
-\BOOKMARK [1][-]{section*.111}{Literaturverzeichnis}{}% 54
-\BOOKMARK [1][-]{section*.112}{Eidesstattliche Erkl\344rung}{}% 55
-\BOOKMARK [1][-]{appendix.113}{A Anhang}{}% 56
-\BOOKMARK [2][-]{subsection.114}{A.1 Detaillierte Zeitplanung}{appendix.113}% 57
-\BOOKMARK [2][-]{subsection.115}{A.2 Verwendete Ressourcen}{appendix.113}% 58
-\BOOKMARK [3][-]{subsubsection.116}{A.2.1 Hardware}{subsection.115}% 59
-\BOOKMARK [3][-]{subsubsection.117}{A.2.2 Software}{subsection.115}% 60
-\BOOKMARK [2][-]{subsection.118}{A.3 Lastenheft \(Auszug\)}{appendix.113}% 61
-\BOOKMARK [2][-]{subsection.140}{A.4 Use-Case-Diagramm ohne SSO}{appendix.113}% 62
-\BOOKMARK [2][-]{subsection.142}{A.5 Use-Case-Diagramm mit SSO}{appendix.113}% 63
-\BOOKMARK [2][-]{subsection.144}{A.6 Benutzeroberfl\344che von wyconnect und dem Client}{appendix.113}% 64
-\BOOKMARK [2][-]{subsection.148}{A.7 Entity Relationship Modell}{appendix.113}% 65
-\BOOKMARK [2][-]{subsection.150}{A.8 Amortisationsdiagramm}{appendix.113}% 66
-\BOOKMARK [2][-]{subsection.152}{A.9 OAuth2 Flow}{appendix.113}% 67
-\BOOKMARK [2][-]{subsection.154}{A.10 Sequenzdiagramm OAuth2}{appendix.113}% 68
-\BOOKMARK [2][-]{subsection.156}{A.11 Pflichtenheft \(Auszug\)}{appendix.113}% 69
-\BOOKMARK [2][-]{subsection.175}{A.12 Routen innerhalb des SSO-Servers}{appendix.113}% 70
-\BOOKMARK [2][-]{subsection.177}{A.13 Screenshot der Entwicklerdokumentation}{appendix.113}% 71
+\BOOKMARK [2][-]{subsection.16}{1.3 Projektbegr\374ndung}{section.11}% 10
+\BOOKMARK [2][-]{subsection.19}{1.4 Projektschnittstellen}{section.11}% 11
+\BOOKMARK [2][-]{subsection.20}{1.5 Projektabgrenzung}{section.11}% 12
+\BOOKMARK [1][-]{section.21}{2 Projektplanung}{}% 13
+\BOOKMARK [2][-]{subsection.22}{2.1 Projektphasen}{section.21}% 14
+\BOOKMARK [2][-]{subsection.24}{2.2 Ressourcenplanung}{section.21}% 15
+\BOOKMARK [2][-]{subsection.25}{2.3 Entwicklungsprozess}{section.21}% 16
+\BOOKMARK [1][-]{section.37}{3 Analysephase}{}% 17
+\BOOKMARK [2][-]{subsection.38}{3.1 Ist-Analyse}{section.37}% 18
+\BOOKMARK [2][-]{subsection.45}{3.2 Wirtschaftlichkeitsanalyse}{section.37}% 19
+\BOOKMARK [3][-]{subsubsection.46}{3.2.1 \214Make or Buy\215-Entscheidung}{subsection.45}% 20
+\BOOKMARK [3][-]{subsubsection.51}{3.2.2 Projektkosten}{subsection.45}% 21
+\BOOKMARK [3][-]{subsubsection.54}{3.2.3 Amortisationsdauer}{subsection.45}% 22
+\BOOKMARK [2][-]{subsection.61}{3.3 Nutzwertanalyse}{section.37}% 23
+\BOOKMARK [2][-]{subsection.62}{3.4 Qualit\344tsanforderungen}{section.37}% 24
+\BOOKMARK [2][-]{subsection.64}{3.5 Anwendungsf\344lle}{section.37}% 25
+\BOOKMARK [2][-]{subsection.65}{3.6 Lastenheft/Fachkonzept}{section.37}% 26
+\BOOKMARK [2][-]{subsection.66}{3.7 Zwischenstand}{section.37}% 27
+\BOOKMARK [1][-]{section.68}{4 Entwurfsphase}{}% 28
+\BOOKMARK [2][-]{subsection.69}{4.1 Zielplattform}{section.68}% 29
+\BOOKMARK [2][-]{subsection.73}{4.2 Framework}{section.68}% 30
+\BOOKMARK [2][-]{subsection.77}{4.3 Wahl des SSO-Protokolls}{section.68}% 31
+\BOOKMARK [2][-]{subsection.80}{4.4 Authorization Grant Types}{section.68}% 32
+\BOOKMARK [2][-]{subsection.85}{4.5 Architekturdesign}{section.68}% 33
+\BOOKMARK [2][-]{subsection.86}{4.6 Entwurf der Benutzeroberfl\344che}{section.68}% 34
+\BOOKMARK [2][-]{subsection.87}{4.7 Datenmodell}{section.68}% 35
+\BOOKMARK [2][-]{subsection.89}{4.8 Gesch\344ftslogik}{section.68}% 36
+\BOOKMARK [2][-]{subsection.91}{4.9 Deployment}{section.68}% 37
+\BOOKMARK [2][-]{subsection.92}{4.10 Pflichtenheft}{section.68}% 38
+\BOOKMARK [2][-]{subsection.93}{4.11 Zwischenstand}{section.68}% 39
+\BOOKMARK [1][-]{section.95}{5 Implementierungsphase}{}% 40
+\BOOKMARK [2][-]{subsection.96}{5.1 Aufsetzen des Grundger\374sts}{section.95}% 41
+\BOOKMARK [2][-]{subsection.97}{5.2 Middleware}{section.95}% 42
+\BOOKMARK [2][-]{subsection.99}{5.3 Implementierung der Benutzeroberfl\344che}{section.95}% 43
+\BOOKMARK [2][-]{subsection.100}{5.4 Implementierung des OAuth2 Flows}{section.95}% 44
+\BOOKMARK [2][-]{subsection.104}{5.5 Implementierung der Anbindung an den Server}{section.95}% 45
+\BOOKMARK [2][-]{subsection.105}{5.6 Zwischenstand}{section.95}% 46
+\BOOKMARK [1][-]{section.107}{6 Abnahme- und Einf\374hrungsphase}{}% 47
+\BOOKMARK [2][-]{subsection.108}{6.1 Zwischenstand}{section.107}% 48
+\BOOKMARK [1][-]{section.110}{7 Dokumentation}{}% 49
+\BOOKMARK [2][-]{subsection.112}{7.1 Zwischenstand}{section.110}% 50
+\BOOKMARK [1][-]{section.114}{8 Fazit}{}% 51
+\BOOKMARK [2][-]{subsection.115}{8.1 Soll-/Ist-Vergleich}{section.114}% 52
+\BOOKMARK [2][-]{subsection.117}{8.2 Lessons Learned}{section.114}% 53
+\BOOKMARK [2][-]{subsection.118}{8.3 Ausblick}{section.114}% 54
+\BOOKMARK [1][-]{section*.119}{Literaturverzeichnis}{}% 55
+\BOOKMARK [1][-]{section*.120}{Eidesstattliche Erkl\344rung}{}% 56
+\BOOKMARK [1][-]{appendix.121}{A Anhang}{}% 57
+\BOOKMARK [2][-]{subsection.122}{A.1 Detaillierte Zeitplanung}{appendix.121}% 58
+\BOOKMARK [2][-]{subsection.123}{A.2 Verwendete Ressourcen}{appendix.121}% 59
+\BOOKMARK [3][-]{subsubsection.124}{A.2.1 Hardware}{subsection.123}% 60
+\BOOKMARK [3][-]{subsubsection.125}{A.2.2 Software}{subsection.123}% 61
+\BOOKMARK [2][-]{subsection.126}{A.3 Lastenheft \(Auszug\)}{appendix.121}% 62
+\BOOKMARK [2][-]{subsection.148}{A.4 Use-Case-Diagramm ohne SSO}{appendix.121}% 63
+\BOOKMARK [2][-]{subsection.150}{A.5 Use-Case-Diagramm mit SSO}{appendix.121}% 64
+\BOOKMARK [2][-]{subsection.152}{A.6 Benutzeroberfl\344che Mockup}{appendix.121}% 65
+\BOOKMARK [2][-]{subsection.154}{A.7 Benutzeroberfl\344che Screenshots}{appendix.121}% 66
+\BOOKMARK [2][-]{subsection.157}{A.8 Entity Relationship Modell}{appendix.121}% 67
+\BOOKMARK [2][-]{subsection.159}{A.9 Amortisationsdiagramm}{appendix.121}% 68
+\BOOKMARK [2][-]{subsection.161}{A.10 OAuth2 Flow}{appendix.121}% 69
+\BOOKMARK [2][-]{subsection.163}{A.11 Sequenzdiagramm OAuth2}{appendix.121}% 70
+\BOOKMARK [2][-]{subsection.165}{A.12 Pflichtenheft \(Auszug\)}{appendix.121}% 71
+\BOOKMARK [2][-]{subsection.184}{A.13 Routen innerhalb des SSO-Servers}{appendix.121}% 72
+\BOOKMARK [2][-]{subsection.186}{A.14 Screenshot der Entwicklerdokumentation}{appendix.121}% 73

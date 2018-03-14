@@ -4,26 +4,26 @@
 Die folgende Projektdokumentation wurde im Rahmen des IHK Abschlussprojektes erstellt, welches während der Ausbildung zum Fachinformatiker Fachrichtung Anwendungsentwicklung durchgeführt wurde.
 \subsection{Projektumfeld} 
 \label{sec:Projektumfeld}
-Ausbildungsbetrieb ist die \textsc{wycomco GmbH}, im Folgenden als \textit{wycomco} bezeichnet. Wycomco ist ein Full-Service-Dienstleister im IT-Bereich mit Sitz in Berlin. Zu den Produkten des Unternehmens gehören außerdem individuell anpassbare Softwarelösungen für Anforderungen aller Art. Momentan beschäftigt das Unternehmen 12 Mitarbeiter. \\
+Ausbildungsbetrieb ist die \textit{wycomco GmbH}, im Folgenden als \textit{wycomco} bezeichnet. Wycomco ist ein Full-Service-Dienstleister im IT-Bereich mit Sitz in Berlin. Zu den Produkten des Unternehmens gehören außerdem individuell anpassbare Softwarelösungen für Anforderungen aller Art. Momentan beschäftigt das Unternehmen 12 Mitarbeiter. \\
 Der Auftraggeber des Projektes ist die Entwicklungsabteilung von wycomco. 
 \subsection{Projektziel} 
 \label{sec:Projektziel}
-Wycomco implementiert immer mehr Webanwendungen zur internen Nutzung. Bisher müssen sich die Mitarbeiter an jeder Anwendung mit eigenem - teils verschiedenen - Benutzernamen und Passwort registrieren und anschließend anmelden. Rechte und Rollen werden manuell gesetzt und eine Anbindung an die \acs{AD} ist nicht vorhanden.
-Mit einem Single-Sign-On Server soll dieser Prozess automatisiert und vereinfacht werden. Die eigenständige Applikation, im folgenden \textit{wy-connect} genannt, verwaltet die Benutzer an zentraler Stelle und vereinheitlicht die Nutzerdaten der verschiedenen Anwendungen. Die Anmeldung erfolgt ausschließlich am SSO über einen sicheren Kanal. 
+Wycomco implementiert immer mehr Webanwendungen zur internen Nutzung. Bisher müssen sich die Mitarbeiter an jeder Anwendung mit eigenem - teils verschiedenen - Benutzernamen und Passwort registrieren und anschließend anmelden. Rechte und Rollen werden manuell gesetzt, eine Anbindung an die \ac{AD} ist nicht vorhanden.
+Mit einem \ac{SSO}-Server soll dieser Prozess automatisiert und vereinfacht werden. Die eigenständige Applikation, im folgenden \textit{wy-connect} genannt, verwaltet die Benutzer an zentraler Stelle und vereinheitlicht die Nutzerdaten der verschiedenen Anwendungen. Die Anmeldung erfolgt ausschließlich am \ac{SSO} über einen sicheren Kanal. 
 \subsection{Projektbegründung} 
 \label{sec:Projektbegruendung}
-Im Unternehmen wird die Softwareentwicklung vorangetrieben und auch die Entwicklung im Eigenbedarf steigt stetig an. So existieren momentan drei Anwendungen die im Betrieb laufen oder in der Testphase sind. Alle drei Apps haben eine eigene Benutzerverwaltung mit eigenen Benutzerkennungen. Wird bei der ersten ein Nutzername zum anmelden vergeben, nutzt die zweite die Firmenmailadresse oder eine ID. 
+Im Unternehmen wird die Softwareentwicklung vorangetrieben und auch die Entwicklung im Eigenbedarf steigt stetig an. So existieren momentan drei Anwendungen die im Betrieb laufen oder in der Testphase sind. Alle drei Apps haben eine eigene Benutzerverwaltung mit eigenen Benutzerkennungen. Wird bei der ersten ein Nutzername zum Anmelden vergeben, nutzt die zweite die Firmenmailadresse oder eine ID. 
 An allen muss in regelmäßigen Abständen das Passwort geändert werden. 
 Damit gehört es zum Standard sich Passwörter aufzuschreiben, Passwörter generieren zu lassen oder vergessene Passwörter neu zu vergeben. Der Einfachheit halber neigt man dazu Trivialpasswörter zu nutzen, diese wiederholt einzusetzen und sie sich an unsicheren Stellen zu notieren\footnote{vgl. \cite{datenschutzbeauftragter}}. 
 Durch den wiederholten Anmeldeprozess an verschiedenen Diensten mit verschiedenen Sicherheitsvorkehrungen steigt zudem die Wahrscheinlichkeit, dass ein Passwort ausgespäht wird. 
 Dazu ein Anwendungsdiagramm im \Anhang{app:Use-Case-Diagramm}. \\
-Durch die Implementierung einer Single Sign-on-Lösung muss sich der Nutzer nur ein Master-Passwort merken und dieses einmalig bei der Anmeldung am wy-connect Dienst eingeben. Bei der Nutzung von SSO ist der größte Vorteil darin zu sehen, dass sich der Nutzer nicht nochmal registrieren muss, so dass das lästige Eintippen von Daten, Festlegen eines neuen Passwortes und Bestätigung der Registrierung entfällt. Auch der administrative Aufwand verringert sich bei einer zentralen Nutzerverwaltungfootnote{vgl. \cite{univention}.\\
+Durch die Implementierung einer Single Sign-on-Lösung muss sich der Nutzer nur ein Master-Passwort merken und dieses einmalig bei der Anmeldung am wy-connect Dienst eingeben. Bei der Nutzung von \ac{SSO} ist der größte Vorteil darin zu sehen, dass sich der Nutzer nicht nochmal registrieren muss, so dass das lästige Eintippen von Daten, Festlegen eines neuen Passwortes und Bestätigung der Registrierung entfällt. Auch der administrative Aufwand verringert sich bei einer zentralen Nutzerverwaltung\footnote{vgl. \cite{univention}}.\\
 Dies hätte auf jeden Fall eine bessere Usability und eine nicht zu unterschätzende Zeitersparnis für Anwender im Vergleich zur derzeitigen Lösung zur Folge. 
-Aufgrund der angeführten Gründe hat sich die wycomco GmbH entschieden die Entwicklung von wy-connect in Auftrag zu geben.
+Aufgrund der angeführten Gründe hat sich wycomco entschieden die Entwicklung von wy-connect in Auftrag zu geben.
 \subsection{Projektschnittstellen} 
 \label{sec:Projektschnittstellen}
-Die Anwendung benötigt keinerlei Schnittstellen zu anderen Diensten. Der SSO-Server kommuniziert im Rahmen des Abschlussprojektes nur mit einem Testclient, der eigens implementiert wird.
-Integration mit anderen externen Systemen wie dem \acs{AD} ist nicht Teil der Anforderung.
+Die Anwendung benötigt keinerlei Schnittstellen zu anderen Diensten. Der \ac{SSO}-Server kommuniziert im Rahmen des Abschlussprojektes nur mit einem Testclient, der eigens implementiert wird.
+Integration mit anderen externen Systemen wie dem \ac{AD} ist nicht Teil der Anforderung.
 \subsection{Projektabgrenzung} 
 \label{sec:Projektabgrenzung}
-Die Anbindung an einen Client wird in diesem Projekt nur für einen Testclient durchgeführt, die Durchführung für alle bestehenden Anwendungen im Unternehmen gehört nicht zum Projekt. Es wird allerdings eine Dokumentation bereitgestellt. Diese befindet sich im Anhang lalala(kommt noch). 
+Die Anbindung an einen Client wird in diesem Projekt nur für einen Testclient durchgeführt, die Durchführung für alle bestehenden Anwendungen im Unternehmen gehört nicht zum Projekt.

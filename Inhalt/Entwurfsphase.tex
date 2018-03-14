@@ -5,34 +5,33 @@
 \subsection{Zielplattform}
 \label{sec:Zielplattform}
 
-Wie in Abschnitt \fullnameref{sec:Projektziel} erwähnt, soll am Ende des Abschlussprojektes eine eigenständige Webanwendung vorliegen. Das Deployment und die Aktualisierung wird somit erleichtert.
+Wie in Abschnitt \fullnameref{sec:Projektziel} erwähnt, soll am Ende des Abschlussprojektes eine eigenständige Webanwendung vorliegen. Die für eventuelle Weiterentwicklungen eine größtmögliche Plattform-Unabhängigkeit gewährleistet und über einen zeitgemäßen Browser oder auch auf mobilen Endgeräten von jedem Nutzer verwendet werden kann. Eine  reine Windows-Anwendung müsste beispielsweise jeweils erst lokal installiert, und bei Änderungen zusätzlich aktualisiert werden.
 Die Daten, auf die zugegriffen werden soll, sind in einer bestehenden MySQL Datenbank gespeichert. 
 
-Als Programmiersprache wurde \acs{PHP}\footnote{vgl. \cite{PHP}} gewählt. Dies bot sich an, da viele bestehende Anwendungen bereits in PHP geschrieben sind und sie sich damit leichter an wy-connect anbinden lassen und die Entwickler wycomcos mit dieser Sprache vertraut sind. 
+Als Programmiersprache wurde \ac{PHP}\footnote{vgl. \cite{PHP}} gewählt. Dies bot sich an, da viele bestehende Anwendungen bereits in PHP geschrieben sind und sie sich damit leichter an wy-connect anbinden lassen und die Entwickler wycomcos mit dieser Sprache vertraut sind. 
 Wie auch die bestehenden Webapplikationen wird bei der Implementation das Framework Laravel\footnote{vgl. \cite{Laravel}} genutzt.
 
 \subsection{Framework}
 \label{sec:Framework}
 
-Laravel ist ein freies \acs{PHP}-Webframework, welches dem \acs{MVC}-Muster folgt. 
-Es ermöglicht neben dem im folgenden unter \ref{sec:Architekturdesign} erläuterten MVC-Architekturdesign, \acs{REST}-Webdienste zu implementieren.
-Laravel wird mit dem \acs{ORM} Eloquent und einem gut bedienbaren Migrationssystem ausgeliefert. Damit werden Objekte einer objektorientierten Anwendung in eine relationale Datenbank überführt.
+Laravel ist ein freies \ac{PHP}-Webframework, welches dem \ac{MVC}-Muster folgt. 
+Es ermöglicht neben dem im folgenden unter \ref{sec:Architekturdesign} erläuterten MVC-Architekturdesign, \ac{REST}-Webdienste zu implementieren.
+Laravel wird mit dem \ac{ORM} Eloquent und einem gut bedienbaren Migrationssystem ausgeliefert. Damit werden Objekte einer objektorientierten Anwendung in eine relationale Datenbank überführt.
 Das Framework bringt von Hause aus ein Authentifizierungspaket, was auch von wyconnect genutzt wird und durch die Pakete Socialite und Passport ergänzt wird um den OAuth2 Mechanismus zu implementieren. Dazu mehr im Kapitel \fullnameref{sec:Geschaeftslogik}.
 
 \subsection{Wahl des SSO-Protokolls}
 \label{sec:Protokollwahl}
 
-Nach der Entscheidung einen \acs{SSO}-Server einzusetzen, galt es ein geeignetes Protokoll für die Umsetzung zu finden. 
-An erster Stelle steht dabei die Sicherheit. Sicherheit bei den wesentlichen Aspekten der Autorisierung und Authentifizierung. Autorisierung um bestimmten Clients den Zugriff auf die Ressourcen des Nutzers zu berechtigen und Authentifizierung um die Identität des Benutzer zu identifizieren. Eine mögliche Lösung bietet das OAuth2 Protokoll. \footnote{vgl. \cite{OAuth2}}.
+Nach der Entscheidung einen \ac{SSO}-Server einzusetzen, galt es ein geeignetes Protokoll für die Umsetzung zu finden. An erster Stelle steht dabei die Sicherheit, bei den wesentlichen Aspekten der Autorisierung und Authentifizierung. Autorisierung um bestimmten Clients den Zugriff auf die Ressourcen des Nutzers zu berechtigen und Authentifizierung um die Identität des Benutzer zu identifizieren. Eine mögliche Lösung bietet das OAuth2 Protokoll. \footnote{vgl. \cite{OAuth2}}.
 
 Die Benutzerkontrolle stellt bei OAuth2 das grundlegende Prinzip dar. Im Fokus steht der Schutz von Benutzerdaten vor unbefugten Zugriff. Die Ressourcen von den Benutzern (als \textit{Resource Owner} bezeichnet) verwaltet ein \textit{Resource Server}, der nur zulässige und autorisierte Anfragen zulässt. Ein vertrauenswürdiger \textit{Authorization Server} authentifiziert den Benutzer und holt dessen Autorisierung für den Zugriff ein. Als Autorisierungsnachweis stellt der \textit{Auhorization Server} Access Token aus. Im vorliegenden Anwendungsfall sind \textit{Resource Server} und \textit{Authorization Server} ein und derselbe Server.
 Als \textit{Client} bezeichnet man dabei jede Anwendung, die auf Ressourcen eines Benutzers in seinem Namen zugreifen möchte. Im Falle der Projektarbeit handelt es sich hierbei um \textit{timy}, eine Zeiterfassungsanwendung, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die als erstes den Single-Sign-On-Dienst nutzen soll. 
 
-Ein anderer Ansatz wäre Kerberos, deren Infrastruktur schon im \acs{AD} mit integriert ist. Allerdings ist damit die Authentifizierung auch an das \acs{AD} gebunden. Sobald sich ein Benutzer außerhalb der Domäne an eine Anwendung anmelden möchte, ist dies nicht mehr möglich. Da wycomco immer mehr Webanwendungen entwickelt und diese auch perspektivisch an Kunden gehen sollen, wäre eine Einschränkung an die AD nicht sinnvoll. 
+Ein anderer Ansatz wäre Kerberos, deren Infrastruktur schon im \ac{AD} mit integriert ist. Allerdings ist damit die Authentifizierung auch an das \ac{AD} gebunden. Sobald sich ein Benutzer außerhalb der Domäne an eine Anwendung anmelden möchte, ist dies nicht mehr möglich. Da wycomco immer mehr Webanwendungen entwickelt und diese auch perspektivisch an Kunden gehen sollen, wäre eine Einschränkung an die AD nicht sinnvoll. 
 \acs{SAML} hingegen weist eine ähnliche Struktur wie die von OAuth2 auf. Während allerdings SAML längere Nachrichten über POST Parameter senden muss, greift OAuth2 auf GET zurück. Zudem sendet SAML \acs{XML} Antworten an den Client zurück, der wesentlich komplizierter zu verarbeiten ist als das häufig genutzte \acs{JSON}, welches auch bei wycomco standardmäßig genutzt wird. \footnote{vgl. \cite{SSO-Vgl}}
 Auch sendet OAuth2 keine Benutzerinformationen mit dem AccessToken mit, wie es in SAML der Fall ist, so erhält ein Angreifer nicht direkt den Zugang zu den Nutzerdaten.
 
-Aufgrund den angeführten Merkmalen der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches innerhalb des SSO-Servers bei wycomco zukünftig zum Einsatz kommen wird. Für OAuth2 gibt es zudem zahlreiche Bibliotheken, die genutzt werden können um die Komplexität der Implementierung zu verringern.
+Aufgrund den angeführten Merkmalen der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches innerhalb des \ac{SSO}-Servers bei wycomco zukünftig zum Einsatz kommen wird. Für OAuth2 gibt es zudem zahlreiche Bibliotheken, die genutzt werden können um die Komplexität der Implementierung zu verringern.
 
 \subsection{Authorization Grant Types}
 \label{sec:AuthorizationGrants}
@@ -41,9 +40,9 @@ OAuth2 bringt verschiedene Arten mit um den Nutzer zu autorisieren.
 
 \begin{enumerate}
 \item mit dem \textbf{Passwortansatz} gibt der Nutzer direkt am Client Nutzername und Passwort ein und sendet sie per POST Request an den Server. Das hat den Nachteil, dass der Client die Daten bearbeitet.
-\item mit dem \textbf{Autorisationsansatz} lenkt der Client den Nutzer auf eine View vom Server. Dort kann der Zugriff gestattet oder abgelehnt werden. Nach Genehmigung bekommt der Client einen Authorization Code über eine Redirect URI, die der Client beim ersten Request angegeben hat. So kann sichergestellt werden, dass der richtige Client den Code bekommt. Nun kann der Client über einen Post Request mit dem Authorization Code ein Access Token erzeugen. 
-\item mit dem \textbf{Implicitansatz} läuft der Prozess ähnlich dem Authorizationsansatz. Nur das senden eines Authorization Codes entfällt und der Client bekommt sofort den Access Code vom Server geschickt.
-\item mit dem \textbf{Client Credentialsansatz} nutzt der Client eine bestimmte Information, die nur der Client kennt, um ein Access Token zu bekommen. So kann der Client ohne weitere Informationen auf Daten zugreifen.
+\item mit dem \textbf{Autorisationsansatz} lenkt der Client den Nutzer auf eine View vom Server. Dort kann der Zugriff gestattet oder abgelehnt werden. Nach Genehmigung bekommt der Client einen Authorization Code über eine Redirect URI, die der Client beim ersten Request angegeben hat. So kann sichergestellt werden, dass der richtige Client den Code bekommt. Nun kann der Client über einen Post Request mit dem Authorization Code ein Access Token beim Server beantragen. 
+\item mit dem \textbf{Implicitansatz} läuft der Prozess ähnlich dem Autorisationsansatz. Nur das senden eines Authorization Codes entfällt und der Client bekommt sofort den Access Code vom Server geschickt.
+\item mit dem \textbf{Client Credentialsansatz} erhält der Client ein Access Token, um auf die eigenen Ressourcen zuzugreifen, und nicht im Auftrag eines Benutzers.
 \end{enumerate}
 
 Im Projekt der Autorin fallen alle Grants bis auf den zweiten heraus. Beim Passwortansatz werden die Credentials des Nutzers von der Anwendung bearbeitet und verschickt werden, dies stellt ein Sicherheitsrisiko dar, was umgangen werden sollte.
@@ -52,53 +51,49 @@ Der Client Credentialsansatz passt nicht zu den Anforderungen von wycomco an das
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
 
-Beim Design wurde dem MVC Muster gefolgt, welches Laravel schon mit sich bringt. Die Anwendung wird in 3 Komponenten aufgespalten und sicher damit Flexibilität, Anpassbarkeit und Wiederverwendbarkeit.
+Beim Design wurde dem \ac{MVC} Muster gefolgt, welches Laravel schon mit sich bringt. Die Anwendung wird in 3 Komponenten aufgespalten und sichert damit Flexibilität, Anpassbarkeit und Wiederverwendbarkeit.
 Bei einer späteren Implementierung als native Anwendung, kann das Model beibehalten werden und nur die View und der Controller müssten teilweise umgeschrieben werden.
 
 Das \textbf{Model} enthält Daten zur Weiterverarbeitung. In vielen Fällen spiegelt ein Model
-eine Tabelle in der Datenbank wieder, so auch beim Eloquent ORM von Laravel. Nur in dieser Model Klasse werden die Daten bearbeitet oder erfasst. Eine Trennung vom Controller ist erwünscht.
+eine Tabelle in der Datenbank wieder, so auch beim Eloquent \ac{ORM} von Laravel. Nur in dieser Model Klasse werden die Daten bearbeitet oder erfasst. Eine Trennung vom Controller ist erwünscht, um die Ziele von \ac{MVC} zu gewährleisten.
 
-Die \textbf{View} ist das Benutzerinterface. Daten von Model und Controller werden visualisiert und leitet \zB Benutzeraktionen und Formulare weiter. Innerhalb der View sollte ein Zugriff auf das Model oder den Controller vermieden werden. Somit bleiben alle Daten statisch und werden nicht verändert.
+Die \textbf{View} ist das Benutzerinterface. Die Daten von den Models werden visualisiert und leitet \zB Benutzeraktionen und Formulare weiter. Innerhalb der View sollte ein Schreibzugriff auf das Model oder den Controller vermieden werden. Somit bleiben alle Daten statisch und werden nicht verändert.
 
 Der \textbf{Controller} empfängt Anfragen (Requests) von der View. In diesen Request sind \bspw die Login Daten eines Benutzers. Der Controller verarbeitet die Daten und sendet eine Anfrage an das User Model, welches dem Controller den richten User zurückgibt. Dieser loggt den Benutzer ein und die View zeigt den erfolgreichen Login Prozess an. 
-
-
+\textit{! Da war ein Kommentar....aber was stand dort??? :D !}
 
 \subsection{Entwurf der Benutzeroberfläche}
 \label{sec:Benutzeroberflaeche} 
 
 Das Laravel Passport Paket bringt eine beispielhafte Oberfläche mit, in der alle relevanten Anforderungen Anwendung finden. Jedoch wurde nach Absprache mit dem Teamleiter beschlossen die Oberfläche selber zu implementieren und auf die gesonderten Anforderungen von wycomco  anzupassen.
 
-Die \acs{GUI} wurde mittels \acs{HTML} und \acs{CSS} responsiv umgesetzt. Dabei kam auch das bekannte Bootstrap Paket zum Einsatz. 
-
 Dazu sind Screenshots und Mockups auf  \fullnameref{app:wyconnect-mockup} zu sehen. Timy stellt hier einen Client dar. Dabei handelt es sich um eine Zeiterfassungssoftware, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die auch über Single-Sign-On laufen soll. Auf diesem Client wurde eine Benutzerverwaltung implementiert, die auch auf die restlich angebundenen Clients übertragen werden kann. 
 
-Über die Hauptansicht kann der Administrator die autorisierten Clients verwalten, die per \acs{SSO} auf  Benutzerdaten zugreifen dürfen. Benutzer können lediglich ihr eigenes Profil verwalten.
+Über die Hauptansicht kann der Administrator die autorisierten Clients verwalten, die per \ac{SSO} auf  Benutzerdaten zugreifen dürfen. Benutzer können lediglich ihr eigenes Profil verwalten.
 
 \subsection{Datenmodell}
 \label{sec:Datenmodell}
 
-Im folgenden sollen die wichtigsten Komponenten des Datenmodells genannt und kurz erläutert werden. 
-Das Laravel Passport Paket erleichtert die Aufgabe der Autorin des Datenmodells immens. Mit Installation des Pakets werden automatisch alle Tabellen migriert. im \fullnameref{app:ERM} werden die von der Autorin benötigten Entitäten dargestellt. 
+Im folgenden sollen die wichtigsten Komponenten des Datenmodells genannt und kurz erläutert werden. Bei\fullnameref{app:ERM} werden die von der Autorin benötigten Entitäten dargestellt. 
 
-\tabelle{Entitaeten}{tab:Entitaeten}{Entitaeten.tex}
+\tabelle{Entitäten}{tab:Entitäten}{Entitaeten.tex}
 
 \subsection{Geschäftslogik}
 \label{sec:Geschaeftslogik}
 
-Da wy-connect mittels \acs{PHP} Laravel umgesetzt werden soll, lag es nahe bei der Implementierung auf das Passport Paket zurückzugreifen.\footnote{vgl. \cite{Passport}}
+Da wy-connect mittels \ac{PHP} Laravel umgesetzt werden soll, lag es nahe bei der Implementierung auf das Passport Paket zurückzugreifen.\footnote{vgl. \cite{Passport}}
 Passport bringt viele Interfaces mit, die dann nach den jeweiligen Anforderungen implementiert werden können. 
-
+\textit{! Ist das schon zuviel gesagt von Passport? !}
 In Kapitel \fullnameref{sec:Protokollwahl} wurden bereits die verschiedenen Rollen erläutert, die im OAuth Prozess eine Rolle spielen. Nachfolgend der Workflow des Protokolls.
 
-Zuerst muss, die neue App, die den Dienst nutzen möchte, registriert werden. Dabei werden Daten wie Anwendungsname, ein Logo und eine Weiterleitungsadresse - die \textit{redirect URI}, auf die der Nutzer weitergeleitet wird.
+Zuerst muss, die neue App, die den Dienst nutzen möchte, registriert werden. Dabei werden Daten wie Anwendungsname und eine Weiterleitungsadresse - die \textit{redirect URI}, auf die der Nutzer weitergeleitet wird, gespeichert.
 
 \textbf{redirect URI}
-Der Service wird den Nutzer nur zur registrierten URL weiterleiten, wodurch einige Angriffe verhindert werden können. Alle redirect URIs müssen TLS verschlüsselt sein, da der Dienst nur URIs akzeptiert die mit "https" beginnen. Das verhindert, dass Token während des Autorisierungsprozesses abgefangen werden können. 
+Der Service wird den Nutzer nur zur registrierten URL weiterleiten, wodurch einige Angriffe, wie \zB Phishing verhindert werden können. Alle redirect URIs müssen TLS verschlüsselt sein, da der Dienst nur URIs akzeptiert die mit "https" beginnen. Das verhindert, dass Token während des Autorisierungsprozesses abgefangen werden können. 
 
 \textbf{Client ID und Secret}
 Nach der Registrierung der Anwendung erhält man eine \textit{Client ID} und ein \textit{Client Secret}. Die Client ID wird als öffentliche Information betrachtet und wird verwendet zum Erstellen von Login Seiten. Sie ist so etwas wie die öffentliche Kennung des Clients. 
-Das Client Secret muss vertraulich behandelt werden und wird genutzt um vom Authorization Server ein Access Token zu erlangen. Das Secret ist nur der Anwendung und dem Autorisierungsserver bekannt und sollte ausreichend zufällig sein. 
+Das Client Secret muss vertraulich behandelt werden und wird genutzt um vom Authorization Server ein Access Token zu erlangen. Das Secret ist nur der Anwendung und dem Autorisierungsserver bekannt und besteht aus einer zufälligen Zahlen-Buchstaben-Reihe. 
 
 Der erste Schritt von OAuth 2 besteht darin, eine Autorisierung vom Benutzer zu erhalten. Dies wird dadurch erreicht, dass dem Benutzer eine vom Dienst bereitgestellte Schnittstelle angezeigt wird. Dazu wird der Nutzer über den Anmelden Button an folgende URL weitergeleitet:
 
@@ -109,12 +104,12 @@ response\_type=code\& \\
 state=TMnRrCWI3HFx3crHYiqcKPepe2McHagD4NlGa5Dn
 }
 
-\textbf{code} - Gibt an, dass Ihr Server einen Autorisierungscode erwartet \\
+\textbf{response\_type=code} - Gibt an, dass der Server einen Autorisierungscode erwartet \\
 \textbf{client\_id} - Die Client-ID, die beim Erstellen der Anwendung festgelegt wurde \\
 \textbf{redirect\_uri} - Gibt die URL an, zu dem der Benutzer nach Abschluss der Autorisierung zurückkehren soll \\
-\textbf{state} - Eine zufällige Zeichenfolge, die von Ihrer Anwendung generiert und später überprüft wird
+\textbf{state} - Eine zufällige Zeichenfolge, die vom Client generiert und später überprüft wird
 
-Nachdem der Benutzer sich Autorisierungsserver eingeloggt hat, sieht er die Autorisierungsanforderung. Wenn der Nutzer auf "Zulassen" klickt, leitet der DIenst ihn mit einem Autorisierungscode zurück zum Client. Ein Beispiel für eine Antworte wäre:
+Nachdem der Benutzer sich am Autorisierungsserver eingeloggt hat, sieht er die Autorisierungsaufforderung. Wenn der Nutzer auf \"Zulassen\" klickt, leitet der Dienst ihn mit einem Autorisierungscode zurück zum Client. Ein Beispiel für eine Antworte wäre:
 
 \texttt{https://wy-connect-client.test/login/wyconnect/callback?\\
 code=def502009ae50a0d3dc123a13c16d3281a46e5301eec50483c3bb4e7 [...]\& \\
@@ -124,8 +119,7 @@ state=TMnRrCWI3HFx3crHYiqcKPepe2McHagD4NlGa5Dn
 \textbf{code} - Der Server gibt den Autorisierungscode zurück \\
 \textbf{state} - Der Server gibt den gleichen Statuswert zurück, der übergeben wurde
 
-Dabei ist wichtig, dass der state Wert dem vom vorherigen Request entspricht. 
-Sie sollten diesen Zustandswert zuerst vergleichen, um sicherzustellen, dass er mit dem übereinstimmt, mit dem Sie begonnen haben. Sie können den Statuswert normalerweise in einem Cookie oder einer Sitzung speichern und vergleichen, wenn der Benutzer zurückkommt. Dies stellt sicher, dass Ihr Umleitungsendpunkt nicht dazu verleitet werden kann, willkürliche Autorisierungscodes auszutauschen.
+Dabei ist wichtig, dass der state Wert dem vom vorherigen Request entspricht. Dieser Zustandswert wird zuerst verglichen, um sicherzustellen, dass er mit dem übereinstimmt, mit dem begonnen wurde. Sie können den Statuswert normalerweise in einem Cookie oder einer Sitzung speichern und vergleichen, wenn der Benutzer zurückkommt. Dies stellt sicher, dass Ihr Umleitungsendpunkt nicht dazu verleitet werden kann, willkürliche Autorisierungscodes auszutauschen.
 
 Mittels des Autorisierungscodes kann nun der Client mittels folgednem Aufruf ein Access Token erlangen: 
 
@@ -137,7 +131,7 @@ Mittels des Autorisierungscodes kann nun der Client mittels folgednem Aufruf ein
   client\_secret=ZKKn5QypcIsO4iAh2dTdFAWJ47bHinbvMoLCYFP2}
   
 \textbf{grant\_type} = authorization\_code - Der Grant Type für diesen Ablauf ist authorization\_code \\
-\textbf{code} - Dies ist der Code, den der Nutzer inm vorherigen Request erhalten hat \\
+\textbf{code} - Dies ist der Code, den der Nutzer im vorherigen Request erhalten hat \\
 \textbf{redirect\_uri} - Muss identisch mit der URL sein, die im ursprünglichen Link angegeben wurde \\
 \textbf{client\_id} - Die Client-ID, die beim Erstellen der Anwendung vergeben wurde \\
 \textbf{client\_secret} - Da diese Anfrage vom serverseitigen Code stammt, ist das Geheimnis enthalten
@@ -149,7 +143,7 @@ Im Anhang \fullnameref{app:oauth2flow} befindet sich ein Diagramm was den Ablauf
 \subsection{Deployment}
 \label{sec:Deployment}
 
-Der Server ist auf dem firmeneigenen Webserver gehostet mit der dazugehörigen Datenbank. Das komplette Repository liegt auf dem Gitlab Server und wird von da aus mittels dem GitLab Runner verarbeitet. Diese Jobs, ausgelöst durch einen Push auf den master Branch, werden innerhalb eines Docker Containers ausgeführt, nachdem der Build erfolgreich war, werden die Tests durchlaufen und bei Erfolg wird der Build deployed. 
+Der Server ist auf dem firmeneigenen Webserver gehostet mit der dazugehörigen Datenbank. Das komplette Repository liegt auf dem Gitlab Server und wird von da aus mittels dem GitLab Runner verarbeitet. Diese Jobs, ausgelöst durch einen Push auf den master Branch, werden innerhalb eines Docker Containers ausgeführt. Nachdem der Build erfolgreich war, werden die Tests durchlaufen und bei Erfolg wird der Build deployed und das System ist läuft auf dem Webserver.
 
 \subsection{Pflichtenheft}
 \label{sec:Pflichtenheft}

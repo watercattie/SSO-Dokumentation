@@ -1,74 +1,75 @@
 \select@language {ngerman}
-\contentsline {section}{\nonumberline Abbildungsverzeichnis}{III}{section*.5}
-\contentsline {section}{\nonumberline Tabellenverzeichnis}{IV}{section*.7}
-\contentsline {section}{\nonumberline Listings}{V}{section*.9}
-\contentsline {section}{Abk\IeC {\"u}rzungsverzeichnis}{VI}{section*.10}
+\contentsline {section}{\nonumberline Abbildungsverzeichnis}{IV}{section*.5}
+\contentsline {section}{\nonumberline Tabellenverzeichnis}{V}{section*.7}
+\contentsline {section}{\nonumberline Listings}{VI}{section*.9}
+\contentsline {section}{Abk\IeC {\"u}rzungsverzeichnis}{VII}{section*.10}
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.11}
 \contentsline {subsection}{\numberline {1.1}Projektumfeld}{1}{subsection.12}
 \contentsline {subsection}{\numberline {1.2}Projektziel}{1}{subsection.13}
-\contentsline {subsection}{\numberline {1.3}Projektbegr\IeC {\"u}ndung}{1}{subsection.14}
-\contentsline {subsection}{\numberline {1.4}Projektschnittstellen}{2}{subsection.16}
-\contentsline {subsection}{\numberline {1.5}Projektabgrenzung}{2}{subsection.17}
-\contentsline {section}{\numberline {2}Projektplanung}{2}{section.18}
-\contentsline {subsection}{\numberline {2.1}Projektphasen}{2}{subsection.19}
-\contentsline {subsection}{\numberline {2.2}Ressourcenplanung}{3}{subsection.21}
-\contentsline {subsection}{\numberline {2.3}Entwicklungsprozess}{3}{subsection.22}
-\contentsline {paragraph}{\nonumberline 1. Test schreiben, der fehlschl\IeC {\"a}gt \color@box {}{red}{RED}}{3}{section*.27}
-\contentsline {paragraph}{\nonumberline 2. Minimum an Produktivcode schreiben, dass der Test erfolgreich durchl\IeC {\"a}uft \color@box {}{green}{GREEN}}{3}{section*.28}
-\contentsline {paragraph}{\nonumberline 3. Falls n\IeC {\"o}tig \IeC {\textendash } Refaktorisieren des Codes \color@box {}{gray}{REFACTOR}}{3}{section*.29}
-\contentsline {section}{\numberline {3}Analysephase}{4}{section.34}
-\contentsline {subsection}{\numberline {3.1}Ist-Analyse}{4}{subsection.35}
-\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{5}{subsection.42}
-\contentsline {subsubsection}{\numberline {3.2.1}\glqq {}Make or Buy\grqq {}-Entscheidung}{5}{subsubsection.43}
-\contentsline {subsubsection}{\numberline {3.2.2}Projektkosten}{5}{subsubsection.48}
-\contentsline {subsubsection}{\numberline {3.2.3}Amortisationsdauer}{6}{subsubsection.51}
-\contentsline {subsection}{\numberline {3.3}Nutzwertanalyse}{7}{subsection.58}
-\contentsline {subsection}{\numberline {3.4}Qualit\IeC {\"a}tsanforderungen}{8}{subsection.59}
-\contentsline {subsection}{\numberline {3.5}Anwendungsf\IeC {\"a}lle}{8}{subsection.61}
-\contentsline {subsection}{\numberline {3.6}Lastenheft/Fachkonzept}{8}{subsection.62}
-\contentsline {subsection}{\numberline {3.7}Zwischenstand}{8}{subsection.63}
-\contentsline {section}{\numberline {4}Entwurfsphase}{9}{section.65}
-\contentsline {subsection}{\numberline {4.1}Zielplattform}{9}{subsection.66}
-\contentsline {subsection}{\numberline {4.2}Framework}{9}{subsection.69}
-\contentsline {subsection}{\numberline {4.3}Wahl des SSO-Protokolls}{9}{subsection.70}
-\contentsline {subsection}{\numberline {4.4}Authorization Grant Types}{10}{subsection.73}
-\contentsline {subsection}{\numberline {4.5}Architekturdesign}{11}{subsection.78}
-\contentsline {subsection}{\numberline {4.6}Entwurf der Benutzeroberfl\IeC {\"a}che}{11}{subsection.79}
-\contentsline {subsection}{\numberline {4.7}Datenmodell}{12}{subsection.80}
-\contentsline {subsection}{\numberline {4.8}Gesch\IeC {\"a}ftslogik}{12}{subsection.82}
-\contentsline {subsection}{\numberline {4.9}Deployment}{14}{subsection.84}
-\contentsline {subsection}{\numberline {4.10}Pflichtenheft}{14}{subsection.85}
-\contentsline {subsection}{\numberline {4.11}Zwischenstand}{14}{subsection.86}
-\contentsline {section}{\numberline {5}Implementierungsphase}{15}{section.88}
-\contentsline {subsection}{\numberline {5.1}Aufsetzen des Grundger\IeC {\"u}sts}{15}{subsection.89}
-\contentsline {subsection}{\numberline {5.2}Middleware}{15}{subsection.90}
-\contentsline {subsection}{\numberline {5.3}Implementierung des OAuth2 Flows}{15}{subsection.92}
-\contentsline {subsection}{\numberline {5.4}Implementierung der Anbindung an den Server}{16}{subsection.95}
-\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.96}
-\contentsline {subsection}{\numberline {5.5}Zwischenstand}{16}{subsection.97}
-\contentsline {section}{\numberline {6}Abnahme- und Einf\IeC {\"u}hrungsphase}{16}{section.99}
-\contentsline {subsection}{\numberline {6.1}Zwischenstand}{17}{subsection.100}
-\contentsline {section}{\numberline {7}Dokumentation}{17}{section.102}
-\contentsline {subsection}{\numberline {7.1}Zwischenstand}{17}{subsection.104}
-\contentsline {section}{\numberline {8}Fazit}{18}{section.106}
-\contentsline {subsection}{\numberline {8.1}Soll-/Ist-Vergleich}{18}{subsection.107}
-\contentsline {subsection}{\numberline {8.2}Lessons Learned}{18}{subsection.109}
-\contentsline {subsection}{\numberline {8.3}Ausblick}{18}{subsection.110}
-\contentsline {section}{\nonumberline Literaturverzeichnis}{19}{section*.111}
-\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{21}{section*.112}
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.113}
-\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.114}
-\contentsline {subsection}{\numberline {A.2}Verwendete Ressourcen}{i}{subsection.115}
-\contentsline {subsubsection}{\numberline {A.2.1}Hardware}{i}{subsubsection.116}
-\contentsline {subsubsection}{\numberline {A.2.2}Software}{i}{subsubsection.117}
-\contentsline {subsection}{\numberline {A.3}Lastenheft (Auszug)}{iii}{subsection.118}
-\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm ohne SSO}{iv}{subsection.140}
-\contentsline {subsection}{\numberline {A.5}Use-Case-Diagramm mit SSO}{v}{subsection.142}
-\contentsline {subsection}{\numberline {A.6}Benutzeroberfl\IeC {\"a}che von wyconnect und dem Client}{vi}{subsection.144}
-\contentsline {subsection}{\numberline {A.7}Entity Relationship Modell}{ix}{subsection.148}
-\contentsline {subsection}{\numberline {A.8}Amortisationsdiagramm}{x}{subsection.150}
-\contentsline {subsection}{\numberline {A.9}OAuth2 Flow}{xi}{subsection.152}
-\contentsline {subsection}{\numberline {A.10}Sequenzdiagramm OAuth2}{xii}{subsection.154}
-\contentsline {subsection}{\numberline {A.11}Pflichtenheft (Auszug)}{xiii}{subsection.156}
-\contentsline {subsection}{\numberline {A.12}Routen innerhalb des SSO-Servers}{xiv}{subsection.175}
-\contentsline {subsection}{\numberline {A.13}Screenshot der Entwicklerdokumentation}{xv}{subsection.177}
+\contentsline {subsection}{\numberline {1.3}Projektbegr\IeC {\"u}ndung}{1}{subsection.16}
+\contentsline {subsection}{\numberline {1.4}Projektschnittstellen}{2}{subsection.19}
+\contentsline {subsection}{\numberline {1.5}Projektabgrenzung}{2}{subsection.20}
+\contentsline {section}{\numberline {2}Projektplanung}{2}{section.21}
+\contentsline {subsection}{\numberline {2.1}Projektphasen}{2}{subsection.22}
+\contentsline {subsection}{\numberline {2.2}Ressourcenplanung}{3}{subsection.24}
+\contentsline {subsection}{\numberline {2.3}Entwicklungsprozess}{3}{subsection.25}
+\contentsline {paragraph}{\nonumberline 1. Test schreiben, der fehlschl\IeC {\"a}gt \color@box {}{red}{RED}}{3}{section*.30}
+\contentsline {paragraph}{\nonumberline 2. Minimum an Produktivcode schreiben, dass der Test erfolgreich durchl\IeC {\"a}uft \color@box {}{green}{GREEN}}{3}{section*.31}
+\contentsline {paragraph}{\nonumberline 3. Falls n\IeC {\"o}tig \IeC {\textendash } Refaktorisieren des Codes \color@box {}{gray}{REFACTOR}}{3}{section*.32}
+\contentsline {section}{\numberline {3}Analysephase}{4}{section.37}
+\contentsline {subsection}{\numberline {3.1}Ist-Analyse}{4}{subsection.38}
+\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{5}{subsection.45}
+\contentsline {subsubsection}{\numberline {3.2.1}\glqq {}Make or Buy\grqq {}-Entscheidung}{5}{subsubsection.46}
+\contentsline {subsubsection}{\numberline {3.2.2}Projektkosten}{5}{subsubsection.51}
+\contentsline {subsubsection}{\numberline {3.2.3}Amortisationsdauer}{6}{subsubsection.54}
+\contentsline {subsection}{\numberline {3.3}Nutzwertanalyse}{7}{subsection.61}
+\contentsline {subsection}{\numberline {3.4}Qualit\IeC {\"a}tsanforderungen}{8}{subsection.62}
+\contentsline {subsection}{\numberline {3.5}Anwendungsf\IeC {\"a}lle}{8}{subsection.64}
+\contentsline {subsection}{\numberline {3.6}Lastenheft/Fachkonzept}{8}{subsection.65}
+\contentsline {subsection}{\numberline {3.7}Zwischenstand}{8}{subsection.66}
+\contentsline {section}{\numberline {4}Entwurfsphase}{9}{section.68}
+\contentsline {subsection}{\numberline {4.1}Zielplattform}{9}{subsection.69}
+\contentsline {subsection}{\numberline {4.2}Framework}{9}{subsection.73}
+\contentsline {subsection}{\numberline {4.3}Wahl des SSO-Protokolls}{9}{subsection.77}
+\contentsline {subsection}{\numberline {4.4}Authorization Grant Types}{10}{subsection.80}
+\contentsline {subsection}{\numberline {4.5}Architekturdesign}{11}{subsection.85}
+\contentsline {subsection}{\numberline {4.6}Entwurf der Benutzeroberfl\IeC {\"a}che}{11}{subsection.86}
+\contentsline {subsection}{\numberline {4.7}Datenmodell}{12}{subsection.87}
+\contentsline {subsection}{\numberline {4.8}Gesch\IeC {\"a}ftslogik}{12}{subsection.89}
+\contentsline {subsection}{\numberline {4.9}Deployment}{14}{subsection.91}
+\contentsline {subsection}{\numberline {4.10}Pflichtenheft}{14}{subsection.92}
+\contentsline {subsection}{\numberline {4.11}Zwischenstand}{14}{subsection.93}
+\contentsline {section}{\numberline {5}Implementierungsphase}{15}{section.95}
+\contentsline {subsection}{\numberline {5.1}Aufsetzen des Grundger\IeC {\"u}sts}{15}{subsection.96}
+\contentsline {subsection}{\numberline {5.2}Middleware}{15}{subsection.97}
+\contentsline {subsection}{\numberline {5.3}Implementierung der Benutzeroberfl\IeC {\"a}che}{15}{subsection.99}
+\contentsline {subsection}{\numberline {5.4}Implementierung des OAuth2 Flows}{16}{subsection.100}
+\contentsline {subsection}{\numberline {5.5}Implementierung der Anbindung an den Server}{16}{subsection.104}
+\contentsline {subsection}{\numberline {5.6}Zwischenstand}{17}{subsection.105}
+\contentsline {section}{\numberline {6}Abnahme- und Einf\IeC {\"u}hrungsphase}{17}{section.107}
+\contentsline {subsection}{\numberline {6.1}Zwischenstand}{17}{subsection.108}
+\contentsline {section}{\numberline {7}Dokumentation}{18}{section.110}
+\contentsline {subsection}{\numberline {7.1}Zwischenstand}{18}{subsection.112}
+\contentsline {section}{\numberline {8}Fazit}{18}{section.114}
+\contentsline {subsection}{\numberline {8.1}Soll-/Ist-Vergleich}{18}{subsection.115}
+\contentsline {subsection}{\numberline {8.2}Lessons Learned}{19}{subsection.117}
+\contentsline {subsection}{\numberline {8.3}Ausblick}{19}{subsection.118}
+\contentsline {section}{\nonumberline Literaturverzeichnis}{20}{section*.119}
+\contentsline {section}{\nonumberline Eidesstattliche Erkl\IeC {\"a}rung}{22}{section*.120}
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.121}
+\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.122}
+\contentsline {subsection}{\numberline {A.2}Verwendete Ressourcen}{i}{subsection.123}
+\contentsline {subsubsection}{\numberline {A.2.1}Hardware}{i}{subsubsection.124}
+\contentsline {subsubsection}{\numberline {A.2.2}Software}{i}{subsubsection.125}
+\contentsline {subsection}{\numberline {A.3}Lastenheft (Auszug)}{iii}{subsection.126}
+\contentsline {subsection}{\numberline {A.4}Use-Case-Diagramm ohne SSO}{iv}{subsection.148}
+\contentsline {subsection}{\numberline {A.5}Use-Case-Diagramm mit SSO}{v}{subsection.150}
+\contentsline {subsection}{\numberline {A.6}Benutzeroberfl\IeC {\"a}che Mockup}{vi}{subsection.152}
+\contentsline {subsection}{\numberline {A.7}Benutzeroberfl\IeC {\"a}che Screenshots}{vii}{subsection.154}
+\contentsline {subsection}{\numberline {A.8}Entity Relationship Modell}{ix}{subsection.157}
+\contentsline {subsection}{\numberline {A.9}Amortisationsdiagramm}{x}{subsection.159}
+\contentsline {subsection}{\numberline {A.10}OAuth2 Flow}{xi}{subsection.161}
+\contentsline {subsection}{\numberline {A.11}Sequenzdiagramm OAuth2}{xii}{subsection.163}
+\contentsline {subsection}{\numberline {A.12}Pflichtenheft (Auszug)}{xiii}{subsection.165}
+\contentsline {subsection}{\numberline {A.13}Routen innerhalb des SSO-Servers}{xiv}{subsection.184}
+\contentsline {subsection}{\numberline {A.14}Screenshot der Entwicklerdokumentation}{xv}{subsection.186}

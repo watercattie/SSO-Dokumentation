@@ -6,7 +6,7 @@
 \subsection{Ist-Analyse} 
 \label{sec:IstAnalyse}
 
-Derzeit gibt es bei der Anmeldung an verschiedene Dienste der wycomco GmbH keine Optimierungen. 
+Derzeit gibt es bei der Anmeldung an den verschiedenen Diensten bei wycomco keine Optimierungen. 
 Bei allen Anwendungen kann man sich nicht selbständig registrieren und sich damit ein Benutzerkonto anlegen. Der jeweilige Administrator oder Befugte muss den User per Hand per Email einladen, damit dieser die Registrierung durchführen kann und nach einem Aktivierungslink die Applikation vollständig nutzbar ist. 
 
 Dieser Prozess lässt wie folgt beschreiben:
@@ -35,10 +35,10 @@ Damit ist es dringend nötig dieses Projekt umzusetzen. Ob sich das auch wirtsch
 \label{sec:MakeOrBuyEntscheidung}
 
 Zu dieser Problematik gibt es eine Vielzahl von Anbietern auf dem Markt und es kommen fortlaufend Neue hinzu. 
-Grundlegend für ein \acs{SSO}-Verfahren ist dessen Integrierbarkeit, ein Großteil der genutzten Anwendungen sollte unterstützt werden und dabei sollten auch Vorgaben für komplexe Passwörter und verschlüsselte Anmeldeverfahren Standard sein. Würde ein Unbefugter Zugang erhalten, hätte er in der Regel Zugriff auf alle angebundenen Anwendungen.
+Grundlegend für ein \ac{SSO}-Verfahren ist dessen Integrierbarkeit, ein Großteil der genutzten Anwendungen sollte unterstützt werden und dabei sollten auch Vorgaben für komplexe Passwörter und verschlüsselte Anmeldeverfahren Standard sein. Würde ein Unbefugter Zugang erhalten, hätte er in der Regel Zugriff auf alle angebundenen Anwendungen.
 Auch durch ihre Nutzerfreundlichkeit sollte eine \acs{SSO} Lösung ansprechen, für Standardanwender gleichermaßen wie für Administratoren\footnote{vgl. \cite{computerwoche}}.
 
-Ein \acs{SSO}-Verfahren, das tatsächlich alle eingesetzten Anwendungen einbinden kann und die oben genannten für wycomco erfüllt, ist kaum zu finden. Da der Großteil der entwickelten Anwendungen bei wycomco auf Laravel\footnote{vgl. \cite{Laravel}} basiert, lag es nahe die zur Verfügung gestellten Pakete zu nutzen. Dabei handelt es sich um Passport\footnote{vgl. \cite{Passport}} und Socialite\footnote{vgl. \cite{Socialite}}, die die Grundfunktionen eines SSO Servers und den angebundenen Clients bieten. Damit kann das Augenmerk auf die individuellen Anforderungen von wycomco gelegt werden und es wurde sich dazu entschieden, das Projekt in Eigenentwicklung durchzuführen.
+Ein \ac{SSO}-Verfahren, das tatsächlich alle eingesetzten Anwendungen einbinden kann und die oben genannten für wycomco erfüllt, ist kaum zu finden. Da der Großteil der entwickelten Anwendungen bei wycomco auf Laravel\footnote{vgl. \cite{Laravel}} basiert, lag es nahe die zur Verfügung gestellten Pakete zu nutzen. Dabei handelt es sich um Passport\footnote{vgl. \cite{Passport}} und Socialite\footnote{vgl. \cite{Socialite}}, die die Grundfunktionen eines SSO Servers und den angebundenen Clients bieten. Damit kann das Augenmerk auf die individuellen Anforderungen von wycomco gelegt werden und es wurde sich dazu entschieden, das Projekt in Eigenentwicklung durchzuführen.
 
 
 \subsubsection{Projektkosten}
@@ -57,7 +57,7 @@ Aus diesen Werten ergeben sich die Projektkosten in Tabelle~\ref{tab:Kostenaufst
 \subsubsection{Amortisationsdauer}
 \label{sec:Amortisationsdauer}
 
-Der Einsatz eines \acs{SSO}-Servers hat eine deutliche Zeitersparnis zur Folge. Durchschnittlich loggt sich ein Mitarbeiter pro Tag mindestens einmal am Tag in einer Anwendung ein. Bei 3 Anwendungen wie momentan bei wycomco sind es 3 Vorgänge täglich. Dazu muss er alle sechs Monat das Passwort ändern. Durch die Vielzahl an Freelancern in der Firma, schätzt man die Anzahl neuer User pro Monat auf eins. Neue User werden von den Administratoren der Anwendung eingeladen und müssen danach selbstständig ihre Registrierung vervollständigen. 
+Der Einsatz eines \ac{SSO}-Servers hat eine deutliche Zeitersparnis zur Folge. Durchschnittlich loggt sich ein Mitarbeiter pro Tag mindestens einmal am Tag in einer Anwendung ein. Bei 3 Anwendungen wie momentan bei wycomco sind es 3 Vorgänge täglich. Dazu muss er alle sechs Monat das Passwort ändern. Durch die Vielzahl an Freelancern in der Firma, schätzt man die Anzahl neuer User pro Monat auf eins. Neue User werden von den Administratoren der Anwendung eingeladen und müssen danach selbstständig ihre Registrierung vervollständigen. 
 
 Dazu die Auflistungen in Tabelle \ref{tab:Zeitersparnis1} und Tabelle \ref{tab:Zeitersparnis2}.
 
@@ -100,7 +100,7 @@ Neben den in \fullnameref{sec:Amortisationsdauer} aufgeführten wirtschaftlichen
 Wie in der \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine höhere Sicherheit mit sich.
 In einer der Anwendungen von wycomco liegen vertrauliche Kundendaten. Sollte das Projekt dort nicht umgesetzt werden und daher Unbefugte Zugriff erlangen, kann man von Opportunitätskosten sprechen. Der Fremdzugriff bringt eine Vertragsstrafe mit sich, schätzungsweise bei größeren Kunden von 60000 \eur. Das sind Kosten die vermieden werden können mit der Umsetzung von wy-connect. 
 
-Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, lässt es sich auch Problemlos auf andere Kunden anwenden. Der tatsächliche Nutzen geht also über wycomco hinaus.
+Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, lässt es sich auch problemlos auf andere Kunden anwenden. Der tatsächliche Nutzen geht also über wycomco hinaus.
 
 
 \subsection{Qualitätsanforderungen}
@@ -117,8 +117,8 @@ Es wird im Zuge der Analyse des Projektes ein Anwendungsfalldiagramm erstellt. D
 Interaktionen von Benutzern mit dem System dar und zeigt somit das erwartete Verhalten der
 Anwendung. Das Anwendungsfalldiagramm ist im Anhang \ref{app:Use-Case-Diagramm} und \ref{app:Use-Case-Diagramm2} dargestellt.
 Bevor ein Nutzer eine Anwendung innerhalb wycomcos nutzen kann, muss ein Administrator sie einladen. Bevor der Implementierung eines \acs{SSO}-Servers geschah dies für jede Anwendung separat. Nach Einladung bekam der User eine EMail, die ihn auf das Registrierungsformular führte. Sobald er sich erfolgreich registriert hatte, musste er sich an jeder einzelnen Anwendung einloggen um sie nutzen zu können.
-Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen gut zu sehen ist, vereinfacht werden. Administratoren erstellen einmalig eine EInladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen.
-Hierbei sei die Authorisierung des Clients vernachlässigt. 
+Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen gut zu sehen ist, vereinfacht werden. Administratoren erstellen einmalig eine Einladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen.
+Hierbei sei die Autorisierung des Clients vernachlässigt. 
 
 
 \subsection{Lastenheft/Fachkonzept}

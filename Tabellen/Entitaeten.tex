@@ -9,13 +9,9 @@
 \textcolor{white}{\textbf{Beschreibung}} \\
 
 \Code{users} & Die Benutzertabelle mit ihren üblichen Attributen wie email, name \etc \\
-\rowcolor{odd} \Code{password\_resets} & Die erstellten Token, mit dem ein Nutzer sein Passwort zurücksetzen kann \\
 \Code{oauth\_clients} & Die verbundenen Clients, die wyconnect akzeptiert \\
-\rowcolor{odd} \Code{oauth\_auth\_codes} & die Autorisierungscodes, die der Client vom Server erhält, wenn der Nutzer seine Autorisierung gibt\\
-\Code{oauth\_access\_tokens} & Die eigentlich Authentifizierungscode. Sobald der Nutzer sich eingeloggt hat und die Anwendung autorisiert hat, erhält der Client einen Access Code und kann damit die Nutzerdaten per API erfragen\\
+\rowcolor{odd} \Code{oauth\_auth\_codes} & der Verweis auf Autorisierungscodes, die der Client vom Server erhält, wenn der Nutzer seine Autorisierung gibt. Die jedoch nicht direkt in der Datenbank zu finden sind.\\
+\Code{oauth\_access\_tokens} & Die eigentlichen Authentifizierungscodes. Sobald der Nutzer sich eingeloggt hat und die Anwendung autorisiert hat, erhält der Client einen Access Code und kann damit die Nutzerdaten per API erfragen. Wie auch bei den Autorisierungscodes sind diese nicht direkt in der Datenbank gespeichert.\\
 \rowcolor{odd} \Code{oauth\_refresh\_tokens} & Sobald das Access Token seine Gültigkeit verliert, kann mit diesem Refresh Token ein neues Access Token angefragt werden. Der Einfachheit halber, wird diese Funktion vernachlässigt\\
 \end{tabularx}
-
-
-%\texttt{users} - Die Benutzertabelle mit ihren üblichen Attributen wie email, name \etc \\
 

@@ -167,4 +167,16 @@
   url    = {https://getcomposer.org/},
 }
 
+@Manual{phpdoc,
+  title     = {PHPDoc},
+  timestamp = {2018-03-01},
+  url       = {https://www.phpdoc.org/},
+}
+
+@Manual{CSRF,
+  title     = {Laravel CSRF Protection},
+  timestamp = {2018-03-01},
+  url       = {https://laravel.com/docs/5.6/csrf},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
