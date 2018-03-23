@@ -16,58 +16,45 @@
 \dinatlabel{\upshape{}CSR } \emph{Laravel CSRF Protection}.
 \newblock :
 \newblock \emph{Laravel CSRF Protection},
-  \url{https://laravel.com/docs/5.6/csrf}
+  \url{https://laravel.com/docs/5.6/csrf}, Abruf: 13.03.2018
 
 \bibitem[\scshape{}PHP()]{PHP}
 \dinatlabel{\upshape{}PHP } \emph{PHP Manual}.
 \newblock :
-\newblock \emph{PHP Manual}, \url{http://php.net/manual/de/index.php}
-
-\bibitem[\scshape{}php()]{phpdoc}
-\dinatlabel{\upshape{}php } \emph{PHPDoc}.
-\newblock :
-\newblock \emph{PHPDoc}, \url{https://www.phpdoc.org/}
-
-\bibitem[\scshape{}intersoft consulting~services
-  AG(2016)]{datenschutzbeauftragter}
-\dinatlabel{\upshape{}intersoft consulting~services AG 2016} \textsc{AG}
-  intersoft consulting~s.:
-\newblock Single Sign-on: Tipps beim Einsatz der Login-Technologie.
-\newblock   (2016).
-\newblock
-  \url{https://www.datenschutzbeauftragter-info.de/single-sign-on-tipps-beim-einsatz-der-login-technologie/}
+\newblock \emph{PHP Manual}, \url{http://php.net/manual/de/index.php}, Abruf:
+  12.03.2018
 
 \bibitem[\scshape{}composer()]{composer}
 \dinatlabel{\upshape{}composer } \textsc{composer}:
-\newblock \emph{Composer}, \url{https://getcomposer.org/}
+\newblock \emph{Composer}, \url{https://getcomposer.org/}, Abruf: 14.03.2018
 
 \bibitem[\scshape{}Darfk()]{SSO-Vgl}
 \dinatlabel{\upshape{}Darfk } \textsc{Darfk}:
 \newblock Single Sign-On Kerberos vs SAML vs OAuth2.
-\newblock  \url{http://dafrk-blog.com/de/sso-kerberos-saml-oauth-sap/}
+\newblock  \url{http://dafrk-blog.com/de/sso-kerberos-saml-oauth-sap/}, Abruf:
+  13.03.2018
 
 \bibitem[\scshape{}EETech~Media(2014)]{tddcircle}
 \dinatlabel{\upshape{}EETech~Media 2014} \textsc{EETech~Media}, LLC:
 \newblock How to Write Better Unit Tests For Embedded Software With TDD.
 \newblock   (2014).
 \newblock
-  \url{https://www.allaboutcircuits.com/technical-articles/how-test-driven-development-can-help-you-write-better-unit-tests/}
+  \url{https://www.allaboutcircuits.com/technical-articles/how-test-driven-development-can-help-you-write-better-unit-tests/},
+  Abruf: 13.03.2018
 
 \bibitem[\scshape{}Git()]{Git}
 \dinatlabel{\upshape{}Git } \textsc{Git}:
-\newblock \emph{Git Documentation}, \url{https://git-scm.com/documentation}
+\newblock \emph{Git Documentation}, \url{https://git-scm.com/documentation},
+  Abruf: 16.03.2018
 
-\bibitem[\scshape{}GmbH(2016)]{univention}
-\dinatlabel{\upshape{}GmbH 2016} \textsc{GmbH}, Univention:
-\newblock Kurz erklärt: Einmalige Anmeldung per Single Sign-on.
-\newblock   (2016).
-\newblock
-  \url{https://www.univention.de/2016/12/einmalige-anmeldung-per-single-sign-on/}
+\bibitem[\scshape{}GitLab()]{GitLab}
+\dinatlabel{\upshape{}GitLab } \textsc{GitLab}, Pages:
+\newblock \emph{GitLab}, \url{https://docs.gitlab.com}, Abruf: 16.03.2018
 
 \bibitem[\scshape{}Hardt()]{OAuth2}
 \dinatlabel{\upshape{}Hardt } \textsc{Hardt}, D.:
 \newblock \emph{The OAuth 2.0 Authorization Framework},
-  \url{https://tools.ietf.org/html/rfc6749}
+  \url{https://tools.ietf.org/html/rfc6749}, Abruf: 12.03.2018
 
 \bibitem[\scshape{}Hübscher u.\,a.(2007)Hübscher, Petersen, Rathgeber,
   Richter, und Dr.~Scharf]{ItHandbuch}
@@ -78,59 +65,83 @@
 \newblock 5.
 \newblock Westermann, 2007
 
-\bibitem[\scshape{}improuv(2015)]{tdd-improuv}
-\dinatlabel{\upshape{}improuv 2015} \textsc{improuv}:
-\newblock TDD - so einfach und doch so schwer.
-\newblock   (2015).
+\bibitem[\scshape{}Intersoft
+  Consulting~Services(2016)]{datenschutzbeauftragter}
+\dinatlabel{\upshape{}Intersoft Consulting~Services 2016} \textsc{Intersoft
+  Consulting~Services}, AG:
+\newblock Single Sign-on: Tipps beim Einsatz der Login-Technologie.
+\newblock   (2016).
 \newblock
-  \url{https://improuv.com/blog/daniel-zappold/tdd-so-einfach-und-doch-so-schwer}
+  \url{https://www.datenschutzbeauftragter-info.de/single-sign-on-tipps-beim-einsatz-der-login-technologie/},
+  Abruf: 14.03.2018
 
 \bibitem[\scshape{}www.schnelle online.info()]{arbeitstage}
 \dinatlabel{\upshape{}www.schnelle online.info } \textsc{online.info}
   www.schnelle:
 \newblock \emph{Arbeitstage 2018}.
 \newblock
-  \url{https://www.schnelle-online.info/Arbeitstage/Anzahl-Arbeitstage-2018.html}
+  \url{https://www.schnelle-online.info/Arbeitstage/Anzahl-Arbeitstage-2018.html},
+  Abruf: 15.03.2018
 
 \bibitem[\scshape{}Oracle()]{MySQL}
 \dinatlabel{\upshape{}Oracle } \textsc{Oracle}:
-\newblock \emph{MySQL Documentation}, \url{https://dev.mysql.com/doc/}
+\newblock \emph{MySQL Documentation}, \url{https://dev.mysql.com/doc/}, Abruf:
+  14.03.2018
 
 \bibitem[\scshape{}Otwell({\natexlab{a}})]{Laravel}
 \dinatlabel{\upshape{}Otwell {\natexlab{a}}} \textsc{Otwell}, Taylor:
-\newblock \emph{Laravel Documentation}, \url{http://www.laravel.com}
+\newblock \emph{Laravel Documentation}, \url{http://www.laravel.com}, Abruf:
+  2018-03-15
 
 \bibitem[\scshape{}Otwell({\natexlab{b}})]{Passport}
 \dinatlabel{\upshape{}Otwell {\natexlab{b}}} \textsc{Otwell}, Taylor:
 \newblock \emph{Laravel Passport},
-  \url{https://laravel.com/docs/master/passport}
+  \url{https://laravel.com/docs/master/passport}, Abruf: 14.03.2018
 
 \bibitem[\scshape{}Otwell({\natexlab{c}})]{Socialite}
 \dinatlabel{\upshape{}Otwell {\natexlab{c}}} \textsc{Otwell}, Taylor:
 \newblock \emph{Laravel Socialite},
-  \url{https://laravel.com/docs/5.5/socialite}
+  \url{https://laravel.com/docs/5.5/socialite}, Abruf: 16.03.2018
 
-\bibitem[\scshape{}Pages()]{GitLab}
-\dinatlabel{\upshape{}Pages } \textsc{Pages}, GitLab:
-\newblock \emph{GitLab}, \url{https://docs.gitlab.com}
-
-\bibitem[\scshape{}Ryte(2016)]{tdd-ryte}
-\dinatlabel{\upshape{}Ryte 2016} \textsc{Ryte}:
-\newblock Test Driven Development.
-\newblock   (2016).
-\newblock \url{https://de.ryte.com/wiki/Test_Driven_Development}
+\bibitem[\scshape{}PHPDoc()]{phpdoc}
+\dinatlabel{\upshape{}PHPDoc } \textsc{PHPDoc}:
+\newblock \emph{PHPDoc}, \url{https://www.phpdoc.org/}, Abruf: 14.03.2018
 
 \bibitem[\scshape{}Schonschek(2015)]{computerwoche}
 \dinatlabel{\upshape{}Schonschek 2015} \textsc{Schonschek}, Oliver:
 \newblock Worauf es bei SSO Lösungen ankommt.
 \newblock   (2015).
 \newblock
-  \url{https://www.computerwoche.de/a/worauf-es-bei-sso-loesungen-ankommt,2539134}
+  \url{https://www.computerwoche.de/a/worauf-es-bei-sso-loesungen-ankommt,2539134},
+  Abruf: 16.03.2018
+
+\bibitem[\scshape{}Torsten~Lodderstedt(2013)]{heise}
+\dinatlabel{\upshape{}Torsten~Lodderstedt 2013} \textsc{Torsten~Lodderstedt},
+  Jochen~H.:
+\newblock Flexible und sichere Internetdienste mit OAuth 2.0.
+\newblock   (2013).
+\newblock
+  \url{https://www.heise.de/developer/artikel/Flexible-und-sichere-Internetdienste-mit-OAuth-2-0-2068404.html},
+  Abruf: 16.03.2018
+
+\bibitem[\scshape{}Univention(2016)]{univention}
+\dinatlabel{\upshape{}Univention 2016} \textsc{Univention}, GmbH:
+\newblock Kurz erklärt: Einmalige Anmeldung per Single Sign-on.
+\newblock   (2016).
+\newblock
+  \url{https://www.univention.de/2016/12/einmalige-anmeldung-per-single-sign-on/},
+  Abruf: 13.03.2018
 
 \bibitem[\scshape{}Wikipedia(2018)]{tddwiki}
 \dinatlabel{\upshape{}Wikipedia 2018} \textsc{Wikipedia}:
 \newblock Testgetriebene Entwicklung.
 \newblock   (2018).
-\newblock \url{https://de.wikipedia.org/wiki/Testgetriebene_Entwicklung}
+\newblock \url{https://de.wikipedia.org/wiki/Testgetriebene_Entwicklung},
+  Abruf: 12.03.2018
+
+\bibitem[\scshape{}Wolff(2015)]{book}
+\dinatlabel{\upshape{}Wolff 2015} \textsc{Wolff}, Eberhard:
+\newblock \emph{Microservices: Grundlagen flexibler Softwarearchitekturen}.
+\newblock 2015
 
 \end{thebibliography}

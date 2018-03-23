@@ -3,7 +3,7 @@
 @Manual{Laravel,
   title     = {Laravel Documentation},
   author    = {Taylor Otwell},
-  lastchecked = {2018-03-15},
+  timestamp = {2018-02-07},
   url       = {http://www.laravel.com},
 }
 
@@ -13,7 +13,14 @@
   year      = {2007},
   author    = {Hübscher, Heinrich and Petersen, Hans-Joachim and Rathgeber, Carsten and Richter, Klaus and Dr. Scharf, Dirk},
   edition   = {5},
-  lastchecked = {2018-03-15},
+  timestamp = {2018-03-14},
+}
+
+@Book{FunktionaleProgrammierung,
+  title     = {Funktionale Programmierung - Sprachdesign und Programmiertechnik},
+  publisher = {Springer},
+  year      = {2006},
+  author    = {Pepper, Peter and Hofstedt, Petra},
 }
 
 @Misc{redgreenrefactor,
@@ -22,14 +29,14 @@
   howpublished = {http://www.jamesshore.com/Blog/Red-Green-Refactor.html},
   month        = {November},
   year         = {2005},
-  lastchecked    = {14.03.2018},
+  timestamp    = {2018-03-23},
 }
 
 @Manual{MySQL,
   title     = {MySQL Documentation},
   author    = {Oracle},
   owner     = {Oracle Corporation},
-  lastchecked = {14.03.2018},
+  timestamp = {2018-02-07},
   url       = {https://dev.mysql.com/doc/},
 }
 
@@ -37,14 +44,14 @@
   title     = {Git Documentation},
   author    = {Git},
   owner     = {Software Freedom Conservancy},
-  lastchecked = {16.03.2018},
+  timestamp = {2018-02-07},
   url       = {https://git-scm.com/documentation},
 }
 
 @Manual{PHP,
   title     = {PHP Manual},
   owner     = {The PHP Group},
-  lastchecked = {12.03.2018},
+  timestamp = {2018-02-07},
   url       = {http://php.net/manual/de/index.php},
 }
 
@@ -53,21 +60,20 @@
   author    = {D. Hardt},
   groups    = {Internet Engineering Task Force},
   owner     = {D. Hardt},
-  lastchecked = {12.03.2018},
+  timestamp = {2018-02-07},
   url       = {https://tools.ietf.org/html/rfc6749},
 }
 
 @Manual{Passport,
   title  = {Laravel Passport},
   author = {Taylor Otwell},
-    lastchecked = {14.03.2018},
   url    = {https://laravel.com/docs/master/passport},
 }
 
 @Manual{GitLab,
   title     = {GitLab},
-  author    = {GitLab, Pages},
-  lastchecked = {16.03.2018},
+  author    = {GitLab Pages},
+  timestamp = {2018-02-07},
   url       = {https://docs.gitlab.com},
 }
 
@@ -75,24 +81,23 @@
   title     = {Laravel Socialite},
   author    = {Taylor Otwell},
   owner     = {Taylor Otwell},
-  lastchecked = {16.03.2018},
+  timestamp = {2018-02-07},
   url       = {https://laravel.com/docs/5.5/socialite},
 }
 
 @Article{datenschutzbeauftragter,
-  author = {Intersoft Consulting Services, AG},
+  author = {intersoft consulting services AG},
   title  = {Single Sign-on: Tipps beim Einsatz der Login-Technologie},
   year   = {2016},
-    lastchecked = {14.03.2018},
   url    = {https://www.datenschutzbeauftragter-info.de/single-sign-on-tipps-beim-einsatz-der-login-technologie/},
 }
 
 @Article{univention,
-  author    = {Univention, GmbH},
+  author    = {Univention GmbH},
   title     = {Kurz erklärt: Einmalige Anmeldung per Single Sign-on},
   year      = {2016},
-  owner     = {Univention},
-  lastchecked = {13.03.2018},
+  owner     = {Univention GmbH},
+  timestamp = {2018-02-09},
   url       = {https://www.univention.de/2016/12/einmalige-anmeldung-per-single-sign-on/},
 }
 
@@ -101,7 +106,7 @@
   title     = {How to Write Better Unit Tests For Embedded Software With TDD},
   year      = {2014},
   owner     = { EETech Media, LLC},
-  lastchecked = {13.03.2018},
+  timestamp = {2018-02-09},
   url       = {https://www.allaboutcircuits.com/technical-articles/how-test-driven-development-can-help-you-write-better-unit-tests/},
 }
 
@@ -110,16 +115,16 @@
   title     = {Test Driven Development},
   year      = {2016},
   owner     = {Ryte},
-  lastchecked = {16.03.2018},
+  timestamp = {2018-02-12},
   url       = {https://de.ryte.com/wiki/Test_Driven_Development},
 }
 
 @Article{tdd-improuv,
-  author    = {Improuv},
+  author    = {improuv},
   title     = {TDD - so einfach und doch so schwer},
   year      = {2015},
   owner     = {improuv},
-  lastchecked = {14.03.2018},
+  timestamp = {2018-02-12},
   url       = {https://improuv.com/blog/daniel-zappold/tdd-so-einfach-und-doch-so-schwer},
 }
 
@@ -128,7 +133,6 @@
   title  = {Testgetriebene Entwicklung},
   year   = {2018},
   owner  = {Wikipedia},
-    lastchecked = {12.03.2018},
   url    = {https://de.wikipedia.org/wiki/Testgetriebene_Entwicklung},
 }
 
@@ -136,48 +140,43 @@
   author = {Oliver Schonschek},
   title  = {Worauf es bei SSO Lösungen ankommt},
   year   = {2015},
-    lastchecked = {16.03.2018},
   url    = {https://www.computerwoche.de/a/worauf-es-bei-sso-loesungen-ankommt,2539134},
 }
 
 @Misc{arbeitstage,
   author    = {www.schnelle-online.info},
   title     = {Arbeitstage 2018},
-  lastchecked = {15.03.2018},
+  timestamp = {2018-02-13},
   url       = {https://www.schnelle-online.info/Arbeitstage/Anzahl-Arbeitstage-2018.html},
 }
 
-@Article{redhat,
+@Article{,
   author = {Red Hat, Inc.},
   title  = {Red Hat Enterprise Linux 4: Referenzhandbuch},
-    lastchecked = {15.03.2018},
   url    = {http://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-de-4/ch-kerberos.html},
 }
 
 @Article{SSO-Vgl,
   author = {Darfk},
   title  = {Single Sign-On Kerberos vs SAML vs OAuth2},
-    lastchecked = {13.03.2018},
   url    = {http://dafrk-blog.com/de/sso-kerberos-saml-oauth-sap/},
 }
 
 @Manual{composer,
   title  = {Composer},
-  author = {Composer},
-    lastchecked = {14.03.2018},
+  author = {composer},
   url    = {https://getcomposer.org/},
 }
 
 @Manual{phpdoc,
   title     = {PHPDoc},
-  author = {PHPDoc},
-  lastchecked = {14.03.2018},
+  timestamp = {2018-03-01},
   url       = {https://www.phpdoc.org/},
 }
 
 @Manual{CSRF,
   title     = {Laravel CSRF Protection},
-  lastchecked = {13.03.2018},
+  timestamp = {2018-03-01},
   url       = {https://laravel.com/docs/5.6/csrf},
 }
 
@@ -185,14 +184,14 @@
   title     = {Microservices: Grundlagen flexibler Softwarearchitekturen},
   year      = {2015},
   author    = {Eberhard Wolff},
-  lastchecked = {14.03.2018},
+  timestamp = {2018-03-23},
 }
 
 @Article{heise,
   author    = {Torsten Lodderstedt, Jochen Hiller},
   title     = {Flexible und sichere Internetdienste mit OAuth 2.0},
   year      = {2013},
-  lastchecked = {16.03.2018},
+  timestamp = {2018-03-23},
   url       = {https://www.heise.de/developer/artikel/Flexible-und-sichere-Internetdienste-mit-OAuth-2-0-2068404.html},
 }
 

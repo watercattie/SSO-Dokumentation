@@ -31,22 +31,31 @@ Das folgende Diagramm beschreibt den Anmeldeprozess an verschiedenen Systemen mi
 \clearpage
 
 \subsection{Benutzeroberfläche Mockup}
-\label{app:wyconnect-mockup}
+\label{app:mockup}
 
 Das folgende Template beschreibt den Anmeldeprozess am \acs{SSO}-Server.
 \begin{figure}[htb]
 \centering
-\includegraphicsKeepAspectRatio{login-wyconnect.png}{0.9}
-\caption{Login am SSO-Servers}
+\includegraphicsKeepAspectRatio{timy-mockup-login.png}{0.9}
+\caption{Loginscreen Mockup Timy}
 \end{figure}
 \clearpage
 
 \subsection{Benutzeroberfläche Screenshots}
-\label{app:wyconnect-screenshots}
-Der folgende Screenshot beschreibt die Benutzeroberfläche an verschiedenen Systemen mit \acs{SSO}.
+\label{app:screens}
+
+Der folgende Screenshot beschreibt die Loginseite des \acs{SSO}.
 \begin{figure}[htb]
 \centering
-\includegraphicsKeepAspectRatio{mockup-server.png}{0.9}
+\includegraphicsKeepAspectRatio{wy-connect-login.png}{0.9}
+\caption{Loginseite des SSO-Servers}
+\end{figure}
+\clearpage
+
+Der folgende Screenshot beschreibt die Benutzeroberfläche des \acs{SSO}.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{wy-connect-screen.png}{0.9}
 \caption{Benutzeroberfläche des SSO-Servers}
 \end{figure}
 \clearpage
@@ -54,7 +63,7 @@ Der folgende Screenshot beschreibt die Benutzeroberfläche an verschiedenen Syst
 Der folgende Screenshot beschreibt  den Anmeldeprozess am Client mit \acs{SSO}.
 \begin{figure}[htb]
 \centering
-\includegraphicsKeepAspectRatio{mockup-timy.png}{0.9}
+\includegraphicsKeepAspectRatio{timy-login-anwendung.png}{0.9}
 \caption{Login am Client Timy}
 \end{figure}
 \clearpage
@@ -108,6 +117,36 @@ Die folgende Ausgabe zeigt alle vorhanden Routen, die der Server zur Verfügung 
 \centering
 \includegraphicsKeepAspectRatio{routes.png}{0.99}
 \caption{Routen des SSO-Servers}
+\end{figure}
+\clearpage
+
+\subsection{Ausschnitt des Klassendiagramms vom SSO-Server}
+\label{app:passport-controllers}
+Das folgende UML Diagramm zeigt einen Ausschnitt aus dem Klassendiagramm des \ac{SSO}-Servers.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{Passport-Controllers.png}{0.99}
+\caption{Ausschnitt aus dem UML Diagramm des SSO-Servers}
+\end{figure}
+\clearpage
+
+\subsection{Ausschnitt des Klassendiagramms vom Client}
+\label{app:passport-controllers}
+Das folgende UML Diagramm zeigt einen Ausschnitt aus dem Klassendiagramm der relevanten Klassen des Clients für die Anbindung an den \ac{SSO}-Server.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{socialite.png}{0.9}
+\caption{Ausschnitt aus dem UML Diagramm des Clients}
+\end{figure}
+\clearpage
+
+\subsection{Ausgabe der Unit- und Featuretests}
+\label{app:tests}
+Die folgende Konsolenausgabe zeigt die erfolgreichen Test mit PHPUnit.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{tests_timy.png}{0.9}
+\caption{Konsolenausgabe der PHPUnit Tests}
 \end{figure}
 \clearpage
 

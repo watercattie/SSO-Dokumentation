@@ -19,7 +19,7 @@ Im Projekt der Autorin werden die Middlewares zur Authentifizierung sowie zum \a
 
 Das eingesetzte CSS-Framework Bootstrap ermöglicht ohne Zusatzaufwand eine responsive Darstellung. Die standardisierten Oberflächengestaltungselemente fanden beim Erstellen der Views Anwendung. 
 Über die verschiedenen Routen, können Views oder Controllerfunktionen aufgerufen werden. Die Routen können intuitiv benannt werden und werden so in der View aufgerufen.
-Unter \ref{app:wyconnect-mockup} finden sich GUI-Ansichten der wichtigsten Views.
+Unter \ref{app:screens} finden sich GUI-Ansichten der wichtigsten Views.
 
 \subsection{Implementierung des OAuth2 Flows}
 \label{sec:ImplementierungOAuth2}
@@ -28,7 +28,7 @@ Mit dem Paketmanager composer wurde das Passport Paket eingebunden, welche den G
 
 Es wurde das ORM Modell und auch das Repository Design Pattern umgesetzt. Die Models haben eine zusätzliche  Repository Klasse, die eine Entkapselung der Persistenzschicht mit sich bringt.
 
-Im \Anhang{app:routes} sind alle Routen aufgelistet, die der Server zur Verfügung stellt. Es ist gut zu erkennen, welche Route auf welchen Controller zugreift und wie die Zugriffsrechte über die Middlewares (siehe \fullnameref{sec:Middleware} geregelt sind. Alle Routen mit der Middleware auth können nur eingeloggte User benutzen, guest ist nur für nicht eingeloggte Nutzer offen.
+Im \Anhang{app:routes} sind alle Routen aufgelistet, die der Server zur Verfügung stellt. Es ist gut zu erkennen, welche Route auf welchen Controller zugreift und wie die Zugriffsrechte über die Middlewares (siehe \Anhang{sec:Middleware}) geregelt sind. Alle Routen mit der Middleware auth können nur eingeloggte User benutzen, guest ist nur für nicht eingeloggte Nutzer offen.
 
 Über ein Formular kann der Admin eines Clients den Namen und die redirect URL angeben und damit seinen Client in die Datenbank eintragen. Als response schickt der ClientController das secret.
 Wie üblich beim MVC Muster, leitet die View den Request mit den Clientdaten an den Controller per POST Request, der dann nach Validierung der Daten das Model beauftragt einen neuen Client anzulegen. 
@@ -37,7 +37,7 @@ Mit dieser ID und der Redirect Adresse fragt der Client am Server per GET Reques
 
 Mit diesem Code, der ID und dem secret kann der Client letztendlich per HTTP POST Request eine Anfrage auf ein Access Token stellen. Der zuständige Controller validiert die Anfrage und generiert ein Token mit der Passport Funktion \textit{respondToAccessTokenRequest}. Mit diesem Token kann per API und Bearer Autorisierung das Benutzerprofil abgefragt werden.
 
-Die einzelnen Controller, Routen, Models und Views sind im Code Anhang zu finden und sind hier nicht verlinkt. Es wurde auf weitere Spezifizierungen der Sicherheit verzichtet, da das Passport Paket automatisiert alle wichtigen Standards aus dem Internet Engineering Task Force\footnote{vgl \cite{OAuth2}} umsetzt.
+Die einzelnen Controller, Routen, Models und Views sind im Code Anhang zu finden und sind hier nicht verlinkt. Es wurde auf weitere Spezifizierungen der Sicherheit verzichtet, da das Passport Paket automatisiert alle wichtigen Standards aus dem Internet Engineering Task Force\footnote{vgl \cite{OAuth2}} umsetzt. Ein Ausschnitt der genutzten Klassen befindet sich im Anhang \Anhang{app:passport-controllers}.
 
 \subsection{Implementierung der Anbindung an den Server}
 \label{sec:ImplementierungCient}
@@ -47,6 +47,6 @@ Wie auch beim SSO-Server wurde beim Client mittels composer das Socialite Paket 
 Die ID, sowie das SECRET sind in der \textit{.env} Datei hinterlegt. Nachdem die Routen und Controller fertiggestellt wurden, muss der \textit{WyconnectProvider} implementiert werden. Er setzt die verschiedenen Routen für den Abruf der Auth Codes und Access Tokens, generiert das \textit{state} Feld und handhabt die übergebenen Userdaten. 
 Im LoginController muss dann nur noch der OAuth2 User aus dem Single-Sign-On in das Usermodel des Clients umgewandelt werden und das Einloggen erfolgen. 
 Als Letztes wurde der Quellcode auf den internen Gitlab Server geladen. In den angebunden Clients muss dann der Gitlab Server als Repository eingebunden werden und anschließend kann das Paket per composer verteilt werden. 
-Nach Installation des wy-connect Providers müssen noch die Routen und der LoginController angepasst werden und der Single-Sign-On Mechanismus verlinkt werden. Siehe dazu die Quelltexte im Anhang. 
+Nach Installation des wy-connect Providers müssen noch die Routen und der LoginController angepasst werden und der Single-Sign-On Mechanismus verlinkt werden. Ein Ausschnitt der genutzten Klassen befindet sich im Anhang \Anhang{app:socialite}.
 
 \Zwischenstand{Implementierungsphase}{Implementierung}

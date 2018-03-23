@@ -26,7 +26,7 @@ Als \textit{Client} bezeichnet man dabei jede Anwendung, die auf Ressourcen eine
 
 Ein anderer Ansatz wäre Kerberos, deren Infrastruktur schon im \ac{AD} mit integriert ist. Allerdings ist damit die Authentifizierung auch an das \ac{AD} gebunden. Sobald sich ein Benutzer außerhalb der Domäne an eine Anwendung anmelden möchte, ist dies nicht mehr möglich. Da wycomco immer mehr Webanwendungen entwickelt und diese auch perspektivisch Kunden zur Verfügung gestellt werden sollen sollen, wäre eine Einschränkung an die AD nicht sinnvoll. 
 \acs{SAML} hingegen weist eine ähnliche Struktur wie die von OAuth2 auf. Während allerdings SAML längere Nachrichten über POST Parameter senden muss, greift OAuth2 auf GET zurück. Zudem sendet SAML \acs{XML} Antworten an den Client zurück, der wesentlich komplizierter zu verarbeiten ist als das häufig genutzte \acs{JSON}, welches auch bei wycomco standardmäßig genutzt wird. \footnote{vgl. \cite{SSO-Vgl}}
-OAuth2 sendet keine Benutzerinformationen mit dem AccessToken mit, wie es in SAML der Fall ist, so erhält ein Angreifer keinen direkten Zugang zu den Nutzerdaten.
+OAuth2 sendet keine Benutzerinformationen mit dem AccessToken mit, wie es in SAML der Fall ist, so erhält ein Angreifer keinen direkten Zugang zu den Nutzerdaten\footnote{vgl. \cite{book}}.
 
 Aufgrund den angeführten Merkmalen der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches innerhalb des \ac{SSO}-Servers bei wycomco zukünftig zum Einsatz kommen wird. 
 
@@ -59,7 +59,7 @@ Der \textbf{Controller} empfängt Anfragen (Requests) von der View. In diesen Re
 \label{sec:Benutzeroberflaeche} 
 
 Das Laravel Passport Paket bringt eine beispielhafte Oberfläche mit, in der alle relevanten Anforderungen Anwendung finden. 
-Dazu sind Screenshots und Mockups auf  \fullnameref{app:wyconnect-mockup} zu sehen. Timy stellt hier einen Client dar. Es handelt sich um eine Zeiterfassungssoftware, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die auch über Single-Sign-On laufen soll. 
+Mockups sind dazu auf  \fullnameref{app:mockup} zu sehen. Timy stellt hier einen Client dar. Es handelt sich um eine Zeiterfassungssoftware, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die auch über Single-Sign-On laufen soll. 
 Über die Hauptansicht kann der Administrator die autorisierten Clients verwalten, die per \ac{SSO} auf  Benutzerdaten zugreifen dürfen. Benutzer können lediglich ihr eigenes Profil verwalten.
 
 \subsection{Datenmodell}
@@ -125,7 +125,7 @@ Mittels des Autorisierungscodes kann nun der Client mittels folgednem Aufruf ein
 \textbf{client\_id} - Die Client-ID, die beim Erstellen der Anwendung vergeben wurde \\
 \textbf{client\_secret} - Da diese Anfrage vom serverseitigen Code stammt, ist das Geheimnis enthalten
 
-Der Server antwortet mit einem Zugriffstoken und einer Ablaufzeit. Mit diesem Access Token, kann timy dann die Nutzerdaten per API erfragen und den Nutzer einloggen.
+Der Server antwortet mit einem Zugriffstoken und einer Ablaufzeit. Mit diesem Access Token, kann timy dann die Nutzerdaten per API erfragen und den Nutzer einloggen\footnote{vgl. \cite{heise}}.
 
 Im Anhang \fullnameref{app:oauth2flow} befindet sich ein Diagramm was den Ablauf des OAuth2 Authentifizierungsprozesses veranschaulicht. 
 

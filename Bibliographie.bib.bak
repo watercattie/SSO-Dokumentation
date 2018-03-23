@@ -11,8 +11,9 @@
   title     = {IT-Handbuch},
   publisher = {Westermann},
   year      = {2007},
-  author    = {HÃŒbscher, Heinrich and Petersen, Hans-Joachim and Rathgeber, Carsten and Richter, Klaus and Dr. Scharf, Dirk},
+  author    = {Hübscher, Heinrich and Petersen, Hans-Joachim and Rathgeber, Carsten and Richter, Klaus and Dr. Scharf, Dirk},
   edition   = {5},
+  timestamp = {2018-03-14},
 }
 
 @Book{FunktionaleProgrammierung,
@@ -177,6 +178,13 @@
   title     = {Laravel CSRF Protection},
   timestamp = {2018-03-01},
   url       = {https://laravel.com/docs/5.6/csrf},
+}
+
+@Book{book,
+  title     = {Microservices: Grundlagen flexibler Softwarearchitekturen},
+  year      = {2015},
+  author    = {Eberhard Wolff},
+  timestamp = {2018-03-23},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
