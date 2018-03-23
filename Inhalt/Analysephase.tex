@@ -31,11 +31,10 @@ Ob sich das auch wirtschaftlich begründen lässt, wird in den nächsten Abschni
 \subsubsection{\gqq{Make or Buy}-Entscheidung}
 \label{sec:MakeOrBuyEntscheidung}
 
-Zu dieser Problematik gibt es eine Vielzahl von Anbietern auf dem Markt und es kommen fortlaufend Neue hinzu. 
-Grundlegend für ein \ac{SSO}-Verfahren ist dessen Integrierbarkeit, ein Großteil der genutzten Anwendungen sollte unterstützt werden und dabei sollten auch Vorgaben für komplexe Passwörter und verschlüsselte Anmeldeverfahren Standard sein. Würde ein Unbefugter Zugang erhalten, hätte er in der Regel Zugriff auf alle angebundenen Anwendungen.
-Auch durch ihre Nutzerfreundlichkeit sollte eine \acs{SSO} Lösung ansprechen, für Standardanwender gleichermaßen wie für Administratoren\footnote{vgl. \cite{computerwoche}}.
+Zu dieser Problematik gibt es eine Vielzahl von Anbietern auf dem Markt, die enstprechende Lösungen anbieten. 
+Grundlegend für die Entscheidung für ein \ac{SSO}-Verfahren ist dessen Anwendbarkeit auf die Ansprüche des Nutzers. Dabei ist zu beachten, dass ein Großteil der genutzten Anwendungen unterstützt werden sollten. Vorgaben für komplexe Passwörter und verschlüsselte Anmeldeverfahren sollten Standard sein, um Missbrauch zu verhindern. Würde ein Unbefugter Zugang erhalten, hätte er in der Regel Zugriff auf alle angebundenen Anwendungen. Auch durch ihre Nutzerfreundlichkeit sollte eine \acs{SSO} Lösung ansprechen, für Standardanwender gleichermaßen wie für Administratoren\footnote{vgl. \cite{computerwoche}}.
 
-Ein \ac{SSO}-Verfahren, das tatsächlich alle eingesetzten Anwendungen einbinden kann und die oben genannten für wycomco erfüllt, ist kaum zu finden. Da der Großteil der entwickelten Anwendungen bei wycomco auf Laravel\footnote{vgl. \cite{Laravel}} basiert, lag es nahe die zur Verfügung gestellten Pakete zu nutzen. Dabei handelt es sich um Passport\footnote{vgl. \cite{Passport}} und Socialite\footnote{vgl. \cite{Socialite}}, die die Grundfunktionen eines SSO Servers und den angebundenen Clients bieten. Damit kann das Augenmerk auf die individuellen Anforderungen von wycomco gelegt werden und es wurde sich dazu entschieden, das Projekt in Eigenentwicklung durchzuführen.
+Ein \ac{SSO}-Verfahren, das tatsächlich alle eingesetzten Anwendungen einbinden kann und die oben genannten Vorraussetzungen für wycomco erfüllt, konnte trotz ausführlicher Recherche nicht gefunden werden. Da der Großteil der entwickelten Anwendungen bei wycomco auf Laravel\footnote{vgl. \cite{Laravel}} basiert, lag es nahe die zur Verfügung gestellten Pakete zu nutzen. Dabei handelt es sich um Passport\footnote{vgl. \cite{Passport}} und Socialite\footnote{vgl. \cite{Socialite}}, die die Grundfunktionen eines SSO Servers und den angebundenen Clients bieten. Damit kann das Augenmerk auf die individuellen Anforderungen von wycomco gelegt werden. Nach Abwegung der genannten Kriterien wurde sich dazu entschieden das Projekt in Eigenentwicklung durchzuführen.
 
 \subsubsection{Projektkosten}
 \label{sec:Projektkosten}
@@ -75,9 +74,9 @@ Eine grafische Darstellung der berechneten Werte findet sich unter \ref{app:Amor
 \subsection{Nutzwertanalyse}
 \label{sec:Nutzwertanalyse}
 
-Neben den in \fullnameref{sec:Amortisationsdauer} aufgeführten wirtschaftlichen Vorteilen ergeben sich durch Realisierung des Projekts noch einige zusätzliche Vorteile.
-Wie in der \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine höhere Sicherheit mit sich. In einer der Anwendungen von wycomco liegen vertrauliche Kundendaten. Sollte das Projekt dort nicht umgesetzt werden und daher Unbefugte Zugriff erlangen, kann man von Opportunitätskosten sprechen. Der Fremdzugriff bringt eine Vertragsstrafe mit sich, schätzungsweise bei größeren Kunden von 60000 \eur. Das sind Kosten die vermieden werden können mit der Umsetzung von wy-connect. 
-Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, lässt es sich auch problemlos auf andere Kunden anwenden. Der tatsächliche Nutzen geht also über wycomco hinaus.
+Neben den in \fullnameref{sec:Amortisationsdauer} aufgeführten wirtschaftlichen Vorteilen ergeben sich durch Realisierung des Projekts noch weitere.
+Wie in der \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine erhöhte Sicherheit mit sich, da die Möglichkeit des unbefugten Zugriffs auf vertrauliche Daten stark minimiert werden würde. Wycomco verwart in einer ihrer Anwendungen beispielsweise sensible Kundeninformationen. Mit der Anwendung der entwickleten Single-Sign-On-Lösung, sinkt das Risiko des Datenverlustes. Mögliche Kosten durch Datenverlust, bei Nichtanwendung der entwickelten Lösung, werden als  Opportunitätskosten bezeichnet. Möglicher Fremdzugriff bringt eine Vertragsstrafe mit sich. Bei größeren Kunden liegt diese bei schätzungsweise 60.000 \eur. Das sind Kosten die mit der Umsetzung von wy-connect vermieden werden können. 
+Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, lässt es sich auch problemlos auf andere Kunden?? anwenden. Der tatsächliche Nutzen geht also über wycomco hinaus.
 
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
@@ -88,11 +87,9 @@ Die Qualitätsanforderungen an die Anwendung lassen sich Tabelle~\ref{tab:Qualit
 \subsection{Anwendungsfälle}
 \label{sec:Anwendungsfaelle}
 
-Es wird im Zuge der Analyse des Projektes ein Anwendungsfalldiagramm erstellt. Dies stellt
-Interaktionen von Benutzern mit dem System dar und zeigt somit das erwartete Verhalten der
-Anwendung. Das Anwendungsfalldiagramm ist im Anhang \ref{app:Use-Case-Diagramm} und \ref{app:Use-Case-Diagramm2} dargestellt.
+Es wird im Zuge der Analyse des Projektes ein Anwendungsfalldiagramm erstellt. Dies stellt Interaktionen von Benutzern mit dem System dar und zeigt somit das erwartete Verhalten der Anwendung. Das Anwendungsfalldiagramm ist im Anhang \ref{app:Use-Case-Diagramm} und \ref{app:Use-Case-Diagramm2} dargestellt.
 Der vollständige Prozess ist in \fullnameref{sec:IstAnalyse} beschrieben.
-Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen gut zu sehen ist, vereinfacht werden. Administratoren erstellen einmalig eine Einladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen. Hierbei sei die Autorisierung des Clients vernachlässigt. 
+Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen erkennbar ist, vereinfacht werden. Administratoren erstellen einmalig eine Einladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen. Hierbei sei die Autorisierung des Clients vernachlässigt. 
 
 \subsection{Lastenheft/Fachkonzept}
 Am Ende der Entwurfsphase wurde zusammen mit dem Projektleiter auf Basis des Anwendungsfalldiagramms das Lastenheft erstellt. Ein Auszug befindet sich im \Anhang{app:Lastenheft}

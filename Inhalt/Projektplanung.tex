@@ -17,14 +17,14 @@ Eine detaillierte Übersicht der Phasen befindet sich im \Anhang{app:Zeitplanung
 Eine vollständige Auflistung aller während der Umsetzung des Projekts verwendeten Ressourcen befindet sich im \Anhang{app:Ressourcen}. Bei der Auswahl der verwendeten Software war es wichtig, dass hierdurch keine Zusatzkosten anfallen. Es sollte also Software verwendet werden, die entweder kostenfrei ist (\zB Open Source) oder für die wycomco bereits Lizenzen besitzt.
 \subsection{Entwicklungsprozess}
 \label{sec:Entwicklungsprozess}
-Die Vorgehensweise nach dem das Projekt entwickelt wird, ist das Wasserfallmodell.
+Das Projekt wurde anhand des Wassfallmodells entwickelt.
 Bei diesem nicht iterativen, linearen Prozess werden die einzelnen Projektphasen schrittweise bearbeitet. Hierbei bilden die Phasen-Ergebnisse jeweils die bindende Vorgabe für die nächste Projektphase\footnote{vgl. \cite[S. 263]{ItHandbuch}}.
 Das gesamte Projekt soll mithilfe von \ac{TDD}, zu Deutsch \textit{Testgetriebene Entwicklung}, umgesetzt werden. Das Kernprinzip von \ac{TDD} besagt, dass das Testen der Programmkomponenten den kompletten Entwicklungsprozess leitet.
-Es handelt sich hierbei um eine Designstrategie in der das Testen vor der eigentlichen Implementierung stattfindet. Es soll keine Zeile Produktivcode geschrieben werden, die nicht durch einen Test vorher abgedeckt wird.
-Damit lässt sich die Qualität des Codes erhöhen und den späteren Wartungsaufwand im Nachhinein zu verringern\footnote{vgl. \cite{datenschutzbeauftragter}}.
-Dieses Parallelentwicklung von Code und Tests erfolgt in sich wiederholenden Mikroiterationen, die nur einen kleinen Zeitraum in Anspruch nehmen sollte. Man kann \acs{TDD} in drei Hauptteile aufspalten, die im englisch Red-Green-Refactor genannt werden. 
+Es handelt sich hierbei um eine Designstrategie in der das Testen vor der eigentlichen Implementierung stattfindet. Somit wurde jede geschriebene Zeile des Produktivcode zuvor getestet.
+Damit lässt sich die Qualität des Codes erhöhen und der Wartungsaufwand im Nachhinein verringern\footnote{vgl. \cite{datenschutzbeauftragter}}.
+Diese Parallelentwicklung von Code und Tests erfolgt in sich wiederholenden Mikroiterationen, die nur einen kleinen Zeitraum in Anspruch nehmen sollten. Dabei kann \acs{TDD} in drei Hauptteile aufspaltet werden. Im Englischen werden diese Red-Green-Refactor genannt. 
 Die einzelnen Phasen lassen sich wie folgt beschreiben\footnote{vgl. \cite{tddwiki}}
-In der ersten, der roten Phase wird ein Test geschrieben, der fehlschlägt. Dieser wird dann mit einem Minimum an Code in der grünen Phase soweit verändert, dass er erfolgreich durchläuft. In der letzten grauen Phase wird der Code refaktorisiert, dass einfacher, sauberer Quelltext entsteht. 
+In der ersten, der roten Phase wird ein Test geschrieben, der fehlschlägt. Dieser wird dann mit einem Minimum an Code in der grünen Phase soweit verändert, dass er erfolgreich durchläuft. In der letzten grauen Phase wird der Code refaktorisiert, um einfachen, sauberen Quelltext herzustellen. 
 
 Zur Verdeutlichung der drei Phasen die Abbildung \ref{fig:tddcircle}\footnote{vgl. \cite{tddcircle}}
 \begin{figure}[htb!]
