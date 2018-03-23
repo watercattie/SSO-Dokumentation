@@ -1,0 +1,28 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Einleitung}
+\label{sec:Einleitung}
+Die folgende Projektdokumentation wurde im Rahmen des IHK Abschlussprojektes erstellt, welches während der Ausbildung zum Fachinformatiker Fachrichtung Anwendungsentwicklung durchgeführt wurde.
+\subsection{Projektumfeld} 
+\label{sec:Projektumfeld}
+Der Ausbildungsbetrieb ist die \textit{wycomco GmbH}, im Folgenden als \textit{wycomco} bezeichnet. Wycomco ist ein Full-Service-Dienstleister im IT-Bereich mit Sitz in Berlin. Zu den Produkten des Unternehmens gehören außerdem individuell anpassbare Softwarelösungen für Anforderungen aller Art. Momentan beschäftigt das Unternehmen 12 Mitarbeiter. \\
+Das Projekt wurde durch die Entwicklungsabteilung von wycomco in Auftrag gegeben. 
+\subsection{Projektziel} 
+\label{sec:Projektziel}
+Wycomco konzentriert sich zunehmend auf die Implementierung von Webanwendungen zur internen Nutzung. Bisher müssen sich die Mitarbeiter zur Nutzung jeweils  mit eigenem - teils verschiedenen - Benutzernamen und Passwort registrieren und anschließend anmelden.
+Mit einem \ac{SSO}-Server soll dieser Prozess automatisiert und vereinfacht werden. Die eigenständige Applikation, im folgenden \textit{wy-connect} genannt, verwaltet die Benutzer an zentraler Stelle und vereinheitlicht die Nutzerdaten der verschiedenen Anwendungen. Die Anmeldung erfolgt ausschließlich am \ac{SSO} über einen sicheren Kanal. 
+\subsection{Projektbegründung} 
+\label{sec:Projektbegruendung}
+Das Unternehmen nutzt aktuell drei Anwendungen, die im Betrieb laufen oder sich in der Testphase befinden. Alle drei haben eine eigene Benutzerverwaltung mit eigenen, teils verschiedenen Benutzerkennungen. Die Nutzer müssen an allen in regelmäßigen Abständen das Passwort ändern. 
+In der Folge gehört es zum Standard, dass Nutzer Ihre Passwörter aufschreiben, diese generieren lassen oder vergessene Passwörter neu vergeben. In der Praxis führt dies zur Nutzung von Trivialpasswörtern, wiederholter Vergabe von Passwörtern oder zur mangelhaften Sicherung der sensiblen Daten.\footnote{vgl. \cite{datenschutzbeauftragter}}. 
+Durch den wiederholten Anmeldeprozess an verschiedenen Diensten mit verschiedenen Sicherheitsvorkehrungen steigt zudem die Wahrscheinlichkeit, dass ein Passwort ausgespäht wird. 
+Dazu ein Anwendungsdiagramm im \Anhang{app:Use-Case-Diagramm}. \\
+Die Implementierung einer Single Sign-on-Lösung ermöglicht dem Nutzer ausschließlich ein Master-Passwort zu vergeben, weclhes nur einmalig bei der Anmeldung am wy-connect Dienst eingeben werden muss. Bei der Nutzung von \ac{SSO} ist der größte Vorteil darin zu sehen, dass sich der Nutzer nicht nochmal registrieren muss, so dass das lästige Eintippen von Daten, Festlegen eines neuen Passwortes und Bestätigung der Registrierung entfällt. Auch der administrative Aufwand verringert sich bei einer zentralen Nutzerverwaltung\footnote{vgl. \cite{univention}}.\\
+Dies verspricht eine bessere Usability und eine nicht zu unterschätzende Zeitersparnis für Anwender im Vergleich zur derzeitigen Lösung. 
+Aufgrund der angeführten Gründe hat sich wycomco entschieden die Entwicklung von wy-connect in Auftrag zu geben.
+\subsection{Projektschnittstellen} 
+\label{sec:Projektschnittstellen}
+Die Anwendung benötigt keinerlei Schnittstellen zu anderen Diensten. Der \ac{SSO}-Server kommuniziert im Rahmen des Abschlussprojektes nur mit einem Testclient, der eigens implementiert wird.
+Integration mit anderen externen Systemen wie dem \ac{AD} ist nicht Teil der Anforderung.
+\subsection{Projektabgrenzung} 
+\label{sec:Projektabgrenzung}
+Die Anbindung an einen Client wird in diesem Projekt nur für einen Testclient durchgeführt, die Durchführung für alle bestehenden Anwendungen im Unternehmen gehört nicht zum Projekt.
