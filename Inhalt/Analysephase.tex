@@ -19,7 +19,7 @@ Dieser Prozess lässt wie folgt beschreiben:
 \end{enumerate}
 
 Wie schnell ersichtlich wird, ist der Aufwand immens, wenn dieser Vorgang auch nur dreimal wiederholt werden muss.
-Auch im täglichen Geschäft ist es erforderlich sich an jeder Anwendung einzeln anzumelden. Wie in Abschnitt \ref{sec:Projektbegruendung} schon erwähnt, führt dies schnell zu Trivialpasswörtern und damit zu einem Sicherheitsrisiko. 
+Auch im täglichen Geschäft ist es erforderlich sich an jeder Anwendung einzeln anzumelden.
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
@@ -52,35 +52,25 @@ Aus diesen Werten ergeben sich die Projektkosten in Tabelle~\ref{tab:Kostenaufst
 \label{sec:Amortisationsdauer}
 
 Der Einsatz eines \ac{SSO}-Servers hat eine deutliche Zeitersparnis zur Folge. Durchschnittlich loggt sich ein Mitarbeiter pro Tag mindestens einmal am Tag in einer Anwendung ein. Bei 3 Anwendungen wie momentan bei wycomco sind es 3 Vorgänge täglich. Dazu muss er alle sechs Monate das Passwort ändern. Durch die Vielzahl an Freelancern in der Firma, schätzt man die Anzahl neuer User pro Monat auf eins. 
-
 Dazu die Auflistungen in Tabelle \ref{tab:Zeitersparnis1} und Tabelle \ref{tab:Zeitersparnis2}.
-
 \tabelle{Zeitersparnis pro Vorgang}{tab:Zeitersparnis1}{Zeitersparnis1.tex}
-
 \tabelle{Zeitersparnis pro Monat}{tab:Zeitersparnis2}{Zeitersparnis2.tex}
-
 Für die Zeitersparnis pro Monat ergeben sich damit 463 Minuten. 
-
 Dies ergibt eine tägliche Ersparnis von
-
 \begin{eqnarray}
 \frac{463 \mbox{ min/Monat}}{20 \mbox{ Tage/Monat}} = 23,15 \mbox{ min/Tag}
 \end{eqnarray}
-
 Bei einer Zeiteinsparung von 23,15 Minuten pro Tag an 252 Arbeitstagen\footnote{vgl. \cite{arbeitstage}} im Jahr ergibt sich eine Zeiteinsparung von 
 \begin{eqnarray}
 252 \frac{Tage}{Jahr} \cdot 23,15 \frac{min}{Tag} = 5833,8 \frac{min}{Jahr} \approx 97,23 \frac{h}{Jahr} 
 \end{eqnarray}
-
 Dadurch ergibt sich eine jährliche Einsparung von 
 \begin{eqnarray}
 97,23 \mbox{ h} \cdot \eur{(40 + 15)}{\mbox{/h}} = \eur{5347,65}
 \end{eqnarray}
-
 Die Amortisationszeit beträgt also $\frac{\eur{2080,00}}{\eur{5347,65}\mbox{/Jahr}} \approx 0,4 \mbox{ Jahre} \approx 5 \mbox{ Monate}$.
-
 Der Server muss also mindestens 5 Monate das alte Vorgehen ersetzen, damit sich Anschaffungskosten und Kosteneinsparung ausgleichen. Da es vorgesehen ist die neue Anwendung längerfristig einzusetzen, kann die Umsetzung trotz der relativ langen Amortisationszeit auch unter wirtschaftlichen Gesichtspunkten als sinnvoll eingestuft werden.
-Eine grafische Darstellung der berechneten Werte findet sich unter \ref{app:Amortisationsdiagramm} .
+Eine grafische Darstellung der berechneten Werte findet sich unter \ref{app:Amortisationsdiagramm}.
 
 \subsection{Nutzwertanalyse}
 \label{sec:Nutzwertanalyse}
@@ -93,7 +83,6 @@ Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, lässt es sich auch p
 \label{sec:Qualitaetsanforderungen}
 
 Die Qualitätsanforderungen an die Anwendung lassen sich Tabelle~\ref{tab:Qualitaetsanforderungen} entnehmen.
-
 \tabelle{Qualitätsanforderungen}{tab:Qualitaetsanforderungen}{Qualitaetsanforderungen.tex}
 
 \subsection{Anwendungsfälle}
@@ -106,6 +95,5 @@ Der vollständige Prozess ist in \fullnameref{sec:IstAnalyse} beschrieben.
 Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen gut zu sehen ist, vereinfacht werden. Administratoren erstellen einmalig eine Einladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen. Hierbei sei die Autorisierung des Clients vernachlässigt. 
 
 \subsection{Lastenheft/Fachkonzept}
-Am Ende der Entwurfsphase wurde zusammen mit dem Projektleiter auf Basis des Anwendungsfalldiagramms das Lastenheft erstellt. Ein Auszug befindet sich im Anhang \Anhang{app:Lastenheft}
-
+Am Ende der Entwurfsphase wurde zusammen mit dem Projektleiter auf Basis des Anwendungsfalldiagramms das Lastenheft erstellt. Ein Auszug befindet sich im \Anhang{app:Lastenheft}
 \Zwischenstand{Analysephase}{Analyse}

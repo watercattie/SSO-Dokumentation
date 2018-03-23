@@ -10,7 +10,7 @@ Für den Testclient wurde die fertige Instanz des von der Autorin entwickelten Z
 
 \subsection{Middleware}
 \label{sec:Middleware}
-Die Middleware bietet einen Filtermechanismus von HTTP-Anfragen, die in eine Anwendung eingehen. Die meist genutzte Middleware wäre hierbei die Überprüfung ob ein User authentifiziert ist. Ist dies nicht der Fall wird er automatisch zum Anmeldebildschirm weitergeleitet. Wenn der Benutzer jedoch authentifiziert ist, ermöglicht die Middleware, dass die Anforderung weiter in der Anwendung ausgeführt wird.
+Die Middleware bietet einen Filtermechanismus von HTTP-Anfragen, die in eine Anwendung eingehen. Die meist benötigte Middleware wäre hierbei die Überprüfung ob ein User authentifiziert ist. Ist dies nicht der Fall wird er automatisch zum Anmeldebildschirm weitergeleitet. Wenn der Benutzer jedoch authentifiziert ist, ermöglicht die Middleware, dass die Anforderung weiter in der Anwendung ausgeführt wird.
 
 Im Projekt der Autorin werden die Middleware für Authentifizierung sowie der \acs{CSRF}-Schutz (Schutz gegen Anfragenfälschung\footnote{vgl \cite{CSRF}}) genutzt.
 
@@ -18,9 +18,7 @@ Im Projekt der Autorin werden die Middleware für Authentifizierung sowie der \a
 \label{sec:ImplBenutzeroberflaeche}
 
 Das eingesetzte CSS-Framework Bootstrap ermöglicht ohne Zusatzaufwand eine responsive Darstellung. Die standardisierten Oberflächengestaltungselemente fanden beim Erstellen der Views Anwendung. 
-
-Über die verschiedenen Routen, können Views oder Controllerfunktionen aufgerufen werden. Die Routen sind intuitiv benannt und werden so in der View gekennzeichnet. 
-
+Über die verschiedenen Routen, können Views oder Controllerfunktionen aufgerufen werden. Die Routen können intuitiv benannt werden und werden so in der View aufgerufen.
 Unter \ref{app:wyconnect-mockup} finden sich GUI-Ansichten der wichtigsten Views.
 
 \subsection{Implementierung des OAuth2 Flows}
@@ -30,8 +28,7 @@ Mit dem Paketmanager composer wurde das Passport Paket eingebunden, welche den G
 
 Es wurde das ORM Modell und auch das Repository Design Pattern umgesetzt. Die Models haben eine zusätzliche  Repository Klasse, die eine Entkapselung der Persistenzschicht mit sich bringt.
 
-Im \Anhang{app:routes} sind alle Routen aufgelistet, die der Server zur Verfügung stellt. Es ist gut zu erkennen, welche Route auf welchen Controller zugreift und wie die Zugriffsrechte über die Middlewares (siehe \fullnameref{sec:Middleware} geregelt sind. Alle Routen mit der Middleware auth können nur eingeloggte User benutzen, guest ist für alle Nutzer offen.
-\textit{! kann den Kommentar nicht lesen !}
+Im \Anhang{app:routes} sind alle Routen aufgelistet, die der Server zur Verfügung stellt. Es ist gut zu erkennen, welche Route auf welchen Controller zugreift und wie die Zugriffsrechte über die Middlewares (siehe \fullnameref{sec:Middleware} geregelt sind. Alle Routen mit der Middleware auth können nur eingeloggte User benutzen, guest ist nur für nicht eingeloggte Nutzer offen.
 
 Über ein Formular kann der Admin eines Clients den Namen und die redirect URL angeben und damit seinen Client in die Datenbank eintragen. Als response schickt der ClientController das secret.
 Wie üblich beim MVC Muster, leitet die View den Request mit den Clientdaten an den Controller per POST Request, der dann nach Validierung der Daten das Model beauftragt einen neuen Client anzulegen. 
