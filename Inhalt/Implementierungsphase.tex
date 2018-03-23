@@ -12,7 +12,7 @@ Für den Testclient wurde die fertige Instanz des von der Autorin entwickelten Z
 \label{sec:Middleware}
 Die Middleware bietet einen Filtermechanismus von HTTP-Anfragen, die in eine Anwendung eingehen. Die meist benötigte Middleware wäre hierbei die Überprüfung ob ein User authentifiziert ist. Ist dies nicht der Fall wird er automatisch zum Anmeldebildschirm weitergeleitet. Wenn der Benutzer jedoch authentifiziert ist, ermöglicht die Middleware, dass die Anforderung weiter in der Anwendung ausgeführt wird.
 
-Im Projekt der Autorin werden die Middleware zur Authentifizierung sowie zum \acs{CSRF}-Schutz (Schutz gegen Anfragenfälschung\footnote{vgl \cite{CSRF}}) genutzt.
+Im Projekt der Autorin werden die Middlewares zur Authentifizierung sowie zum \acs{CSRF}-Schutz (Schutz gegen Anfragenfälschung\footnote{vgl \cite{CSRF}}) genutzt.
 
 \subsection{Implementierung der Benutzeroberfläche}
 \label{sec:ImplBenutzeroberflaeche}
@@ -33,7 +33,7 @@ Im \Anhang{app:routes} sind alle Routen aufgelistet, die der Server zur Verfügu
 Über ein Formular kann der Admin eines Clients den Namen und die redirect URL angeben und damit seinen Client in die Datenbank eintragen. Als response schickt der ClientController das secret.
 Wie üblich beim MVC Muster, leitet die View den Request mit den Clientdaten an den Controller per POST Request, der dann nach Validierung der Daten das Model beauftragt einen neuen Client anzulegen. 
 
-Mit dieser ID und der Redirect Adresse fragt der Client am Server per GET Request einen AuthorizationCode an. Sollte der Benutzer noch nicht eingeloggt sein, schützt die middleware die angeforderte Route, fordert den Nutzer auf sich einzuloggen und leitet ihn schließlich auf eine View, auf der er der Autorisierung der Anwendung zustimmen kann. Die Antwort verarbeiten der \textit{ApproveAuthorizationController} und der \textit{DenyAuthorizationController}, die bei fehlerhaftem state Code eine Fehlermeldung zurückgeben, oder über Passport eigene Funktionen per \textit{completeAuthorizationRequest()} einen AuthCode ??? generieren und ihn per HTTP dem Client als response zusenden.
+Mit dieser ID und der Redirect Adresse fragt der Client am Server per GET Request einen AuthorizationCode an. Sollte der Benutzer noch nicht eingeloggt sein, schützt die middleware die angeforderte Route, fordert den Nutzer auf sich einzuloggen und leitet ihn schließlich auf eine View, auf der er der Autorisierung der Anwendung zustimmen kann. Die Antwort verarbeiten der \textit{ApproveAuthorizationController} und der \textit{DenyAuthorizationController}, die bei fehlerhaftem state Code eine Fehlermeldung zurückgeben, oder über eine Funktion Passports per \textit{completeAuthorizationRequest()} einen AuthCode generieren und ihn per HTTP dem Client als response zusenden.
 
 Mit diesem Code, der ID und dem secret kann der Client letztendlich per HTTP POST Request eine Anfrage auf ein Access Token stellen. Der zuständige Controller validiert die Anfrage und generiert ein Token mit der Passport Funktion \textit{respondToAccessTokenRequest}. Mit diesem Token kann per API und Bearer Autorisierung das Benutzerprofil abgefragt werden.
 
