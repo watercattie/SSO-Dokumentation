@@ -1,18 +1,15 @@
 \select@language {ngerman}
-\contentsline {figure}{\numberline {1}{\ignorespaces grobe Zeitplanung}}{2}{figure.23}
-\contentsline {figure}{\numberline {2}{\ignorespaces TDD Zirkel}}{3}{figure.31}
-\contentsline {figure}{\numberline {3}{\ignorespaces Use-Case-Diagramm ohne SSO}}{iv}{figure.146}
-\contentsline {figure}{\numberline {4}{\ignorespaces Use-Case-Diagramm mit SSO}}{v}{figure.148}
-\contentsline {figure}{\numberline {5}{\ignorespaces Loginscreen Mockup Timy}}{vi}{figure.150}
-\contentsline {figure}{\numberline {6}{\ignorespaces Loginseite des SSO-Servers}}{vii}{figure.152}
-\contentsline {figure}{\numberline {7}{\ignorespaces Benutzeroberfl\IeC {\"a}che des SSO-Servers}}{viii}{figure.153}
-\contentsline {figure}{\numberline {8}{\ignorespaces Login am Client Timy}}{ix}{figure.154}
-\contentsline {figure}{\numberline {9}{\ignorespaces ERM}}{x}{figure.156}
-\contentsline {figure}{\numberline {10}{\ignorespaces Amortisations-Diagramm}}{xi}{figure.158}
-\contentsline {figure}{\numberline {11}{\ignorespaces OAuth2 Flow}}{xii}{figure.160}
-\contentsline {figure}{\numberline {12}{\ignorespaces Sequenzdiagramm OAuth2}}{xiii}{figure.162}
-\contentsline {figure}{\numberline {13}{\ignorespaces Routen des SSO-Servers}}{xv}{figure.183}
-\contentsline {figure}{\numberline {14}{\ignorespaces Ausschnitt aus dem UML Diagramm des SSO-Servers}}{xvi}{figure.185}
-\contentsline {figure}{\numberline {15}{\ignorespaces Ausschnitt aus dem UML Diagramm des Clients}}{xvii}{figure.187}
-\contentsline {figure}{\numberline {16}{\ignorespaces Konsolenausgabe der PHPUnit Tests}}{xviii}{figure.189}
-\contentsline {figure}{\numberline {17}{\ignorespaces Benutzerdokumentation}}{xix}{figure.191}
+\contentsline {figure}{\numberline {1}{\ignorespaces grobe Zeitplanung}}{2}{figure.22}
+\contentsline {figure}{\numberline {2}{\ignorespaces \ac {TDD} Kreislauf}}{3}{figure.29}
+\contentsline {figure}{\numberline {3}{\ignorespaces Use-Case-Diagramm ohne SSO}}{iv}{figure.147}
+\contentsline {figure}{\numberline {4}{\ignorespaces Use-Case-Diagramm mit SSO}}{v}{figure.149}
+\contentsline {figure}{\numberline {5}{\ignorespaces Benutzeroberfl\IeC {\"a}che des SSO-Servers}}{vi}{figure.151}
+\contentsline {figure}{\numberline {6}{\ignorespaces Login am Client Timy}}{vi}{figure.152}
+\contentsline {figure}{\numberline {7}{\ignorespaces ERM}}{vii}{figure.154}
+\contentsline {figure}{\numberline {8}{\ignorespaces Amortisations-Diagramm}}{viii}{figure.156}
+\contentsline {figure}{\numberline {9}{\ignorespaces OAuth2 Flow}}{ix}{figure.158}
+\contentsline {figure}{\numberline {10}{\ignorespaces Sequenzdiagramm OAuth2}}{x}{figure.160}
+\contentsline {figure}{\numberline {11}{\ignorespaces Ausschnitt aus dem UML Diagramm des SSO-Servers}}{xii}{figure.181}
+\contentsline {figure}{\numberline {12}{\ignorespaces Ausschnitt aus dem UML Diagramm des Clients}}{xiii}{figure.183}
+\contentsline {figure}{\numberline {13}{\ignorespaces Konsolenausgabe der PHPUnit Tests}}{xiv}{figure.185}
+\contentsline {figure}{\numberline {14}{\ignorespaces Benutzerdokumentation}}{xv}{figure.187}

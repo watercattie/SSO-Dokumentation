@@ -6,35 +6,35 @@
 \subsection{Ist-Analyse} 
 \label{sec:IstAnalyse}
 
-Derzeit gibt es bei der Anmeldung an den verschiedenen Diensten bei wycomco keine Optimierungen. 
+Derzeit gibt es bei der Registrierung und Anmeldung an den verschiedenen Diensten bei wycomco keine Optimierungen. 
 
-Dieser Prozess lässt wie folgt beschreiben:
+Dieser Prozess lässt sich wie folgt beschreiben:
+\setlist[enumerate]{itemsep=0cm} 
 \begin{enumerate}
-	\item Anlegen eines vorläufigen Benutzerkontos durch den Admin
-	\item Benutzer bekommt eine Mail und klickt auf den Registrierungslink
-	\item Benutzer füllt das Registrierungsformular aus
-	\item Benutzer bekommt eine Email mit einem Aktivierungslink
-	\item Benutzer klickt auf den Link und lässt sich damit aktivieren
-	\item Benutzer muss sich einloggen und kann damit die Anwendung vollständig nutzen
+	\item Anlegen eines vorläufigen Benutzerkontos durch den Administrator
+	\item Benutzer bekommt eine Mail und klickt auf den Registrierungslink\footnote{Link der zum Registrierungsformular führt}
+	\item Benutzer füllt ein Registrierungsformular aus
+	\item Benutzer bekommt eine E-Mail mit einem Aktivierungslink\footnote{Link der das Benutzerkonto aktiviert}
+	\item Benutzer klickt auf den Link und wird damit aktiviert
+	\item Benutzer kann sich einloggen und damit die Anwendung vollständig nutzen
 \end{enumerate}
 
-Wie schnell ersichtlich wird, ist der Aufwand immens, wenn dieser Vorgang auch nur dreimal wiederholt werden muss.
-Auch im täglichen Geschäft ist es erforderlich sich an jeder Anwendung einzeln anzumelden.
+Wie schnell ersichtlich wird, ist dieser Aufwand nicht zu vernachlässigen, wenn dieser Vorgang auch nur dreimal wiederholt werden muss. Eine genaue Aufstellung siehe Kapitel~\ref{sec:Amortisationsdauer}: \nameref{sec:Amortisationsdauer}.
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
 
-Durch den momentanen Prozess entsteht ein hoher zeitlicher Mehraufwand, der durch die Umsetzung des Projektes verringert werden kann.
+Durch den momentanen Prozess entsteht ein hoher zeitlicher Mehraufwand, der durch die Umsetzung des Projekts verringert werden soll.
 Eine Vereinheitlichung der Nutzerzugänge durch ein Single-Sign-On-Verfahren erscheint als hilfreicher Ausweg.
-Ob sich das auch wirtschaftlich begründen lässt, wird in den nächsten Abschnitten erläutert.
+Ob sich das auch wirtschaftlich begründen lässt, wird in diesen Abschnitten erläutert.
 
 \subsubsection{\gqq{Make or Buy}-Entscheidung}
 \label{sec:MakeOrBuyEntscheidung}
 
-Zu dieser Problematik gibt es eine Vielzahl von Anbietern auf dem Markt, die enstprechende Lösungen anbieten. 
-Grundlegend für die Entscheidung für ein \ac{SSO}-Verfahren ist dessen Anwendbarkeit auf die Ansprüche des Nutzers. Dabei ist zu beachten, dass ein Großteil der genutzten Anwendungen unterstützt werden sollten. Vorgaben für komplexe Passwörter und verschlüsselte Anmeldeverfahren sollten Standard sein, um Missbrauch zu verhindern. Würde ein Unbefugter Zugang erhalten, hätte er in der Regel Zugriff auf alle angebundenen Anwendungen. Auch durch ihre Nutzerfreundlichkeit sollte eine \acs{SSO} Lösung ansprechen, für Standardanwender gleichermaßen wie für Administratoren\footnote{vgl. \cite{computerwoche}}.
+Zum \ac{SSO}-Verfahren gibt es eine Vielzahl von Lösungen auf dem Markt.
+Grundlegend für die Entscheidung für ein \ac{SSO}-Verfahren ist dessen Anwendbarkeit auf die Ansprüche des Nutzers. Dabei ist zu beachten, dass ein Großteil der genutzten Anwendungen unterstützt werden sollten. Vorgaben für komplexe Passwörter und verschlüsselte Anmeldeverfahren sollten Standard sein, um Missbrauch zu verhindern. Würde ein Unbefugter Zugang erhalten, hätte er in der Regel Zugriff auf alle angebundenen Anwendungen. Auch durch ihre Nutzerfreundlichkeit sollte eine \acs{SSO} Lösung ansprechen, für Standardanwender gleichermaßen wie für Administratoren.\footnote{vgl. \cite{computerwoche}}
 
-Ein \ac{SSO}-Verfahren, das tatsächlich alle eingesetzten Anwendungen einbinden kann und die oben genannten Vorraussetzungen für wycomco erfüllt, konnte trotz ausführlicher Recherche nicht gefunden werden. Da der Großteil der entwickelten Anwendungen bei wycomco auf Laravel\footnote{vgl. \cite{Laravel}} basiert, lag es nahe die zur Verfügung gestellten Pakete zu nutzen. Dabei handelt es sich um Passport\footnote{vgl. \cite{Passport}} und Socialite\footnote{vgl. \cite{Socialite}}, die die Grundfunktionen eines SSO Servers und den angebundenen Clients bieten. Damit kann das Augenmerk auf die individuellen Anforderungen von wycomco gelegt werden. Nach Abwägung der genannten Kriterien wurde sich dazu entschieden das Projekt in Eigenentwicklung durchzuführen.
+Ein \ac{SSO}-Verfahren, das tatsächlich alle eingesetzten Anwendungen einbinden kann und die oben genannten Vorraussetzungen für wycomco erfüllt, konnte trotz ausführlicher Recherche nicht gefunden werden. Da der Großteil der entwickelten Anwendungen bei wycomco auf Laravel\footnote{vgl. \cite{Laravel}} basiert, lag es nahe die zur Verfügung gestellten Pakete\footnote{zu finden unter: \cite{pakete}} zu nutzen. Dabei handelt es sich um Passport\footnote{vgl. \cite{Passport}} und Socialite\footnote{vgl. \cite{Socialite}}, die die Grundfunktionen eines SSO Servers und den angebundenen Clients bieten. Damit kann die Konzentration auf die individuellen Anforderungen von wycomco gelegt werden. Nach Abwägung der genannten Kriterien wurde sich dazu entschieden das Projekt in Eigenentwicklung mit Hilfe der vorhandenen Laravel Pakete durchzuführen.
 
 \subsubsection{Projektkosten}
 \label{sec:Projektkosten}
@@ -75,7 +75,7 @@ Eine grafische Darstellung der berechneten Werte findet sich unter \ref{app:Amor
 \label{sec:Nutzwertanalyse}
 
 Neben den in \fullnameref{sec:Amortisationsdauer} aufgeführten wirtschaftlichen Vorteilen ergeben sich durch Realisierung des Projekts noch weitere.
-Wie in der \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine erhöhte Sicherheit mit sich, da die Möglichkeit des unbefugten Zugriffs auf vertrauliche Daten stark minimiert werden würde. Wycomco verwart in einer ihrer Anwendungen beispielsweise sensible Kundeninformationen. Mit der Anwendung der entwickelten Single-Sign-On-Lösung, sinkt das Risiko des Datenverlustes. Mögliche Kosten durch Datenverlust, bei Nichtanwendung der entwickelten Lösung, werden als  Opportunitätskosten bezeichnet. Möglicher Fremdzugriff bringt eine Vertragsstrafe mit sich. Bei größeren Kunden liegt diese bei schätzungsweise 60.000 \eur. Das sind Kosten die mit der Umsetzung von wy-connect vermieden werden können. 
+Wie in der \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine erhöhte Sicherheit mit sich, da die Möglichkeit des unbefugten Zugriffs auf vertrauliche Daten stark minimiert werden würde. Wycomco verwahrt in einer ihrer Anwendungen beispielsweise sensible Kundeninformationen. Mit der Anwendung der entwickelten Single-Sign-On-Lösung, sinkt das Risiko des Datenverlustes. Mögliche Kosten durch Datenverlust, bei Nichtanwendung der entwickelten Lösung, werden als  Opportunitätskosten bezeichnet. Möglicher Fremdzugriff bringt eine Vertragsstrafe mit sich. Bei größeren Kunden liegt diese bei schätzungsweise 60.000\eur{}. Das sind Kosten die mit der Umsetzung von wy-connect vermieden werden können. 
 Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, eröffnet sich die Möglichkeit die entwickelte Applikation  Kunden von wycomco zur Verfügung zu stellen. Der tatsächliche Nutzen geht also über wycomco hinaus.
 
 \subsection{Qualitätsanforderungen}
@@ -92,5 +92,6 @@ Der vollständige Prozess ist in \fullnameref{sec:IstAnalyse} beschrieben.
 Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen erkennbar ist, vereinfacht werden. Administratoren erstellen einmalig eine Einladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen. Hierbei sei die Autorisierung des Clients vernachlässigt. 
 
 \subsection{Lastenheft/Fachkonzept}
+\label{sec:Lastenheft}
 Am Ende der Entwurfsphase wurde zusammen mit dem Projektleiter auf Basis des Anwendungsfalldiagramms das Lastenheft erstellt. Ein Auszug befindet sich im \Anhang{app:Lastenheft}
 \Zwischenstand{Analysephase}{Analyse}

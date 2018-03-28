@@ -24,8 +24,8 @@
 \newblock \emph{PHP Manual}, \url{http://php.net/manual/de/index.php}, Abruf:
   12.03.2018
 
-\bibitem[\scshape{}composer()]{composer}
-\dinatlabel{\upshape{}composer } \textsc{composer}:
+\bibitem[\scshape{}Composer()]{composer}
+\dinatlabel{\upshape{}Composer } \textsc{Composer}:
 \newblock \emph{Composer}, \url{https://getcomposer.org/}, Abruf: 14.03.2018
 
 \bibitem[\scshape{}Darfk()]{SSO-Vgl}

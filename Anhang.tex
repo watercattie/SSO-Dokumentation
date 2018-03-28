@@ -30,40 +30,20 @@ Das folgende Diagramm beschreibt den Anmeldeprozess an verschiedenen Systemen mi
 \end{figure}
 \clearpage
 
-\subsection{Benutzeroberfläche Mockup}
-\label{app:mockup}
-
-Das folgende Template beschreibt den Anmeldeprozess am \acs{SSO}-Server.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{timy-mockup-login.png}{0.9}
-\caption{Loginscreen Mockup Timy}
-\end{figure}
-\clearpage
-
 \subsection{Benutzeroberfläche Screenshots}
 \label{app:screens}
-
-Der folgende Screenshot beschreibt die Loginseite des \acs{SSO}.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{wy-connect-login.png}{0.9}
-\caption{Loginseite des SSO-Servers}
-\end{figure}
-\clearpage
 
 Der folgende Screenshot beschreibt die Benutzeroberfläche des \acs{SSO}.
 \begin{figure}[htb]
 \centering
-\includegraphicsKeepAspectRatio{wy-connect-screen.png}{0.9}
+\includegraphicsKeepAspectRatio{wy-connect-screen.png}{0.8}
 \caption{Benutzeroberfläche des SSO-Servers}
 \end{figure}
-\clearpage
 
 Der folgende Screenshot beschreibt  den Anmeldeprozess am Client mit \acs{SSO}.
 \begin{figure}[htb]
 \centering
-\includegraphicsKeepAspectRatio{timy-login-anwendung.png}{0.9}
+\includegraphicsKeepAspectRatio{timy-login-anwendung.png}{0.8}
 \caption{Login am Client Timy}
 \end{figure}
 \clearpage
@@ -110,16 +90,6 @@ Das folgende Diagramm zeigt den Ablauf des OAuth2 Protokolls am Beispiel des Cli
 
 \input{Anhang/AnhangPflichtenheft.tex}
 
-\subsection{Routen innerhalb des SSO-Servers}
-\label{app:routes}
-Die folgende Ausgabe zeigt alle vorhanden Routen, die der Server zur Verfügung stellt.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{routes.png}{0.99}
-\caption{Routen des SSO-Servers}
-\end{figure}
-\clearpage
-
 \subsection{Ausschnitt des Klassendiagramms vom SSO-Server}
 \label{app:passport-controllers}
 Das folgende UML Diagramm zeigt einen Ausschnitt aus dem Klassendiagramm des \ac{SSO}-Servers.
@@ -131,7 +101,7 @@ Das folgende UML Diagramm zeigt einen Ausschnitt aus dem Klassendiagramm des \ac
 \clearpage
 
 \subsection{Ausschnitt des Klassendiagramms vom Client}
-\label{app:passport-controllers}
+\label{app:socialite}
 Das folgende UML Diagramm zeigt einen Ausschnitt aus dem Klassendiagramm der relevanten Klassen des Clients für die Anbindung an den \ac{SSO}-Server.
 \begin{figure}[htb]
 \centering
@@ -141,7 +111,7 @@ Das folgende UML Diagramm zeigt einen Ausschnitt aus dem Klassendiagramm der rel
 \clearpage
 
 \subsection{Ausgabe der Unit- und Featuretests}
-\label{app:tests}
+\label{app:tests_timy}
 Die folgende Konsolenausgabe zeigt die erfolgreichen Test mit PHPUnit.
 \begin{figure}[htb]
 \centering
