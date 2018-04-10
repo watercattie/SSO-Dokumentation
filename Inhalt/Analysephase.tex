@@ -19,7 +19,7 @@ Dieser Prozess lässt sich wie folgt beschreiben:
 	\item Benutzer kann sich einloggen und damit die Anwendung vollständig nutzen
 \end{enumerate}
 
-Wie schnell ersichtlich wird, ist dieser Aufwand nicht zu vernachlässigen, wenn dieser Vorgang auch nur dreimal wiederholt werden muss. Eine genaue Aufstellung siehe Kapitel~\ref{sec:Amortisationsdauer}: \nameref{sec:Amortisationsdauer}.
+Wie schnell ersichtlich wird, ist dieser Aufwand nicht zu vernachlässigen, wenn dieser Vorgang auch nur dreimal wiederholt werden muss. Für eine genaue Aufstellung siehe Kapitel~\ref{sec:Amortisationsdauer}: \nameref{sec:Amortisationsdauer}.
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
@@ -51,7 +51,7 @@ Aus diesen Werten ergeben sich die Projektkosten in Tabelle~\ref{tab:Kostenaufst
 \label{sec:Amortisationsdauer}
 
 Der Einsatz eines \ac{SSO}-Servers hat eine deutliche Zeitersparnis zur Folge. Durchschnittlich loggt sich ein Mitarbeiter pro Tag mindestens einmal am Tag in einer Anwendung ein. Bei 3 Anwendungen wie momentan bei wycomco sind es 3 Vorgänge täglich. Dazu muss er alle sechs Monate das Passwort ändern. Durch die Vielzahl an Freelancern in der Firma, schätzt man die Anzahl neuer User pro Monat auf eins. 
-Dazu die Auflistungen in Tabelle \ref{tab:Zeitersparnis1} und Tabelle \ref{tab:Zeitersparnis2}.
+Dazu eine Übersicht in den Tabellen \ref{tab:Zeitersparnis1} und \ref{tab:Zeitersparnis2}.
 \tabelle{Zeitersparnis pro Vorgang}{tab:Zeitersparnis1}{Zeitersparnis1.tex}
 \tabelle{Zeitersparnis pro Monat}{tab:Zeitersparnis2}{Zeitersparnis2.tex}
 Für die Zeitersparnis pro Monat ergeben sich damit 463 Minuten. 
@@ -69,14 +69,14 @@ Dadurch ergibt sich eine jährliche Einsparung von
 \end{eqnarray}
 Die Amortisationszeit beträgt also $\frac{\eur{2080,00}}{\eur{5347,65}\mbox{/Jahr}} \approx 0,4 \mbox{ Jahre} \approx 5 \mbox{ Monate}$.
 Der Server muss also mindestens 5 Monate das alte Vorgehen ersetzen, damit sich Anschaffungskosten und Kosteneinsparung ausgleichen. Da es vorgesehen ist die neue Anwendung längerfristig einzusetzen, kann die Umsetzung trotz der relativ langen Amortisationszeit auch unter wirtschaftlichen Gesichtspunkten als sinnvoll eingestuft werden.
-Eine grafische Darstellung der berechneten Werte findet sich unter \ref{app:Amortisationsdiagramm}.
+Eine grafische Darstellung der berechneten Werte findet sich im \Anhang{app:Amortisationsdiagramm}.
 
 \subsection{Nutzwertanalyse}
 \label{sec:Nutzwertanalyse}
 
 Neben den in \fullnameref{sec:Amortisationsdauer} aufgeführten wirtschaftlichen Vorteilen ergeben sich durch Realisierung des Projekts noch weitere.
-Wie in \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine erhöhte Sicherheit mit sich, da die Möglichkeit des unbefugten Zugriffs auf vertrauliche Daten stark minimiert werden würde. Wycomco verwahrt in einer ihrer Anwendungen beispielsweise sensible Kundeninformationen. Mit der Anwendung der entwickelten Single-Sign-On-Lösung, sinkt das Risiko des Datenverlustes. Mögliche Kosten durch Datenverlust, bei Nichtanwendung der entwickelten Lösung, werden als  Opportunitätskosten bezeichnet. Möglicher Fremdzugriff bringt eine Vertragsstrafe mit sich. Bei größeren Kunden liegt diese bei schätzungsweise 60.000\eur{}. Das sind Kosten die mit der Umsetzung von wy-connect vermieden werden können. 
-Obwohl das Projekt im Rahmen von wycomco entwickelt wurde, eröffnet sich die Möglichkeit die entwickelte Applikation  Kunden von wycomco zur Verfügung zu stellen. Der tatsächliche Nutzen geht also über wycomco hinaus.
+Wie in \fullnameref{sec:Projektbegruendung} schon erläutert, bringt der Einsatz einer Single-Sign-On-Lösung eine erhöhte Sicherheit mit sich, da die Möglichkeit des unbefugten Zugriffs auf vertrauliche Daten stark minimiert werden würde. Wycomco verwahrt in einer ihrer Anwendungen beispielsweise sensible Kundeninformationen. Mit der Anwendung der entwickelten Single-Sign-On-Lösung sinkt das Risiko des Datenverlustes. Mögliche Kosten durch Datenverlust, bei Nichtanwendung der entwickelten Lösung, werden als  Opportunitätskosten bezeichnet. Möglicher Fremdzugriff bringt eine Vertragsstrafe mit sich. Bei größeren Kunden liegt diese bei schätzungsweise 60.000\eur{}. Das sind Kosten die mit der Umsetzung von wy-connect vermieden werden können. 
+Obwohl das Projekt intern von wycomco entwickelt wurde, eröffnet sich die Möglichkeit die entwickelte Applikation  Kunden von wycomco zur Verfügung zu stellen. Der tatsächliche Nutzen geht also über die Zeitersparnis für wycomco hinaus.
 
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
@@ -91,7 +91,7 @@ Es wird im Zuge der Analyse des Projektes ein Anwendungsfalldiagramm erstellt. D
 Der vollständige Prozess ist in \fullnameref{sec:IstAnalyse} beschrieben.
 Mit Hilfe von wyconnect kann dieser Prozess wie in den Diagrammen erkennbar ist, vereinfacht werden. Administratoren erstellen einmalig eine Einladung und der Benutzer registriert und loggt sich nur einmalig ein und kann sofort alle Anwendungen nutzen. Hierbei sei die Autorisierung des Clients vernachlässigt. 
 
-\subsection{Lastenheft/Fachkonzept}
+\subsection{Lastenheft}
 \label{sec:Lastenheft}
 Am Ende der Entwurfsphase wurde zusammen mit dem Projektleiter auf Basis der Anwendungsfalldiagramme \fullnameref{app:Use-Case-Diagramm} und \fullnameref{app:Use-Case-Diagramm2} das Lastenheft erstellt. Ein Auszug befindet sich im \Anhang{app:Lastenheft}
 \Zwischenstand{Analysephase}{Analyse}

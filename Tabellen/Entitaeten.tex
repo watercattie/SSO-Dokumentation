@@ -9,7 +9,7 @@
 \textcolor{white}{\textbf{Beschreibung}} \\
 
 \Code{users} & Die Benutzertabelle mit ihren üblichen Attributen wie email, name \etc \\
-\rowcolor{odd}\Code{oauth\_clients} & Die verbundenen Clients, die wyconnect akzeptiert \\
+\rowcolor{odd}\Code{oauth\_clients} & Die verbundenen Clients, die wy-connect akzeptiert \\
 \Code{oauth\_auth\_codes} & Der Verweis auf Autorisierungscodes, die der Client vom Server erhält, wenn der Nutzer seine Autorisierung gibt. Diese sind  jedoch nicht direkt in der Datenbank zu finden.\\
 \rowcolor{odd}\Code{oauth\_access\_tokens} & Die eigentlichen Authentifizierungscodes. Sobald der Nutzer sich eingeloggt hat und die Anwendung autorisiert hat, erhält der Client einen Access Code und kann damit die Nutzerdaten per API erfragen. Wie auch bei den Autorisierungscodes sind diese nicht direkt in der Datenbank gespeichert.\\
 \end{tabularx}

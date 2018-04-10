@@ -9,10 +9,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Bibliographie.bib
 Warning--to sort, need author, organization, or key in PHP
-Warning--to sort, need author, organization, or key in CSRF
-Warning--empty edition in CSRF
-Warning--empty address in CSRF
-Warning--empty year in CSRF
 Warning--empty edition in PHP
 Warning--empty address in PHP
 Warning--empty year in PHP
@@ -35,6 +31,12 @@ Warning--empty year in MySQL
 Warning--empty edition in Laravel
 Warning--empty address in Laravel
 Warning--empty year in Laravel
+Warning--empty edition in Eloquent
+Warning--empty address in Eloquent
+Warning--empty year in Eloquent
+Warning--empty edition in pakete
+Warning--empty address in pakete
+Warning--empty year in pakete
 Warning--empty edition in Passport
 Warning--empty address in Passport
 Warning--empty year in Passport
@@ -44,45 +46,48 @@ Warning--empty year in Socialite
 Warning--empty edition in phpdoc
 Warning--empty address in phpdoc
 Warning--empty year in phpdoc
-You've used 21 entries,
+Warning--empty edition in CSRF
+Warning--empty address in CSRF
+Warning--empty year in CSRF
+You've used 23 entries,
             4728 wiz_defined-function locations,
-            979 strings with 8567 characters,
-and the built_in function-call counts, 10171 in all, are:
-= -- 1093
-> -- 224
-< -- 166
-+ -- 218
-- -- 70
-* -- 714
-:= -- 1779
-add.period$ -- 19
-call.type$ -- 21
-change.case$ -- 86
+            986 strings with 8687 characters,
+and the built_in function-call counts, 11309 in all, are:
+= -- 1217
+> -- 254
+< -- 199
++ -- 258
+- -- 80
+* -- 792
+:= -- 1991
+add.period$ -- 18
+call.type$ -- 23
+change.case$ -- 95
 chr.to.int$ -- 19
-cite$ -- 59
-duplicate$ -- 378
-empty$ -- 810
-format.name$ -- 134
-if$ -- 2096
-int.to.chr$ -- 3
+cite$ -- 65
+duplicate$ -- 414
+empty$ -- 878
+format.name$ -- 152
+if$ -- 2309
+int.to.chr$ -- 5
 int.to.str$ -- 1
-missing$ -- 57
-newline$ -- 118
-num.names$ -- 76
-pop$ -- 198
+missing$ -- 61
+newline$ -- 125
+num.names$ -- 88
+pop$ -- 222
 preamble$ -- 1
-purify$ -- 128
+purify$ -- 141
 quote$ -- 0
-skip$ -- 518
+skip$ -- 582
 stack$ -- 0
-substring$ -- 403
-swap$ -- 61
-text.length$ -- 23
+substring$ -- 457
+swap$ -- 69
+text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 285
-warning$ -- 36
-while$ -- 80
+type$ -- 315
+warning$ -- 41
+while$ -- 92
 width$ -- 0
-write$ -- 297
-(There were 36 warnings)
+write$ -- 319
+(There were 41 warnings)

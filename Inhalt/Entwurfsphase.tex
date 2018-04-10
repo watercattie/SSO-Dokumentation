@@ -13,22 +13,22 @@ Wie auch bei den bestehenden Webapplikationen wird bei der Implementierung das F
 \subsection{Framework}
 \label{sec:Framework}
 
-Laravel ist ein freies \ac{PHP}-Webframework, welches dem \ac{MVC}-Muster folgt. Es ermöglicht neben dem im folgenden unter \ref{sec:Architekturdesign} erläuterten \ac{MVC}-Architekturdesign, \ac{REST}-Webdienste zu implementieren. Laravel wird mit dem \ac{ORM} Eloquent und einem gut bedienbaren Migrationssystem ausgeliefert. Damit werden Objekte einer objektorientierten Anwendung in eine relationale Datenbank überführt.
-Das Framework bringt von Hause aus ein Authentifizierungspaket mit, welches von wyconnect genutzt wird und durch die Pakete Socialite und Passport ergänzt wird, um den OAuth2 Mechanismus zu implementieren. Dazu mehr im Kapitel \fullnameref{sec:Geschaeftslogik}.
+Laravel ist ein freies \ac{PHP}-Webframework, welches dem \ac{MVC}-Muster folgt. Es ermöglicht, neben dem im Folgenden unter \ref{sec:Architekturdesign} erläuterten \ac{MVC}-Architekturdesign auch \ac{REST}-Webdienste zu implementieren. Laravel wird mit dem \ac{ORM} Eloquent\footnote{vgl. \cite{Eloquent}} und einem gut bedienbaren Migrationssystem ausgeliefert. Damit werden Objekte einer objektorientierten Anwendung in eine relationale Datenbank überführt.
+Das Framework bringt von Hause aus ein Authentifizierungspaket mit, welches von wy-connect genutzt wird und durch die Pakete Socialite und Passport ergänzt wird, um den OAuth2 Mechanismus zu implementieren, dazu mehr im Kapitel \fullnameref{sec:Geschaeftslogik}.
 
 \subsection{Wahl des SSO-Protokolls}
 \label{sec:Protokollwahl}
 
-Nach der Entscheidung einen \ac{SSO}-Server einzusetzen, galt es ein geeignetes Protokoll für die Umsetzung zu finden. An erster Stelle steht dabei die Sicherheit, bei den wesentlichen Aspekten der Autorisierung und Authentifizierung. Autorisierung um bestimmten Clients den Zugriff auf die Ressourcen des Nutzers zu berechtigen und Authentifizierung um die Identität des Benutzer zu identifizieren. Eine mögliche Lösung bietet das OAuth2 Protokoll.\footnote{vgl. \cite{OAuth2}}
+Nach der Entscheidung einen \ac{SSO}-Server einzusetzen, galt es ein geeignetes Protokoll für die Umsetzung zu finden. An erster Stelle steht dabei die Sicherheitn bei den wesentlichen Aspekten der Autorisierung und Authentifizierung. Autorisierung um bestimmten Clients den Zugriff auf die Ressourcen des Nutzers zu berechtigen und Authentifizierung um die Identität des Benutzer zu identifizieren. Eine mögliche Lösung bietet das OAuth2 Protokoll.\footnote{vgl. \cite{OAuth2}}
 
 Die Benutzerkontrolle stellt bei OAuth2 das grundlegende Prinzip dar. Im Fokus steht der Schutz von Benutzerdaten vor unbefugtem Zugriff. Die Ressourcen von den Benutzern (als \textit{Resource Owner} bezeichnet) verwaltet ein \textit{Resource Server}, der nur autorisierte Anfragen zulässt. Ein vertrauenswürdiger \textit{Authorization Server} authentifiziert den Benutzer und holt dessen Autorisierung für den Zugriff ein. Als Autorisierungsnachweis stellt der \textit{Auhorization Server} Access Token aus. Im vorliegenden Anwendungsfall sind \textit{Resource Server} und \textit{Authorization Server} ein und derselbe Server.
 Als \textit{Client} bezeichnet man dabei jede Anwendung, die auf Ressourcen eines Benutzers in seinem Namen zugreifen möchte. Im Falle der Projektarbeit handelt es sich hierbei um \textit{timy}, eine Zeiterfassungsanwendung, die die Autorin im Rahmen ihrer Ausbildung implementiert hat und die als erstes den Single-Sign-On-Dienst nutzen soll. 
 
-Ein anderer Ansatz wäre Kerberos, deren Infrastruktur schon im \ac{AD} mit integriert ist. Allerdings ist damit die Authentifizierung auch an das \ac{AD} gebunden. Sobald sich ein Benutzer außerhalb der Domäne an eine Anwendung anmelden möchte, ist dies nicht mehr möglich. Da wycomco immer mehr Webanwendungen entwickelt und diese auch perspektivisch Kunden zur Verfügung gestellt werden sollen, wäre eine Einschränkung an die \ac{AD} nicht sinnvoll. 
+Ein anderer Ansatz wäre Kerberos, deren Infrastruktur schon im \ac{AD} mit integriert ist. Allerdings ist damit die Authentifizierung auch an das \ac{AD} gebunden. Sobald sich ein Benutzer außerhalb der Domäne an eine Anwendung anmelden möchte, ist dies nicht mehr möglich. Da wycomco immer mehr Webanwendungen entwickelt und diese auch perspektivisch Kunden zur Verfügung gestellt werden sollen, wäre eine Einschränkung an die \ac{AD} nicht sinnvoll.  \\
 \acs{SAML} hingegen weist eine ähnliche Struktur wie die von OAuth2 auf. Während allerdings \acs{SAML} längere Nachrichten über POST Parameter senden muss, greift OAuth2 auf GET zurück. Zudem sendet \acs{SAML} \acs{XML}-Antworten an den Client zurück, die wesentlich komplizierter zu verarbeiten sind als das häufig genutzte \acs{JSON}, welches auch bei wycomco standardmäßig genutzt wird.\footnote{vgl. \cite{SSO-Vgl}}
-OAuth2 sendet keine Benutzerinformationen mit dem AccessToken mit, wie es in \acs{SAML} der Fall ist, so erhält ein Angreifer keinen direkten Zugang zu den Nutzerdaten.\footnote{vgl. \cite{book}}
+OAuth2 sendet keine Benutzerinformationen mit dem AccessToken mit, wie es in \acs{SAML} der Fall ist, so erhält ein erfolgreicher Angreifer keinen direkten Zugang zu den Nutzerdaten.\footnote{vgl. \cite{book}}
 
-Aufgrund den angeführten Merkmalen der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches bei wycomco zukünftig zum Einsatz kommen wird. 
+Aufgrund der angeführten Merkmale der verschiedenen Protokolle fällt die Wahl auf das OAuth2 Protokoll, welches bei wycomco zukünftig zum Einsatz kommen wird. 
 
 \subsection{Authorization Grant Types}
 \label{sec:AuthorizationGrants}
@@ -38,22 +38,22 @@ OAuth2 bringt verschiedene Arten mit um den Nutzer zu autorisieren.
 \begin{enumerate}
 \item mit dem \textbf{Passwortansatz} gibt der Nutzer direkt am Client Nutzername und Passwort ein und sendet sie per POST Request an den \ac{SSO}-Server. Das hat den Nachteil, dass der Client die Daten bearbeitet.
 \item mit dem \textbf{Autorisationsansatz} lenkt der Client den Nutzer auf eine View vom \ac{SSO}-Server. Dort kann der Zugriff gestattet oder abgelehnt werden. Nach Genehmigung bekommt der Client einen Authorization Code über eine Redirect URI, die der Client beim ersten Request angegeben hat. So kann sichergestellt werden, dass der richtige Client den Code bekommt. Nun kann der Client über einen Post Request mit dem Authorization Code ein Access Token beim Server beantragen. 
-\item mit dem \textbf{Implizitansatz} läuft der Prozess ähnlich dem Autorisationsansatz. Nur das senden eines Authorization Codes entfällt und der Client bekommt sofort den Access Code vom \ac{SSO}-Server geschickt.
+\item mit dem \textbf{Implizitansatz} läuft der Prozess ähnlich dem Autorisationsansatz. Nur das Senden eines Authorization Codes entfällt und der Client bekommt sofort den Access Code vom \ac{SSO}-Server geschickt.
 \item mit dem \textbf{Client-Anmeldeinformationenansatz} erhält der Client ein Access Token, um auf die eigenen Ressourcen zuzugreifen und nicht im Auftrag eines Benutzers.
 \end{enumerate}
 
-Im Projekt der Autorin fallen alle Grants bis auf den zweiten heraus. Beim Passwortansatz werden die Anmeldeinformationen des Nutzers von der Anwendung bearbeitet und verschickt, dies stellt ein zu umgehendes Sicherheitsrisiko dar.
+Im Projekt der Autorin fallen alle Grant Types bis auf den zweiten heraus. Beim Passwortansatz werden die Anmeldeinformationen des Nutzers von der Anwendung bearbeitet und verschickt, dies stellt ein zu umgehendes Sicherheitsrisiko dar.
 Der Client-Anmeldeinformationenansatz passt nicht zu den Anforderungen von wycomco an das Projekt, es soll eindeutig ein Nutzer authentifiziert werden, nur der Client ist nicht ausreichend. Nach Prüfung der Sicherheitsbestimmungen entschied sich die Autorin für den Autorisationsansatz. Der Nutzer kann den Zugriff gestatten und sendet seine Nutzerdaten ausschließlich über den \ac{SSO}-Server, damit erhöht sich durch die Verwendung eines Authorizationscodes die Sicherheit und der Client ist nicht in die Authentifizierung eingebunden.
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
 
-Beim Design wurde dem \ac{MVC} Muster gefolgt, welches Laravel mit sich bringt. Die Anwendung wird in 3 Komponenten aufgespaltet und sichert damit Flexibilität, Anpassbarkeit und Wiederverwendbarkeit.
-Bei einer späteren Implementierung als native Anwendung, kann das Model beibehalten werden und nur die View und der Controller müssten teilweise umgeschrieben werden.
+Beim Design wurde dem \ac{MVC} Muster gefolgt, welches Laravel unterstützt. Die Anwendung wird in drei Komponenten aufgespaltet und sichert damit Flexibilität, Anpassbarkeit und Wiederverwendbarkeit.
+Bei einer späteren Implementierung als native Anwendung kann das Model beibehalten werden und nur die View und der Controller müssten teilweise umgeschrieben werden.
 
-Das \textbf{Model} enthält Daten zur Weiterverarbeitung. In vielen Fällen spiegelt ein Model eine Tabelle in der Datenbank wieder, so auch beim Eloquent \ac{ORM} von Laravel. Nur in dieser Model Klasse werden die Daten bearbeitet oder erfasst. 
+Das \textbf{Model} enthält Daten zur Weiterverarbeitung. In vielen Fällen spiegelt ein Model eine Tabelle in der Datenbank wieder, so auch beim Eloquent \ac{ORM} von Laravel. Nur in dieser Model-Klasse werden die Daten bearbeitet oder erfasst. 
 Die \textbf{View} ist das Benutzerinterface. Die Daten von den Models werden visualisiert und leiten \zB Benutzeraktionen und Formulare weiter. Innerhalb der View sollte ein Schreibzugriff auf Daten vermieden werden. Somit bleiben alle Daten statisch und werden nicht verändert.
-Der \textbf{Controller} empfängt Anfragen (Requests) von der View. In diesen Request sind \bspw die Login Daten eines Benutzers. Der Controller verarbeitet die Daten und sendet eine Anfrage an das User Model, welches dem Controller den richtigen User zurückgibt. Dieser loggt den Benutzer ein und die View zeigt den erfolgreichen Login Prozess an. 
+Der \textbf{Controller} empfängt Anfragen (Requests) von der View. In diesen Request sind \bspw die Login-Daten eines Benutzers. Der Controller verarbeitet die Daten und sendet eine Anfrage an das User Model, welches dem Controller den richtigen User zurückgibt. Dieser meldet den Benutzer an und die View zeigt den erfolgreichen Login Prozess an. 
 
 \subsection{Entwurf der Benutzeroberfläche}
 \label{sec:Benutzeroberflaeche} 
@@ -72,8 +72,8 @@ Im folgenden sollen die wichtigsten Komponenten des Datenmodells genannt und kur
 \subsection{Geschäftslogik}
 \label{sec:Geschaeftslogik}
 
-Da wy-connect mit Hilfe von Laravel umgesetzt werden soll, lag es nahe bei der Implementierung auf das Passport Paket zurückzugreifen.\footnote{vgl. \cite{Passport}}
-In Kapitel \fullnameref{sec:Protokollwahl} wurden bereits die verschiedenen Rollen im OAuth2 erläutert. Nachfolgend der Workflow des Protokolls.
+Da wy-connect mit Hilfe von Laravel umgesetzt werden soll, lag es nahe bei der Implementierung auf das Passport-Paket zurückzugreifen.\footnote{vgl. \cite{Passport}}
+In Kapitel \fullnameref{sec:Protokollwahl} wurden bereits die verschiedenen Rollen im OAuth2 erläutert, nachfolgend der Workflow des Protokolls.
 
 Zuerst muss die neue App, die den Dienst nutzen möchte, registriert werden. Dabei werden Daten wie Anwendungsname und eine Weiterleitungsadresse - die \textit{redirect URI}, auf die der Nutzer weitergeleitet wird, gespeichert.
 
@@ -90,7 +90,7 @@ Der erste Schritt von OAuth 2 besteht darin, eine Autorisierung vom Benutzer zu 
 \textbf{redirect\_uri} - Gibt die URL an, zu dem der Benutzer nach Abschluss der Autorisierung zurückkehren soll \\
 \textbf{state} - Eine zufällige Zeichenfolge, die vom Client generiert und später überprüft wird
 
-Nachdem der Benutzer sich am Autorisierungsserver eingeloggt hat, sieht er die Autorisierungsaufforderung. Wenn der Nutzer auf \flqq Zulassen\frqq  klickt, leitet der Dienst ihn mit einem Autorisierungscode zurück zum Client. Ein Beispiel für eine Antwort wäre \texttt{https://wy-connect-client.test/login/wyconnect/callback} mit folgenden Parametern:
+Nachdem der Benutzer sich am Autorisierungsserver eingeloggt hat, sieht er die Autorisierungsaufforderung. Wenn der Nutzer auf \glqq Zulassen\grqq{}   klickt, leitet der Dienst ihn mit einem Autorisierungscode zurück zum Client. Ein Beispiel für eine Antwort wäre \texttt{https://wy-connect-client.test/login/wyconnect/callback} mit folgenden Parametern:
 
 \textbf{code} - Der Server gibt den Autorisierungscode zurück \\
 \textbf{state} - Der Server gibt den gleichen Statuswert zurück, der übergeben wurde
